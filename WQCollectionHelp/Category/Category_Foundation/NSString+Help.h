@@ -1,0 +1,13 @@
+//
+//  NSString+Help.h
+//  SomeUIKit
+//
+//  Created by WangQiang on 2017/3/2.
+//  Copyright © 2017年 WangQiang. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface NSString (Help)
+-(CGSize)sizeWithMaxSize:(CGSize)maxSize font:(UIFont *)font;
+@end

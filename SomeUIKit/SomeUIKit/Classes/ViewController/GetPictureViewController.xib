@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GetPictureViewController">
+            <connections>
+                <outlet property="imageView" destination="i4C-GO-7KS" id="7Tm-cR-jUM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i4C-GO-7KS">
+                    <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="LEI-QQ-0L4"/>
+                        <constraint firstAttribute="width" constant="200" id="UTM-TJ-ZGM"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6O-Cb-8yh">
+                    <rect key="frame" x="134.5" y="443.5" width="106" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="4T8-C5-L3r"/>
+                        <constraint firstAttribute="width" constant="106" id="F6D-r7-4U8"/>
+                    </constraints>
+                    <state key="normal" title="获取图片"/>
+                    <connections>
+                        <action selector="btnAction:" destination="-1" eventType="touchUpInside" id="Ofh-US-ECA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rx4-oC-N33">
+                    <rect key="frame" x="164.5" y="183.5" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="76c-JR-7eB"/>
+                        <constraint firstAttribute="height" constant="30" id="ZPt-1h-1fu"/>
+                    </constraints>
+                    <state key="normal" title="分享UI"/>
+                    <connections>
+                        <action selector="ShareUI:" destination="-1" eventType="touchUpInside" id="yvl-XC-Mz6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGA-Uq-drA">
+                    <rect key="frame" x="120.5" y="133.5" width="134" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="134" id="L17-ij-Hrr"/>
+                        <constraint firstAttribute="height" constant="30" id="PBW-PW-U5k"/>
+                    </constraints>
+                    <state key="normal" title="广告启动倒计时"/>
+                    <connections>
+                        <action selector="countDownAD:" destination="-1" eventType="touchUpInside" id="RGE-KO-Z3f"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Rx4-oC-N33" firstAttribute="top" secondItem="HGA-Uq-drA" secondAttribute="bottom" constant="20" id="4Ce-fe-thi"/>
+                <constraint firstItem="i4C-GO-7KS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8OX-nh-Pzj"/>
+                <constraint firstItem="HGA-Uq-drA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kdj-Kx-mOy"/>
+                <constraint firstItem="i4C-GO-7KS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Uoy-d3-T6g"/>
+                <constraint firstItem="T6O-Cb-8yh" firstAttribute="top" secondItem="i4C-GO-7KS" secondAttribute="bottom" constant="10" id="cKU-Vw-erK"/>
+                <constraint firstItem="i4C-GO-7KS" firstAttribute="top" secondItem="Rx4-oC-N33" secondAttribute="bottom" constant="20" id="iRr-w8-VDo"/>
+                <constraint firstItem="T6O-Cb-8yh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lmm-0Z-7w5"/>
+                <constraint firstItem="Rx4-oC-N33" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wcY-Zj-r8f"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
