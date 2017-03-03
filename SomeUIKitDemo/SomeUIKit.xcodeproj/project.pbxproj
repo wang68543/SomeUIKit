@@ -68,8 +68,6 @@
 		DEFF6BB41E694AB40004CFE2 /* WQVoiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6B461E694AB40004CFE2 /* WQVoiceTool.m */; };
 		DEFF6BB51E694AB40004CFE2 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6B4B1E694AB40004CFE2 /* PlaceholderTextView.m */; };
 		DEFF6BB61E694AB40004CFE2 /* WQEdgeTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6B4D1E694AB40004CFE2 /* WQEdgeTitleButton.m */; };
-		DEFF6BB71E694AB40004CFE2 /* AlertBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6B511E694AB40004CFE2 /* AlertBottomView.m */; };
-		DEFF6BB81E694AB40004CFE2 /* AlertTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6B531E694AB40004CFE2 /* AlertTitleView.m */; };
 		DEFF6BB91E694AB40004CFE2 /* WQAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6B551E694AB40004CFE2 /* WQAlertViewController.m */; };
 		DEFF6BBA1E694AB40004CFE2 /* BannerLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6B581E694AB40004CFE2 /* BannerLoopView.m */; };
 		DEFF6BBB1E694AB40004CFE2 /* ClendarDayUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6B5B1E694AB40004CFE2 /* ClendarDayUnit.m */; };
@@ -229,10 +227,6 @@
 		DEFF6B4B1E694AB40004CFE2 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
 		DEFF6B4C1E694AB40004CFE2 /* WQEdgeTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQEdgeTitleButton.h; sourceTree = "<group>"; };
 		DEFF6B4D1E694AB40004CFE2 /* WQEdgeTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQEdgeTitleButton.m; sourceTree = "<group>"; };
-		DEFF6B501E694AB40004CFE2 /* AlertBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertBottomView.h; sourceTree = "<group>"; };
-		DEFF6B511E694AB40004CFE2 /* AlertBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBottomView.m; sourceTree = "<group>"; };
-		DEFF6B521E694AB40004CFE2 /* AlertTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertTitleView.h; sourceTree = "<group>"; };
-		DEFF6B531E694AB40004CFE2 /* AlertTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertTitleView.m; sourceTree = "<group>"; };
 		DEFF6B541E694AB40004CFE2 /* WQAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAlertViewController.h; sourceTree = "<group>"; };
 		DEFF6B551E694AB40004CFE2 /* WQAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAlertViewController.m; sourceTree = "<group>"; };
 		DEFF6B571E694AB40004CFE2 /* BannerLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerLoopView.h; sourceTree = "<group>"; };
@@ -655,10 +649,6 @@
 		DEFF6B4F1E694AB40004CFE2 /* AlertUI */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6B501E694AB40004CFE2 /* AlertBottomView.h */,
-				DEFF6B511E694AB40004CFE2 /* AlertBottomView.m */,
-				DEFF6B521E694AB40004CFE2 /* AlertTitleView.h */,
-				DEFF6B531E694AB40004CFE2 /* AlertTitleView.m */,
 				DEFF6B541E694AB40004CFE2 /* WQAlertViewController.h */,
 				DEFF6B551E694AB40004CFE2 /* WQAlertViewController.m */,
 			);
@@ -970,7 +960,6 @@
 				DEFF6BC61E694AB40004CFE2 /* SelectPhotoViewController.m in Sources */,
 				DE8537791DE0043800654C4D /* WQClanderViewController.m in Sources */,
 				DEFF6BB31E694AB40004CFE2 /* WQKeyboardAdjustHelp.m in Sources */,
-				DEFF6BB71E694AB40004CFE2 /* AlertBottomView.m in Sources */,
 				DEFF6B9C1E694AB40004CFE2 /* UIButton+countDown.m in Sources */,
 				DEFF6BC81E694AB40004CFE2 /* SelectTimeView.m in Sources */,
 				DEFF6BCD1E694AB40004CFE2 /* ContainerViewController.m in Sources */,
@@ -992,7 +981,6 @@
 				DEFF6BCF1E694AB40004CFE2 /* MainTabBarController.m in Sources */,
 				DEFF6BAD1E694AB40004CFE2 /* APPHELP.m in Sources */,
 				DEC00B531DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m in Sources */,
-				DEFF6BB81E694AB40004CFE2 /* AlertTitleView.m in Sources */,
 				DE71DF9C1E6672C50061E374 /* WQKeyboardHandleViewController.m in Sources */,
 				DEC00AF81DB8BBC000A516A1 /* AppDelegate.m in Sources */,
 				DEFF6BBB1E694AB40004CFE2 /* ClendarDayUnit.m in Sources */,
@@ -1172,14 +1160,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SomeUIKit/Classes/Utils/InputView/amrwapper/opencore-amrnb",
-					"$(PROJECT_DIR)/SomeUIKit/Classes/Utils/InputView/amrwapper/opencore-amrwb",
-					"$(PROJECT_DIR)/SomeUIKit/WQCollectionHelp/Resources/amrwapper/opencore-amrnb",
-					"$(PROJECT_DIR)/SomeUIKit/WQCollectionHelp/Resources/amrwapper/opencore-amrwb",
-					"$(PROJECT_DIR)/WQCollectionHelp/Resources/amrwapper/opencore-amrnb",
-					"$(PROJECT_DIR)/WQCollectionHelp/Resources/amrwapper/opencore-amrwb",
-					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrnb",
-					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrwb",
+					"$(PROJECT_DIR)/../WQSomeUIKit/Resources/amrwapper/opencore-amrnb",
+					"$(PROJECT_DIR)/../WQSomeUIKit/Resources/amrwapper/opencore-amrwb",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WANG.SomeUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1196,14 +1178,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SomeUIKit/Classes/Utils/InputView/amrwapper/opencore-amrnb",
-					"$(PROJECT_DIR)/SomeUIKit/Classes/Utils/InputView/amrwapper/opencore-amrwb",
-					"$(PROJECT_DIR)/SomeUIKit/WQCollectionHelp/Resources/amrwapper/opencore-amrnb",
-					"$(PROJECT_DIR)/SomeUIKit/WQCollectionHelp/Resources/amrwapper/opencore-amrwb",
-					"$(PROJECT_DIR)/WQCollectionHelp/Resources/amrwapper/opencore-amrnb",
-					"$(PROJECT_DIR)/WQCollectionHelp/Resources/amrwapper/opencore-amrwb",
-					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrnb",
-					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrwb",
+					"$(PROJECT_DIR)/../WQSomeUIKit/Resources/amrwapper/opencore-amrnb",
+					"$(PROJECT_DIR)/../WQSomeUIKit/Resources/amrwapper/opencore-amrwb",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WANG.SomeUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
