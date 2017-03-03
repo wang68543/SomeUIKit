@@ -8,10 +8,6 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
+#import "WQSomeUIKit.h"
 
-#import "Constans.h"
-#import "APPHELP.h"
-#import "UIGestureRecognizer+Block.h"
-#import "UIView+Extension.h"
-#import "UIImage+Extension.h"
 #endif /* PrefixHeader_pch */

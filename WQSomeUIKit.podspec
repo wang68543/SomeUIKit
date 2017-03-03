@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                       平常自己使用一些频率比较高得工具、控件的封装,后期使用的时候也不断维护、更新 
                     DESC
 
-  s.homepage     = "https://github.com/wang68543/SomeUIKit"
+  s.homepage     = "https://github.com/wang68543/WQSomeUIKit"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/wang68543/SomeUIKit.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/wang68543/WQSomeUIKit.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -94,7 +94,7 @@ Pod::Spec.new do |s|
   s.source_files  = "WQSomeUIKit", "WQSomeUIKit/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+  s.public_header_files = "WQSomeUIKit/WQSomeUIKit.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -130,8 +130,14 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
-
+  
+  non_arc_files = 'WQSomeUIKit/Resources/amrwapper/amrFileCodec.{h,m}','WQSomeUIKit/Resources/amrwapper/amrFileCodec.{h,m}'
+    s.requires_arc = true
+   s.exclude_files = non_arc_files
+   s.subspec 'no-arc' do |sna|
+   sna.requires_arc = false
+   sna.source_files = non_arc_files
+   end
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 

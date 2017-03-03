@@ -70,7 +70,7 @@ const static NSString *offset = @"offset";
     //
     CGSize size = [_pageControl sizeForNumberOfPages:datas.count];
     _pageControl.numberOfPages = datas.count;
-    _pageControl.frame = CGRectMake(_pageW  - size.width - 20, 0,size.width, _pageBackground.height);
+    _pageControl.frame = CGRectMake(_pageW  - size.width - 20, 0,size.width, _pageBackground.frame.size.height);
      _centerView.image = [UIImage imageNamed:[datas firstObject]];
     _centerView.tag = 0;
     _scrollView.contentOffset = CGPointMake(_pageW, 0);

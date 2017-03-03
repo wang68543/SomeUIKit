@@ -8,7 +8,7 @@
 
 #import "BroserController.h"
 #import <WebKit/WebKit.h>
-
+#import "APPHELP.h"
 @interface BroserController ()<UIWebViewDelegate,WKNavigationDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 //@property (strong, nonatomic) WKWebView *webView;
