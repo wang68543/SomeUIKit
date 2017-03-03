@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarViewController">
+            <connections>
+                <outlet property="StarContentView" destination="C56-Ky-ePC" id="CQg-Ty-4mw"/>
+                <outlet property="starValue" destination="b9f-qr-x7V" id="Z67-G9-LeG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C56-Ky-ePC">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="tfq-XU-2bx"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9f-qr-x7V">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7Yn-vG-Jvz"/>
+                        <constraint firstAttribute="width" constant="50" id="jnV-bj-Ugc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这个控件是照着一个牛人的来的,只不过牛人的是Swift版 这个是OC版 在一个就是五角星的大小可以是任意的" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dON-aO-Rh7">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="C56-Ky-ePC" firstAttribute="top" secondItem="dON-aO-Rh7" secondAttribute="bottom" constant="20" id="AYN-of-cQ8"/>
+                <constraint firstItem="dON-aO-Rh7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Cms-Ji-aCs"/>
+                <constraint firstItem="dON-aO-Rh7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="DOO-Xt-1C9"/>
+                <constraint firstItem="b9f-qr-x7V" firstAttribute="top" secondItem="C56-Ky-ePC" secondAttribute="bottom" constant="20" id="K4l-aU-YMI"/>
+                <constraint firstItem="C56-Ky-ePC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="RdK-9q-YHZ"/>
+                <constraint firstAttribute="trailing" secondItem="C56-Ky-ePC" secondAttribute="trailing" constant="25" id="X6y-ze-vlf"/>
+                <constraint firstItem="b9f-qr-x7V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qeO-yX-unk"/>
+                <constraint firstAttribute="trailing" secondItem="dON-aO-Rh7" secondAttribute="trailing" constant="20" id="yXU-mA-3WZ"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="58.5" y="128.5"/>
+        </view>
+    </objects>
+</document>
