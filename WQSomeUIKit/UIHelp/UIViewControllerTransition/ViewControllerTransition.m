@@ -288,69 +288,69 @@
  rotate	                 90cw, 90ccw, 180cw, 180ccw	               -
  suckEffect	                         -	              CGPoint inputPosition;
  */
--(void)transition:(id <UIViewControllerContextTransitioning>)transitionContext{
-    
-    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-    UIColor *viewBackColor ;
-    //    CGAffineTransform  transform;
-    
-    if(!self.animatedView) self.animatedView = [toView.subviews firstObject];
-    CGRect targetFrame = self.animatedView.frame;
-    
-    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
-    
-    if(toView){
-        self.animatedView.center =  toView.center;
-        
-       
-    }
-
-  [UIView transitionWithView:fromView duration:self.duration options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-      toView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
-      UIView *containerView = [transitionContext containerView];
-       [containerView addSubview:toView];
-//      toView.backgroundColor = [UIColor redColor];
-      
-  } completion:^(BOOL finished) {
-      [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-  }];
-//
+//-(void)transition:(id <UIViewControllerContextTransitioning>)transitionContext{
 //    
-//
+//    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
+//    UIColor *viewBackColor ;
+//    //    CGAffineTransform  transform;
 //    
-//    CATransition *animation = [CATransition animation];
+//    if(!self.animatedView) self.animatedView = [toView.subviews firstObject];
+//    CGRect targetFrame = self.animatedView.frame;
 //    
-//    [animation setDuration:3.0];
+//    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
 //    
-//    [animation setFillMode:kCAFillModeForwards];
-//    
-//    animation.timingFunction = UIViewAnimationCurveEaseInOut;
-//    [animation setType:@"rippleEffect"];// rippleEffect
-//    
-//    [animation setSubtype:kCATransitionFromTop];
-//    animation.startProgress = 0.0; //动画开始起点(在整体动画的百分比)
-//    animation.endProgress = 1.0;  //动画停止终点(在整体动画的百分比)
-//    animation.removedOnCompletion = NO;
-//    [containerView.layer addAnimation:animation forKey:nil];
-//    [containerView addSubview:toView];
-//    toView.backgroundColor = [UIColor redColor];
-//      [transitionContext completeTransition:YES];
-//    [containerView addSubview:toView];
-//    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-//    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-//    [toViewController transitionFromViewController:fromViewController toViewController:toViewController duration:self.duration options:UIViewAnimationOptionTransitionFlipFromLeft animations:NULL completion:^(BOOL finished) {
-//        [transitionContext completeTransition:YES];
-//    }];
-    
-//    [UIView transitionFromView:[transitionContext viewForKey:UITransitionContextFromViewKey] toView:[transitionContext viewForKey:UITransitionContextToViewKey] duration:self.duration options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
-//        [transitionContext completeTransition:YES];
-//    }];
-//    [UIView transitionWithView:[transitionContext viewForKey:UITransitionContextToViewKey] duration:self.duration options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+//    if(toView){
+//        self.animatedView.center =  toView.center;
 //        
-//    } completion:^(BOOL finished) {
-//        [transitionContext completeTransition:YES];
-//    }];
-}
+//       
+//    }
+//
+//  [UIView transitionWithView:fromView duration:self.duration options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+//      toView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+//      UIView *containerView = [transitionContext containerView];
+//       [containerView addSubview:toView];
+////      toView.backgroundColor = [UIColor redColor];
+//      
+//  } completion:^(BOOL finished) {
+//      [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+//  }];
+////
+////    
+////
+////    
+////    CATransition *animation = [CATransition animation];
+////    
+////    [animation setDuration:3.0];
+////    
+////    [animation setFillMode:kCAFillModeForwards];
+////    
+////    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+////    [animation setType:@"rippleEffect"];// rippleEffect
+////    
+////    [animation setSubtype:kCATransitionFromTop];
+////    animation.startProgress = 0.0; //动画开始起点(在整体动画的百分比)
+////    animation.endProgress = 1.0;  //动画停止终点(在整体动画的百分比)
+////    animation.removedOnCompletion = NO;
+////    [containerView.layer addAnimation:animation forKey:nil];
+////    [containerView addSubview:toView];
+////    toView.backgroundColor = [UIColor redColor];
+////      [transitionContext completeTransition:YES];
+////    [containerView addSubview:toView];
+////    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+////    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+////    [toViewController transitionFromViewController:fromViewController toViewController:toViewController duration:self.duration options:UIViewAnimationOptionTransitionFlipFromLeft animations:NULL completion:^(BOOL finished) {
+////        [transitionContext completeTransition:YES];
+////    }];
+//    
+////    [UIView transitionFromView:[transitionContext viewForKey:UITransitionContextFromViewKey] toView:[transitionContext viewForKey:UITransitionContextToViewKey] duration:self.duration options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+////        [transitionContext completeTransition:YES];
+////    }];
+////    [UIView transitionWithView:[transitionContext viewForKey:UITransitionContextToViewKey] duration:self.duration options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+////        
+////    } completion:^(BOOL finished) {
+////        [transitionContext completeTransition:YES];
+////    }];
+//}
 #pragma mark -- 父View的转场动画
 -(void)handlePan:(UIPanGestureRecognizer *)panGR{
     CGFloat transLationX = fabs([panGR translationInView:_tabBarController.view].x);

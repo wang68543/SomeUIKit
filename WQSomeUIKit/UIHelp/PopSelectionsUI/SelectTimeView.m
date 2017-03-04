@@ -8,6 +8,8 @@
 
 #import "SelectTimeView.h"
 #import "SelectedTimeViewCell.h"
+#import "WQConstans.h"
+
 #define TimeCellHeight 30.0
 #define BorderWidth 1.0
 @interface SelectTimeView()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>{

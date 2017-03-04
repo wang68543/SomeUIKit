@@ -120,6 +120,5 @@ const static NSString *offset = @"offset";
     if([self.delegate respondsToSelector:@selector(bannerLoopView:didSelected:)]){
         [self.delegate bannerLoopView:self didSelected:tapGesture.view.tag];
     }
-    NSLog(@"===%ld",tapGesture.view.tag);
 }
 @end

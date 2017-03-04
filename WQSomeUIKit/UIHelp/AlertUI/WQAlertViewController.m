@@ -10,6 +10,10 @@
 //#import "AlertTitleView.h"
 //#import "AlertBottomView.h"
 #import "ViewControllerTransition.h"
+#import "WQConstans.h"
+#import "APPHELP.h"
+#import "UIView+Extension.h"
+
 #pragma mark ============BottomView=================
 @implementation AlertBottomView
 

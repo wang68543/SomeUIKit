@@ -8,7 +8,7 @@
 
 #import "WQAppInfo.h"
 #import "WQCache.h"
-
+#import <UIKit/UIKit.h>
 @implementation WQAppInfo
 /**存储设备token的健*/
 static NSString *kDeviceToken = @"DEVICE_TOKEN";

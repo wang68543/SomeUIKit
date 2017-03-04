@@ -59,7 +59,7 @@
     if(date && [date isKindOfClass:[NSDate class]]){
         _date = date;
         NSInteger day = [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] component:NSCalendarUnitDay fromDate:date];
-        self.dayLabel.text = [NSString stringWithFormat:@"%ld",day];
+        self.dayLabel.text = [NSString stringWithFormat:@"%ld",(long)day];
         self.userInteractionEnabled = YES;
 //        if(_date.isToday){
 //            self.backgroundColor = [UIColor greenColor];

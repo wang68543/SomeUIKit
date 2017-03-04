@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 typedef UIView<UITextInput> WQTextFiledView;
 typedef NS_ENUM(NSInteger,TextType) {
     TextTypeFiled,

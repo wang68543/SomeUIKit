@@ -8,6 +8,6 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-#import "WQSomeUIKit.h"
-
+//#import "WQSomeUIKit.h"
+#import "WQConstans.h"
 #endif /* PrefixHeader_pch */

@@ -28,7 +28,7 @@ static NSString  *const  Clender = @"Clender";
     if(!_currentDateFirstDay){
         NSDate *today = [NSDate date];
         NSDate *beginningOfWeek = nil;
-        BOOL ok = [self.currentCalendar rangeOfUnit:NSCalendarUnitMonth startDate:&beginningOfWeek interval:NULL forDate:today];
+        [self.currentCalendar rangeOfUnit:NSCalendarUnitMonth startDate:&beginningOfWeek interval:NULL forDate:today];
         _currentDateFirstDay = beginningOfWeek;
 //        if(ok){
 //            _currentDateFirstDay = [beginningOfWeek modifyDate];

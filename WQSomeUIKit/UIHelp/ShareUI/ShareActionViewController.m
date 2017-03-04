@@ -9,6 +9,8 @@
 #import "ShareActionViewController.h"
 #import "ShareActionCell.h"
 #import "ViewControllerTransition.h"
+#import "WQConstans.h"
+#import "APPHELP.h"
 
 #define ShareItemH 80.0
 @interface ShareActionViewController()<UICollectionViewDelegate,UICollectionViewDataSource,UIGestureRecognizerDelegate>

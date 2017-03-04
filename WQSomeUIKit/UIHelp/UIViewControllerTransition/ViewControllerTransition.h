@@ -7,6 +7,7 @@
 //  从底部往上动画
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 //最开始present出来的View上的一个子View的动画类型(类似弹框的效果)
 typedef NS_ENUM(NSInteger ,ShowOneSubViewType) {
     ShowOneSubviewTypeDefault,//缺省状态下启用两个View之间转场(ShowSuperViewType)

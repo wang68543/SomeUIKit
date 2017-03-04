@@ -8,8 +8,8 @@
 
 #import "SelectPhotoViewController.h"
 #import "ViewControllerTransition.h"
-
-
+#import "WQConstans.h"
+#import "APPHELP.h"
 #define DivLineBG UIColorMake(225, 226, 230, 1.0)
 #define subViewH  50
 #define subBGColor(alph) [UIColor colorWithRed:242/255.0 green:244/255.0 blue:245/255.0 alpha:(alph)]

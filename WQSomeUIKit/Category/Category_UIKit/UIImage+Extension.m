@@ -7,6 +7,8 @@
 //
 
 #import "UIImage+Extension.h"
+#import "WQConstans.h"
+
 
 @implementation UIImage (Extension)
 

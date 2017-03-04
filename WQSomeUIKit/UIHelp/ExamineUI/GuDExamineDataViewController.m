@@ -9,6 +9,9 @@
 #import "GuDExamineDataViewController.h"
 #import "GuDExaminationItem.h"
 #import "ExamineCell.h"
+#import "WQConstans.h"
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
 
 @interface GuDExamineDataViewController ()
 ///<,UITableViewDataSource>
@@ -54,7 +57,7 @@ static NSString *const ID = @"examineCell";
     footerView.frame = CGRectMake(0, 0, APP_WIGHT, 60.0);
     CGFloat btnW = 100;
     CGFloat btnH = 45.0;
-    CGFloat y = (footerView.height - btnH)*0.5+ btnH*0.5;
+    CGFloat y = (footerView.frame.size.height - btnH)*0.5+ btnH*0.5;
     UIButton *nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     nextBtn.bounds = CGRectMake(0, 0, btnW, btnH);
     nextBtn.center = CGPointMake(APP_WIGHT*0.75, y);

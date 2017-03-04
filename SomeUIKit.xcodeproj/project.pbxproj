@@ -44,9 +44,6 @@
 		DEFF6D431E6971800004CFE2 /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CBE1E69717F0004CFE2 /* UIButton+countDown.m */; };
 		DEFF6D441E6971800004CFE2 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CC01E69717F0004CFE2 /* UIImage+Extension.m */; };
 		DEFF6D451E6971800004CFE2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CC21E69717F0004CFE2 /* UIView+Extension.m */; };
-		DEFF6D461E6971800004CFE2 /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CCB1E69717F0004CFE2 /* amrFileCodec.m */; };
-		DEFF6D471E6971800004CFE2 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFF6CD01E69717F0004CFE2 /* libopencore-amrnb.a */; };
-		DEFF6D481E6971800004CFE2 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFF6CD11E69717F0004CFE2 /* libopencore-amrwb.a */; };
 		DEFF6D491E6971800004CFE2 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD31E69717F0004CFE2 /* 00.jpg */; };
 		DEFF6D4A1E6971800004CFE2 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD41E69717F0004CFE2 /* 01.jpg */; };
 		DEFF6D4B1E6971800004CFE2 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD51E69717F0004CFE2 /* 02.jpg */; };
@@ -187,15 +184,6 @@
 		DEFF6CC21E69717F0004CFE2 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		DEFF6CC51E69717F0004CFE2 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		DEFF6CC61E69717F0004CFE2 /* WQConstans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQConstans.h; sourceTree = "<group>"; };
-		DEFF6CC71E69717F0004CFE2 /* WQSomeUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQSomeUIKit.h; sourceTree = "<group>"; };
-		DEFF6CCA1E69717F0004CFE2 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
-		DEFF6CCB1E69717F0004CFE2 /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
-		DEFF6CCC1E69717F0004CFE2 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		DEFF6CCD1E69717F0004CFE2 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		DEFF6CCE1E69717F0004CFE2 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		DEFF6CCF1E69717F0004CFE2 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		DEFF6CD01E69717F0004CFE2 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		DEFF6CD11E69717F0004CFE2 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		DEFF6CD31E69717F0004CFE2 /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
 		DEFF6CD41E69717F0004CFE2 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
 		DEFF6CD51E69717F0004CFE2 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
@@ -286,8 +274,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEFF6D481E6971800004CFE2 /* libopencore-amrwb.a in Frameworks */,
-				DEFF6D471E6971800004CFE2 /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +492,6 @@
 			children = (
 				DEFF6CC51E69717F0004CFE2 /* Singleton.h */,
 				DEFF6CC61E69717F0004CFE2 /* WQConstans.h */,
-				DEFF6CC71E69717F0004CFE2 /* WQSomeUIKit.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -514,26 +499,10 @@
 		DEFF6CC81E69717F0004CFE2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6CC91E69717F0004CFE2 /* amrwapper */,
 				DEFF6CD21E69717F0004CFE2 /* images */,
 				DEFF6CDB1E69717F0004CFE2 /* Sb */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		DEFF6CC91E69717F0004CFE2 /* amrwapper */ = {
-			isa = PBXGroup;
-			children = (
-				DEFF6CCA1E69717F0004CFE2 /* amrFileCodec.h */,
-				DEFF6CCB1E69717F0004CFE2 /* amrFileCodec.m */,
-				DEFF6CCC1E69717F0004CFE2 /* dec_if.h */,
-				DEFF6CCD1E69717F0004CFE2 /* if_rom.h */,
-				DEFF6CCE1E69717F0004CFE2 /* interf_dec.h */,
-				DEFF6CCF1E69717F0004CFE2 /* interf_enc.h */,
-				DEFF6CD01E69717F0004CFE2 /* libopencore-amrnb.a */,
-				DEFF6CD11E69717F0004CFE2 /* libopencore-amrwb.a */,
-			);
-			path = amrwapper;
 			sourceTree = "<group>";
 		};
 		DEFF6CD21E69717F0004CFE2 /* images */ = {
@@ -996,7 +965,6 @@
 				DEFF6D571E6971800004CFE2 /* RuntimeKit.m in Sources */,
 				DEFF6D441E6971800004CFE2 /* UIImage+Extension.m in Sources */,
 				DEFF6D531E6971800004CFE2 /* WQError.m in Sources */,
-				DEFF6D461E6971800004CFE2 /* amrFileCodec.m in Sources */,
 				DEFF6D621E6971800004CFE2 /* WQClendarView.m in Sources */,
 				DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */,
 				DEFF6D671E6971800004CFE2 /* GuDExamineViewController.m in Sources */,

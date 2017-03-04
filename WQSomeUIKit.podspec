@@ -90,11 +90,12 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  s.source_files  = "WQSomeUIKit", "WQSomeUIKit/**/*.{h,m}"
+# "WQSomeUIKit", 
+  s.source_files  = "WQSomeUIKit/**/**/*.{h,m}"
+  # spec.resources = ["Pod/Assets/*.storyboard"] 
   # s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "WQSomeUIKit/WQSomeUIKit.h"
+  # s.public_header_files = "WQSomeUIKit/Gloable/Header/WQSomeUIKit.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -131,13 +132,13 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   
-  non_arc_files = 'WQSomeUIKit/Resources/amrwapper/amrFileCodec.{h,m}','WQSomeUIKit/Resources/amrwapper/amrFileCodec.{h,m}'
-    s.requires_arc = true
-   s.exclude_files = non_arc_files
-   s.subspec 'no-arc' do |sna|
-   sna.requires_arc = false
-   sna.source_files = non_arc_files
-   end
+  # non_arc_files = 'WQSomeUIKit/Resources/amrwapper/amrFileCodec.{h,m}'
+   s.requires_arc = true
+  #  s.exclude_files = non_arc_files
+  #  s.subspec 'no-arc' do |sna|
+  #  sna.requires_arc = false
+  #  sna.source_files = non_arc_files
+  #  end
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
