@@ -6,25 +6,25 @@
 //  Copyright © 2016年 WangQiang. All rights reserved.
 //
 
-#import "SelectPhotoViewController.h"
-#import "ViewControllerTransition.h"
+#import "WQSelectPhotoViewController.h"
+#import "WQControllerTransition.h"
 #import "WQConstans.h"
 #import "APPHELP.h"
 #define DivLineBG UIColorMake(225, 226, 230, 1.0)
 #define subViewH  50
 #define subBGColor(alph) [UIColor colorWithRed:242/255.0 green:244/255.0 blue:245/255.0 alpha:(alph)]
 #define btnFont [UIFont systemFontOfSize:16.0]
-@interface SelectPhotoViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface WQSelectPhotoViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (strong ,nonatomic) UIView *actionSheetView;
 @property (strong ,nonatomic) UIViewController *controller;
-@property (strong ,nonatomic) ViewControllerTransition *bottomTranstion;
+@property (strong ,nonatomic) WQControllerTransition *bottomTranstion;
 
 @end
 
-@implementation SelectPhotoViewController
--(ViewControllerTransition *)bottomTranstion{
+@implementation WQSelectPhotoViewController
+-(WQControllerTransition *)bottomTranstion{
     if(!_bottomTranstion){
-      _bottomTranstion =  [ViewControllerTransition transitionWithAnimatedView:self.actionSheetView];
+      _bottomTranstion =  [WQControllerTransition transitionWithAnimatedView:self.actionSheetView];
         _bottomTranstion.duration = 0.3;
     }
     return _bottomTranstion;

@@ -6,13 +6,12 @@
 //  Copyright © 2016年 WangQiang. All rights reserved.
 //
 
-#import "WQAlertViewController.h"
+#import "WQAlertController.h"
 //#import "AlertTitleView.h"
 //#import "AlertBottomView.h"
-#import "ViewControllerTransition.h"
+#import "WQControllerTransition.h"
 #import "WQConstans.h"
 #import "APPHELP.h"
-#import "UIView+Extension.h"
 
 #pragma mark ============BottomView=================
 @implementation AlertBottomView
@@ -74,16 +73,18 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     CGFloat lineW = 1.0;
-    self.topLine.frame = CGRectMake(0, 0, self.width, lineW);
+    CGFloat viewWidth = CGRectGetWidth(self.frame);
+    CGFloat viewHeight = CGRectGetHeight(self.frame);
+    self.topLine.frame = CGRectMake(0, 0, viewWidth, lineW);
     if(_confirmBtn && _cancleBtn){
-        _midleLine.frame = CGRectMake(self.width*0.5, lineW, lineW, self.height - lineW);
-        _confirmBtn.frame = CGRectMake(0, lineW, self.width*0.5, self.height - 1.0);
-        _cancleBtn.frame = CGRectMake(CGRectGetMaxX(self.confirmBtn.frame), self.confirmBtn.y, self.confirmBtn.width, self.confirmBtn.height);
+        _midleLine.frame = CGRectMake(viewWidth*0.5, lineW, lineW, viewHeight - lineW);
+        _confirmBtn.frame = CGRectMake(0, lineW, viewWidth*0.5, viewHeight - 1.0);
+        _cancleBtn.frame = CGRectMake(CGRectGetMaxX(self.confirmBtn.frame), CGRectGetMinY(self.confirmBtn.frame),  CGRectGetWidth(self.confirmBtn.frame),  CGRectGetHeight(self.confirmBtn.frame));
     }else{
         if(_confirmBtn){
-            _confirmBtn.frame = CGRectMake(0, lineW, self.width, self.height - lineW);
+            _confirmBtn.frame = CGRectMake(0, lineW, viewWidth,viewHeight - lineW);
         }else{
-            _cancleBtn.frame = CGRectMake(0, lineW, self.width, self.height - lineW);
+            _cancleBtn.frame = CGRectMake(0, lineW, viewWidth, viewHeight - lineW);
         }
     }
 }
@@ -132,7 +133,7 @@
 }
 -(void)layoutSubviews{
     [super layoutSubviews];
-    self.lineView.frame = CGRectMake(0, self.height - 2.0, self.width, 2.0);
+    self.lineView.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 2.0, CGRectGetWidth(self.frame), 2.0);
     CGFloat leftX = 10.0;
     
     if(_iconView.image){
@@ -144,20 +145,20 @@
     }
     
     if(_titleLabel.text){
-        _titleLabel.frame = CGRectMake(leftX, 0.0, self.width - leftX - 20.0, self.height - self.lineView.height);
+        _titleLabel.frame = CGRectMake(leftX, 0.0, CGRectGetWidth(self.frame) - leftX - 20.0, CGRectGetHeight(self.frame) - CGRectGetHeight(self.lineView.frame));
     }
 }
 @end
 #pragma mark =============AlertController================
-@interface WQAlertViewController ()<AlertBottomViewDelegate,UIGestureRecognizerDelegate>{
+@interface WQAlertController ()<AlertBottomViewDelegate,UIGestureRecognizerDelegate>{
     NSMutableDictionary *_actions;
     UITapGestureRecognizer *_tapBackGR;
 }
 @property (strong ,nonatomic) UIView *containerView;
-@property (strong ,nonatomic) ViewControllerTransition *bottomTranstion;
+@property (strong ,nonatomic) WQControllerTransition *bottomTranstion;
 @end
 
-@implementation WQAlertViewController
+@implementation WQAlertController
 
 -(UIView *)containerView{
     if(!_containerView){
@@ -295,7 +296,7 @@
         centerViewHeight += 49.0;
     }
     
-    CGRect _topCenterViewFrame = CGRectMake(MAX(0, (centerViewWidth - _topCenterView.width)*0.5), centerViewHeight, _topCenterView.width, _topCenterView.height);
+    CGRect _topCenterViewFrame = CGRectMake(MAX(0, (centerViewWidth - CGRectGetWidth(_topCenterView.frame))*0.5), centerViewHeight, CGRectGetWidth(_topCenterView.frame), CGRectGetHeight(_topCenterView.frame));
  
     _topCenterView.frame = _topCenterViewFrame;
 
@@ -367,7 +368,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _bottomTranstion = [ViewControllerTransition transitionWithAnimatedView:self.containerView];
+    _bottomTranstion = [WQControllerTransition transitionWithAnimatedView:self.containerView];
     _bottomTranstion.showOneSubViewType = ShowOneSubviewFromDownToMiddleCenter;
     _bottomTranstion.animationType = AnimationTypeSpring;
     

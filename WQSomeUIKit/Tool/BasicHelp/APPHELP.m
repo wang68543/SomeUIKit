@@ -9,7 +9,7 @@
 #import "APPHELP.h"
 #import <objc/runtime.h>
 
-#import "BroserController.h"
+#import "WQBroserController.h"
 @interface APPHELP()
 @property (strong ,nonatomic) UIWebView *webView;
 
@@ -17,7 +17,7 @@
 @implementation APPHELP
 #pragma mark -- 打开浏览器
 +(void)openBroserWithRoute:(UINavigationController *)nav url:(NSString *)url title:(NSString *)title{
-    BroserController *broser = [[BroserController alloc] init];
+    WQBroserController *broser = [[WQBroserController alloc] init];
     broser.URLString = url;
     broser.title = title;
     [nav pushViewController:broser animated:YES];

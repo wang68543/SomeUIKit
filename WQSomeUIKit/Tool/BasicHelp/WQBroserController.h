@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BroserController : UIViewController
+@interface WQBroserController : UIViewController
 @property (copy ,nonatomic) NSString *URLString;
 @end

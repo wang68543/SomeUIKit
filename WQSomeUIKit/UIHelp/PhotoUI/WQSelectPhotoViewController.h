@@ -12,7 +12,7 @@
 -(void)photoSelectedViewDidFinshSelectedImage:(UIImage *)image;
 -(void)photoSelectedViewDidFinshSelected:(NSDictionary *)info;
 @end
-@interface SelectPhotoViewController : UIViewController
+@interface WQSelectPhotoViewController : UIViewController
 -(void)showInController:(UIViewController *)controller;
 @property (weak ,nonatomic) id<PhotoSelectedViewControllerDelegate> delegate;
 @end

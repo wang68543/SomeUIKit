@@ -6,10 +6,10 @@
 //  Copyright © 2016年 WangQiang. All rights reserved.
 //
 
-#import "NSCoderObject.h"
+#import "WQCoderObject.h"
 #import <objc/runtime.h>
 
-@implementation NSCoderObject
+@implementation WQCoderObject
 -(instancetype)initSelfWithDict:(NSDictionary *)dict{
     if(self = [super init]){
         [self setValuesForKeysWithDictionary:dict];
@@ -25,7 +25,7 @@
     if(![array isKindOfClass:[NSArray class]] || array.count <= 0) return [NSArray array];
     NSMutableArray *items = [NSMutableArray array];
     for (NSDictionary *dic in array) {
-        NSCoderObject *obj = [self classWithDict:dic];
+        WQCoderObject *obj = [self classWithDict:dic];
         if(obj){
             [items addObject:obj];
         }
@@ -37,7 +37,7 @@
     if(![array isKindOfClass:[NSArray class]]) return [NSArray array];
     NSMutableArray *items = [NSMutableArray array];
     for (NSDictionary *dic in array) {
-        NSCoderObject *obj = [self classWithDict:dic classInDict:inArrayModels];
+        WQCoderObject *obj = [self classWithDict:dic classInDict:inArrayModels];
         if(obj){
             [items addObject:obj];
         }
@@ -173,7 +173,7 @@
 
 -(instancetype)copyItem{
    
-    NSCoderObject *obj = [[[self class] alloc] init];
+    WQCoderObject *obj = [[[self class] alloc] init];
      unsigned int count = 0;
     //获取属性列表
     objc_property_t *propertyList = class_copyPropertyList([self class], &count);

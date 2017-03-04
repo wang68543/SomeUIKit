@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SelectTimeView;
+@class WQSelecOptionsView;
 typedef NS_ENUM(NSInteger,ShowPostion) {
     ShowPostionDefault,
     ShowPostionUp,
     ShowPostionDown,
 };
-@interface SelectTimeView : UIView
+@interface WQSelecOptionsView : UIView
 @property (strong ,nonatomic) NSArray <NSString *>*datas;
 /**
  *  显示在某一个控件的底部

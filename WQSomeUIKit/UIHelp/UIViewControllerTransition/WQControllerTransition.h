@@ -36,7 +36,7 @@ typedef NS_ENUM(NSInteger ,AnimationType) {
 };
 
 // MARK:-------- 使用此类 必须强引用
-@interface ViewControllerTransition : NSObject<UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate>
+@interface WQControllerTransition : NSObject<UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate>
 
 /**动画时间 默认0.3*/
 @property (assign ,nonatomic) CGFloat duration;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlaceholderTextView : UITextView
+@interface WQTextView : UITextView
 @property (copy ,nonatomic) NSString *placeholder;
 @end

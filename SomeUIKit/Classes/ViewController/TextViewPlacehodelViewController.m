@@ -7,10 +7,10 @@
 //
 
 #import "TextViewPlacehodelViewController.h"
-#import "PlaceholderTextView.h"
+#import "WQTextView.h"
 
 @interface TextViewPlacehodelViewController ()
-@property (weak, nonatomic) IBOutlet PlaceholderTextView *placeholder;
+@property (weak, nonatomic) IBOutlet WQTextView *placeholder;
 
 @end
 

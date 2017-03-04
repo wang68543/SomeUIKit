@@ -6,19 +6,19 @@
 //  Copyright © 2016年 WangQiang. All rights reserved.
 //
 
-#import "SelectTimeView.h"
-#import "SelectedTimeViewCell.h"
+#import "WQSelecOptionsView.h"
+#import "WQSelectOptionsCell.h"
 #import "WQConstans.h"
 
 #define TimeCellHeight 30.0
 #define BorderWidth 1.0
-@interface SelectTimeView()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>{
+@interface WQSelecOptionsView()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>{
     NSMutableArray *_insideDatas;
     NSInteger _expectIndex;//排除显示
 }
 @property (strong ,nonatomic) UITableView *tableView;
 @end
-@implementation SelectTimeView
+@implementation WQSelecOptionsView
 -(UITableView *)tableView{
     if(!_tableView){
         _tableView = [[UITableView alloc] init];
@@ -181,9 +181,9 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *ID = @"dateCell";
-    SelectedTimeViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    WQSelectOptionsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell){
-        cell = [[SelectedTimeViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[WQSelectOptionsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textAlignment = _textAlignment;
         cell.textLabel.textColor = _textColor;

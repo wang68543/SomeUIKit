@@ -7,7 +7,7 @@
 //
 
 #import "DropDownViewController.h"
-#import "SelectTimeView.h"
+#import "WQSelecOptionsView.h"
 #import "ZHAnimationView.h"
 
 @interface DropDownViewController ()
@@ -23,7 +23,7 @@
 
 
 - (IBAction)Top:(UIButton *)sender {
-    SelectTimeView *timeView = [[SelectTimeView alloc] init];
+    WQSelecOptionsView *timeView = [[WQSelecOptionsView alloc] init];
     timeView.datas = @[@"开始123",@"我是要排除的",@"结束456"];
     timeView.expectData = sender.currentTitle;
     [timeView setTableViewBackGround:[UIColor blueColor]];
@@ -39,7 +39,7 @@
 
 - (IBAction)Bottom:(UIButton *)sender {
     
-    SelectTimeView *timeView = [[SelectTimeView alloc] init];
+    WQSelecOptionsView *timeView = [[WQSelecOptionsView alloc] init];
     NSMutableArray *datas = [NSMutableArray array];
     for (int i = 0; i < 100 ; i ++) {
         [datas addObject:[NSString stringWithFormat:@"%d",i]];

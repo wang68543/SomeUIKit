@@ -11,7 +11,6 @@
 #import "ExamineCell.h"
 #import "WQConstans.h"
 #import "UIImage+Extension.h"
-#import "UIView+Extension.h"
 
 @interface GuDExamineDataViewController ()
 ///<,UITableViewDataSource>

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SelectedTimeViewCell : UITableViewCell
+@interface WQSelectOptionsCell : UITableViewCell
 
 @end

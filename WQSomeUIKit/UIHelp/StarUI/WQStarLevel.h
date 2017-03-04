@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StarLevel : UIControl
+@interface WQStarLevel : UIControl
 
 /**
  星星的高度(星星的高度与宽度需相等)

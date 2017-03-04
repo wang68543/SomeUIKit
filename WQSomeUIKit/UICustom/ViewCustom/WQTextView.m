@@ -6,11 +6,11 @@
 //  Copyright © 2016年 WangQiang. All rights reserved.
 //
 
-#import "PlaceholderTextView.h"
-@interface PlaceholderTextView()
+#import "WQTextView.h"
+@interface WQTextView()
 
 @end
-@implementation PlaceholderTextView{
+@implementation WQTextView{
     UILabel *_placeHolderLabel;
 }
 

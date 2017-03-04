@@ -7,10 +7,10 @@
 //
 
 #import "WQTabBarViewController.h"
-#import "ViewControllerTransition.h"
+#import "WQControllerTransition.h"
 
 @interface WQTabBarViewController ()
-@property (strong ,nonatomic) ViewControllerTransition *tabControllerTransition;
+@property (strong ,nonatomic) WQControllerTransition *tabControllerTransition;
 
 @end
 
@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabControllerTransition = [ViewControllerTransition transitionWithTabBarController:self];
+    self.tabControllerTransition = [WQControllerTransition transitionWithTabBarController:self];
 }
 -(void)dealloc{
     NSLog(@"tabbarController 销毁");

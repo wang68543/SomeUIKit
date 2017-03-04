@@ -6,15 +6,15 @@
 //  Copyright © 2016年 WangQiang. All rights reserved.
 //
 
-#import "BroserController.h"
+#import "WQBroserController.h"
 #import <WebKit/WebKit.h>
 #import "APPHELP.h"
-@interface BroserController ()<UIWebViewDelegate,WKNavigationDelegate>
+@interface WQBroserController ()<UIWebViewDelegate,WKNavigationDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 //@property (strong, nonatomic) WKWebView *webView;
 @end
 
-@implementation BroserController
+@implementation WQBroserController
 //
 //-(WKWebView *)webView{
 //    if(!_webView){

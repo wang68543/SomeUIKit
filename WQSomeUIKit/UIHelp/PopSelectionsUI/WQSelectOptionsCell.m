@@ -6,9 +6,9 @@
 //  Copyright © 2016年 WangQiang. All rights reserved.
 //
 
-#import "SelectedTimeViewCell.h"
+#import "WQSelectOptionsCell.h"
 
-@implementation SelectedTimeViewCell
+@implementation WQSelectOptionsCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

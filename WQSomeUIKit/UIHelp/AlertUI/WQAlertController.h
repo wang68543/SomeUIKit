@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class WQAlertViewController;
+@class WQAlertController;
 
 //@protocol CommonAlertDelegate<NSObject>
 //-(void)commonAlertDidConfirm:(nonnull CommonAlertViewController *)commonAlert;
@@ -21,7 +21,7 @@
 UIKIT_EXTERN  NSString * _Nonnull const ActionConfirm;
 UIKIT_EXTERN  NSString * _Nonnull const ActionCancel;
 
-typedef void(^BottomAction)( WQAlertViewController * _Nonnull alertViewController);
+typedef void(^BottomAction)( WQAlertController * _Nonnull alertController);
 #pragma mark -- -alertView
 @class AlertBottomView;
 @protocol AlertBottomViewDelegate<NSObject>
@@ -47,7 +47,7 @@ typedef void(^BottomAction)( WQAlertViewController * _Nonnull alertViewControlle
 +(nonnull instancetype)titleView;
 @end
 
-@interface WQAlertViewController : UIViewController
+@interface WQAlertController : UIViewController
 +(nonnull instancetype)alertWithContent:(nonnull NSString *)content;
 +(nonnull instancetype)alertWithCenterView:(nonnull UIView *)centerView;
 +(nonnull instancetype)alertWithCenterView:(nonnull UIView *)centerView isNeedBottomView:(BOOL)needBottom;

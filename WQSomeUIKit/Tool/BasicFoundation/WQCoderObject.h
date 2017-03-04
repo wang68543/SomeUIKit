@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSCoderObject : NSObject
+@interface WQCoderObject : NSObject
 
 +(instancetype)classWithDict:(NSDictionary *)dict;
 +(NSArray *)classesWithArray:(NSArray *)array;

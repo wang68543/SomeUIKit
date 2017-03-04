@@ -6,12 +6,12 @@
 //  Copyright © 2016年 WangQiang. All rights reserved.
 //
 
-#import "StarLevel.h"
-@interface StarLevel(){
+#import "WQStarLevel.h"
+@interface WQStarLevel(){
     NSMutableArray *starRects ;
 }
 @end
-@implementation StarLevel
+@implementation WQStarLevel
 -(instancetype)init{
     if(self = [super init]){
         [self defaultInit];

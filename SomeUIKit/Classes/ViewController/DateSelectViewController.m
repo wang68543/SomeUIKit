@@ -7,7 +7,7 @@
 //
 
 #import "DateSelectViewController.h"
-#import "WQAlertViewController.h"
+#import "WQAlertController.h"
 
 @interface DateSelectViewController ()
 @property (strong ,nonatomic) UIDatePicker *myDatePicker;
@@ -25,20 +25,20 @@
 }
 - (IBAction)alertAction:(UIButton *)sender {
     
-    WQAlertViewController *alert = [WQAlertViewController alertViewWithTitle:@"选择日期" centerView:_myDatePicker];
+    WQAlertController *alert = [WQAlertController alertViewWithTitle:@"选择日期" centerView:_myDatePicker];
     alert.titleView.titleLabel.font = MYFont(18.0);
     alert.titleView.titleLabel.textColor = [UIColor redColor];
     [alert showInViewController:self];
   
     
     //__weak
-    [alert addActionType:ActionCancel action:^(WQAlertViewController * _Nonnull alertViewController) {
+    [alert addActionType:ActionCancel action:^(WQAlertController * _Nonnull alertViewController) {
         sender.backgroundColor = [UIColor redColor];
 //        [alertViewController dismissViewControllerAnimated:YES completion:NULL];
          [alertViewController popCenterViewAnimate:YES];
         
     }];
-    [alert addActionType:ActionConfirm action:^(WQAlertViewController * _Nonnull alertViewController) {
+    [alert addActionType:ActionConfirm action:^(WQAlertController * _Nonnull alertViewController) {
         UIView *centerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, AlertCenterWidth, 100)];
         UITextField *textView = [[UITextField alloc] init];
         textView.frame = CGRectMake(10, 30, AlertCenterWidth - 20, 50);

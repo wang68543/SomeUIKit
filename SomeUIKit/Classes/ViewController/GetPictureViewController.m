@@ -7,7 +7,7 @@
 //
 
 #import "GetPictureViewController.h"
-#import "SelectPhotoViewController.h"
+#import "WQSelectPhotoViewController.h"
 #import "ShareActionViewController.h"
 
 @interface GetPictureViewController ()<PhotoSelectedViewControllerDelegate,ShareActionDelegate>
@@ -27,7 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)btnAction:(UIButton *)sender {
-    SelectPhotoViewController *photoView = [[SelectPhotoViewController alloc] init];
+    WQSelectPhotoViewController *photoView = [[WQSelectPhotoViewController alloc] init];
     photoView.delegate = self;
     [photoView showInController:self];
 }

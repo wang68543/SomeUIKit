@@ -6,14 +6,14 @@
 //  Copyright © 2016年 WangQiang. All rights reserved.
 //
 
-#import "ViewControllerTransition.h"
-@interface ViewControllerTransition()<UITabBarControllerDelegate>
+#import "WQControllerTransition.h"
+@interface WQControllerTransition()<UITabBarControllerDelegate>
 @property (weak ,nonatomic) UIView *animatedView;
 @property (assign ,nonatomic) BOOL interactive;
 @property (strong ,nonatomic) UIPercentDrivenInteractiveTransition *interactionController;
 @property (weak ,nonatomic) UITabBarController *tabBarController;
 @end
-@implementation ViewControllerTransition
+@implementation WQControllerTransition
 #pragma mark -- 子View转场初始化方式
 +(nonnull instancetype)transitionWithAnimatedView:(nullable UIView *)animatedView{
     return [[self alloc] initTransitionWithAnimatedView:animatedView];

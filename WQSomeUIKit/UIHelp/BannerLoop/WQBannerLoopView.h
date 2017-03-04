@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class BannerLoopView;
+@class WQBannerLoopView;
 @protocol BannerLoopViewDelegate <NSObject>
--(void)bannerLoopView:(BannerLoopView *)bannerLoopView didSelected:(NSInteger)index;
+-(void)bannerLoopView:(WQBannerLoopView *)bannerLoopView didSelected:(NSInteger)index;
 
 @end
-@interface BannerLoopView : UIView
+@interface WQBannerLoopView : UIView
 @property (strong ,nonatomic) NSArray *datas;
 @property (weak ,nonatomic) id<BannerLoopViewDelegate> delegate;
 @end

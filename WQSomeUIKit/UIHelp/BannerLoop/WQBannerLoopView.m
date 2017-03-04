@@ -6,9 +6,9 @@
 //  Copyright © 2016年 itcast. All rights reserved.
 //
 
-#import "BannerLoopView.h"
+#import "WQBannerLoopView.h"
 
-@interface BannerLoopView ()<UIScrollViewDelegate>{
+@interface WQBannerLoopView ()<UIScrollViewDelegate>{
     UIImageView *_reusableView; // 循环利用的
     UIImageView *_centerView; // 中间的
     CGFloat _pageW;
@@ -18,7 +18,7 @@
 @property (strong ,nonatomic) UIPageControl *pageControl;
 
 @end
-@implementation BannerLoopView
+@implementation WQBannerLoopView
 -(UIScrollView *)scrollView{
     if(!_scrollView){
         _scrollView = [[UIScrollView alloc] init];

@@ -35,15 +35,12 @@
 		DEFE2C6A1DD22716006BB614 /* WQLoopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFE2C681DD22716006BB614 /* WQLoopViewController.xib */; };
 		DEFF6D3B1E6971800004CFE2 /* ZHAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CAB1E69717F0004CFE2 /* ZHAnimationView.m */; };
 		DEFF6D3C1E6971800004CFE2 /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CAF1E69717F0004CFE2 /* NSDate+Format.m */; };
-		DEFF6D3D1E6971800004CFE2 /* NSDate+FormatStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB11E69717F0004CFE2 /* NSDate+FormatStringExtension.m */; };
 		DEFF6D3E1E6971800004CFE2 /* NSFileManager+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB31E69717F0004CFE2 /* NSFileManager+Path.m */; };
 		DEFF6D3F1E6971800004CFE2 /* NSString+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB51E69717F0004CFE2 /* NSString+Date.m */; };
-		DEFF6D401E6971800004CFE2 /* NSString+DateFormatExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB71E69717F0004CFE2 /* NSString+DateFormatExtension.m */; };
 		DEFF6D411E6971800004CFE2 /* NSString+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB91E69717F0004CFE2 /* NSString+Help.m */; };
 		DEFF6D421E6971800004CFE2 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CBB1E69717F0004CFE2 /* UIGestureRecognizer+Block.m */; };
 		DEFF6D431E6971800004CFE2 /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CBE1E69717F0004CFE2 /* UIButton+countDown.m */; };
 		DEFF6D441E6971800004CFE2 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CC01E69717F0004CFE2 /* UIImage+Extension.m */; };
-		DEFF6D451E6971800004CFE2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CC21E69717F0004CFE2 /* UIView+Extension.m */; };
 		DEFF6D491E6971800004CFE2 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD31E69717F0004CFE2 /* 00.jpg */; };
 		DEFF6D4A1E6971800004CFE2 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD41E69717F0004CFE2 /* 01.jpg */; };
 		DEFF6D4B1E6971800004CFE2 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD51E69717F0004CFE2 /* 02.jpg */; };
@@ -53,20 +50,20 @@
 		DEFF6D4F1E6971800004CFE2 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD91E69717F0004CFE2 /* 06.jpg */; };
 		DEFF6D501E6971800004CFE2 /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CDA1E69717F0004CFE2 /* 07.jpg */; };
 		DEFF6D511E6971800004CFE2 /* TabbbarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CDC1E69717F0004CFE2 /* TabbbarController.storyboard */; };
-		DEFF6D521E6971800004CFE2 /* NSCoderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE01E69717F0004CFE2 /* NSCoderObject.m */; };
+		DEFF6D521E6971800004CFE2 /* WQCoderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE01E69717F0004CFE2 /* WQCoderObject.m */; };
 		DEFF6D531E6971800004CFE2 /* WQError.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE21E69717F0004CFE2 /* WQError.m */; };
 		DEFF6D541E6971800004CFE2 /* APPHELP.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE51E69717F0004CFE2 /* APPHELP.m */; };
-		DEFF6D551E6971800004CFE2 /* BroserController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE71E69717F0004CFE2 /* BroserController.m */; };
+		DEFF6D551E6971800004CFE2 /* WQBroserController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE71E69717F0004CFE2 /* WQBroserController.m */; };
 		DEFF6D561E6971800004CFE2 /* BroserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CE81E69717F0004CFE2 /* BroserController.xib */; };
 		DEFF6D571E6971800004CFE2 /* RuntimeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CEA1E69717F0004CFE2 /* RuntimeKit.m */; };
 		DEFF6D581E6971800004CFE2 /* WQAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CEC1E69717F0004CFE2 /* WQAppInfo.m */; };
 		DEFF6D591E6971800004CFE2 /* WQCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CEE1E69717F0004CFE2 /* WQCache.m */; };
 		DEFF6D5A1E6971800004CFE2 /* WQKeyboardAdjustHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CF11E69717F0004CFE2 /* WQKeyboardAdjustHelp.m */; };
 		DEFF6D5B1E6971800004CFE2 /* WQVoiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CF41E69717F0004CFE2 /* WQVoiceTool.m */; };
-		DEFF6D5C1E6971800004CFE2 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CF81E69717F0004CFE2 /* PlaceholderTextView.m */; };
+		DEFF6D5C1E6971800004CFE2 /* WQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CF81E69717F0004CFE2 /* WQTextView.m */; };
 		DEFF6D5D1E6971800004CFE2 /* WQEdgeTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CFA1E69717F0004CFE2 /* WQEdgeTitleButton.m */; };
-		DEFF6D5E1E6971800004CFE2 /* WQAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CFE1E69717F0004CFE2 /* WQAlertViewController.m */; };
-		DEFF6D5F1E6971800004CFE2 /* BannerLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D011E69717F0004CFE2 /* BannerLoopView.m */; };
+		DEFF6D5E1E6971800004CFE2 /* WQAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CFE1E69717F0004CFE2 /* WQAlertController.m */; };
+		DEFF6D5F1E6971800004CFE2 /* WQBannerLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D011E69717F0004CFE2 /* WQBannerLoopView.m */; };
 		DEFF6D601E6971800004CFE2 /* ClendarDayUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D041E69717F0004CFE2 /* ClendarDayUnit.m */; };
 		DEFF6D611E6971800004CFE2 /* ClendarUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D061E69717F0004CFE2 /* ClendarUnit.m */; };
 		DEFF6D621E6971800004CFE2 /* WQClendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D081E69717F0004CFE2 /* WQClendarView.m */; };
@@ -78,9 +75,9 @@
 		DEFF6D681E6971800004CFE2 /* WQTagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D151E69717F0004CFE2 /* WQTagCollectionViewCell.m */; };
 		DEFF6D691E6971800004CFE2 /* WQTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6D161E69717F0004CFE2 /* WQTagCollectionViewCell.xib */; };
 		DEFF6D6A1E6971800004CFE2 /* WQTagsFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D181E69717F0004CFE2 /* WQTagsFlowLayout.m */; };
-		DEFF6D6B1E6971800004CFE2 /* SelectPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D1B1E69717F0004CFE2 /* SelectPhotoViewController.m */; };
-		DEFF6D6C1E6971800004CFE2 /* SelectedTimeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D1E1E69717F0004CFE2 /* SelectedTimeViewCell.m */; };
-		DEFF6D6D1E6971800004CFE2 /* SelectTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D201E69717F0004CFE2 /* SelectTimeView.m */; };
+		DEFF6D6B1E6971800004CFE2 /* WQSelectPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D1B1E69717F0004CFE2 /* WQSelectPhotoViewController.m */; };
+		DEFF6D6C1E6971800004CFE2 /* WQSelectOptionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D1E1E69717F0004CFE2 /* WQSelectOptionsCell.m */; };
+		DEFF6D6D1E6971800004CFE2 /* WQSelecOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D201E69717F0004CFE2 /* WQSelecOptionsView.m */; };
 		DEFF6D6E1E6971800004CFE2 /* ShareActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D231E69717F0004CFE2 /* ShareActionCell.m */; };
 		DEFF6D6F1E6971800004CFE2 /* ShareActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6D241E69717F0004CFE2 /* ShareActionCell.xib */; };
 		DEFF6D701E6971800004CFE2 /* ShareActionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D261E69717F0004CFE2 /* ShareActionItem.m */; };
@@ -89,8 +86,8 @@
 		DEFF6D731E6971800004CFE2 /* MainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D2D1E6971800004CFE2 /* MainNavController.m */; };
 		DEFF6D741E6971800004CFE2 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D2F1E6971800004CFE2 /* MainTabBarController.m */; };
 		DEFF6D751E6971800004CFE2 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D311E6971800004CFE2 /* MenuViewController.m */; };
-		DEFF6D761E6971800004CFE2 /* StarLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D341E6971800004CFE2 /* StarLevel.m */; };
-		DEFF6D771E6971800004CFE2 /* ViewControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D371E6971800004CFE2 /* ViewControllerTransition.m */; };
+		DEFF6D761E6971800004CFE2 /* WQStarLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D341E6971800004CFE2 /* WQStarLevel.m */; };
+		DEFF6D771E6971800004CFE2 /* WQControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D371E6971800004CFE2 /* WQControllerTransition.m */; };
 		DEFF6D781E6971800004CFE2 /* GYChangeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D3A1E6971800004CFE2 /* GYChangeTextView.m */; };
 /* End PBXBuildFile section */
 
@@ -164,14 +161,10 @@
 		DEFF6CAB1E69717F0004CFE2 /* ZHAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAnimationView.m; sourceTree = "<group>"; };
 		DEFF6CAE1E69717F0004CFE2 /* NSDate+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Format.h"; sourceTree = "<group>"; };
 		DEFF6CAF1E69717F0004CFE2 /* NSDate+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Format.m"; sourceTree = "<group>"; };
-		DEFF6CB01E69717F0004CFE2 /* NSDate+FormatStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FormatStringExtension.h"; sourceTree = "<group>"; };
-		DEFF6CB11E69717F0004CFE2 /* NSDate+FormatStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FormatStringExtension.m"; sourceTree = "<group>"; };
 		DEFF6CB21E69717F0004CFE2 /* NSFileManager+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Path.h"; sourceTree = "<group>"; };
 		DEFF6CB31E69717F0004CFE2 /* NSFileManager+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Path.m"; sourceTree = "<group>"; };
 		DEFF6CB41E69717F0004CFE2 /* NSString+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Date.h"; sourceTree = "<group>"; };
 		DEFF6CB51E69717F0004CFE2 /* NSString+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Date.m"; sourceTree = "<group>"; };
-		DEFF6CB61E69717F0004CFE2 /* NSString+DateFormatExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DateFormatExtension.h"; sourceTree = "<group>"; };
-		DEFF6CB71E69717F0004CFE2 /* NSString+DateFormatExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DateFormatExtension.m"; sourceTree = "<group>"; };
 		DEFF6CB81E69717F0004CFE2 /* NSString+Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Help.h"; sourceTree = "<group>"; };
 		DEFF6CB91E69717F0004CFE2 /* NSString+Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Help.m"; sourceTree = "<group>"; };
 		DEFF6CBA1E69717F0004CFE2 /* UIGestureRecognizer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Block.h"; sourceTree = "<group>"; };
@@ -180,8 +173,6 @@
 		DEFF6CBE1E69717F0004CFE2 /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
 		DEFF6CBF1E69717F0004CFE2 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		DEFF6CC01E69717F0004CFE2 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
-		DEFF6CC11E69717F0004CFE2 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		DEFF6CC21E69717F0004CFE2 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		DEFF6CC51E69717F0004CFE2 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		DEFF6CC61E69717F0004CFE2 /* WQConstans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQConstans.h; sourceTree = "<group>"; };
 		DEFF6CD31E69717F0004CFE2 /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
@@ -193,14 +184,14 @@
 		DEFF6CD91E69717F0004CFE2 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
 		DEFF6CDA1E69717F0004CFE2 /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
 		DEFF6CDC1E69717F0004CFE2 /* TabbbarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabbbarController.storyboard; sourceTree = "<group>"; };
-		DEFF6CDF1E69717F0004CFE2 /* NSCoderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoderObject.h; sourceTree = "<group>"; };
-		DEFF6CE01E69717F0004CFE2 /* NSCoderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCoderObject.m; sourceTree = "<group>"; };
+		DEFF6CDF1E69717F0004CFE2 /* WQCoderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCoderObject.h; sourceTree = "<group>"; };
+		DEFF6CE01E69717F0004CFE2 /* WQCoderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCoderObject.m; sourceTree = "<group>"; };
 		DEFF6CE11E69717F0004CFE2 /* WQError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQError.h; sourceTree = "<group>"; };
 		DEFF6CE21E69717F0004CFE2 /* WQError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQError.m; sourceTree = "<group>"; };
 		DEFF6CE41E69717F0004CFE2 /* APPHELP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPHELP.h; sourceTree = "<group>"; };
 		DEFF6CE51E69717F0004CFE2 /* APPHELP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPHELP.m; sourceTree = "<group>"; };
-		DEFF6CE61E69717F0004CFE2 /* BroserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroserController.h; sourceTree = "<group>"; };
-		DEFF6CE71E69717F0004CFE2 /* BroserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BroserController.m; sourceTree = "<group>"; };
+		DEFF6CE61E69717F0004CFE2 /* WQBroserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBroserController.h; sourceTree = "<group>"; };
+		DEFF6CE71E69717F0004CFE2 /* WQBroserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQBroserController.m; sourceTree = "<group>"; };
 		DEFF6CE81E69717F0004CFE2 /* BroserController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BroserController.xib; sourceTree = "<group>"; };
 		DEFF6CE91E69717F0004CFE2 /* RuntimeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeKit.h; sourceTree = "<group>"; };
 		DEFF6CEA1E69717F0004CFE2 /* RuntimeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeKit.m; sourceTree = "<group>"; };
@@ -212,14 +203,14 @@
 		DEFF6CF11E69717F0004CFE2 /* WQKeyboardAdjustHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQKeyboardAdjustHelp.m; sourceTree = "<group>"; };
 		DEFF6CF31E69717F0004CFE2 /* WQVoiceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQVoiceTool.h; sourceTree = "<group>"; };
 		DEFF6CF41E69717F0004CFE2 /* WQVoiceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQVoiceTool.m; sourceTree = "<group>"; };
-		DEFF6CF71E69717F0004CFE2 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
-		DEFF6CF81E69717F0004CFE2 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
+		DEFF6CF71E69717F0004CFE2 /* WQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTextView.h; sourceTree = "<group>"; };
+		DEFF6CF81E69717F0004CFE2 /* WQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTextView.m; sourceTree = "<group>"; };
 		DEFF6CF91E69717F0004CFE2 /* WQEdgeTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQEdgeTitleButton.h; sourceTree = "<group>"; };
 		DEFF6CFA1E69717F0004CFE2 /* WQEdgeTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQEdgeTitleButton.m; sourceTree = "<group>"; };
-		DEFF6CFD1E69717F0004CFE2 /* WQAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAlertViewController.h; sourceTree = "<group>"; };
-		DEFF6CFE1E69717F0004CFE2 /* WQAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAlertViewController.m; sourceTree = "<group>"; };
-		DEFF6D001E69717F0004CFE2 /* BannerLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerLoopView.h; sourceTree = "<group>"; };
-		DEFF6D011E69717F0004CFE2 /* BannerLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerLoopView.m; sourceTree = "<group>"; };
+		DEFF6CFD1E69717F0004CFE2 /* WQAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAlertController.h; sourceTree = "<group>"; };
+		DEFF6CFE1E69717F0004CFE2 /* WQAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAlertController.m; sourceTree = "<group>"; };
+		DEFF6D001E69717F0004CFE2 /* WQBannerLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBannerLoopView.h; sourceTree = "<group>"; };
+		DEFF6D011E69717F0004CFE2 /* WQBannerLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQBannerLoopView.m; sourceTree = "<group>"; };
 		DEFF6D031E69717F0004CFE2 /* ClendarDayUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClendarDayUnit.h; sourceTree = "<group>"; };
 		DEFF6D041E69717F0004CFE2 /* ClendarDayUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClendarDayUnit.m; sourceTree = "<group>"; };
 		DEFF6D051E69717F0004CFE2 /* ClendarUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClendarUnit.h; sourceTree = "<group>"; };
@@ -240,12 +231,12 @@
 		DEFF6D161E69717F0004CFE2 /* WQTagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WQTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		DEFF6D171E69717F0004CFE2 /* WQTagsFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTagsFlowLayout.h; sourceTree = "<group>"; };
 		DEFF6D181E69717F0004CFE2 /* WQTagsFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTagsFlowLayout.m; sourceTree = "<group>"; };
-		DEFF6D1A1E69717F0004CFE2 /* SelectPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPhotoViewController.h; sourceTree = "<group>"; };
-		DEFF6D1B1E69717F0004CFE2 /* SelectPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPhotoViewController.m; sourceTree = "<group>"; };
-		DEFF6D1D1E69717F0004CFE2 /* SelectedTimeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedTimeViewCell.h; sourceTree = "<group>"; };
-		DEFF6D1E1E69717F0004CFE2 /* SelectedTimeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedTimeViewCell.m; sourceTree = "<group>"; };
-		DEFF6D1F1E69717F0004CFE2 /* SelectTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTimeView.h; sourceTree = "<group>"; };
-		DEFF6D201E69717F0004CFE2 /* SelectTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTimeView.m; sourceTree = "<group>"; };
+		DEFF6D1A1E69717F0004CFE2 /* WQSelectPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQSelectPhotoViewController.h; sourceTree = "<group>"; };
+		DEFF6D1B1E69717F0004CFE2 /* WQSelectPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQSelectPhotoViewController.m; sourceTree = "<group>"; };
+		DEFF6D1D1E69717F0004CFE2 /* WQSelectOptionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQSelectOptionsCell.h; sourceTree = "<group>"; };
+		DEFF6D1E1E69717F0004CFE2 /* WQSelectOptionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQSelectOptionsCell.m; sourceTree = "<group>"; };
+		DEFF6D1F1E69717F0004CFE2 /* WQSelecOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQSelecOptionsView.h; sourceTree = "<group>"; };
+		DEFF6D201E69717F0004CFE2 /* WQSelecOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQSelecOptionsView.m; sourceTree = "<group>"; };
 		DEFF6D221E69717F0004CFE2 /* ShareActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareActionCell.h; sourceTree = "<group>"; };
 		DEFF6D231E69717F0004CFE2 /* ShareActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareActionCell.m; sourceTree = "<group>"; };
 		DEFF6D241E69717F0004CFE2 /* ShareActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareActionCell.xib; sourceTree = "<group>"; };
@@ -261,10 +252,10 @@
 		DEFF6D2F1E6971800004CFE2 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		DEFF6D301E6971800004CFE2 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		DEFF6D311E6971800004CFE2 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		DEFF6D331E6971800004CFE2 /* StarLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarLevel.h; sourceTree = "<group>"; };
-		DEFF6D341E6971800004CFE2 /* StarLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarLevel.m; sourceTree = "<group>"; };
-		DEFF6D361E6971800004CFE2 /* ViewControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTransition.h; sourceTree = "<group>"; };
-		DEFF6D371E6971800004CFE2 /* ViewControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTransition.m; sourceTree = "<group>"; };
+		DEFF6D331E6971800004CFE2 /* WQStarLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStarLevel.h; sourceTree = "<group>"; };
+		DEFF6D341E6971800004CFE2 /* WQStarLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStarLevel.m; sourceTree = "<group>"; };
+		DEFF6D361E6971800004CFE2 /* WQControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQControllerTransition.h; sourceTree = "<group>"; };
+		DEFF6D371E6971800004CFE2 /* WQControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQControllerTransition.m; sourceTree = "<group>"; };
 		DEFF6D391E6971800004CFE2 /* GYChangeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYChangeTextView.h; sourceTree = "<group>"; };
 		DEFF6D3A1E6971800004CFE2 /* GYChangeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYChangeTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -450,14 +441,10 @@
 			children = (
 				DEFF6CAE1E69717F0004CFE2 /* NSDate+Format.h */,
 				DEFF6CAF1E69717F0004CFE2 /* NSDate+Format.m */,
-				DEFF6CB01E69717F0004CFE2 /* NSDate+FormatStringExtension.h */,
-				DEFF6CB11E69717F0004CFE2 /* NSDate+FormatStringExtension.m */,
 				DEFF6CB21E69717F0004CFE2 /* NSFileManager+Path.h */,
 				DEFF6CB31E69717F0004CFE2 /* NSFileManager+Path.m */,
 				DEFF6CB41E69717F0004CFE2 /* NSString+Date.h */,
 				DEFF6CB51E69717F0004CFE2 /* NSString+Date.m */,
-				DEFF6CB61E69717F0004CFE2 /* NSString+DateFormatExtension.h */,
-				DEFF6CB71E69717F0004CFE2 /* NSString+DateFormatExtension.m */,
 				DEFF6CB81E69717F0004CFE2 /* NSString+Help.h */,
 				DEFF6CB91E69717F0004CFE2 /* NSString+Help.m */,
 				DEFF6CBA1E69717F0004CFE2 /* UIGestureRecognizer+Block.h */,
@@ -473,8 +460,6 @@
 				DEFF6CBE1E69717F0004CFE2 /* UIButton+countDown.m */,
 				DEFF6CBF1E69717F0004CFE2 /* UIImage+Extension.h */,
 				DEFF6CC01E69717F0004CFE2 /* UIImage+Extension.m */,
-				DEFF6CC11E69717F0004CFE2 /* UIView+Extension.h */,
-				DEFF6CC21E69717F0004CFE2 /* UIView+Extension.m */,
 			);
 			path = Category_UIKit;
 			sourceTree = "<group>";
@@ -542,8 +527,8 @@
 		DEFF6CDE1E69717F0004CFE2 /* BasicFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6CDF1E69717F0004CFE2 /* NSCoderObject.h */,
-				DEFF6CE01E69717F0004CFE2 /* NSCoderObject.m */,
+				DEFF6CDF1E69717F0004CFE2 /* WQCoderObject.h */,
+				DEFF6CE01E69717F0004CFE2 /* WQCoderObject.m */,
 				DEFF6CE11E69717F0004CFE2 /* WQError.h */,
 				DEFF6CE21E69717F0004CFE2 /* WQError.m */,
 			);
@@ -555,8 +540,8 @@
 			children = (
 				DEFF6CE41E69717F0004CFE2 /* APPHELP.h */,
 				DEFF6CE51E69717F0004CFE2 /* APPHELP.m */,
-				DEFF6CE61E69717F0004CFE2 /* BroserController.h */,
-				DEFF6CE71E69717F0004CFE2 /* BroserController.m */,
+				DEFF6CE61E69717F0004CFE2 /* WQBroserController.h */,
+				DEFF6CE71E69717F0004CFE2 /* WQBroserController.m */,
 				DEFF6CE81E69717F0004CFE2 /* BroserController.xib */,
 				DEFF6CE91E69717F0004CFE2 /* RuntimeKit.h */,
 				DEFF6CEA1E69717F0004CFE2 /* RuntimeKit.m */,
@@ -597,8 +582,8 @@
 		DEFF6CF61E69717F0004CFE2 /* ViewCustom */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6CF71E69717F0004CFE2 /* PlaceholderTextView.h */,
-				DEFF6CF81E69717F0004CFE2 /* PlaceholderTextView.m */,
+				DEFF6CF71E69717F0004CFE2 /* WQTextView.h */,
+				DEFF6CF81E69717F0004CFE2 /* WQTextView.m */,
 				DEFF6CF91E69717F0004CFE2 /* WQEdgeTitleButton.h */,
 				DEFF6CFA1E69717F0004CFE2 /* WQEdgeTitleButton.m */,
 			);
@@ -627,8 +612,8 @@
 		DEFF6CFC1E69717F0004CFE2 /* AlertUI */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6CFD1E69717F0004CFE2 /* WQAlertViewController.h */,
-				DEFF6CFE1E69717F0004CFE2 /* WQAlertViewController.m */,
+				DEFF6CFD1E69717F0004CFE2 /* WQAlertController.h */,
+				DEFF6CFE1E69717F0004CFE2 /* WQAlertController.m */,
 			);
 			path = AlertUI;
 			sourceTree = "<group>";
@@ -636,8 +621,8 @@
 		DEFF6CFF1E69717F0004CFE2 /* BannerLoop */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6D001E69717F0004CFE2 /* BannerLoopView.h */,
-				DEFF6D011E69717F0004CFE2 /* BannerLoopView.m */,
+				DEFF6D001E69717F0004CFE2 /* WQBannerLoopView.h */,
+				DEFF6D011E69717F0004CFE2 /* WQBannerLoopView.m */,
 			);
 			path = BannerLoop;
 			sourceTree = "<group>";
@@ -686,8 +671,8 @@
 		DEFF6D191E69717F0004CFE2 /* PhotoUI */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6D1A1E69717F0004CFE2 /* SelectPhotoViewController.h */,
-				DEFF6D1B1E69717F0004CFE2 /* SelectPhotoViewController.m */,
+				DEFF6D1A1E69717F0004CFE2 /* WQSelectPhotoViewController.h */,
+				DEFF6D1B1E69717F0004CFE2 /* WQSelectPhotoViewController.m */,
 			);
 			path = PhotoUI;
 			sourceTree = "<group>";
@@ -695,10 +680,10 @@
 		DEFF6D1C1E69717F0004CFE2 /* PopSelectionsUI */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6D1D1E69717F0004CFE2 /* SelectedTimeViewCell.h */,
-				DEFF6D1E1E69717F0004CFE2 /* SelectedTimeViewCell.m */,
-				DEFF6D1F1E69717F0004CFE2 /* SelectTimeView.h */,
-				DEFF6D201E69717F0004CFE2 /* SelectTimeView.m */,
+				DEFF6D1D1E69717F0004CFE2 /* WQSelectOptionsCell.h */,
+				DEFF6D1E1E69717F0004CFE2 /* WQSelectOptionsCell.m */,
+				DEFF6D1F1E69717F0004CFE2 /* WQSelecOptionsView.h */,
+				DEFF6D201E69717F0004CFE2 /* WQSelecOptionsView.m */,
 			);
 			path = PopSelectionsUI;
 			sourceTree = "<group>";
@@ -735,8 +720,8 @@
 		DEFF6D321E6971800004CFE2 /* StarUI */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6D331E6971800004CFE2 /* StarLevel.h */,
-				DEFF6D341E6971800004CFE2 /* StarLevel.m */,
+				DEFF6D331E6971800004CFE2 /* WQStarLevel.h */,
+				DEFF6D341E6971800004CFE2 /* WQStarLevel.m */,
 			);
 			path = StarUI;
 			sourceTree = "<group>";
@@ -744,8 +729,8 @@
 		DEFF6D351E6971800004CFE2 /* UIViewControllerTransition */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6D361E6971800004CFE2 /* ViewControllerTransition.h */,
-				DEFF6D371E6971800004CFE2 /* ViewControllerTransition.m */,
+				DEFF6D361E6971800004CFE2 /* WQControllerTransition.h */,
+				DEFF6D371E6971800004CFE2 /* WQControllerTransition.m */,
 			);
 			path = UIViewControllerTransition;
 			sourceTree = "<group>";
@@ -914,19 +899,17 @@
 				DEFF6D411E6971800004CFE2 /* NSString+Help.m in Sources */,
 				DEFF6D631E6971800004CFE2 /* ExamineCell.m in Sources */,
 				DEFF6D741E6971800004CFE2 /* MainTabBarController.m in Sources */,
-				DEFF6D5E1E6971800004CFE2 /* WQAlertViewController.m in Sources */,
+				DEFF6D5E1E6971800004CFE2 /* WQAlertController.m in Sources */,
 				DEFF6D431E6971800004CFE2 /* UIButton+countDown.m in Sources */,
 				DEC00AFB1DB8BBC000A516A1 /* ViewController.m in Sources */,
 				DEFF6D661E6971800004CFE2 /* GuDExamineDataViewController.m in Sources */,
 				DEFF6D611E6971800004CFE2 /* ClendarUnit.m in Sources */,
-				DEFF6D761E6971800004CFE2 /* StarLevel.m in Sources */,
+				DEFF6D761E6971800004CFE2 /* WQStarLevel.m in Sources */,
 				DEFF6D581E6971800004CFE2 /* WQAppInfo.m in Sources */,
 				DEFF6D6A1E6971800004CFE2 /* WQTagsFlowLayout.m in Sources */,
-				DEFF6D521E6971800004CFE2 /* NSCoderObject.m in Sources */,
-				DEFF6D5C1E6971800004CFE2 /* PlaceholderTextView.m in Sources */,
+				DEFF6D521E6971800004CFE2 /* WQCoderObject.m in Sources */,
+				DEFF6D5C1E6971800004CFE2 /* WQTextView.m in Sources */,
 				DE8537791DE0043800654C4D /* WQClanderViewController.m in Sources */,
-				DEFF6D401E6971800004CFE2 /* NSString+DateFormatExtension.m in Sources */,
-				DEFF6D3D1E6971800004CFE2 /* NSDate+FormatStringExtension.m in Sources */,
 				DE5C94D21DE6B8BC00EFA20F /* WQSelectedTagsViewController.m in Sources */,
 				DEFF6D5D1E6971800004CFE2 /* WQEdgeTitleButton.m in Sources */,
 				DE55FF471DBA08EB0014C758 /* VerticalScrollTextViewController.m in Sources */,
@@ -940,9 +923,9 @@
 				DEFF6D781E6971800004CFE2 /* GYChangeTextView.m in Sources */,
 				DE71DF9C1E6672C50061E374 /* WQKeyboardHandleViewController.m in Sources */,
 				DEFF6D591E6971800004CFE2 /* WQCache.m in Sources */,
-				DEFF6D5F1E6971800004CFE2 /* BannerLoopView.m in Sources */,
+				DEFF6D5F1E6971800004CFE2 /* WQBannerLoopView.m in Sources */,
 				DEFF6D6E1E6971800004CFE2 /* ShareActionCell.m in Sources */,
-				DEFF6D6D1E6971800004CFE2 /* SelectTimeView.m in Sources */,
+				DEFF6D6D1E6971800004CFE2 /* WQSelecOptionsView.m in Sources */,
 				DEFF6D701E6971800004CFE2 /* ShareActionItem.m in Sources */,
 				DEFF6D3B1E6971800004CFE2 /* ZHAnimationView.m in Sources */,
 				DEC00AF81DB8BBC000A516A1 /* AppDelegate.m in Sources */,
@@ -953,10 +936,9 @@
 				DEFF6D3F1E6971800004CFE2 /* NSString+Date.m in Sources */,
 				DEFF6D601E6971800004CFE2 /* ClendarDayUnit.m in Sources */,
 				DEC00B4B1DB8CA7400A516A1 /* DropDownViewController.m in Sources */,
-				DEFF6D771E6971800004CFE2 /* ViewControllerTransition.m in Sources */,
+				DEFF6D771E6971800004CFE2 /* WQControllerTransition.m in Sources */,
 				DEFF6D731E6971800004CFE2 /* MainNavController.m in Sources */,
-				DEFF6D451E6971800004CFE2 /* UIView+Extension.m in Sources */,
-				DEFF6D6B1E6971800004CFE2 /* SelectPhotoViewController.m in Sources */,
+				DEFF6D6B1E6971800004CFE2 /* WQSelectPhotoViewController.m in Sources */,
 				DEFF6D421E6971800004CFE2 /* UIGestureRecognizer+Block.m in Sources */,
 				DEC00AF51DB8BBC000A516A1 /* main.m in Sources */,
 				DEFF6D681E6971800004CFE2 /* WQTagCollectionViewCell.m in Sources */,
@@ -969,9 +951,9 @@
 				DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */,
 				DEFF6D671E6971800004CFE2 /* GuDExamineViewController.m in Sources */,
 				DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */,
-				DEFF6D6C1E6971800004CFE2 /* SelectedTimeViewCell.m in Sources */,
+				DEFF6D6C1E6971800004CFE2 /* WQSelectOptionsCell.m in Sources */,
 				DE8537841DE0602400654C4D /* ReplicatorViewController.m in Sources */,
-				DEFF6D551E6971800004CFE2 /* BroserController.m in Sources */,
+				DEFF6D551E6971800004CFE2 /* WQBroserController.m in Sources */,
 				DEAFF1F71DDF142200CF8116 /* WQTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

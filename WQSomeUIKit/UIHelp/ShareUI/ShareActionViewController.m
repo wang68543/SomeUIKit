@@ -8,7 +8,7 @@
 
 #import "ShareActionViewController.h"
 #import "ShareActionCell.h"
-#import "ViewControllerTransition.h"
+#import "WQControllerTransition.h"
 #import "WQConstans.h"
 #import "APPHELP.h"
 
@@ -17,7 +17,7 @@
 @property (strong ,nonatomic) UICollectionView *collectionView;
 //@property (assign ,nonatomic) CGFloat shareItemH;
 @property (strong ,nonatomic) NSArray *datas;
-@property (strong ,nonatomic) ViewControllerTransition *botomTransition;
+@property (strong ,nonatomic) WQControllerTransition *botomTransition;
 
 @end
 @implementation ShareActionViewController
@@ -58,9 +58,9 @@ static NSString *const CellID = @"shareCell";
     }
     return _collectionView;
 }
--(ViewControllerTransition *)botomTransition{
+-(WQControllerTransition *)botomTransition{
     if(!_botomTransition){
-        _botomTransition = [ViewControllerTransition transitionWithAnimatedView:self.collectionView];
+        _botomTransition = [WQControllerTransition transitionWithAnimatedView:self.collectionView];
     }
     return _botomTransition;
 }
