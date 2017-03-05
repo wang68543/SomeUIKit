@@ -10,8 +10,8 @@
 		DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE056BAA1DCD760F00E16D15 /* DateSelectViewController.m */; };
 		DE056BAD1DCD760F00E16D15 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE056BAB1DCD760F00E16D15 /* DateSelectViewController.xib */; };
 		DE1686031E6AC84F00442791 /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1685FC1E6AC84F00442791 /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DE1686041E6AC84F00442791 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1686011E6AC84F00442791 /* libopencore-amrnb.a */; };
-		DE1686051E6AC84F00442791 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1686021E6AC84F00442791 /* libopencore-amrwb.a */; };
+		DE16860B1E6C546E00442791 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1686091E6C546D00442791 /* libopencore-amrnb.a */; };
+		DE16860C1E6C546E00442791 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE16860A1E6C546D00442791 /* libopencore-amrwb.a */; };
 		DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE55FF3B1DB9A48C0014C758 /* StarViewController.m */; };
 		DE55FF3E1DB9A48C0014C758 /* StarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE55FF3C1DB9A48C0014C758 /* StarViewController.xib */; };
 		DE55FF471DBA08EB0014C758 /* VerticalScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE55FF461DBA08EB0014C758 /* VerticalScrollTextViewController.m */; };
@@ -121,8 +121,8 @@
 		DE1685FE1E6AC84F00442791 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
 		DE1685FF1E6AC84F00442791 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
 		DE1686001E6AC84F00442791 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		DE1686011E6AC84F00442791 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		DE1686021E6AC84F00442791 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		DE1686091E6C546D00442791 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		DE16860A1E6C546D00442791 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		DE55FF3A1DB9A48C0014C758 /* StarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarViewController.h; sourceTree = "<group>"; };
 		DE55FF3B1DB9A48C0014C758 /* StarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarViewController.m; sourceTree = "<group>"; };
 		DE55FF3C1DB9A48C0014C758 /* StarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarViewController.xib; sourceTree = "<group>"; };
@@ -276,8 +276,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE1686051E6AC84F00442791 /* libopencore-amrwb.a in Frameworks */,
-				DE1686041E6AC84F00442791 /* libopencore-amrnb.a in Frameworks */,
+				DE16860C1E6C546E00442791 /* libopencore-amrwb.a in Frameworks */,
+				DE16860B1E6C546E00442791 /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +301,14 @@
 		DE1685FA1E6AC84F00442791 /* amrwapper */ = {
 			isa = PBXGroup;
 			children = (
+				DE1686091E6C546D00442791 /* libopencore-amrnb.a */,
+				DE16860A1E6C546D00442791 /* libopencore-amrwb.a */,
 				DE1685FB1E6AC84F00442791 /* amrFileCodec.h */,
 				DE1685FC1E6AC84F00442791 /* amrFileCodec.m */,
 				DE1685FD1E6AC84F00442791 /* dec_if.h */,
 				DE1685FE1E6AC84F00442791 /* if_rom.h */,
 				DE1685FF1E6AC84F00442791 /* interf_dec.h */,
 				DE1686001E6AC84F00442791 /* interf_enc.h */,
-				DE1686011E6AC84F00442791 /* libopencore-amrnb.a */,
-				DE1686021E6AC84F00442791 /* libopencore-amrwb.a */,
 			);
 			path = amrwapper;
 			sourceTree = "<group>";

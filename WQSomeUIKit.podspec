@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Usual collection"
 
   # This description is used to generate tags and improve search results.
@@ -92,6 +92,7 @@ Pod::Spec.new do |s|
   #
 # "WQSomeUIKit", 
   s.source_files  = "WQSomeUIKit/**/**/*.{h,m}"
+  s.vendored_libraries = "WQSomeUIKit/Resources/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Resources/amrwapper/libopencore-amrwb.a"
   # spec.resources = ["Pod/Assets/*.storyboard"] 
   # s.exclude_files = "Classes/Exclude"
 
@@ -107,7 +108,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  # s.resources = "WQSomeUIKit/**/**/*.a"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -134,7 +135,7 @@ Pod::Spec.new do |s|
   
   non_arc_files = 'WQSomeUIKit/Resources/amrwapper/amrFileCodec.{h,m}'
    s.requires_arc = true
-   s.exclude_files = non_arc_files
+   # s.exclude_files = non_arc_files
    s.subspec 'no-arc' do |sna|
    sna.requires_arc = false
    sna.source_files = non_arc_files
