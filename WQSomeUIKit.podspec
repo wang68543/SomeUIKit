@@ -132,13 +132,13 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   
-  # non_arc_files = 'WQSomeUIKit/Resources/amrwapper/amrFileCodec.{h,m}'
+  non_arc_files = 'WQSomeUIKit/Resources/amrwapper/amrFileCodec.{h,m}'
    s.requires_arc = true
-  #  s.exclude_files = non_arc_files
-  #  s.subspec 'no-arc' do |sna|
-  #  sna.requires_arc = false
-  #  sna.source_files = non_arc_files
-  #  end
+   s.exclude_files = non_arc_files
+   s.subspec 'no-arc' do |sna|
+   sna.requires_arc = false
+   sna.source_files = non_arc_files
+   end
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 

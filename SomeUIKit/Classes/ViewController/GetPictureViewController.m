@@ -8,7 +8,7 @@
 
 #import "GetPictureViewController.h"
 #import "WQSelectPhotoViewController.h"
-#import "ShareActionViewController.h"
+#import "WQShareActionViewController.h"
 
 @interface GetPictureViewController ()<PhotoSelectedViewControllerDelegate,ShareActionDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -32,7 +32,7 @@
     [photoView showInController:self];
 }
 - (IBAction)ShareUI:(UIButton *)sender {
-    ShareActionViewController *photoView = [[ShareActionViewController alloc] init];
+    WQShareActionViewController *photoView = [[WQShareActionViewController alloc] init];
     photoView.delegate = self;
     [photoView showInController:self];
     
@@ -98,7 +98,7 @@
     dispatch_source_cancel(_timer);
 }
 #pragma mark -- ShareActionDelegate
--(void)shareActionDidSelected:(ShareActionItem *)item{
+-(void)shareActionDidSelected:(WQShareActionItem *)item{
     NSLog(@"%@",item);
 }
 @end
