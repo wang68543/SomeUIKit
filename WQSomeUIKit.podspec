@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "Usual collection"
 
   # This description is used to generate tags and improve search results.
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #
 # "WQSomeUIKit", 
   s.source_files  = "WQSomeUIKit/**/**/*.{h,m}"
-  s.vendored_libraries = "WQSomeUIKit/Resources/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Resources/amrwapper/libopencore-amrwb.a"
+  # s.vendored_libraries = "WQSomeUIKit/Resources/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Resources/amrwapper/libopencore-amrwb.a"
   # spec.resources = ["Pod/Assets/*.storyboard"] 
   # s.exclude_files = "Classes/Exclude"
 

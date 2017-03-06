@@ -6,8 +6,9 @@
 //  Copyright 2011 test. All rights reserved.
 //
 
-#include "amrFileCodec.h"
-
+#import "amrFileCodec.h"
+#include "interf_dec.h"
+#include "interf_enc.h"
 typedef unsigned long long u64;
 typedef long long s64;
 typedef unsigned int u32;
