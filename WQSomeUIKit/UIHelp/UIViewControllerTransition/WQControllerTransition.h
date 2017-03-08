@@ -21,10 +21,11 @@ typedef NS_ENUM(NSInteger,ShowSuperViewType) {
     ShowSuperViewTypeDefault,
     ShowSuperViewTypePush,
     ShowSuperViewTypePop,
-    ShowSuperViewTypeTabRight,
-    ShowSuperViewTypeTabLeft,
-    ShowSuperViewTypePresentation,
-    ShowSuperViewTypeDismissal,
+    ShowSuperViewTypeTabRight,//用于tabBarController
+    ShowSuperViewTypeTabLeft,//同上
+    ShowSuperViewTypePresentation,//从下往上
+    ShowSuperViewTypeDismissal,//从上往下
+    ShowSuperViewTypeFrameChange,//此类枚举用到了orignalFrame与TargetFrame
 };
 typedef NS_ENUM(NSInteger ,AnimationType) {
     AnimationTypeNormal,
@@ -37,6 +38,8 @@ typedef NS_ENUM(NSInteger ,AnimationType) {
 
 // MARK:-------- 使用此类 必须强引用
 @interface WQControllerTransition : NSObject<UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate>
+/**弹出页面是否是将要显示*/
+@property (assign ,nonatomic,readonly,getter=isPresent) BOOL present;
 
 /**动画时间 默认0.3*/
 @property (assign ,nonatomic) CGFloat duration;
@@ -70,12 +73,12 @@ typedef NS_ENUM(NSInteger ,AnimationType) {
 @property (assign ,nonatomic) CGRect targetFrame;
 
 /**
- 背景View的初始颜色
+ 背景View的初始颜色 //TODO:这里如果不设置在子View动画中默认为clearColor
  */
 @property (nullable,strong ,nonatomic) UIColor *origanlBackColor;
 
 /**
- 背景View动画过后的颜色
+ 背景View动画过后的颜色 //TODO:这里如果不设置在子View动画中选用默认值
  */
 @property (strong ,nonatomic,nullable) UIColor *targetBackColor;
 //******************************************

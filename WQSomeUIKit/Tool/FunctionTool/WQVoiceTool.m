@@ -9,7 +9,7 @@
 #import "WQVoiceTool.h"
 #import <AVFoundation/AVFoundation.h>
 #import "WQCache.h"
-//#import "amrFileCodec.h"
+#import "amrFileCodec.h"
 
 
 @interface WQVoiceTool()<AVAudioPlayerDelegate>
@@ -223,26 +223,26 @@ static id _instace;
 }
 #pragma mark -- /**录音格式转换*/
 -(void)wavData:(NSData *)data toAmr:(void (^)(NSData *))compeletion{
-//    __weak typeof(self) weakSelf = self;
-//    dispatch_block_t block = ^(){
-//         NSData *amrData = [weakSelf wavToAmr:data];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            !compeletion?:compeletion(amrData);
-//        });
-//    };
-//    [self addJobToQueue:block];
+    __weak typeof(self) weakSelf = self;
+    dispatch_block_t block = ^(){
+         NSData *amrData = [weakSelf wavToAmr:data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            !compeletion?:compeletion(amrData);
+        });
+    };
+    [self addJobToQueue:block];
 }
 #pragma mark -- wav与amr相互转换
-//-(NSData *)decodeAmr:(NSData *)data{
-//    if (!data) {
-//        return data;
-//    }
-//    return DecodeAMRToWAVE(data);
-//}
-//-(NSData *)wavToAmr:(NSData *)data{
-//    if(!data) return data;
-//    return  EncodeWAVEToAMR(data,1,16);
-//}
+-(NSData *)decodeAmr:(NSData *)data{
+    if (!data) {
+        return data;
+    }
+    return DecodeAMRToWAVE(data);
+}
+-(NSData *)wavToAmr:(NSData *)data{
+    if(!data) return data;
+    return  EncodeWAVEToAMR(data,1,16);
+}
 
 -(NSError *)errorWithMsg:(NSString *)msg{
    return  [NSError errorWithDomain:NSStringFromClass([self class]) code:-3000 userInfo:@{NSLocalizedDescriptionKey:msg}];

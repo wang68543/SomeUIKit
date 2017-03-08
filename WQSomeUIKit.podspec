@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "Usual collection"
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-# "WQSomeUIKit", 
+# "WQSomeUIKit",  表示源文件的路径，注意这个路径是相对podspec文件而言的。
   s.source_files  = "WQSomeUIKit/**/**/*.{h,m}"
   # s.vendored_libraries = "WQSomeUIKit/Resources/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Resources/amrwapper/libopencore-amrwb.a"
   # spec.resources = ["Pod/Assets/*.storyboard"] 
@@ -121,7 +121,7 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
-
+  s.frameworks = 'Foundation','UIKit' 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
@@ -133,13 +133,16 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   
-  non_arc_files = 'WQSomeUIKit/Resources/amrwapper/amrFileCodec.{h,m}'
+  non_arc_files = 'WQSomeUIKit/Resources/amrwapper/*.{h,m}'
    s.requires_arc = true
-   # s.exclude_files = non_arc_files
+   s.exclude_files = non_arc_files
    s.subspec 'no-arc' do |sna|
    sna.requires_arc = false
    sna.source_files = non_arc_files
+   # sna.resources =
+   sna.vendored_libraries = "WQSomeUIKit/Resources/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Resources/amrwapper/libopencore-amrwb.a"
    end
+   # $(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrwb
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 

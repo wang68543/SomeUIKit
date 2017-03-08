@@ -10,6 +10,8 @@
 @interface WQControllerTransition()<UITabBarControllerDelegate>
 @property (weak ,nonatomic) UIView *animatedView;
 @property (assign ,nonatomic) BOOL interactive;
+
+
 @property (strong ,nonatomic) UIPercentDrivenInteractiveTransition *interactionController;
 @property (weak ,nonatomic) UITabBarController *tabBarController;
 @end
@@ -59,7 +61,7 @@
     [self defaultCommonInit];
 }
 -(void)defaultCommonInit{
-    
+     _present = YES;
 }
 #pragma mark -- ViewController Transitioning Delegate
 // MARK: - UIViewControllerTransitioningDelegate
@@ -103,6 +105,15 @@
     //UIModalPresentationCustom 这种模式下的 Modal 转场结束时 fromView 并未从视图结构中移除 UIModalPresentationFullScreen 模式的 Modal 转场结束后 fromView 依然主动被从视图结构中移除了
     
     //iOS8 协议添加了viewForKey:方法以方便获取 fromView 和 toView，但是在 Modal 转场里要注意，从上面可以知道，Custom 模式下，presentingView 并不受 containerView 管理，这时通过viewForKey:方法来获取 presentingView 得到的是 nil，必须通过viewControllerForKey:得到 presentingVC 后来获取。因此在 Modal 转场中，较稳妥的方法是从 fromVC 和 toVC 中获取 fromView 和 toView。
+    
+    //TODO:viewControllerForKey 获取的两个控制器显示或消失的时候都不为空 viewForKey获取的View只能够获到弹出的View(弹出的时候用UITransitionContextToViewKey获取弹出的View 消失的时候用UITransitionContextFromViewKey获取之前被弹出的View)
+    /**
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    
+    NSLog(@"%@----%@",toViewController,fromViewController);
+    NSLog(@"%@----%@",[transitionContext viewForKey:UITransitionContextToViewKey],[transitionContext viewForKey:UITransitionContextFromViewKey]);
+    */
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
     UIColor *viewBackColor ;
     //    CGAffineTransform  transform;
@@ -111,6 +122,7 @@
     CGRect targetFrame = self.animatedView.frame;
     
     if(toView){//显示动画
+        _present = YES;
         CGRect orignalFrame = self.animatedView.frame;
         UIView *containerView = [transitionContext containerView];
         [containerView addSubview:toView];
@@ -155,6 +167,7 @@
         //        toView.backgroundColor = viewBackColor;
         self.animatedView.frame = orignalFrame;//先摆好要动画的View的位置
     }else{//消失动画
+        _present = NO;
         toView = [transitionContext viewForKey:UITransitionContextFromViewKey];
         
         viewBackColor = self.origanlBackColor?self.origanlBackColor:[UIColor clearColor];
@@ -203,11 +216,38 @@
                 weakSelf.animatedView.frame = targetFrame;
             }
         };
-        [self springAnimation:subViewFrameAnimation damping:0.5 velocity:3.0 transitionContext:transitionContext];
+        if(self.isPresent){
+          [self springAnimation:subViewFrameAnimation damping:0.5 velocity:3.0 transitionContext:transitionContext];
+        }else{
+            [self springAnimation:subViewFrameAnimation damping:0.6 velocity:3.5 transitionContext:transitionContext];
+        }
+        
         
         //        _animationType = AnimationTypeNormal;//这里 暂时设置显示的时候Spring动画  消失的时候回归正常动画 解决 spring消失动画闪现黑屏问题
     }else if(_animationType == AnimationTypeBlipBounce){
-        
+        if(!self.animatedView){
+            [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+           
+        }else{
+            CGRect frame = targetFrame;
+            frame.size.height = 0;
+            frame.origin.y = CGRectGetHeight(toView.frame)*0.5;
+            frame.origin.x = (CGRectGetWidth(toView.frame) - CGRectGetWidth(frame))*0.5;
+            
+            targetFrame.origin.x = frame.origin.x;
+            targetFrame.origin.y = frame.origin.y - CGRectGetHeight(targetFrame)*0.5;
+            self.animatedView.frame = frame;
+            [UIView animateWithDuration:_duration delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:2.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                self.animatedView.frame = targetFrame;
+            } completion:^(BOOL finished) {
+                 [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+            }];
+//            [UIView animateWithDuration:_duration animations:^{
+//                self.animatedView.frame = targetFrame;
+//            } completion:^(BOOL finished) {
+//                [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+//            }];
+        }
     }else{
         dispatch_block_t anmation = ^{
             if(weakSelf.animatedView){
@@ -234,7 +274,6 @@
         if(context)[context completeTransition:![context transitionWasCancelled]];
     }];
 }
-
 /* 过渡效果
  fade     //交叉淡化过渡(不支持过渡方向)
  push     //新视图把旧视图推出去
@@ -395,66 +434,83 @@
     }
 }
 -(void)animationSuperView:(id <UIViewControllerContextTransitioning>)transitionContext{
+ 
     UIView *contanierView = [transitionContext containerView];
-    
-    UIViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    
-    UIView *fromView = fromVc.view;
-    UIView *toView = toVC.view;
-    CGFloat translation = contanierView.frame.size.width;
-    
-    CGAffineTransform toViewTransform = CGAffineTransformIdentity;
-    CGAffineTransform fromViewTransform = CGAffineTransformIdentity;
-    
-    switch (_showSuperViewType) {
-        case ShowSuperViewTypePop:
-            translation = -translation;
-        case ShowSuperViewTypePush:
-            toViewTransform = CGAffineTransformMakeTranslation(translation, 0);
-            fromViewTransform = CGAffineTransformMakeTranslation(-translation, 0);
-            break;
-        case ShowSuperViewTypeTabRight:
-            translation = -translation;
-        case ShowSuperViewTypeTabLeft:
-            
-            toViewTransform = CGAffineTransformMakeTranslation(-translation, 0);
-            fromViewTransform = CGAffineTransformMakeTranslation(translation, 0);
-            
-            break;
-        case ShowSuperViewTypePresentation:
-            translation =  contanierView.frame.size.height;
-            toViewTransform = CGAffineTransformMakeTranslation(0, translation);
-            fromViewTransform = CGAffineTransformMakeTranslation(0, 0);
-            break;
-        case ShowSuperViewTypeDismissal:
-            translation =  contanierView.frame.size.height;
-            toViewTransform = CGAffineTransformMakeTranslation(0, 0);
-            fromViewTransform = CGAffineTransformMakeTranslation(0, translation);
-            break;
-        default:
-            break;
+    UIView *view ;
+    if(self.present){
+        view = [transitionContext viewForKey:UITransitionContextToViewKey];
+    }else{
+       view = [transitionContext viewForKey:UITransitionContextFromViewKey];
     }
-    
-    switch (_showSuperViewType) {
-        case ShowSuperViewTypeDismissal:
-            //在 dismissal 转场中，不要添加 toView，否则黑屏
-            break;
-        default:
-            [contanierView addSubview:toView];
-            break;
+    if(_showSuperViewType != ShowSuperViewTypeFrameChange){
+        CGFloat viewW = view.frame.size.width;
+        CGFloat viewH = view.frame.size.height;
+        CGFloat translationX = 0;
+        CGFloat translationY = 0;
+        switch (_showSuperViewType) {
+            case ShowSuperViewTypeTabLeft:
+            case ShowSuperViewTypePop:
+                translationX = - viewW;
+                break;
+            case ShowSuperViewTypeTabRight:
+            case ShowSuperViewTypePush:
+                translationX = viewW;
+                break;
+            case ShowSuperViewTypePresentation:
+                translationY = viewH;
+                break;
+            case ShowSuperViewTypeDismissal:
+                translationY = -viewH;
+                break;
+            default:
+                break;
+        }
+        
+        CGAffineTransform viewTransform = CGAffineTransformMakeTranslation(translationX, translationY);
+        if(self.isPresent){
+            [contanierView addSubview:view];
+            [CATransaction begin];
+            [CATransaction setDisableActions:YES];
+            view.transform = viewTransform;
+            [CATransaction commit];
+            [UIView animateWithDuration:self.duration animations:^{
+                view.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                _present = NO;
+                [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+            }];
+        }else{
+            [UIView animateWithDuration:self.duration animations:^{
+                view.transform = viewTransform;
+            } completion:^(BOOL finished) {
+                _present = YES;
+                [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+            }];
+        }
+    }else{//TODO: --控制器中间父View转场frame变换
+        if(CGRectIsNull(self.targetFrame))self.targetFrame = view.frame;
+        if(self.isPresent){
+            [CATransaction begin];
+            [CATransaction setDisableActions:YES];
+            view.frame = self.orignalFrame;
+            [CATransaction commit];
+            [contanierView addSubview:view];
+           [UIView animateWithDuration:_duration animations:^{
+               view.frame = self.targetFrame;
+           } completion:^(BOOL finished) {
+               _present = NO;
+              [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+           }];
+        }else{
+            [UIView animateWithDuration:_duration animations:^{
+                view.frame = self.orignalFrame;
+            } completion:^(BOOL finished) {
+                _present = YES;
+                [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+            }];
+        }
     }
-    
-    toView.transform = toViewTransform;
-    
-    [UIView animateWithDuration:self.duration animations:^{
-        fromView.transform = fromViewTransform;
-        toView.transform = CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
-        fromView.transform = CGAffineTransformIdentity;
-        toView.transform = CGAffineTransformIdentity;
-        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-    }];
+
 }
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
     if(_showSuperViewType == ShowSuperViewTypeDefault){

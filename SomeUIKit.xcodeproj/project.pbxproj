@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE056BAA1DCD760F00E16D15 /* DateSelectViewController.m */; };
 		DE056BAD1DCD760F00E16D15 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE056BAB1DCD760F00E16D15 /* DateSelectViewController.xib */; };
+		DE0A4DAB1E6DAF0000281808 /* WQSubTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A4DAA1E6DAF0000281808 /* WQSubTransitionViewController.m */; };
 		DE1686031E6AC84F00442791 /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1685FC1E6AC84F00442791 /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DE16860B1E6C546E00442791 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1686091E6C546D00442791 /* libopencore-amrnb.a */; };
 		DE16860C1E6C546E00442791 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE16860A1E6C546D00442791 /* libopencore-amrwb.a */; };
+		DE49E2B81E6D44DA0040A51A /* WQAnimationTrasitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */; };
 		DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE55FF3B1DB9A48C0014C758 /* StarViewController.m */; };
 		DE55FF3E1DB9A48C0014C758 /* StarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE55FF3C1DB9A48C0014C758 /* StarViewController.xib */; };
 		DE55FF471DBA08EB0014C758 /* VerticalScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE55FF461DBA08EB0014C758 /* VerticalScrollTextViewController.m */; };
@@ -115,6 +117,8 @@
 		DE056BA91DCD760F00E16D15 /* DateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectViewController.h; sourceTree = "<group>"; };
 		DE056BAA1DCD760F00E16D15 /* DateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectViewController.m; sourceTree = "<group>"; };
 		DE056BAB1DCD760F00E16D15 /* DateSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelectViewController.xib; sourceTree = "<group>"; };
+		DE0A4DA91E6DAF0000281808 /* WQSubTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQSubTransitionViewController.h; sourceTree = "<group>"; };
+		DE0A4DAA1E6DAF0000281808 /* WQSubTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQSubTransitionViewController.m; sourceTree = "<group>"; };
 		DE1685FB1E6AC84F00442791 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
 		DE1685FC1E6AC84F00442791 /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
 		DE1685FD1E6AC84F00442791 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		DE1686001E6AC84F00442791 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
 		DE1686091E6C546D00442791 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
 		DE16860A1E6C546D00442791 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		DE49E2B61E6D44DA0040A51A /* WQAnimationTrasitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAnimationTrasitionViewController.h; sourceTree = "<group>"; };
+		DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAnimationTrasitionViewController.m; sourceTree = "<group>"; };
 		DE55FF3A1DB9A48C0014C758 /* StarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarViewController.h; sourceTree = "<group>"; };
 		DE55FF3B1DB9A48C0014C758 /* StarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarViewController.m; sourceTree = "<group>"; };
 		DE55FF3C1DB9A48C0014C758 /* StarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarViewController.xib; sourceTree = "<group>"; };
@@ -420,6 +426,10 @@
 				DE5C94D11DE6B8BC00EFA20F /* WQSelectedTagsViewController.m */,
 				DE71DF9A1E6672C50061E374 /* WQKeyboardHandleViewController.h */,
 				DE71DF9B1E6672C50061E374 /* WQKeyboardHandleViewController.m */,
+				DE49E2B61E6D44DA0040A51A /* WQAnimationTrasitionViewController.h */,
+				DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */,
+				DE0A4DA91E6DAF0000281808 /* WQSubTransitionViewController.h */,
+				DE0A4DAA1E6DAF0000281808 /* WQSubTransitionViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -937,6 +947,7 @@
 				DEFF6D581E6971800004CFE2 /* WQAppInfo.m in Sources */,
 				DEFF6D6A1E6971800004CFE2 /* WQTagsFlowLayout.m in Sources */,
 				DEFF6D521E6971800004CFE2 /* WQCoderObject.m in Sources */,
+				DE49E2B81E6D44DA0040A51A /* WQAnimationTrasitionViewController.m in Sources */,
 				DEFF6D5C1E6971800004CFE2 /* WQTextView.m in Sources */,
 				DE8537791DE0043800654C4D /* WQClanderViewController.m in Sources */,
 				DE5C94D21DE6B8BC00EFA20F /* WQSelectedTagsViewController.m in Sources */,
@@ -956,6 +967,7 @@
 				DEFF6D6E1E6971800004CFE2 /* WQShareActionCell.m in Sources */,
 				DEFF6D6D1E6971800004CFE2 /* WQSelecOptionsView.m in Sources */,
 				DEFF6D701E6971800004CFE2 /* WQShareActionItem.m in Sources */,
+				DE0A4DAB1E6DAF0000281808 /* WQSubTransitionViewController.m in Sources */,
 				DEFF6D3B1E6971800004CFE2 /* ZHAnimationView.m in Sources */,
 				DEC00AF81DB8BBC000A516A1 /* AppDelegate.m in Sources */,
 				DEFE2C691DD22716006BB614 /* WQLoopViewController.m in Sources */,
