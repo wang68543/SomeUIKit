@@ -7,8 +7,6 @@
 //
 
 #import "WQAlertController.h"
-//#import "AlertTitleView.h"
-//#import "AlertBottomView.h"
 #import "WQControllerTransition.h"
 #import "WQConstans.h"
 #import "APPHELP.h"

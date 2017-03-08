@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "Usual collection"
 
   # This description is used to generate tags and improve search results.
@@ -93,10 +93,10 @@ Pod::Spec.new do |s|
 # "WQSomeUIKit",  表示源文件的路径，注意这个路径是相对podspec文件而言的。
   s.source_files  = "WQSomeUIKit/**/**/*.{h,m}"
   # s.vendored_libraries = "WQSomeUIKit/Resources/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Resources/amrwapper/libopencore-amrwb.a"
-  # spec.resources = ["Pod/Assets/*.storyboard"] 
+  s.resources = ["WQSomeUIKit/Resources/Sb/*.storyboard"] 
   # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "WQSomeUIKit/Gloable/Header/WQSomeUIKit.h"
+  # s.public_header_files = 'WQSomeUIKit/Gloable/Header/*.h'
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -136,7 +136,7 @@ Pod::Spec.new do |s|
   non_arc_files = 'WQSomeUIKit/Resources/amrwapper/*.{h,m}'
    s.requires_arc = true
    s.exclude_files = non_arc_files
-   s.subspec 'no-arc' do |sna|
+   s.subspec 'WavAmrHelp' do |sna|
    sna.requires_arc = false
    sna.source_files = non_arc_files
    # sna.resources =
