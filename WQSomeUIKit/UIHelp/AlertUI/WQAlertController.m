@@ -8,8 +8,10 @@
 
 #import "WQAlertController.h"
 #import "WQControllerTransition.h"
-#import "WQConstans.h"
+//#import "WQConstans.h"
 #import "APPHELP.h"
+#define APP_WIGHT [[UIScreen mainScreen] bounds].size.width
+#define APP_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
 #pragma mark ============BottomView=================
 @implementation AlertBottomView
@@ -25,7 +27,7 @@
         if(confirmTitle){
             UIButton *confirm = [[UIButton alloc] init];
             [confirm setTitle:confirmTitle forState:UIControlStateNormal];
-            confirm.titleLabel.font = MYFont(17.0);
+            confirm.titleLabel.font = [UIFont systemFontOfSize:17.0];
             [confirm setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
             [confirm setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.8] forState:UIControlStateNormal];
             [confirm addTarget:self action:@selector(confirm) forControlEvents:UIControlEventTouchUpInside];
@@ -39,7 +41,7 @@
             [cancle setTitle:cancelTitle forState:UIControlStateNormal];
             [cancle setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
             [cancle addTarget:self action:@selector(cancle) forControlEvents:UIControlEventTouchUpInside];
-            cancle.titleLabel.font = MYFont(16.0);
+            cancle.titleLabel.font = [UIFont systemFontOfSize:16.0];
             cancle.backgroundColor = [UIColor clearColor];
             [cancle setTitleColor:[[UIColor redColor] colorWithAlphaComponent:0.8] forState:UIControlStateNormal];
             _cancleBtn = cancle;
@@ -109,8 +111,8 @@
         _iconView = imageView;
         [self addSubview:imageView];
         UILabel  *label = [[UILabel alloc] init];
-        label.font = MYFontM(20.0);
-        label.textColor = TITLE3;
+        label.font = [UIFont boldSystemFontOfSize:20.0];
+        label.textColor = [UIColor colorWithRed:157.0/255.0 green:160.0/255.0 blue:166.0/255.0 alpha:1.0];
         _titleLabel = label;
         [self addSubview:label];
         
@@ -194,7 +196,7 @@
     if(!content || content.length <= 0) return nil;
     UILabel *contentLabel = [[UILabel alloc] init];
     CGFloat contentWidth = AlertCenterWidth - 20;
-    UIFont *contentFont = MYFont(17.0);
+    UIFont *contentFont = [UIFont systemFontOfSize:17.0];
     
     CGSize contentSize = [content boundingRectWithSize:CGSizeMake(contentWidth, 200) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName :contentFont} context:nil].size;
     contentLabel.text = content;

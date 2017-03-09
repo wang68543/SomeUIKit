@@ -17,7 +17,7 @@
 //@end
 @class AlertBottomView;
 @class AlertTitleView;
-#define AlertCenterWidth (APP_WIGHT - 50)
+#define AlertCenterWidth ([[UIScreen mainScreen] bounds].size.width - 50)
 UIKIT_EXTERN  NSString * _Nonnull const ActionConfirm;
 UIKIT_EXTERN  NSString * _Nonnull const ActionCancel;
 

@@ -190,6 +190,15 @@
     
 }
 
++ (instancetype)sharedAPP
+{//获取单例
+    static APPHELP *_instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[self alloc] init];
+    });
+    return _instance;
+}
 
-singleton_m(APP);
+//singleton_m(APP);
 @end

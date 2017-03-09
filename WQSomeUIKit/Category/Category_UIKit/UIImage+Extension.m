@@ -8,8 +8,6 @@
 
 #import "UIImage+Extension.h"
 #import "WQConstans.h"
-
-
 @implementation UIImage (Extension)
 
 - (instancetype)hu_circleImageWithCornerRadius:(CGFloat)radius

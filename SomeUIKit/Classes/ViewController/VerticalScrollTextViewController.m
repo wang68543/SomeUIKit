@@ -19,7 +19,7 @@
     [super viewDidLoad];
     GYChangeTextView *textView = [[GYChangeTextView alloc] init];
     textView.animationTextCount = 3;
-    textView.frame = CGRectMake(10, 80, APP_WIGHT - 20, 120);
+    textView.frame = CGRectMake(10, 80, [[UIScreen mainScreen] bounds].size.width - 20, 120);
     [textView animationWithTexts:@[@"第一行文字",@"第二行文字",@"第三行文字",@"第四行文字"]];
     [self.view addSubview:textView];
 }

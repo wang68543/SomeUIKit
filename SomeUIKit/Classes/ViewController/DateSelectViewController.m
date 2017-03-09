@@ -26,7 +26,7 @@
 - (IBAction)alertAction:(UIButton *)sender {
     
     WQAlertController *alert = [WQAlertController alertViewWithTitle:@"选择日期" centerView:_myDatePicker];
-    alert.titleView.titleLabel.font = MYFont(18.0);
+    alert.titleView.titleLabel.font = [UIFont systemFontOfSize:18.0];
     alert.titleView.titleLabel.textColor = [UIColor redColor];
     [alert showInViewController:self];
   

@@ -8,7 +8,7 @@
 
 #import "WQSelecOptionsView.h"
 #import "WQSelectOptionsCell.h"
-#import "WQConstans.h"
+//#import "WQConstans.h"
 
 #define TimeCellHeight 30.0
 #define BorderWidth 1.0
@@ -78,12 +78,12 @@
 -(void)showWithRect:(CGRect)rect{
     CGFloat contentSizeHeight = _insideDatas.count * self.cellHeight;
     //如果向下高度够的话就向下显示
-    if(APP_HEIGHT - CGRectGetMaxY(rect) - self.bottomInset > contentSizeHeight){
+    if([[UIScreen mainScreen] bounds].size.width - CGRectGetMaxY(rect) - self.bottomInset > contentSizeHeight){
       [self showWithRect:rect position:ShowPostionDown];
     }else if(rect.origin.y  - self.topInset > contentSizeHeight){ //如果向上高度够的话就向上显示
          [self showWithRect:rect position:ShowPostionUp];
     }else {//都不够的话就向下显示
-        if(CGRectGetMaxY(rect) < APP_HEIGHT*0.5){
+        if(CGRectGetMaxY(rect) < [[UIScreen mainScreen] bounds].size.height*0.5){
             [self showWithRect:rect position:ShowPostionDown];
         }else{
            [self showWithRect:rect position:ShowPostionUp];
@@ -112,7 +112,7 @@
         case ShowPostionDown:
             positionPoint = CGPointMake(rect.origin.x, CGRectGetMaxY(rect));
             anchorPoint = CGPointMake(0, 0);
-            tableViewHeight = MIN(_insideDatas.count *self.cellHeight, APP_HEIGHT - CGRectGetMaxY(rect)-self.bottomInset);
+            tableViewHeight = MIN(_insideDatas.count *self.cellHeight, [[UIScreen mainScreen] bounds].size.height - CGRectGetMaxY(rect)-self.bottomInset);
             break;
         default:
             break;
@@ -160,7 +160,7 @@
     _textAlignment = NSTextAlignmentCenter;
     _topInset = 84.0;
     _bottomInset = 30.0;
-    _labelFont = MYFont(15.0);
+    _labelFont = [UIFont systemFontOfSize:15.0];
     _cellHeight = TimeCellHeight;
     _textColor = [UIColor blackColor];
     [self addSubview:self.tableView];

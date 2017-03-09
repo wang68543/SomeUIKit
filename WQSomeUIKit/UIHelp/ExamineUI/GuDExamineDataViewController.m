@@ -9,8 +9,7 @@
 #import "GuDExamineDataViewController.h"
 #import "GuDExaminationItem.h"
 #import "ExamineCell.h"
-#import "WQConstans.h"
-#import "UIImage+Extension.h"
+//#import "UIImage+Extension.h"
 
 @interface GuDExamineDataViewController ()
 ///<,UITableViewDataSource>
@@ -45,21 +44,21 @@ static NSString *const ID = @"examineCell";
 -(void)headerView{
     UILabel *headerLabel = [[UILabel alloc] init];
     headerLabel.numberOfLines = 0;
-    headerLabel.frame = CGRectMake(0, 0, APP_WIGHT, 50.0);
-    headerLabel.font = MYFont(15.0);
+    headerLabel.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 50.0);
+    headerLabel.font = [UIFont systemFontOfSize:15.0];
     headerLabel.text = [NSString stringWithFormat:@"  (%@)%@",self.item.typeDescription,self.item.title];
     self.tableView.tableHeaderView = headerLabel;
  }
 -(void)footerView{
    
     UIView *footerView = [[UIView alloc] init];
-    footerView.frame = CGRectMake(0, 0, APP_WIGHT, 60.0);
+    footerView.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 60.0);
     CGFloat btnW = 100;
     CGFloat btnH = 45.0;
     CGFloat y = (footerView.frame.size.height - btnH)*0.5+ btnH*0.5;
     UIButton *nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     nextBtn.bounds = CGRectMake(0, 0, btnW, btnH);
-    nextBtn.center = CGPointMake(APP_WIGHT*0.75, y);
+    nextBtn.center = CGPointMake([[UIScreen mainScreen] bounds].size.width*0.75, y);
      if(self.pageNumber < self.items.count){
          [nextBtn setTitle:@"下一题" forState:UIControlStateNormal];
          [nextBtn addTarget:self action:@selector(nextPage) forControlEvents:UIControlEventTouchUpInside];
@@ -67,7 +66,8 @@ static NSString *const ID = @"examineCell";
          [nextBtn setTitle:@"提交" forState:UIControlStateNormal];
          [nextBtn addTarget:self action:@selector(commit) forControlEvents:UIControlEventTouchUpInside];
      }
-    [nextBtn setBackgroundImage:[UIImage imageWithColor:LightGreen] forState:UIControlStateNormal];
+//    [nextBtn setBackgroundImage:[UIImage imageWithColor:LightGreen] forState:UIControlStateNormal];
+    nextBtn.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.5];
 //    nextBtn.backgroundColor = LightGreen;
     [footerView addSubview:nextBtn];
     nextBtn.enabled = self.item.currentSelectedItems.length;
@@ -76,9 +76,9 @@ static NSString *const ID = @"examineCell";
     if(self.pageNumber > 1){
         UIButton *forwardBtn = [[UIButton alloc] init];
         forwardBtn.bounds = CGRectMake(0, 0, btnW, btnH);
-        forwardBtn.center = CGPointMake(APP_WIGHT*0.25, y);
+        forwardBtn.center = CGPointMake([[UIScreen mainScreen] bounds].size.width*0.25, y);
         [forwardBtn setTitle:@"上一题" forState:UIControlStateNormal];
-        forwardBtn.backgroundColor = LightGreen;
+        forwardBtn.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.5];
         [forwardBtn addTarget:self action:@selector(forwardPage) forControlEvents:UIControlEventTouchUpInside];
         [footerView addSubview:forwardBtn];
     }

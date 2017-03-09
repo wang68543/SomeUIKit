@@ -8,11 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-#import "Singleton.h"
-
 @interface APPHELP : NSObject
-singleton_h(APP);
++ (instancetype)sharedAPP;
 /**
  *  打开网页
  *

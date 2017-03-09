@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B43B7901A5066FFD774F34F /* libPods-SomeUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 366E2D08C590E008A7E8429E /* libPods-SomeUIKit.a */; };
 		DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE056BAA1DCD760F00E16D15 /* DateSelectViewController.m */; };
 		DE056BAD1DCD760F00E16D15 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE056BAB1DCD760F00E16D15 /* DateSelectViewController.xib */; };
 		DE0A4DAB1E6DAF0000281808 /* WQSubTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A4DAA1E6DAF0000281808 /* WQSubTransitionViewController.m */; };
-		DE1686031E6AC84F00442791 /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1685FC1E6AC84F00442791 /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DE16860B1E6C546E00442791 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1686091E6C546D00442791 /* libopencore-amrnb.a */; };
-		DE16860C1E6C546E00442791 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE16860A1E6C546D00442791 /* libopencore-amrwb.a */; };
 		DE49E2B81E6D44DA0040A51A /* WQAnimationTrasitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */; };
 		DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE55FF3B1DB9A48C0014C758 /* StarViewController.m */; };
 		DE55FF3E1DB9A48C0014C758 /* StarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE55FF3C1DB9A48C0014C758 /* StarViewController.xib */; };
@@ -36,11 +34,19 @@
 		DEC00B4B1DB8CA7400A516A1 /* DropDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC00B491DB8CA7400A516A1 /* DropDownViewController.m */; };
 		DEC00B4C1DB8CA7400A516A1 /* DropDownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC00B4A1DB8CA7400A516A1 /* DropDownViewController.xib */; };
 		DEC00B531DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC00B511DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m */; };
+		DED67AC01E71252A0061CABF /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67AB71E71252A0061CABF /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DED67AC11E71252A0061CABF /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DED67ABC1E71252A0061CABF /* libopencore-amrnb.a */; };
+		DED67AC21E71252A0061CABF /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DED67ABD1E71252A0061CABF /* libopencore-amrwb.a */; };
+		DED67AC31E71252A0061CABF /* WQVoiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ABF1E71252A0061CABF /* WQVoiceTool.m */; };
+		DED67AD01E71340B0061CABF /* APPHELP.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ACA1E71340B0061CABF /* APPHELP.m */; };
+		DED67AD11E71340B0061CABF /* WQBroserController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ACC1E71340B0061CABF /* WQBroserController.m */; };
+		DED67AD21E71340B0061CABF /* WQBroserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED67ACD1E71340B0061CABF /* WQBroserController.xib */; };
+		DED67AD31E71340B0061CABF /* WQControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ACF1E71340B0061CABF /* WQControllerTransition.m */; };
+		DED67AD91E714E400061CABF /* NSFileManager+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67AD81E714E400061CABF /* NSFileManager+Path.m */; };
 		DEFE2C691DD22716006BB614 /* WQLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFE2C671DD22716006BB614 /* WQLoopViewController.m */; };
 		DEFE2C6A1DD22716006BB614 /* WQLoopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFE2C681DD22716006BB614 /* WQLoopViewController.xib */; };
 		DEFF6D3B1E6971800004CFE2 /* ZHAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CAB1E69717F0004CFE2 /* ZHAnimationView.m */; };
 		DEFF6D3C1E6971800004CFE2 /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CAF1E69717F0004CFE2 /* NSDate+Format.m */; };
-		DEFF6D3E1E6971800004CFE2 /* NSFileManager+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB31E69717F0004CFE2 /* NSFileManager+Path.m */; };
 		DEFF6D3F1E6971800004CFE2 /* NSString+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB51E69717F0004CFE2 /* NSString+Date.m */; };
 		DEFF6D411E6971800004CFE2 /* NSString+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB91E69717F0004CFE2 /* NSString+Help.m */; };
 		DEFF6D421E6971800004CFE2 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CBB1E69717F0004CFE2 /* UIGestureRecognizer+Block.m */; };
@@ -57,14 +63,10 @@
 		DEFF6D511E6971800004CFE2 /* TabbbarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CDC1E69717F0004CFE2 /* TabbbarController.storyboard */; };
 		DEFF6D521E6971800004CFE2 /* WQCoderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE01E69717F0004CFE2 /* WQCoderObject.m */; };
 		DEFF6D531E6971800004CFE2 /* WQError.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE21E69717F0004CFE2 /* WQError.m */; };
-		DEFF6D541E6971800004CFE2 /* APPHELP.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE51E69717F0004CFE2 /* APPHELP.m */; };
-		DEFF6D551E6971800004CFE2 /* WQBroserController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE71E69717F0004CFE2 /* WQBroserController.m */; };
-		DEFF6D561E6971800004CFE2 /* BroserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CE81E69717F0004CFE2 /* BroserController.xib */; };
 		DEFF6D571E6971800004CFE2 /* RuntimeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CEA1E69717F0004CFE2 /* RuntimeKit.m */; };
 		DEFF6D581E6971800004CFE2 /* WQAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CEC1E69717F0004CFE2 /* WQAppInfo.m */; };
 		DEFF6D591E6971800004CFE2 /* WQCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CEE1E69717F0004CFE2 /* WQCache.m */; };
 		DEFF6D5A1E6971800004CFE2 /* WQKeyboardAdjustHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CF11E69717F0004CFE2 /* WQKeyboardAdjustHelp.m */; };
-		DEFF6D5B1E6971800004CFE2 /* WQVoiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CF41E69717F0004CFE2 /* WQVoiceTool.m */; };
 		DEFF6D5C1E6971800004CFE2 /* WQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CF81E69717F0004CFE2 /* WQTextView.m */; };
 		DEFF6D5D1E6971800004CFE2 /* WQEdgeTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CFA1E69717F0004CFE2 /* WQEdgeTitleButton.m */; };
 		DEFF6D5E1E6971800004CFE2 /* WQAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CFE1E69717F0004CFE2 /* WQAlertController.m */; };
@@ -92,7 +94,6 @@
 		DEFF6D741E6971800004CFE2 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D2F1E6971800004CFE2 /* MainTabBarController.m */; };
 		DEFF6D751E6971800004CFE2 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D311E6971800004CFE2 /* MenuViewController.m */; };
 		DEFF6D761E6971800004CFE2 /* WQStarLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D341E6971800004CFE2 /* WQStarLevel.m */; };
-		DEFF6D771E6971800004CFE2 /* WQControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D371E6971800004CFE2 /* WQControllerTransition.m */; };
 		DEFF6D781E6971800004CFE2 /* GYChangeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D3A1E6971800004CFE2 /* GYChangeTextView.m */; };
 /* End PBXBuildFile section */
 
@@ -114,19 +115,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		366E2D08C590E008A7E8429E /* libPods-SomeUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SomeUIKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE056BA91DCD760F00E16D15 /* DateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectViewController.h; sourceTree = "<group>"; };
 		DE056BAA1DCD760F00E16D15 /* DateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectViewController.m; sourceTree = "<group>"; };
 		DE056BAB1DCD760F00E16D15 /* DateSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelectViewController.xib; sourceTree = "<group>"; };
 		DE0A4DA91E6DAF0000281808 /* WQSubTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQSubTransitionViewController.h; sourceTree = "<group>"; };
 		DE0A4DAA1E6DAF0000281808 /* WQSubTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQSubTransitionViewController.m; sourceTree = "<group>"; };
-		DE1685FB1E6AC84F00442791 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
-		DE1685FC1E6AC84F00442791 /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
-		DE1685FD1E6AC84F00442791 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		DE1685FE1E6AC84F00442791 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		DE1685FF1E6AC84F00442791 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		DE1686001E6AC84F00442791 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		DE1686091E6C546D00442791 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		DE16860A1E6C546D00442791 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		DE49E2B61E6D44DA0040A51A /* WQAnimationTrasitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAnimationTrasitionViewController.h; sourceTree = "<group>"; };
 		DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAnimationTrasitionViewController.m; sourceTree = "<group>"; };
 		DE55FF3A1DB9A48C0014C758 /* StarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarViewController.h; sourceTree = "<group>"; };
@@ -171,6 +165,25 @@
 		DEC00B4A1DB8CA7400A516A1 /* DropDownViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownViewController.xib; sourceTree = "<group>"; };
 		DEC00B501DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonTitleImageLayoutViewController.h; sourceTree = "<group>"; };
 		DEC00B511DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonTitleImageLayoutViewController.m; sourceTree = "<group>"; };
+		DED67AB61E71252A0061CABF /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		DED67AB71E71252A0061CABF /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
+		DED67AB81E71252A0061CABF /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		DED67AB91E71252A0061CABF /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		DED67ABA1E71252A0061CABF /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		DED67ABB1E71252A0061CABF /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		DED67ABC1E71252A0061CABF /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		DED67ABD1E71252A0061CABF /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		DED67ABE1E71252A0061CABF /* WQVoiceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQVoiceTool.h; sourceTree = "<group>"; };
+		DED67ABF1E71252A0061CABF /* WQVoiceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQVoiceTool.m; sourceTree = "<group>"; };
+		DED67AC91E71340B0061CABF /* APPHELP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPHELP.h; sourceTree = "<group>"; };
+		DED67ACA1E71340B0061CABF /* APPHELP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPHELP.m; sourceTree = "<group>"; };
+		DED67ACB1E71340B0061CABF /* WQBroserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBroserController.h; sourceTree = "<group>"; };
+		DED67ACC1E71340B0061CABF /* WQBroserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQBroserController.m; sourceTree = "<group>"; };
+		DED67ACD1E71340B0061CABF /* WQBroserController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WQBroserController.xib; sourceTree = "<group>"; };
+		DED67ACE1E71340B0061CABF /* WQControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQControllerTransition.h; sourceTree = "<group>"; };
+		DED67ACF1E71340B0061CABF /* WQControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQControllerTransition.m; sourceTree = "<group>"; };
+		DED67AD71E714E400061CABF /* NSFileManager+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Path.h"; sourceTree = "<group>"; };
+		DED67AD81E714E400061CABF /* NSFileManager+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Path.m"; sourceTree = "<group>"; };
 		DEFE2C661DD22716006BB614 /* WQLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQLoopViewController.h; sourceTree = "<group>"; };
 		DEFE2C671DD22716006BB614 /* WQLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLoopViewController.m; sourceTree = "<group>"; };
 		DEFE2C681DD22716006BB614 /* WQLoopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WQLoopViewController.xib; sourceTree = "<group>"; };
@@ -178,8 +191,6 @@
 		DEFF6CAB1E69717F0004CFE2 /* ZHAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAnimationView.m; sourceTree = "<group>"; };
 		DEFF6CAE1E69717F0004CFE2 /* NSDate+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Format.h"; sourceTree = "<group>"; };
 		DEFF6CAF1E69717F0004CFE2 /* NSDate+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Format.m"; sourceTree = "<group>"; };
-		DEFF6CB21E69717F0004CFE2 /* NSFileManager+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Path.h"; sourceTree = "<group>"; };
-		DEFF6CB31E69717F0004CFE2 /* NSFileManager+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Path.m"; sourceTree = "<group>"; };
 		DEFF6CB41E69717F0004CFE2 /* NSString+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Date.h"; sourceTree = "<group>"; };
 		DEFF6CB51E69717F0004CFE2 /* NSString+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Date.m"; sourceTree = "<group>"; };
 		DEFF6CB81E69717F0004CFE2 /* NSString+Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Help.h"; sourceTree = "<group>"; };
@@ -205,11 +216,6 @@
 		DEFF6CE01E69717F0004CFE2 /* WQCoderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCoderObject.m; sourceTree = "<group>"; };
 		DEFF6CE11E69717F0004CFE2 /* WQError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQError.h; sourceTree = "<group>"; };
 		DEFF6CE21E69717F0004CFE2 /* WQError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQError.m; sourceTree = "<group>"; };
-		DEFF6CE41E69717F0004CFE2 /* APPHELP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPHELP.h; sourceTree = "<group>"; };
-		DEFF6CE51E69717F0004CFE2 /* APPHELP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPHELP.m; sourceTree = "<group>"; };
-		DEFF6CE61E69717F0004CFE2 /* WQBroserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBroserController.h; sourceTree = "<group>"; };
-		DEFF6CE71E69717F0004CFE2 /* WQBroserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQBroserController.m; sourceTree = "<group>"; };
-		DEFF6CE81E69717F0004CFE2 /* BroserController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BroserController.xib; sourceTree = "<group>"; };
 		DEFF6CE91E69717F0004CFE2 /* RuntimeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeKit.h; sourceTree = "<group>"; };
 		DEFF6CEA1E69717F0004CFE2 /* RuntimeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeKit.m; sourceTree = "<group>"; };
 		DEFF6CEB1E69717F0004CFE2 /* WQAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAppInfo.h; sourceTree = "<group>"; };
@@ -218,8 +224,6 @@
 		DEFF6CEE1E69717F0004CFE2 /* WQCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCache.m; sourceTree = "<group>"; };
 		DEFF6CF01E69717F0004CFE2 /* WQKeyboardAdjustHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQKeyboardAdjustHelp.h; sourceTree = "<group>"; };
 		DEFF6CF11E69717F0004CFE2 /* WQKeyboardAdjustHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQKeyboardAdjustHelp.m; sourceTree = "<group>"; };
-		DEFF6CF31E69717F0004CFE2 /* WQVoiceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQVoiceTool.h; sourceTree = "<group>"; };
-		DEFF6CF41E69717F0004CFE2 /* WQVoiceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQVoiceTool.m; sourceTree = "<group>"; };
 		DEFF6CF71E69717F0004CFE2 /* WQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTextView.h; sourceTree = "<group>"; };
 		DEFF6CF81E69717F0004CFE2 /* WQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTextView.m; sourceTree = "<group>"; };
 		DEFF6CF91E69717F0004CFE2 /* WQEdgeTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQEdgeTitleButton.h; sourceTree = "<group>"; };
@@ -271,10 +275,10 @@
 		DEFF6D311E6971800004CFE2 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		DEFF6D331E6971800004CFE2 /* WQStarLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStarLevel.h; sourceTree = "<group>"; };
 		DEFF6D341E6971800004CFE2 /* WQStarLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStarLevel.m; sourceTree = "<group>"; };
-		DEFF6D361E6971800004CFE2 /* WQControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQControllerTransition.h; sourceTree = "<group>"; };
-		DEFF6D371E6971800004CFE2 /* WQControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQControllerTransition.m; sourceTree = "<group>"; };
 		DEFF6D391E6971800004CFE2 /* GYChangeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYChangeTextView.h; sourceTree = "<group>"; };
 		DEFF6D3A1E6971800004CFE2 /* GYChangeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYChangeTextView.m; sourceTree = "<group>"; };
+		DFA5B52A480A3EB1FB2C3F57 /* Pods-SomeUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SomeUIKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SomeUIKit/Pods-SomeUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		E2E006F6D8D3D194833EABBA /* Pods-SomeUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SomeUIKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SomeUIKit/Pods-SomeUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,8 +286,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE16860C1E6C546E00442791 /* libopencore-amrwb.a in Frameworks */,
-				DE16860B1E6C546E00442791 /* libopencore-amrnb.a in Frameworks */,
+				8B43B7901A5066FFD774F34F /* libPods-SomeUIKit.a in Frameworks */,
+				DED67AC21E71252A0061CABF /* libopencore-amrwb.a in Frameworks */,
+				DED67AC11E71252A0061CABF /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,19 +309,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE1685FA1E6AC84F00442791 /* amrwapper */ = {
+		9CE9924D14FA40B2692C7558 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DE1686091E6C546D00442791 /* libopencore-amrnb.a */,
-				DE16860A1E6C546D00442791 /* libopencore-amrwb.a */,
-				DE1685FB1E6AC84F00442791 /* amrFileCodec.h */,
-				DE1685FC1E6AC84F00442791 /* amrFileCodec.m */,
-				DE1685FD1E6AC84F00442791 /* dec_if.h */,
-				DE1685FE1E6AC84F00442791 /* if_rom.h */,
-				DE1685FF1E6AC84F00442791 /* interf_dec.h */,
-				DE1686001E6AC84F00442791 /* interf_enc.h */,
+				E2E006F6D8D3D194833EABBA /* Pods-SomeUIKit.debug.xcconfig */,
+				DFA5B52A480A3EB1FB2C3F57 /* Pods-SomeUIKit.release.xcconfig */,
 			);
-			path = amrwapper;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		DEC00AE71DB8BBC000A516A1 = {
@@ -327,6 +326,8 @@
 				DEC00B0C1DB8BBC000A516A1 /* SomeUIKitTests */,
 				DEC00B171DB8BBC000A516A1 /* SomeUIKitUITests */,
 				DEC00AF11DB8BBC000A516A1 /* Products */,
+				9CE9924D14FA40B2692C7558 /* Pods */,
+				E577C160D8780838F62A60D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -434,6 +435,45 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		DED67AB41E71252A0061CABF /* VoiceTool */ = {
+			isa = PBXGroup;
+			children = (
+				DED67AB51E71252A0061CABF /* amrwapper */,
+				DED67ABE1E71252A0061CABF /* WQVoiceTool.h */,
+				DED67ABF1E71252A0061CABF /* WQVoiceTool.m */,
+			);
+			path = VoiceTool;
+			sourceTree = "<group>";
+		};
+		DED67AB51E71252A0061CABF /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				DED67AB61E71252A0061CABF /* amrFileCodec.h */,
+				DED67AB71E71252A0061CABF /* amrFileCodec.m */,
+				DED67AB81E71252A0061CABF /* dec_if.h */,
+				DED67AB91E71252A0061CABF /* if_rom.h */,
+				DED67ABA1E71252A0061CABF /* interf_dec.h */,
+				DED67ABB1E71252A0061CABF /* interf_enc.h */,
+				DED67ABC1E71252A0061CABF /* libopencore-amrnb.a */,
+				DED67ABD1E71252A0061CABF /* libopencore-amrwb.a */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		DED67AC81E71340B0061CABF /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				DED67AC91E71340B0061CABF /* APPHELP.h */,
+				DED67ACA1E71340B0061CABF /* APPHELP.m */,
+				DED67ACB1E71340B0061CABF /* WQBroserController.h */,
+				DED67ACC1E71340B0061CABF /* WQBroserController.m */,
+				DED67ACD1E71340B0061CABF /* WQBroserController.xib */,
+				DED67ACE1E71340B0061CABF /* WQControllerTransition.h */,
+				DED67ACF1E71340B0061CABF /* WQControllerTransition.m */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
 		DEFF6CA71E69717F0004CFE2 /* WQSomeUIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,8 +519,6 @@
 			children = (
 				DEFF6CAE1E69717F0004CFE2 /* NSDate+Format.h */,
 				DEFF6CAF1E69717F0004CFE2 /* NSDate+Format.m */,
-				DEFF6CB21E69717F0004CFE2 /* NSFileManager+Path.h */,
-				DEFF6CB31E69717F0004CFE2 /* NSFileManager+Path.m */,
 				DEFF6CB41E69717F0004CFE2 /* NSString+Date.h */,
 				DEFF6CB51E69717F0004CFE2 /* NSString+Date.m */,
 				DEFF6CB81E69717F0004CFE2 /* NSString+Help.h */,
@@ -522,7 +560,6 @@
 		DEFF6CC81E69717F0004CFE2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DE1685FA1E6AC84F00442791 /* amrwapper */,
 				DEFF6CD21E69717F0004CFE2 /* images */,
 				DEFF6CDB1E69717F0004CFE2 /* Sb */,
 			);
@@ -555,10 +592,10 @@
 		DEFF6CDD1E69717F0004CFE2 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				DED67AB41E71252A0061CABF /* VoiceTool */,
 				DEFF6CDE1E69717F0004CFE2 /* BasicFoundation */,
 				DEFF6CE31E69717F0004CFE2 /* BasicHelp */,
 				DEFF6CEF1E69717F0004CFE2 /* FunctionHelp */,
-				DEFF6CF21E69717F0004CFE2 /* FunctionTool */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -577,11 +614,8 @@
 		DEFF6CE31E69717F0004CFE2 /* BasicHelp */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6CE41E69717F0004CFE2 /* APPHELP.h */,
-				DEFF6CE51E69717F0004CFE2 /* APPHELP.m */,
-				DEFF6CE61E69717F0004CFE2 /* WQBroserController.h */,
-				DEFF6CE71E69717F0004CFE2 /* WQBroserController.m */,
-				DEFF6CE81E69717F0004CFE2 /* BroserController.xib */,
+				DED67AD71E714E400061CABF /* NSFileManager+Path.h */,
+				DED67AD81E714E400061CABF /* NSFileManager+Path.m */,
 				DEFF6CE91E69717F0004CFE2 /* RuntimeKit.h */,
 				DEFF6CEA1E69717F0004CFE2 /* RuntimeKit.m */,
 				DEFF6CEB1E69717F0004CFE2 /* WQAppInfo.h */,
@@ -599,15 +633,6 @@
 				DEFF6CF11E69717F0004CFE2 /* WQKeyboardAdjustHelp.m */,
 			);
 			path = FunctionHelp;
-			sourceTree = "<group>";
-		};
-		DEFF6CF21E69717F0004CFE2 /* FunctionTool */ = {
-			isa = PBXGroup;
-			children = (
-				DEFF6CF31E69717F0004CFE2 /* WQVoiceTool.h */,
-				DEFF6CF41E69717F0004CFE2 /* WQVoiceTool.m */,
-			);
-			path = FunctionTool;
 			sourceTree = "<group>";
 		};
 		DEFF6CF51E69717F0004CFE2 /* UICustom */ = {
@@ -632,6 +657,7 @@
 		DEFF6CFB1E69717F0004CFE2 /* UIHelp */ = {
 			isa = PBXGroup;
 			children = (
+				DED67AC81E71340B0061CABF /* Help */,
 				DEFF6CFC1E69717F0004CFE2 /* AlertUI */,
 				DEFF6CFF1E69717F0004CFE2 /* BannerLoop */,
 				DEFF6D021E69717F0004CFE2 /* ClendarUI */,
@@ -642,7 +668,6 @@
 				DEFF6D211E69717F0004CFE2 /* ShareUI */,
 				DEFF6D291E69717F0004CFE2 /* SlideMenu */,
 				DEFF6D321E6971800004CFE2 /* StarUI */,
-				DEFF6D351E6971800004CFE2 /* UIViewControllerTransition */,
 				DEFF6D381E6971800004CFE2 /* VerticalLoopText */,
 			);
 			path = UIHelp;
@@ -765,15 +790,6 @@
 			path = StarUI;
 			sourceTree = "<group>";
 		};
-		DEFF6D351E6971800004CFE2 /* UIViewControllerTransition */ = {
-			isa = PBXGroup;
-			children = (
-				DEFF6D361E6971800004CFE2 /* WQControllerTransition.h */,
-				DEFF6D371E6971800004CFE2 /* WQControllerTransition.m */,
-			);
-			path = UIViewControllerTransition;
-			sourceTree = "<group>";
-		};
 		DEFF6D381E6971800004CFE2 /* VerticalLoopText */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +799,14 @@
 			path = VerticalLoopText;
 			sourceTree = "<group>";
 		};
+		E577C160D8780838F62A60D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				366E2D08C590E008A7E8429E /* libPods-SomeUIKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -790,9 +814,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEC00B1D1DB8BBC000A516A1 /* Build configuration list for PBXNativeTarget "SomeUIKit" */;
 			buildPhases = (
+				775431099D0013AF2A029610 /* [CP] Check Pods Manifest.lock */,
 				DEC00AEC1DB8BBC000A516A1 /* Sources */,
 				DEC00AED1DB8BBC000A516A1 /* Frameworks */,
 				DEC00AEE1DB8BBC000A516A1 /* Resources */,
+				3417C4CABEEA89CB347CAC0E /* [CP] Embed Pods Frameworks */,
+				C7A3E926A17615A84BED3C95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -893,7 +920,6 @@
 				DEFF6D6F1E6971800004CFE2 /* ShareActionCell.xib in Resources */,
 				DEFF6D4F1E6971800004CFE2 /* 06.jpg in Resources */,
 				DEFF6D4D1E6971800004CFE2 /* 04.jpg in Resources */,
-				DEFF6D561E6971800004CFE2 /* BroserController.xib in Resources */,
 				DEFF6D4C1E6971800004CFE2 /* 03.jpg in Resources */,
 				DEFF6D4A1E6971800004CFE2 /* 01.jpg in Resources */,
 				DEFF6D491E6971800004CFE2 /* 00.jpg in Resources */,
@@ -906,6 +932,7 @@
 				DEFE2C6A1DD22716006BB614 /* WQLoopViewController.xib in Resources */,
 				DEC00B001DB8BBC000A516A1 /* Assets.xcassets in Resources */,
 				DEFF6D511E6971800004CFE2 /* TabbbarController.storyboard in Resources */,
+				DED67AD21E71340B0061CABF /* WQBroserController.xib in Resources */,
 				DEFF6D691E6971800004CFE2 /* WQTagCollectionViewCell.xib in Resources */,
 				DEFF6D501E6971800004CFE2 /* 07.jpg in Resources */,
 				DE55FF631DBA10310014C758 /* TextViewPlacehodelViewController.xib in Resources */,
@@ -930,6 +957,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3417C4CABEEA89CB347CAC0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SomeUIKit/Pods-SomeUIKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		775431099D0013AF2A029610 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C7A3E926A17615A84BED3C95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SomeUIKit/Pods-SomeUIKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DEC00AEC1DB8BBC000A516A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -941,10 +1016,12 @@
 				DEFF6D5E1E6971800004CFE2 /* WQAlertController.m in Sources */,
 				DEFF6D431E6971800004CFE2 /* UIButton+countDown.m in Sources */,
 				DEC00AFB1DB8BBC000A516A1 /* ViewController.m in Sources */,
+				DED67AD31E71340B0061CABF /* WQControllerTransition.m in Sources */,
 				DEFF6D661E6971800004CFE2 /* GuDExamineDataViewController.m in Sources */,
 				DEFF6D611E6971800004CFE2 /* ClendarUnit.m in Sources */,
 				DEFF6D761E6971800004CFE2 /* WQStarLevel.m in Sources */,
 				DEFF6D581E6971800004CFE2 /* WQAppInfo.m in Sources */,
+				DED67AD11E71340B0061CABF /* WQBroserController.m in Sources */,
 				DEFF6D6A1E6971800004CFE2 /* WQTagsFlowLayout.m in Sources */,
 				DEFF6D521E6971800004CFE2 /* WQCoderObject.m in Sources */,
 				DE49E2B81E6D44DA0040A51A /* WQAnimationTrasitionViewController.m in Sources */,
@@ -953,12 +1030,11 @@
 				DE5C94D21DE6B8BC00EFA20F /* WQSelectedTagsViewController.m in Sources */,
 				DEFF6D5D1E6971800004CFE2 /* WQEdgeTitleButton.m in Sources */,
 				DE55FF471DBA08EB0014C758 /* VerticalScrollTextViewController.m in Sources */,
-				DEFF6D5B1E6971800004CFE2 /* WQVoiceTool.m in Sources */,
 				DEFF6D751E6971800004CFE2 /* MenuViewController.m in Sources */,
 				DEC00B341DB8C0D900A516A1 /* GetPictureViewController.m in Sources */,
 				DEFF6D3C1E6971800004CFE2 /* NSDate+Format.m in Sources */,
-				DEFF6D541E6971800004CFE2 /* APPHELP.m in Sources */,
 				DEC00B531DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m in Sources */,
+				DED67AD01E71340B0061CABF /* APPHELP.m in Sources */,
 				DEFF6D711E6971800004CFE2 /* WQShareActionViewController.m in Sources */,
 				DEFF6D781E6971800004CFE2 /* GYChangeTextView.m in Sources */,
 				DE71DF9C1E6672C50061E374 /* WQKeyboardHandleViewController.m in Sources */,
@@ -977,26 +1053,25 @@
 				DEFF6D3F1E6971800004CFE2 /* NSString+Date.m in Sources */,
 				DEFF6D601E6971800004CFE2 /* ClendarDayUnit.m in Sources */,
 				DEC00B4B1DB8CA7400A516A1 /* DropDownViewController.m in Sources */,
-				DEFF6D771E6971800004CFE2 /* WQControllerTransition.m in Sources */,
 				DEFF6D731E6971800004CFE2 /* MainNavController.m in Sources */,
 				DEFF6D6B1E6971800004CFE2 /* WQSelectPhotoViewController.m in Sources */,
 				DEFF6D421E6971800004CFE2 /* UIGestureRecognizer+Block.m in Sources */,
 				DEC00AF51DB8BBC000A516A1 /* main.m in Sources */,
 				DEFF6D681E6971800004CFE2 /* WQTagCollectionViewCell.m in Sources */,
-				DEFF6D3E1E6971800004CFE2 /* NSFileManager+Path.m in Sources */,
 				DEFF6D5A1E6971800004CFE2 /* WQKeyboardAdjustHelp.m in Sources */,
 				DEFF6D571E6971800004CFE2 /* RuntimeKit.m in Sources */,
 				DEFF6D441E6971800004CFE2 /* UIImage+Extension.m in Sources */,
+				DED67AC31E71252A0061CABF /* WQVoiceTool.m in Sources */,
 				DEFF6D531E6971800004CFE2 /* WQError.m in Sources */,
 				DEFF6D621E6971800004CFE2 /* WQClendarView.m in Sources */,
 				DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */,
+				DED67AD91E714E400061CABF /* NSFileManager+Path.m in Sources */,
 				DEFF6D671E6971800004CFE2 /* GuDExamineViewController.m in Sources */,
 				DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */,
+				DED67AC01E71252A0061CABF /* amrFileCodec.m in Sources */,
 				DEFF6D6C1E6971800004CFE2 /* WQSelectOptionsCell.m in Sources */,
 				DE8537841DE0602400654C4D /* ReplicatorViewController.m in Sources */,
-				DEFF6D551E6971800004CFE2 /* WQBroserController.m in Sources */,
 				DEAFF1F71DDF142200CF8116 /* WQTabBarViewController.m in Sources */,
-				DE1686031E6AC84F00442791 /* amrFileCodec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1137,6 +1212,7 @@
 		};
 		DEC00B1E1DB8BBC000A516A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2E006F6D8D3D194833EABBA /* Pods-SomeUIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SomeUIKit/PrefixHeader.pch";
@@ -1148,6 +1224,7 @@
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrnb",
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrwb",
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper",
+					"$(PROJECT_DIR)/WQSomeUIKit/Tool/VoiceTool/amrwapper",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WANG.SomeUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1156,6 +1233,7 @@
 		};
 		DEC00B1F1DB8BBC000A516A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA5B52A480A3EB1FB2C3F57 /* Pods-SomeUIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SomeUIKit/PrefixHeader.pch";
@@ -1167,6 +1245,7 @@
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrnb",
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrwb",
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper",
+					"$(PROJECT_DIR)/WQSomeUIKit/Tool/VoiceTool/amrwapper",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WANG.SomeUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

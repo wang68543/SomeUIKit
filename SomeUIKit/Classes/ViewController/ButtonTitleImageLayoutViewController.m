@@ -50,7 +50,7 @@
     RightContent.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
     RightContent.frame = CGRectMake(20, 430, 280 , 120);
 
-    [self.view setValue:[NSValue valueWithCGSize:CGSizeMake(APP_WIGHT, CGRectGetMaxY(RightContent.frame) + 20)] forKeyPath:@"contentSize"];
+    [self.view setValue:[NSValue valueWithCGSize:CGSizeMake([[UIScreen mainScreen] bounds].size.width, CGRectGetMaxY(RightContent.frame) + 20)] forKeyPath:@"contentSize"];
 }
 
 -(WQEdgeTitleButton *)commonContentTitle{

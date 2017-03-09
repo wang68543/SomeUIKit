@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //如果View是Xib创建 这里的宽高实际为Xib初始的宽高
-    _scrollView = [[WQBannerLoopView alloc] initWithFrame:CGRectMake(0, 100, APP_WIGHT, 400)];
+    _scrollView = [[WQBannerLoopView alloc] initWithFrame:CGRectMake(0, 100, [[UIScreen mainScreen] bounds].size.width, 400)];
     [self.view addSubview:_scrollView];
     _scrollView.datas = @[@"00.jpg",@"01.jpg",@"02.jpg",@"03.jpg",@"04.jpg",@"05.jpg",@"06.jpg",@"07.jpg"];
     [WQKeyboardAdjustHelp keyboardAdjustHelpWithView:self.view excludeTag:NSNotFound];

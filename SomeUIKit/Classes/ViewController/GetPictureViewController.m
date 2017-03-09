@@ -64,7 +64,7 @@
     [label setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [label addTarget:self action:@selector(jumpAD) forControlEvents:UIControlEventTouchUpInside];
     
-    label.frame = CGRectMake(APP_WIGHT - 130, 20, 100, 20);
+    label.frame = CGRectMake([[UIScreen mainScreen] bounds].size.width - 130, 20, 100, 20);
     [imageView addSubview:label];
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);

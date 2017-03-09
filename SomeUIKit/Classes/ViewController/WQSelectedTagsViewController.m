@@ -78,7 +78,7 @@ static NSString *const identifier = @"cell";
 }
 #pragma mark -- WQTagsFlowLayoutDelegate
 -(CGFloat)tagsFlowLayout:(WQTagsFlowLayout *)flowLayout widthAtIndex:(NSIndexPath *)indePath targetLine:(NSInteger)targetLine lineRemindWidth:(CGFloat)remindWidth{
-    return [_testTags[indePath.row] sizeWithAttributes:@{NSFontAttributeName : MYFont(17.0)}].width + 58.0;
+    return [_testTags[indePath.row] sizeWithAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.0]}].width + 58.0;
 }
 -(LineAlignment)tagsFlowLayout:(WQTagsFlowLayout *)flowLayout lineContentAliment:(NSInteger)line lastLine:(BOOL)isLast{
     if(isLast){

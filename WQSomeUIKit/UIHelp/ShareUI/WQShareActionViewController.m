@@ -9,7 +9,7 @@
 #import "WQShareActionViewController.h"
 #import "WQShareActionCell.h"
 #import "WQControllerTransition.h"
-#import "WQConstans.h"
+//#import "WQConstans.h"
 #import "APPHELP.h"
 
 #define ShareItemH 80.0
@@ -49,8 +49,8 @@ static NSString *const CellID = @"shareCell";
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.minimumInteritemSpacing = 1.0;
         layout.minimumLineSpacing = layout.minimumInteritemSpacing;
-        layout.itemSize = CGSizeMake((APP_WIGHT - layout.minimumInteritemSpacing *2)/3.0, ShareItemH);
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, APP_HEIGHT, APP_WIGHT, ShareItemH *ceilf(self.datas.count/3.0) + layout.minimumLineSpacing)collectionViewLayout:layout];
+        layout.itemSize = CGSizeMake(([UIScreen mainScreen].bounds.size.width - layout.minimumInteritemSpacing *2)/3.0, ShareItemH);
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, ShareItemH *ceilf(self.datas.count/3.0) + layout.minimumLineSpacing)collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor lightGrayColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;

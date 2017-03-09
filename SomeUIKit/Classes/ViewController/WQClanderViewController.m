@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    WQClendarView *claendar = [[WQClendarView alloc] initWithFrame:CGRectMake(0, 100, APP_WIGHT, 200)];
+    WQClendarView *claendar = [[WQClendarView alloc] initWithFrame:CGRectMake(0, 100, [[UIScreen mainScreen] bounds].size.width, 200)];
     [self.view addSubview:claendar];
 }
 
