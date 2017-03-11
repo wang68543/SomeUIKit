@@ -9,6 +9,7 @@
 #import "WQAnimationTrasitionViewController.h"
 #import "WQControllerTransition.h"
 #import "WQSubTransitionViewController.h"
+#import "WQAlertController.h"
 
 @interface WQAnimationTrasitionViewController ()
 @property (strong ,nonatomic) WQControllerTransition *frameChangeTransition;
@@ -19,32 +20,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(40, 100, 200, 200)];
-    [btn addTarget:self action:@selector(viewTransition:) forControlEvents:UIControlEventTouchUpInside];
-    btn.backgroundColor = [UIColor redColor];
-    [self.view addSubview:btn];
 }
--(void)viewTransition:(UIButton *)btn{
+-(IBAction)viewTransition:(UIButton *)btn{
     WQSubTransitionViewController *viewController = [[WQSubTransitionViewController alloc] init];
     viewController.view.backgroundColor = [UIColor greenColor];
     
 
     self.frameChangeTransition = [[WQControllerTransition alloc] init];
 //    self.frameChangeTransition.showOneSubViewType = ShowOneSubviewTypeCustom;
-    self.frameChangeTransition.showSuperViewType = ShowSuperViewTypePresentation;//ShowSuperViewTypeFrameChange;
+    self.frameChangeTransition.showSuperViewType = ShowSuperViewTypeFrameChange;//ShowSuperViewTypeFrameChange;
     
     self.frameChangeTransition.orignalFrame = btn.frame;
     self.frameChangeTransition.targetFrame = self.view.frame;
-    self.frameChangeTransition.animationType = AnimationTypeBlipBounce;
     viewController.transitioningDelegate = self.frameChangeTransition;
     //    self.modalTransitionStyle 系统的翻页效果
     viewController.modalPresentationStyle = UIModalPresentationCustom;
     
-   
     
     [self.navigationController presentViewController:viewController animated:YES completion:NULL];
+}
+- (IBAction)otherTransition:(UIButton *)sender {
+    WQSubTransitionViewController *viewController = [[WQSubTransitionViewController alloc] init];
+    viewController.view.backgroundColor = [UIColor greenColor];
+    
+    
+    self.frameChangeTransition = [[WQControllerTransition alloc] init];
+    //    self.frameChangeTransition.showOneSubViewType = ShowOneSubviewTypeCustom;
+    self.frameChangeTransition.showSuperViewType = ShowSuperViewTypeDismissal;//ShowSuperViewTypeFrameChange;
+    viewController.transitioningDelegate = self.frameChangeTransition;
+    //    self.modalTransitionStyle 系统的翻页效果
+    viewController.modalPresentationStyle = UIModalPresentationCustom;
+    
+    
+    [self.navigationController presentViewController:viewController animated:YES completion:NULL];
+    
+}
+- (IBAction)centerAlert:(UIButton *)sender {
+    
+    WQAlertController *alert = [WQAlertController alertWithContent:@"弹出内容" title:@"标题"];
+    [alert showInViewController:self.navigationController];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

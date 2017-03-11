@@ -8,13 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class WQAlertController;
-
-//@protocol CommonAlertDelegate<NSObject>
-//-(void)commonAlertDidConfirm:(nonnull CommonAlertViewController *)commonAlert;
-//@optional
-//-(void)commonAlertDidCancel:(nonnull CommonAlertViewController *)commonAlert;
-//
-//@end
 @class AlertBottomView;
 @class AlertTitleView;
 #define AlertCenterWidth ([[UIScreen mainScreen] bounds].size.width - 50)
@@ -72,7 +65,21 @@ typedef void(^BottomAction)( WQAlertController * _Nonnull alertController);
                                centerView:(nonnull UIView *)centerView
                              confirmTitle:( nullable NSString *)confirmitle
                               cancelTitle:(nullable NSString *)cancelTitle;
+///**中间视图的四周边距*/
+//@property (assign ,nonatomic) UIEdgeInsets contentEdgeInsets;
 @property (strong ,nonatomic,nullable) UIColor *tintColor;
+/**整个视图的圆角*/
+@property (assign ,nonatomic) CGFloat containerViewRadius;
+
+@property (nullable,strong ,nonatomic,readonly) AlertTitleView *titleView;
+
+@property (strong ,nonatomic,nullable ,readonly) AlertBottomView *bottomView;
+
+@property (strong ,nonatomic,nonnull ,readonly) UIView *topCenterView;
+/**当中间点击切换的时候会有多个View*/
+@property (strong ,nonatomic,nonnull ,readonly) NSMutableArray *centerViews;
+
+
 
 -(void)addActionType:(nonnull NSString *const)type action:(nonnull BottomAction)action;
 
@@ -91,15 +98,5 @@ typedef void(^BottomAction)( WQAlertController * _Nonnull alertController);
  弹出中间视图
  */
 -(void)showInViewController:(nullable UIViewController *)inViewController;
-
-//@property (weak ,nonatomic,nullable) id<CommonAlertDelegate> delegate;
-
-@property (nullable,strong ,nonatomic,readonly) AlertTitleView *titleView;
-
-@property (strong ,nonatomic,nullable ,readonly) AlertBottomView *bottomView;
-
-@property (strong ,nonatomic,nonnull ,readonly) UIView *topCenterView;
-
-@property (strong ,nonatomic,nonnull ,readonly) NSMutableArray *centerViews;
 
 @end

@@ -182,7 +182,7 @@
             if([subView  conformsToProtocol:@protocol(UITextInput)]){
                 [textFiledViews addObject:subView];
             }else{
-                [textFiledViews addObject:[self deepInputTextViews:subView]];
+                [textFiledViews addObjectsFromArray:[self deepInputTextViews:subView]];
             }
         }
         return textFiledViews;

@@ -26,51 +26,43 @@
     
 }
 +(instancetype)keyboardAdjustHelpWithView:(UIView *)view excludeTag:(NSInteger)excludeTag{
-    return [[self alloc] initWithView:view excludeTag:excludeTag];
+    return [self keyboardAdjustWithMoveView:view gestureRecognizerView:view excludeTag:excludeTag];
 }
-
--(instancetype)initWithView:(UIView *)view excludeTag:(NSInteger)excludeTag{
++(instancetype)keyboardAdjustWithMoveView:(UIView *)moveView gestureRecognizerView:(UIView *)gestureView excludeTag:(NSInteger)excludeTag{
+    return [[self alloc] initWithMoveView:moveView gestureRecognizerView:gestureView excludeTag:excludeTag];
+}
+-(instancetype)initWithMoveView:(UIView *)moveView gestureRecognizerView:(UIView *)gestureView excludeTag:(NSInteger)excludeTag{
     if(self = [super init]){
-        _lastView = view;
-        if([view isKindOfClass:[UIScrollView class]]){
-            _adjustScrollView = (UIScrollView *)view;
+        _lastView = moveView;
+        if([moveView isKindOfClass:[UIScrollView class]]){
+            _adjustScrollView = (UIScrollView *)moveView;
             _preContentOffset = _adjustScrollView.contentOffset;
         }else{
-            _adjustView = view;
+            _adjustView = moveView;
             _preContentOffset = CGPointZero;
         }
-        _preTransform = view.transform;
+        _preTransform = moveView.transform;
         
         
         _excludeTag = excludeTag;
-
+        
         _animationCurve = UIViewAnimationCurveEaseInOut;
         _animationDuration = 0.25;
         _keyboardDistanceFromTextField = 10.0;
         
         [self rigisterNotification];
-     
+        
         //放在这里是为了让键盘的returnKey初始化
         [self findAllTextFileds];
         [self setDelegates];
-        
-        self.enableBackgroundTap = YES;
+        if(gestureView){
+            _tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackground:)];
+           [gestureView addGestureRecognizer:_tapGR];
+        }
     }
     return self;
 }
 
--(void)setEnableBackgroundTap:(BOOL)enableBackgroundTap{
-    if(_enableBackgroundTap == enableBackgroundTap) return;
-    _enableBackgroundTap = enableBackgroundTap;
-    if(enableBackgroundTap){
-        if(!_tapGR){
-            _tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackground:)];
-        }
-        [_lastView addGestureRecognizer:_tapGR];
-    }else{
-        [_lastView removeGestureRecognizer:_tapGR];
-    }
-}
 -(void)tapBackground:(UITapGestureRecognizer *)tapGR{
 //    self.keyboardChangeing = NO;
     [_lastView endEditing:YES];
@@ -166,25 +158,31 @@
 //MARK: --找出所有的输入框 并排序
 -(void)findAllTextFileds{
     if(_textFieldViews) return;
-    _textFieldViews =  [[APPHELP deepInputTextViews:_lastView] sortedArrayUsingComparator:^NSComparisonResult(UIView *  _Nonnull view1, UIView *  _Nonnull view2) {
-        CGRect frame1 = [view1 convertRect:view1.bounds toView:_lastView];
-        CGRect frame2 = [view2 convertRect:view2.bounds toView:_lastView];
-        CGFloat x1 = CGRectGetMinX(frame1);
-        CGFloat y1 = CGRectGetMinY(frame1);
-        CGFloat x2 = CGRectGetMinX(frame2);
-        CGFloat y2 = CGRectGetMinY(frame2);
-        
-        if (y1 < y2)  return NSOrderedAscending;
-        
-        else if (y1 > y2) return NSOrderedDescending;
-        
-        //Else both y are same so checking for x positions
-        else if (x1 < x2)  return NSOrderedAscending;
-        
-        else if (x1 > x2) return NSOrderedDescending;
-        
-        else    return NSOrderedSame;
-    }];
+    NSArray *tfViews = [APPHELP deepInputTextViews:_lastView];
+    if(tfViews.count > 0){
+        _textFieldViews =  [tfViews sortedArrayUsingComparator:^NSComparisonResult(UIView *  _Nonnull view1, UIView *  _Nonnull view2) {
+            CGRect frame1 = [view1 convertRect:view1.bounds toView:_lastView];
+            CGRect frame2 = [view2 convertRect:view2.bounds toView:_lastView];
+            CGFloat x1 = CGRectGetMinX(frame1);
+            CGFloat y1 = CGRectGetMinY(frame1);
+            CGFloat x2 = CGRectGetMinX(frame2);
+            CGFloat y2 = CGRectGetMinY(frame2);
+            
+            if (y1 < y2)  return NSOrderedAscending;
+            
+            else if (y1 > y2) return NSOrderedDescending;
+            
+            //Else both y are same so checking for x positions
+            else if (x1 < x2)  return NSOrderedAscending;
+            
+            else if (x1 > x2) return NSOrderedDescending;
+            
+            else    return NSOrderedSame;
+        }];
+    }else{
+        _textFieldViews = tfViews;
+    }
+   
 }
 // MARK: 找出当前页面的第一响应者输入框
 -(void)findFirstResponderTextFiledView{

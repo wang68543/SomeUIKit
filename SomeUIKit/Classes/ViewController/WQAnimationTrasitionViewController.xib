@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WQAnimationTrasitionViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="0Nc-aV-KO8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdM-na-yrg">
+                    <rect key="frame" x="20" y="50" width="200" height="200"/>
+                    <color key="backgroundColor" red="0.25882352939999997" green="0.74901960779999999" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="4W4-S7-B3C"/>
+                        <constraint firstAttribute="height" constant="200" id="tyw-CU-xB9"/>
+                    </constraints>
+                    <state key="normal" title="尺寸放大转场"/>
+                    <connections>
+                        <action selector="viewTransition:" destination="-1" eventType="touchUpInside" id="5KI-ak-Eq8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NE-Pc-hUO">
+                    <rect key="frame" x="57" y="282" width="92" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="从上到下转场"/>
+                    <connections>
+                        <action selector="otherTransition:" destination="-1" eventType="touchUpInside" id="XYv-rC-b3H"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek4-L0-4Ca">
+                    <rect key="frame" x="65" y="342" width="77" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="文字弹出框"/>
+                    <connections>
+                        <action selector="centerAlert:" destination="-1" eventType="touchUpInside" id="HdW-zF-qf4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DdM-na-yrg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="Qr1-ac-6CB"/>
+                <constraint firstItem="DdM-na-yrg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="TJf-Uh-Gse"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

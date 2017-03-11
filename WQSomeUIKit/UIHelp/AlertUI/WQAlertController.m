@@ -163,6 +163,7 @@
 -(UIView *)containerView{
     if(!_containerView){
         _containerView = [[UIView alloc] init];
+        
     }
     return _containerView;
 }
@@ -195,30 +196,39 @@
 +(instancetype)alertWithContent:(NSString *)content title:(NSString *)title{
     if(!content || content.length <= 0) return nil;
     UILabel *contentLabel = [[UILabel alloc] init];
-    CGFloat contentWidth = AlertCenterWidth - 20;
+    contentLabel.text = content;
+    contentLabel.numberOfLines = 0;
+    UIEdgeInsets _contentEdge = UIEdgeInsetsMake(15, 15, 15, 15);
+    CGFloat contentWidth = AlertCenterWidth - _contentEdge.left - _contentEdge.right;
     UIFont *contentFont = [UIFont systemFontOfSize:17.0];
     
-    CGSize contentSize = [content boundingRectWithSize:CGSizeMake(contentWidth, 200) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName :contentFont} context:nil].size;
-    contentLabel.text = content;
-    contentLabel.bounds = CGRectMake(0, 0, contentWidth, MAX(contentSize.height, 50));
-    
-    return [self alertViewWithTitle:title centerView:contentLabel];
+    CGSize contentSize = [contentLabel.text boundingRectWithSize:CGSizeMake(contentWidth, APP_HEIGHT - 280) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName :contentFont} context:nil].size;
+    contentLabel.frame = (CGRect){CGPointMake(_contentEdge.left, _contentEdge.top),contentSize};
+    UIView *centerView = [[UIView alloc] init];
+    centerView.backgroundColor = [UIColor clearColor];
+    centerView.bounds = CGRectMake(0, 0, AlertCenterWidth, contentSize.height + _contentEdge.top + _contentEdge.bottom);
+    [centerView addSubview:contentLabel];
+    return [self alertViewWithTitle:title centerView:centerView];
 }
+
 -(instancetype)initWithTitle:(nullable NSString *)title
                    titleIcon:(nullable NSString *)titleIcon
                   centerView:(nonnull UIView *)centerView
                 confirmTitle:(nullable NSString *)confirmitle
                  cancelTitle:(nullable NSString *)cancelTitle{
     if (self = [super init]){
+        _actions = [NSMutableDictionary dictionary];
+        _centerViews = [NSMutableArray array];
+        
         [self configTitleViewWithTitle:title icon:titleIcon];
         [self configCenterView:centerView];
         
         [self configBottomViewWithConfirm:confirmitle cancel:cancelTitle];
         [self layoutContainerSubView];
         
-        _actions = [NSMutableDictionary dictionary];
-        _centerViews = [NSMutableArray array];
+        
         [_centerViews addObject:_topCenterView];
+//        self.containerViewRadius = 5.0;
     }
     return self;
 }
@@ -234,6 +244,14 @@
         [self.containerView addSubview:_titleView];
     }else{
         _titleView = nil;
+    }
+}
+-(void)setContainerViewRadius:(CGFloat)containerViewRadius{
+    if(containerViewRadius < 0) containerViewRadius = 0 ;
+    if(containerViewRadius != _containerViewRadius){
+        _containerViewRadius = containerViewRadius;
+        self.containerView.layer.cornerRadius = _containerViewRadius;
+        self.containerView.layer.masksToBounds = YES;
     }
 }
 #pragma mark -- 配置底部视图
@@ -258,7 +276,6 @@
     UIView *tf = [self findInputText:centerView];
     if(tf){
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
-
     }
     [self configTapGR];
     [self.containerView addSubview:centerView];
