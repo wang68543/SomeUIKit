@@ -8,7 +8,7 @@
 
 #import "WQHttpTool.h"
 
-#import <AFNetworking.h>
+#import "AFNetworking.h"
 
 //static NSString * kBaseUrl = @"http://120.77.174.130:8080/jingtong/appapi/appapi.htmls";
 static NSString * kBaseUrl = @"";

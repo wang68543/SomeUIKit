@@ -7,7 +7,7 @@
 //
 
 #import "UIImageView+SDWebImage.h"
-#import <UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 
 @implementation UIImageView (SDWebImage)
 -(void)downloadHeadImage:(NSString *)url{
