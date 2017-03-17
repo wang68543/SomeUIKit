@@ -48,6 +48,15 @@
 		DED67AD21E71340B0061CABF /* WQBroserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED67ACD1E71340B0061CABF /* WQBroserController.xib */; };
 		DED67AD31E71340B0061CABF /* WQControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ACF1E71340B0061CABF /* WQControllerTransition.m */; };
 		DED67AD91E714E400061CABF /* NSFileManager+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67AD81E714E400061CABF /* NSFileManager+Path.m */; };
+		DEE619FB1E77CD2300C6D806 /* WQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE619FA1E77CD2300C6D806 /* WQTableViewController.m */; };
+		DEEA34241E763A72007149B1 /* WQCommonBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34231E763A72007149B1 /* WQCommonBaseItem.m */; };
+		DEEA34271E763B05007149B1 /* WQCommonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34261E763B05007149B1 /* WQCommonGroup.m */; };
+		DEEA342A1E763E31007149B1 /* WQCommonArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34291E763E31007149B1 /* WQCommonArrowItem.m */; };
+		DEEA342D1E763E8D007149B1 /* WQCommonSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA342C1E763E8D007149B1 /* WQCommonSwitchItem.m */; };
+		DEEA34301E76675F007149B1 /* WQCommonSubtitleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA342F1E76675F007149B1 /* WQCommonSubtitleItem.m */; };
+		DEEA34331E766AC6007149B1 /* WQCommonBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34321E766AC6007149B1 /* WQCommonBaseCell.m */; };
+		DEEA34361E766B08007149B1 /* WQCommonBaseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34351E766B08007149B1 /* WQCommonBaseTableController.m */; };
+		DEEA34391E769ACC007149B1 /* WQCommonCenterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34381E769ACC007149B1 /* WQCommonCenterItem.m */; };
 		DEFE2C691DD22716006BB614 /* WQLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFE2C671DD22716006BB614 /* WQLoopViewController.m */; };
 		DEFE2C6A1DD22716006BB614 /* WQLoopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFE2C681DD22716006BB614 /* WQLoopViewController.xib */; };
 		DEFF6D3B1E6971800004CFE2 /* ZHAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CAB1E69717F0004CFE2 /* ZHAnimationView.m */; };
@@ -198,6 +207,24 @@
 		DED67ACF1E71340B0061CABF /* WQControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQControllerTransition.m; sourceTree = "<group>"; };
 		DED67AD71E714E400061CABF /* NSFileManager+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Path.h"; sourceTree = "<group>"; };
 		DED67AD81E714E400061CABF /* NSFileManager+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Path.m"; sourceTree = "<group>"; };
+		DEE619F91E77CD2300C6D806 /* WQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTableViewController.h; sourceTree = "<group>"; };
+		DEE619FA1E77CD2300C6D806 /* WQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTableViewController.m; sourceTree = "<group>"; };
+		DEEA34221E763A72007149B1 /* WQCommonBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonBaseItem.h; sourceTree = "<group>"; };
+		DEEA34231E763A72007149B1 /* WQCommonBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonBaseItem.m; sourceTree = "<group>"; };
+		DEEA34251E763B05007149B1 /* WQCommonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonGroup.h; sourceTree = "<group>"; };
+		DEEA34261E763B05007149B1 /* WQCommonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonGroup.m; sourceTree = "<group>"; };
+		DEEA34281E763E31007149B1 /* WQCommonArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonArrowItem.h; sourceTree = "<group>"; };
+		DEEA34291E763E31007149B1 /* WQCommonArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonArrowItem.m; sourceTree = "<group>"; };
+		DEEA342B1E763E8D007149B1 /* WQCommonSwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonSwitchItem.h; sourceTree = "<group>"; };
+		DEEA342C1E763E8D007149B1 /* WQCommonSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonSwitchItem.m; sourceTree = "<group>"; };
+		DEEA342E1E76675F007149B1 /* WQCommonSubtitleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonSubtitleItem.h; sourceTree = "<group>"; };
+		DEEA342F1E76675F007149B1 /* WQCommonSubtitleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonSubtitleItem.m; sourceTree = "<group>"; };
+		DEEA34311E766AC6007149B1 /* WQCommonBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonBaseCell.h; sourceTree = "<group>"; };
+		DEEA34321E766AC6007149B1 /* WQCommonBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonBaseCell.m; sourceTree = "<group>"; };
+		DEEA34341E766B08007149B1 /* WQCommonBaseTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonBaseTableController.h; sourceTree = "<group>"; };
+		DEEA34351E766B08007149B1 /* WQCommonBaseTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonBaseTableController.m; sourceTree = "<group>"; };
+		DEEA34371E769ACC007149B1 /* WQCommonCenterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonCenterItem.h; sourceTree = "<group>"; };
+		DEEA34381E769ACC007149B1 /* WQCommonCenterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonCenterItem.m; sourceTree = "<group>"; };
 		DEFE2C661DD22716006BB614 /* WQLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQLoopViewController.h; sourceTree = "<group>"; };
 		DEFE2C671DD22716006BB614 /* WQLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLoopViewController.m; sourceTree = "<group>"; };
 		DEFE2C681DD22716006BB614 /* WQLoopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WQLoopViewController.xib; sourceTree = "<group>"; };
@@ -459,6 +486,8 @@
 				DE0A4DA91E6DAF0000281808 /* WQSubTransitionViewController.h */,
 				DE0A4DAA1E6DAF0000281808 /* WQSubTransitionViewController.m */,
 				DE1FDD2C1E72507C008E6BA2 /* WQAnimationTrasitionViewController.xib */,
+				DEE619F91E77CD2300C6D806 /* WQTableViewController.h */,
+				DEE619FA1E77CD2300C6D806 /* WQTableViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -502,9 +531,57 @@
 			path = Help;
 			sourceTree = "<group>";
 		};
+		DEEA341E1E7639F7007149B1 /* CommonTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DEEA341F1E7639F7007149B1 /* Model */,
+				DEEA34201E7639F7007149B1 /* View */,
+				DEEA34211E7639F7007149B1 /* ViewController */,
+			);
+			path = CommonTableView;
+			sourceTree = "<group>";
+		};
+		DEEA341F1E7639F7007149B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEEA34221E763A72007149B1 /* WQCommonBaseItem.h */,
+				DEEA34231E763A72007149B1 /* WQCommonBaseItem.m */,
+				DEEA34251E763B05007149B1 /* WQCommonGroup.h */,
+				DEEA34261E763B05007149B1 /* WQCommonGroup.m */,
+				DEEA34281E763E31007149B1 /* WQCommonArrowItem.h */,
+				DEEA34291E763E31007149B1 /* WQCommonArrowItem.m */,
+				DEEA342B1E763E8D007149B1 /* WQCommonSwitchItem.h */,
+				DEEA342C1E763E8D007149B1 /* WQCommonSwitchItem.m */,
+				DEEA342E1E76675F007149B1 /* WQCommonSubtitleItem.h */,
+				DEEA342F1E76675F007149B1 /* WQCommonSubtitleItem.m */,
+				DEEA34371E769ACC007149B1 /* WQCommonCenterItem.h */,
+				DEEA34381E769ACC007149B1 /* WQCommonCenterItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEEA34201E7639F7007149B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEEA34311E766AC6007149B1 /* WQCommonBaseCell.h */,
+				DEEA34321E766AC6007149B1 /* WQCommonBaseCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEEA34211E7639F7007149B1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DEEA34341E766B08007149B1 /* WQCommonBaseTableController.h */,
+				DEEA34351E766B08007149B1 /* WQCommonBaseTableController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		DEFF6CA71E69717F0004CFE2 /* WQSomeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DEEA341E1E7639F7007149B1 /* CommonTableView */,
 				DEFF6CA81E69717F0004CFE2 /* AnmationViews */,
 				DEFF6CAC1E69717F0004CFE2 /* Category */,
 				DEFF6CC31E69717F0004CFE2 /* Gloable */,
@@ -1042,16 +1119,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEEA34391E769ACC007149B1 /* WQCommonCenterItem.m in Sources */,
 				DEFF6D411E6971800004CFE2 /* NSString+Help.m in Sources */,
 				DE1FDD311E72A069008E6BA2 /* WQHttpTool.m in Sources */,
 				DEFF6D631E6971800004CFE2 /* ExamineCell.m in Sources */,
 				DEFF6D741E6971800004CFE2 /* MainTabBarController.m in Sources */,
+				DEEA34271E763B05007149B1 /* WQCommonGroup.m in Sources */,
 				DEFF6D5E1E6971800004CFE2 /* WQAlertController.m in Sources */,
 				DEFF6D431E6971800004CFE2 /* UIButton+countDown.m in Sources */,
 				DEC00AFB1DB8BBC000A516A1 /* ViewController.m in Sources */,
 				DED67AD31E71340B0061CABF /* WQControllerTransition.m in Sources */,
 				DEFF6D661E6971800004CFE2 /* GuDExamineDataViewController.m in Sources */,
 				DEFF6D611E6971800004CFE2 /* ClendarUnit.m in Sources */,
+				DEEA342D1E763E8D007149B1 /* WQCommonSwitchItem.m in Sources */,
 				DE1FDD371E72AC51008E6BA2 /* UIImageView+SDWebImage.m in Sources */,
 				DEFF6D761E6971800004CFE2 /* WQStarLevel.m in Sources */,
 				DEFF6D581E6971800004CFE2 /* WQAppInfo.m in Sources */,
@@ -1064,12 +1144,14 @@
 				DE5C94D21DE6B8BC00EFA20F /* WQSelectedTagsViewController.m in Sources */,
 				DEFF6D5D1E6971800004CFE2 /* WQEdgeTitleButton.m in Sources */,
 				DE55FF471DBA08EB0014C758 /* VerticalScrollTextViewController.m in Sources */,
+				DEEA34361E766B08007149B1 /* WQCommonBaseTableController.m in Sources */,
 				DEFF6D751E6971800004CFE2 /* MenuViewController.m in Sources */,
 				DEC00B341DB8C0D900A516A1 /* GetPictureViewController.m in Sources */,
 				DEFF6D3C1E6971800004CFE2 /* NSDate+Format.m in Sources */,
 				DEC00B531DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m in Sources */,
 				DED67AD01E71340B0061CABF /* APPHELP.m in Sources */,
 				DEFF6D711E6971800004CFE2 /* WQShareActionViewController.m in Sources */,
+				DEE619FB1E77CD2300C6D806 /* WQTableViewController.m in Sources */,
 				DEFF6D781E6971800004CFE2 /* GYChangeTextView.m in Sources */,
 				DE71DF9C1E6672C50061E374 /* WQKeyboardHandleViewController.m in Sources */,
 				DEFF6D591E6971800004CFE2 /* WQCache.m in Sources */,
@@ -1086,9 +1168,12 @@
 				DEFF6D721E6971800004CFE2 /* ContainerViewController.m in Sources */,
 				DE55FF621DBA10310014C758 /* TextViewPlacehodelViewController.m in Sources */,
 				DEFF6D651E6971800004CFE2 /* GuDExaminationItem.m in Sources */,
+				DEEA342A1E763E31007149B1 /* WQCommonArrowItem.m in Sources */,
 				DEFF6D3F1E6971800004CFE2 /* NSString+Date.m in Sources */,
 				DEFF6D601E6971800004CFE2 /* ClendarDayUnit.m in Sources */,
+				DEEA34331E766AC6007149B1 /* WQCommonBaseCell.m in Sources */,
 				DEC00B4B1DB8CA7400A516A1 /* DropDownViewController.m in Sources */,
+				DEEA34301E76675F007149B1 /* WQCommonSubtitleItem.m in Sources */,
 				DEFF6D731E6971800004CFE2 /* MainNavController.m in Sources */,
 				DEFF6D6B1E6971800004CFE2 /* WQSelectPhotoViewController.m in Sources */,
 				DEFF6D421E6971800004CFE2 /* UIGestureRecognizer+Block.m in Sources */,
@@ -1105,6 +1190,7 @@
 				DEFF6D671E6971800004CFE2 /* GuDExamineViewController.m in Sources */,
 				DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */,
 				DED67AC01E71252A0061CABF /* amrFileCodec.m in Sources */,
+				DEEA34241E763A72007149B1 /* WQCommonBaseItem.m in Sources */,
 				DEFF6D6C1E6971800004CFE2 /* WQSelectOptionsCell.m in Sources */,
 				DE8537841DE0602400654C4D /* ReplicatorViewController.m in Sources */,
 				DEAFF1F71DDF142200CF8116 /* WQTabBarViewController.m in Sources */,

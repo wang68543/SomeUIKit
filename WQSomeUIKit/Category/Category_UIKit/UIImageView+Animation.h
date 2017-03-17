@@ -21,4 +21,5 @@
 -(void)stopRotationImage;
 @property (assign ,nonatomic,getter=isRunning) BOOL running;
 
+
 @end

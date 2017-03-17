@@ -14,6 +14,7 @@
 @dynamic running;
 //@synthesize running = _running;
 static char *const kLoadingKey = "running";
+static NSString *kRotation = @"rotationAnimation";
 
 -(void)setFadeImage:(UIImage *)fadeImage{
     CATransition *transtion = [CATransition animation];
@@ -30,7 +31,7 @@ static char *const kLoadingKey = "running";
 }
 -(void)startRotationImage{
     self.running = YES;
-    CAAnimation *anmiation = [self.layer animationForKey:@"rotationAnimation"];
+    CAAnimation *anmiation = [self.layer animationForKey:kRotation];
     if(!anmiation){
         CABasicAnimation* rotationAnimation;
         rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
@@ -41,10 +42,10 @@ static char *const kLoadingKey = "running";
         rotationAnimation.removedOnCompletion = NO;
         anmiation = rotationAnimation;
     }
-    [self.layer addAnimation:anmiation forKey:@"rotationAnimation"];
+    [self.layer addAnimation:anmiation forKey:kRotation];
 }
 -(void)stopRotationImage{
-    [self.layer removeAnimationForKey:@"rotationAnimation"];
+    [self.layer removeAnimationForKey:kRotation];
     self.running = NO;
 }
 -(void)setRunning:(BOOL)running{
