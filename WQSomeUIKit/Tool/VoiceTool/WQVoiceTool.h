@@ -22,6 +22,13 @@ typedef NS_ENUM(NSInteger,VoiceCacheType) {
  */
 typedef void(^PlayFinshBlock)(NSError *error , BOOL finshed);
 typedef void (^DowonFinshBlock)(NSError *error ,NSData *voiceData,VoiceCacheType cacheType);
+/**
+ 音频格式转换(可能下载的格式iOS无法播放所以需要转换)
+ 
+ @param originalData 下载下来的原始数据
+ @return 转换后的数据
+ */
+typedef NSData * (^ConvertDownloadVoiceBlock)(NSData *originalData);
 
 /**
  录音完成回调
@@ -41,7 +48,21 @@ typedef BOOL (^RecordFinshBlock)(NSError *error,NSString *recordPath,CGFloat dur
 @property (assign ,nonatomic,readonly,getter=isPlaying) BOOL playing;
 
 /**根据语音的url下载并播放并缓存到固定的路径*/
--(void)playWithPath:(NSString *)path downFinshed:(DowonFinshBlock)downFinsh compeletion:(PlayFinshBlock)compeleletion;
+-(void)playWithPath:(NSString *)path
+        downFinshed:(DowonFinshBlock)downFinsh
+        compeletion:(PlayFinshBlock)compeleletion;
+/**
+ 音频播放
+
+ @param path 音频路径
+ @param convertBlock 下载的音频转换后播放 //FIXME: 这里默认没有转换 (转换需添加框架框架比较大)
+ @param downFinsh 音频下载完成
+ @param compeleletion 音频播放完成
+ */
+-(void)playWithPath:(NSString *)path
+       convertVoice:(ConvertDownloadVoiceBlock)convertBlock
+        downFinshed:(DowonFinshBlock)downFinsh
+        compeletion:(PlayFinshBlock)compeleletion;
 /**外部停止播放(会回调block)*/
 -(void)stopCurrentPlayer;
 /**
@@ -58,5 +79,6 @@ typedef BOOL (^RecordFinshBlock)(NSError *error,NSString *recordPath,CGFloat dur
 -(void)stopRecordCompeletion:(RecordFinshBlock)recordFinsh;
 
 /**录音格式转换*/
--(void)wavData:(NSData *)data toAmr:(void (^)(NSData *))compeletion;
+//FIXME:这里需要导入一个第三方的库文件才能调用
+//-(void)wavData:(NSData *)data toAmr:(void (^)(NSData *))compeletion;
 @end

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "Usual collection"
 
   # This description is used to generate tags and improve search results.
@@ -240,15 +240,15 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   
-  non_arc_files = 'WQSomeUIKit/Tool/VoiceTool/amrwapper/*.{h,m}'
-   s.requires_arc = true
-   s.exclude_files = non_arc_files
-   s.subspec 'WavAmrHelp' do |sna|
-   sna.requires_arc = false
-   sna.source_files = non_arc_files
-   # sna.resources =
-   sna.vendored_libraries = "WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrwb.a"
-   end
+  # non_arc_files = 'WQSomeUIKit/Tool/VoiceTool/amrwapper/*.{h,m}'
+  #  s.requires_arc = true
+  #  s.exclude_files = non_arc_files
+  #  s.subspec 'WavAmrHelp' do |sna|
+  #  sna.requires_arc = false
+  #  sna.source_files = non_arc_files
+  #  # sna.resources =
+  #  sna.vendored_libraries = "WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrwb.a"
+  #  end
    # $(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrwb
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency 'AFNetworking', '~> 3.0'

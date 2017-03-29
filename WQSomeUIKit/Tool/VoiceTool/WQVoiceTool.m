@@ -9,7 +9,7 @@
 #import "WQVoiceTool.h"
 #import <AVFoundation/AVFoundation.h>
 #import "WQCache.h"
-#import "amrFileCodec.h"
+//#import "amrFileCodec.h"
 
 
 @interface WQVoiceTool()<AVAudioPlayerDelegate>
@@ -66,14 +66,21 @@ static id _instace;
 #pragma mark -- 语音播放
 
 -(void)playWithPath:(NSString *)path downFinshed:(DowonFinshBlock)downFinsh compeletion:(PlayFinshBlock)compeleletion{
+    [self playWithPath:path convertVoice:^NSData *(NSData *originalData) {
+        //FIXME: 这里音频转换需要第三方库支持
+//        return [self decodeAmr:originalData];
+        return originalData;
+    } downFinshed:downFinsh compeletion:compeleletion];
+}
+-(void)playWithPath:(NSString *)path convertVoice:(ConvertDownloadVoiceBlock)convertBlock downFinshed:(DowonFinshBlock)downFinsh compeletion:(PlayFinshBlock)compeleletion{
     [self stopCurrentPlayer];
     __weak typeof(self) weakSelf = self;
-    [self downloadVoice:path compeletion:^(NSError *error, NSData *voiceData, VoiceCacheType cacheType) {
+    [self downloadVoice:path  convertVoice:convertBlock compeletion:^(NSError *error, NSData *voiceData, VoiceCacheType cacheType) {
         !downFinsh?:downFinsh(error,voiceData,cacheType);
         if(error){
             !compeleletion?:compeleletion(error,YES);
         }else{
-           weakSelf.player = [[AVAudioPlayer alloc] initWithData:voiceData error:&error];
+            weakSelf.player = [[AVAudioPlayer alloc] initWithData:voiceData error:&error];
             if(error){
                 !compeleletion?:compeleletion(error,YES);
             }else{
@@ -90,9 +97,8 @@ static id _instace;
         }
     }];
 }
-
 #pragma mark -- 下载语音
--(void)downloadVoice:(NSString *)path compeletion:(DowonFinshBlock)downFinshed{
+-(void)downloadVoice:(NSString *)path convertVoice:(ConvertDownloadVoiceBlock)convertBlock compeletion:(DowonFinshBlock)downFinshed{
      NSURL *url = [NSURL URLWithString:path];
     if(!url){
         !downFinshed?:downFinshed([self errorWithMsg:@"音频文件路径不存在"],nil,VoiceCacheTypeNone);
@@ -101,15 +107,17 @@ static id _instace;
     __weak typeof(self) weakSelf = self;
     dispatch_block_t block = ^(){
         NSString *lastPath = url.lastPathComponent;
-        NSString *path = [[NSFileManager pathForVoiceDirectory] stringByAppendingPathComponent:lastPath];
-        //先从缓存中取
-        NSData *data = [self voiceDataWithPath:path];
+        //TODO: 先从缓存中取、取不到再去网络取
+        NSData *data = [self voiceDataWithName:lastPath];
         VoiceCacheType cacheType;
         if(data){
             cacheType = VoiceCacheTypeDisk;
         }else{
             cacheType = VoiceCacheTypeNone;
             data = [NSData dataWithContentsOfURL:url];
+            if(convertBlock){
+                data = convertBlock(data);
+            }
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             NSError *error;
@@ -125,10 +133,12 @@ static id _instace;
 }
 
 /**从缓存中获取语音*/
--(NSData *)voiceDataWithPath:(NSString *)path{
-    if(!path){
+-(NSData *)voiceDataWithName:(NSString *)name{
+    if(!name){
         return nil;
     }else{
+        NSString *path = [[NSFileManager pathForVoiceDirectory] stringByAppendingPathComponent:name];
+        if(!path) return nil;
         NSData *data = [NSData dataWithContentsOfFile:path];
         return data;
     }
@@ -222,27 +232,27 @@ static id _instace;
     }
 }
 #pragma mark -- /**录音格式转换*/
--(void)wavData:(NSData *)data toAmr:(void (^)(NSData *))compeletion{
-    __weak typeof(self) weakSelf = self;
-    dispatch_block_t block = ^(){
-         NSData *amrData = [weakSelf wavToAmr:data];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            !compeletion?:compeletion(amrData);
-        });
-    };
-    [self addJobToQueue:block];
-}
+//-(void)wavData:(NSData *)data toAmr:(void (^)(NSData *))compeletion{
+//    __weak typeof(self) weakSelf = self;
+//    dispatch_block_t block = ^(){
+//         NSData *amrData = [weakSelf wavToAmr:data];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            !compeletion?:compeletion(amrData);
+//        });
+//    };
+//    [self addJobToQueue:block];
+//}
 #pragma mark -- wav与amr相互转换
--(NSData *)decodeAmr:(NSData *)data{
-    if (!data) {
-        return data;
-    }
-    return DecodeAMRToWAVE(data);
-}
--(NSData *)wavToAmr:(NSData *)data{
-    if(!data) return data;
-    return  EncodeWAVEToAMR(data,1,16);
-}
+//-(NSData *)decodeAmr:(NSData *)data{
+//    if (!data) {
+//        return data;
+//    }
+//    return DecodeAMRToWAVE(data);
+//}
+//-(NSData *)wavToAmr:(NSData *)data{
+//    if(!data) return data;
+//    return  EncodeWAVEToAMR(data,1,16);
+//}
 
 -(NSError *)errorWithMsg:(NSString *)msg{
    return  [NSError errorWithDomain:NSStringFromClass([self class]) code:-3000 userInfo:@{NSLocalizedDescriptionKey:msg}];

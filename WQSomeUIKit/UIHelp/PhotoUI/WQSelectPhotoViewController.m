@@ -10,7 +10,7 @@
 #import "WQControllerTransition.h"
 //#import "WQConstans.h"
 #import "APPHELP.h"
-#define APP_WIGHT [[UIScreen mainScreen] bounds].size.width
+#define APP_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define APP_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define DivLineBG UIColorMake(225, 226, 230, 1.0)
 #define subViewH  50
@@ -38,14 +38,14 @@
 }
 -(UIView *)actionSheetView{
     if(!_actionSheetView){
-        _actionSheetView = [[UIView alloc] initWithFrame:CGRectMake(0, APP_HEIGHT , APP_WIGHT, subViewH *3+4.0)];//- (subViewH *3+4.0)
+        _actionSheetView = [[UIView alloc] initWithFrame:CGRectMake(0, APP_HEIGHT , APP_WIDTH, subViewH *3+4.0)];//- (subViewH *3+4.0)
     _actionSheetView.backgroundColor = [UIColor whiteColor];
     UIView *view1 = [self setupBtnWithTitleMessage:@"拍照" withTag:1];
-    view1.frame = CGRectMake(0, 0, APP_WIGHT, subViewH);
+    view1.frame = CGRectMake(0, 0, APP_WIDTH, subViewH);
     UIView *view2 =  [self setupBtnWithTitleMessage:@"从相册获取" withTag:2];
-       view2.frame = CGRectMake(0, CGRectGetMaxY(view1.frame), APP_WIGHT, subViewH);
+       view2.frame = CGRectMake(0, CGRectGetMaxY(view1.frame), APP_WIDTH, subViewH);
     UIView *cancelView =   [self setCancelButtonWithTitleMessage:@"取消"];
-    cancelView.frame = CGRectMake(0, CGRectGetMaxY(view2.frame), APP_WIGHT, subViewH+4.0);
+    cancelView.frame = CGRectMake(0, CGRectGetMaxY(view2.frame), APP_WIDTH, subViewH+4.0);
     }
     return _actionSheetView;
 }
@@ -94,11 +94,11 @@
     [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     btn.tag = tag;
     btn.backgroundColor = [UIColor clearColor];
-    btn.frame = CGRectMake(0, 0, APP_WIGHT, subViewH - 1.0);
+    btn.frame = CGRectMake(0, 0, APP_WIDTH, subViewH - 1.0);
     
     UIView *lineV = [[UIView alloc] init];
     lineV.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    lineV.frame = CGRectMake(0, subViewH -1.0, APP_WIGHT, 1.0);
+    lineV.frame = CGRectMake(0, subViewH -1.0, APP_WIDTH, 1.0);
     [backView addSubview:lineV];
     [backView addSubview:btn];
     [_actionSheetView addSubview:backView];
@@ -119,11 +119,11 @@
     btn.titleLabel.font = btnFont;
     [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     btn.backgroundColor = [UIColor clearColor];
-    btn.frame = CGRectMake(0, 5.0, APP_WIGHT, subViewH - 5.0);
+    btn.frame = CGRectMake(0, 5.0, APP_WIDTH, subViewH - 5.0);
     
     UIView *lineV = [[UIView alloc] init];
     lineV.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    lineV.frame = CGRectMake(0, 0, APP_WIGHT, 5.0);
+    lineV.frame = CGRectMake(0, 0, APP_WIDTH, 5.0);
     [backView addSubview:lineV];
     [backView addSubview:btn];
     [_actionSheetView addSubview:backView];

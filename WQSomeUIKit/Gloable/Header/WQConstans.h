@@ -22,7 +22,7 @@
 #define TITLE3  UIColorMakeA(157,160,166,1)
 #define TITLE4  UIColorMakeA(195,197,204,1)
 
-#define APP_WIGHT [[UIScreen mainScreen] bounds].size.width
+#define APP_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define APP_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
 #define MYFont(a) [UIFont systemFontOfSize:(a)]

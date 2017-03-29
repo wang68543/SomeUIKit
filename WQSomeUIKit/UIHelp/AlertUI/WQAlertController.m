@@ -7,10 +7,10 @@
 //
 
 #import "WQAlertController.h"
-#import "WQControllerTransition.h"
+
 //#import "WQConstans.h"
 #import "APPHELP.h"
-#define APP_WIGHT [[UIScreen mainScreen] bounds].size.width
+#define APP_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define APP_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
 #pragma mark ============BottomView=================
@@ -324,7 +324,7 @@
         centerViewHeight += 49.0;
     }
 
-    _containerView.frame = CGRectMake((APP_WIGHT - centerViewWidth)*0.5,( APP_HEIGHT - centerViewHeight)*0.5, centerViewWidth, centerViewHeight);
+    _containerView.frame = CGRectMake((APP_WIDTH - centerViewWidth)*0.5,( APP_HEIGHT - centerViewHeight)*0.5, centerViewWidth, centerViewHeight);
 }
 -(UIView *)findInputText:(UIView *)findView{
     if ([findView conformsToProtocol:@protocol(UITextInput)]) {
@@ -385,22 +385,28 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _bottomTranstion = [WQControllerTransition transitionWithAnimatedView:self.containerView];
-    _bottomTranstion.showOneSubViewType = ShowOneSubviewFromDownToMiddleCenter;
-    _bottomTranstion.animationType = AnimationTypeSpring;
-    
     self.containerView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.containerView];
 }
 
 -(void)showInViewController:(UIViewController *)inViewController{
+    [self showInViewController:inViewController subViewFrameChangeType:ShowOneSubviewFromDownToMiddleCenter subViewShowAnimationType:AnimationTypeSpring];
+}
+-(void)showInViewController:(UIViewController *)inViewController subViewFrameChangeType:(ShowOneSubViewType)showSubViewType subViewShowAnimationType:(AnimationType)animationTye{
     if(!inViewController){
         inViewController = [APPHELP visibleViewController];
     }
-
+    _bottomTranstion = [WQControllerTransition transitionWithAnimatedView:self.containerView];
+    _bottomTranstion.showOneSubViewType = showSubViewType;
+    _bottomTranstion.animationType = animationTye;
+    
     self.view.backgroundColor = [UIColor whiteColor];
-    self.transitioningDelegate = self.bottomTranstion;
-//    self.modalTransitionStyle 系统的翻页效果
+    self.transitioningDelegate = _bottomTranstion;
+    // MARK: -- 非自定义翻页的半透明效果
+    /**如果不自定义翻页效果 设置下面这个属性可以有半透明的效果
+    self.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];*/
+    //    self.modalTransitionStyle 系统的翻页效果
     self.modalPresentationStyle = UIModalPresentationCustom;
     [inViewController presentViewController:self animated:YES completion:NULL];
 }

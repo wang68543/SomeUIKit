@@ -16,6 +16,7 @@
 		DE1FDD341E72A1AC008E6BA2 /* WQBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD331E72A1AC008E6BA2 /* WQBaseAPI.m */; };
 		DE1FDD371E72AC51008E6BA2 /* UIImageView+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD361E72AC51008E6BA2 /* UIImageView+SDWebImage.m */; };
 		DE1FDD3A1E72B053008E6BA2 /* UIImageView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD391E72B053008E6BA2 /* UIImageView+Animation.m */; };
+		DE289B381E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE289B371E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m */; };
 		DE49E2B81E6D44DA0040A51A /* WQAnimationTrasitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */; };
 		DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE55FF3B1DB9A48C0014C758 /* StarViewController.m */; };
 		DE55FF3E1DB9A48C0014C758 /* StarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE55FF3C1DB9A48C0014C758 /* StarViewController.xib */; };
@@ -144,6 +145,8 @@
 		DE1FDD361E72AC51008E6BA2 /* UIImageView+SDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWebImage.m"; sourceTree = "<group>"; };
 		DE1FDD381E72B053008E6BA2 /* UIImageView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Animation.h"; sourceTree = "<group>"; };
 		DE1FDD391E72B053008E6BA2 /* UIImageView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Animation.m"; sourceTree = "<group>"; };
+		DE289B361E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BarButtonHelp.h"; sourceTree = "<group>"; };
+		DE289B371E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BarButtonHelp.m"; sourceTree = "<group>"; };
 		DE49E2B61E6D44DA0040A51A /* WQAnimationTrasitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAnimationTrasitionViewController.h; sourceTree = "<group>"; };
 		DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAnimationTrasitionViewController.m; sourceTree = "<group>"; };
 		DE55FF3A1DB9A48C0014C758 /* StarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarViewController.h; sourceTree = "<group>"; };
@@ -643,6 +646,8 @@
 				DEFF6CC01E69717F0004CFE2 /* UIImage+Extension.m */,
 				DE1FDD381E72B053008E6BA2 /* UIImageView+Animation.h */,
 				DE1FDD391E72B053008E6BA2 /* UIImageView+Animation.m */,
+				DE289B361E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.h */,
+				DE289B371E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m */,
 			);
 			path = Category_UIKit;
 			sourceTree = "<group>";
@@ -1192,6 +1197,7 @@
 				DED67AC01E71252A0061CABF /* amrFileCodec.m in Sources */,
 				DEEA34241E763A72007149B1 /* WQCommonBaseItem.m in Sources */,
 				DEFF6D6C1E6971800004CFE2 /* WQSelectOptionsCell.m in Sources */,
+				DE289B381E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m in Sources */,
 				DE8537841DE0602400654C4D /* ReplicatorViewController.m in Sources */,
 				DEAFF1F71DDF142200CF8116 /* WQTabBarViewController.m in Sources */,
 			);

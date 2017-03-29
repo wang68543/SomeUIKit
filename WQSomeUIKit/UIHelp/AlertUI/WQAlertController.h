@@ -10,6 +10,7 @@
 @class WQAlertController;
 @class AlertBottomView;
 @class AlertTitleView;
+#import "WQControllerTransition.h"
 #define AlertCenterWidth ([[UIScreen mainScreen] bounds].size.width - 50)
 UIKIT_EXTERN  NSString * _Nonnull const ActionConfirm;
 UIKIT_EXTERN  NSString * _Nonnull const ActionCancel;
@@ -65,6 +66,7 @@ typedef void(^BottomAction)( WQAlertController * _Nonnull alertController);
                                centerView:(nonnull UIView *)centerView
                              confirmTitle:( nullable NSString *)confirmitle
                               cancelTitle:(nullable NSString *)cancelTitle;
+
 ///**中间视图的四周边距*/
 //@property (assign ,nonatomic) UIEdgeInsets contentEdgeInsets;
 @property (strong ,nonatomic,nullable) UIColor *tintColor;
@@ -95,8 +97,17 @@ typedef void(^BottomAction)( WQAlertController * _Nonnull alertController);
 -(void)popCenterViewAnimate:(BOOL)animate;
 
 /**
- 弹出中间视图
+ 弹框
  */
 -(void)showInViewController:(nullable UIViewController *)inViewController;
+/**
+ 弹框
 
+ @param inViewController 在哪个控制器中显示
+ @param showSubViewType 子视图出现方式
+ @param animationTye 子视图动画方式
+ */
+-(void)showInViewController:(nullable UIViewController *)inViewController
+     subViewFrameChangeType:(ShowOneSubViewType)showSubViewType
+   subViewShowAnimationType:(AnimationType)animationTye;
 @end

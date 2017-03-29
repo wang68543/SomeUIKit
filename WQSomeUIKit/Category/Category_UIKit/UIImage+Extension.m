@@ -43,7 +43,7 @@
 
 + (UIImage *)imageWithColor:(UIColor *)color
 {
-    CGFloat imageW = APP_WIGHT;
+    CGFloat imageW = APP_WIDTH;
     CGFloat imageH = 100;
     // 1.开启基于位图的图形上下文
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(imageW, imageH), NO, 0.0);
