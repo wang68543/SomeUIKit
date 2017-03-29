@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.1.2"
+  s.version      = "1.1.3"
   s.summary      = "Usual collection"
 
   # This description is used to generate tags and improve search results.
@@ -240,9 +240,9 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   
-  # non_arc_files = 'WQSomeUIKit/Tool/VoiceTool/amrwapper/*.{h,m}'
+  non_arc_files = 'WQSomeUIKit/Tool/VoiceTool/amrwapper/*.{h,m}'
   #  s.requires_arc = true
-  #  s.exclude_files = non_arc_files
+   s.exclude_files = non_arc_files
   #  s.subspec 'WavAmrHelp' do |sna|
   #  sna.requires_arc = false
   #  sna.source_files = non_arc_files

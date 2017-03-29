@@ -17,6 +17,9 @@
 		DE1FDD371E72AC51008E6BA2 /* UIImageView+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD361E72AC51008E6BA2 /* UIImageView+SDWebImage.m */; };
 		DE1FDD3A1E72B053008E6BA2 /* UIImageView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD391E72B053008E6BA2 /* UIImageView+Animation.m */; };
 		DE289B381E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE289B371E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m */; };
+		DE289B4E1E8BB99200F8C92E /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DE289B471E8BB99200F8C92E /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DE289B4F1E8BB99200F8C92E /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE289B4C1E8BB99200F8C92E /* libopencore-amrnb.a */; };
+		DE289B501E8BB99200F8C92E /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE289B4D1E8BB99200F8C92E /* libopencore-amrwb.a */; };
 		DE49E2B81E6D44DA0040A51A /* WQAnimationTrasitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */; };
 		DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE55FF3B1DB9A48C0014C758 /* StarViewController.m */; };
 		DE55FF3E1DB9A48C0014C758 /* StarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE55FF3C1DB9A48C0014C758 /* StarViewController.xib */; };
@@ -40,9 +43,6 @@
 		DEC00B4B1DB8CA7400A516A1 /* DropDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC00B491DB8CA7400A516A1 /* DropDownViewController.m */; };
 		DEC00B4C1DB8CA7400A516A1 /* DropDownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC00B4A1DB8CA7400A516A1 /* DropDownViewController.xib */; };
 		DEC00B531DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC00B511DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m */; };
-		DED67AC01E71252A0061CABF /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67AB71E71252A0061CABF /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DED67AC11E71252A0061CABF /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DED67ABC1E71252A0061CABF /* libopencore-amrnb.a */; };
-		DED67AC21E71252A0061CABF /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DED67ABD1E71252A0061CABF /* libopencore-amrwb.a */; };
 		DED67AC31E71252A0061CABF /* WQVoiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ABF1E71252A0061CABF /* WQVoiceTool.m */; };
 		DED67AD01E71340B0061CABF /* APPHELP.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ACA1E71340B0061CABF /* APPHELP.m */; };
 		DED67AD11E71340B0061CABF /* WQBroserController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ACC1E71340B0061CABF /* WQBroserController.m */; };
@@ -147,6 +147,14 @@
 		DE1FDD391E72B053008E6BA2 /* UIImageView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Animation.m"; sourceTree = "<group>"; };
 		DE289B361E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BarButtonHelp.h"; sourceTree = "<group>"; };
 		DE289B371E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BarButtonHelp.m"; sourceTree = "<group>"; };
+		DE289B461E8BB99200F8C92E /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		DE289B471E8BB99200F8C92E /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
+		DE289B481E8BB99200F8C92E /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		DE289B491E8BB99200F8C92E /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		DE289B4A1E8BB99200F8C92E /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		DE289B4B1E8BB99200F8C92E /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		DE289B4C1E8BB99200F8C92E /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		DE289B4D1E8BB99200F8C92E /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		DE49E2B61E6D44DA0040A51A /* WQAnimationTrasitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAnimationTrasitionViewController.h; sourceTree = "<group>"; };
 		DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAnimationTrasitionViewController.m; sourceTree = "<group>"; };
 		DE55FF3A1DB9A48C0014C758 /* StarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarViewController.h; sourceTree = "<group>"; };
@@ -191,14 +199,6 @@
 		DEC00B4A1DB8CA7400A516A1 /* DropDownViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownViewController.xib; sourceTree = "<group>"; };
 		DEC00B501DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonTitleImageLayoutViewController.h; sourceTree = "<group>"; };
 		DEC00B511DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonTitleImageLayoutViewController.m; sourceTree = "<group>"; };
-		DED67AB61E71252A0061CABF /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
-		DED67AB71E71252A0061CABF /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
-		DED67AB81E71252A0061CABF /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		DED67AB91E71252A0061CABF /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		DED67ABA1E71252A0061CABF /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		DED67ABB1E71252A0061CABF /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		DED67ABC1E71252A0061CABF /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		DED67ABD1E71252A0061CABF /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		DED67ABE1E71252A0061CABF /* WQVoiceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQVoiceTool.h; sourceTree = "<group>"; };
 		DED67ABF1E71252A0061CABF /* WQVoiceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQVoiceTool.m; sourceTree = "<group>"; };
 		DED67AC91E71340B0061CABF /* APPHELP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPHELP.h; sourceTree = "<group>"; };
@@ -331,8 +331,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B43B7901A5066FFD774F34F /* libPods-SomeUIKit.a in Frameworks */,
-				DED67AC21E71252A0061CABF /* libopencore-amrwb.a in Frameworks */,
-				DED67AC11E71252A0061CABF /* libopencore-amrnb.a in Frameworks */,
+				DE289B501E8BB99200F8C92E /* libopencore-amrwb.a in Frameworks */,
+				DE289B4F1E8BB99200F8C92E /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +373,21 @@
 				DE1FDD361E72AC51008E6BA2 /* UIImageView+SDWebImage.m */,
 			);
 			path = NetWorkTool;
+			sourceTree = "<group>";
+		};
+		DE289B451E8BB99200F8C92E /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				DE289B461E8BB99200F8C92E /* amrFileCodec.h */,
+				DE289B471E8BB99200F8C92E /* amrFileCodec.m */,
+				DE289B481E8BB99200F8C92E /* dec_if.h */,
+				DE289B491E8BB99200F8C92E /* if_rom.h */,
+				DE289B4A1E8BB99200F8C92E /* interf_dec.h */,
+				DE289B4B1E8BB99200F8C92E /* interf_enc.h */,
+				DE289B4C1E8BB99200F8C92E /* libopencore-amrnb.a */,
+				DE289B4D1E8BB99200F8C92E /* libopencore-amrwb.a */,
+			);
+			path = amrwapper;
 			sourceTree = "<group>";
 		};
 		DEC00AE71DB8BBC000A516A1 = {
@@ -498,26 +513,11 @@
 		DED67AB41E71252A0061CABF /* VoiceTool */ = {
 			isa = PBXGroup;
 			children = (
-				DED67AB51E71252A0061CABF /* amrwapper */,
+				DE289B451E8BB99200F8C92E /* amrwapper */,
 				DED67ABE1E71252A0061CABF /* WQVoiceTool.h */,
 				DED67ABF1E71252A0061CABF /* WQVoiceTool.m */,
 			);
 			path = VoiceTool;
-			sourceTree = "<group>";
-		};
-		DED67AB51E71252A0061CABF /* amrwapper */ = {
-			isa = PBXGroup;
-			children = (
-				DED67AB61E71252A0061CABF /* amrFileCodec.h */,
-				DED67AB71E71252A0061CABF /* amrFileCodec.m */,
-				DED67AB81E71252A0061CABF /* dec_if.h */,
-				DED67AB91E71252A0061CABF /* if_rom.h */,
-				DED67ABA1E71252A0061CABF /* interf_dec.h */,
-				DED67ABB1E71252A0061CABF /* interf_enc.h */,
-				DED67ABC1E71252A0061CABF /* libopencore-amrnb.a */,
-				DED67ABD1E71252A0061CABF /* libopencore-amrwb.a */,
-			);
-			path = amrwapper;
 			sourceTree = "<group>";
 		};
 		DED67AC81E71340B0061CABF /* Help */ = {
@@ -1167,6 +1167,7 @@
 				DE0A4DAB1E6DAF0000281808 /* WQSubTransitionViewController.m in Sources */,
 				DE1FDD341E72A1AC008E6BA2 /* WQBaseAPI.m in Sources */,
 				DE1FDD3A1E72B053008E6BA2 /* UIImageView+Animation.m in Sources */,
+				DE289B4E1E8BB99200F8C92E /* amrFileCodec.m in Sources */,
 				DEFF6D3B1E6971800004CFE2 /* ZHAnimationView.m in Sources */,
 				DEC00AF81DB8BBC000A516A1 /* AppDelegate.m in Sources */,
 				DEFE2C691DD22716006BB614 /* WQLoopViewController.m in Sources */,
@@ -1194,7 +1195,6 @@
 				DED67AD91E714E400061CABF /* NSFileManager+Path.m in Sources */,
 				DEFF6D671E6971800004CFE2 /* GuDExamineViewController.m in Sources */,
 				DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */,
-				DED67AC01E71252A0061CABF /* amrFileCodec.m in Sources */,
 				DEEA34241E763A72007149B1 /* WQCommonBaseItem.m in Sources */,
 				DEFF6D6C1E6971800004CFE2 /* WQSelectOptionsCell.m in Sources */,
 				DE289B381E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m in Sources */,
@@ -1354,6 +1354,7 @@
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrwb",
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper",
 					"$(PROJECT_DIR)/WQSomeUIKit/Tool/VoiceTool/amrwapper",
+					"$(PROJECT_DIR)/WQSomeUIKit/amrwapper",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WANG.SomeUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1376,6 +1377,7 @@
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrwb",
 					"$(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper",
 					"$(PROJECT_DIR)/WQSomeUIKit/Tool/VoiceTool/amrwapper",
+					"$(PROJECT_DIR)/WQSomeUIKit/amrwapper",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WANG.SomeUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
