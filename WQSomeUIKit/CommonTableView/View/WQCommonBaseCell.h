@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WQCommonGroup.h"
+#import "WQCommonCellProtocol.h"
+
 @class WQCommonBaseCell;
 
 @protocol WQCommonBaseCellDelegate<NSObject>
@@ -15,7 +16,7 @@
 -(void)commonBaseCellDidSwitchChange:(WQCommonBaseCell *)baseCell switchState:(BOOL)state;
 @end
 
-@interface WQCommonBaseCell : UITableViewCell
+@interface WQCommonBaseCell : UITableViewCell<WQCommonCellProtocol>
 
 @property (weak ,nonatomic) id<WQCommonBaseCellDelegate> delegate;
 @property (strong ,nonatomic) WQCommonBaseItem *baseItem;

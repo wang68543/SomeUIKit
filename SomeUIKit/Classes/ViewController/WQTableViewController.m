@@ -32,7 +32,7 @@
     WQCommonGroup *group2 = [WQCommonGroup comomnGroupWithHeder:@"头部" footer:@"底部"];
     WQCommonCenterItem *centerItem = [WQCommonCenterItem baseItemWithTitle:@"退出登录的样式"];
     [group2.items addObject:centerItem];
-    [self addGroups:@[group1,group2]];
+    [self.tableDataHandle addGroups:@[group1,group2]];
     
     
 }

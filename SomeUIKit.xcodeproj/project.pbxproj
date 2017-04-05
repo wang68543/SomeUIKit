@@ -49,6 +49,8 @@
 		DED67AD21E71340B0061CABF /* WQBroserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED67ACD1E71340B0061CABF /* WQBroserController.xib */; };
 		DED67AD31E71340B0061CABF /* WQControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ACF1E71340B0061CABF /* WQControllerTransition.m */; };
 		DED67AD91E714E400061CABF /* NSFileManager+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67AD81E714E400061CABF /* NSFileManager+Path.m */; };
+		DEDCAAEF1E8F78CF00E9B61E /* WQCommonCustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDCAAEE1E8F78CF00E9B61E /* WQCommonCustomItem.m */; };
+		DEDCAAF31E8F839500E9B61E /* WQCommonDataResource.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDCAAF21E8F839500E9B61E /* WQCommonDataResource.m */; };
 		DEE619FB1E77CD2300C6D806 /* WQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE619FA1E77CD2300C6D806 /* WQTableViewController.m */; };
 		DEEA34241E763A72007149B1 /* WQCommonBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34231E763A72007149B1 /* WQCommonBaseItem.m */; };
 		DEEA34271E763B05007149B1 /* WQCommonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34261E763B05007149B1 /* WQCommonGroup.m */; };
@@ -210,6 +212,12 @@
 		DED67ACF1E71340B0061CABF /* WQControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQControllerTransition.m; sourceTree = "<group>"; };
 		DED67AD71E714E400061CABF /* NSFileManager+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Path.h"; sourceTree = "<group>"; };
 		DED67AD81E714E400061CABF /* NSFileManager+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Path.m"; sourceTree = "<group>"; };
+		DEDCAAEC1E8F5A8700E9B61E /* WQSomeUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQSomeUIKit.h; sourceTree = "<group>"; };
+		DEDCAAED1E8F78CF00E9B61E /* WQCommonCustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonCustomItem.h; sourceTree = "<group>"; };
+		DEDCAAEE1E8F78CF00E9B61E /* WQCommonCustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonCustomItem.m; sourceTree = "<group>"; };
+		DEDCAAF11E8F839500E9B61E /* WQCommonDataResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonDataResource.h; sourceTree = "<group>"; };
+		DEDCAAF21E8F839500E9B61E /* WQCommonDataResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonDataResource.m; sourceTree = "<group>"; };
+		DEDCAAF51E8FC17D00E9B61E /* WQCommonCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonCellProtocol.h; sourceTree = "<group>"; };
 		DEE619F91E77CD2300C6D806 /* WQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTableViewController.h; sourceTree = "<group>"; };
 		DEE619FA1E77CD2300C6D806 /* WQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTableViewController.m; sourceTree = "<group>"; };
 		DEEA34221E763A72007149B1 /* WQCommonBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonBaseItem.h; sourceTree = "<group>"; };
@@ -534,9 +542,20 @@
 			path = Help;
 			sourceTree = "<group>";
 		};
+		DEDCAAF01E8F837400E9B61E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DEDCAAF11E8F839500E9B61E /* WQCommonDataResource.h */,
+				DEDCAAF21E8F839500E9B61E /* WQCommonDataResource.m */,
+				DEDCAAF51E8FC17D00E9B61E /* WQCommonCellProtocol.h */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DEEA341E1E7639F7007149B1 /* CommonTableView */ = {
 			isa = PBXGroup;
 			children = (
+				DEDCAAF01E8F837400E9B61E /* ViewModel */,
 				DEEA341F1E7639F7007149B1 /* Model */,
 				DEEA34201E7639F7007149B1 /* View */,
 				DEEA34211E7639F7007149B1 /* ViewController */,
@@ -559,6 +578,8 @@
 				DEEA342F1E76675F007149B1 /* WQCommonSubtitleItem.m */,
 				DEEA34371E769ACC007149B1 /* WQCommonCenterItem.h */,
 				DEEA34381E769ACC007149B1 /* WQCommonCenterItem.m */,
+				DEDCAAED1E8F78CF00E9B61E /* WQCommonCustomItem.h */,
+				DEDCAAEE1E8F78CF00E9B61E /* WQCommonCustomItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -584,6 +605,7 @@
 		DEFF6CA71E69717F0004CFE2 /* WQSomeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DEDCAAEC1E8F5A8700E9B61E /* WQSomeUIKit.h */,
 				DEEA341E1E7639F7007149B1 /* CommonTableView */,
 				DEFF6CA81E69717F0004CFE2 /* AnmationViews */,
 				DEFF6CAC1E69717F0004CFE2 /* Category */,
@@ -1127,6 +1149,7 @@
 				DEEA34391E769ACC007149B1 /* WQCommonCenterItem.m in Sources */,
 				DEFF6D411E6971800004CFE2 /* NSString+Help.m in Sources */,
 				DE1FDD311E72A069008E6BA2 /* WQHttpTool.m in Sources */,
+				DEDCAAEF1E8F78CF00E9B61E /* WQCommonCustomItem.m in Sources */,
 				DEFF6D631E6971800004CFE2 /* ExamineCell.m in Sources */,
 				DEFF6D741E6971800004CFE2 /* MainTabBarController.m in Sources */,
 				DEEA34271E763B05007149B1 /* WQCommonGroup.m in Sources */,
@@ -1155,6 +1178,7 @@
 				DEFF6D3C1E6971800004CFE2 /* NSDate+Format.m in Sources */,
 				DEC00B531DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m in Sources */,
 				DED67AD01E71340B0061CABF /* APPHELP.m in Sources */,
+				DEDCAAF31E8F839500E9B61E /* WQCommonDataResource.m in Sources */,
 				DEFF6D711E6971800004CFE2 /* WQShareActionViewController.m in Sources */,
 				DEE619FB1E77CD2300C6D806 /* WQTableViewController.m in Sources */,
 				DEFF6D781E6971800004CFE2 /* GYChangeTextView.m in Sources */,

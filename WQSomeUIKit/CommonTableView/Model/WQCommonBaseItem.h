@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger ,CommonItemType) {
     CommonItemTypeSwitch,
     CommonItemTypeSubtitle,
     CommonItemTypeCenter,
+    CommonItemTypeCustom,//自定义Cell
 };
 @interface WQCommonBaseItem : NSObject
 
@@ -29,6 +30,12 @@ typedef NS_ENUM(NSInteger ,CommonItemType) {
 @property (copy ,nonatomic) NSString *title;
 
 @property (copy ,nonatomic) CommonOperation operation;
+
+
+
+
+
+
 
 /**
  cell的背景颜色

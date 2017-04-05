@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WQCommonGroup.h"
-#import "WQCommonBaseCell.h"
+//#import "WQCommonGroup.h"
+//#import "WQCommonBaseCell.h"
+#import "WQCommonDataResource.h"
 
-@interface WQCommonBaseTableController : UITableViewController
-@property (strong ,nonatomic,readonly) NSArray<WQCommonGroup *> *groups;
+@interface WQCommonBaseTableController : UIViewController
+@property (strong ,nonatomic) WQCommonDataResource *tableDataHandle;
 
--(void)addGroups:(NSArray <WQCommonGroup *>*)groups;
 @end

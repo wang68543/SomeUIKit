@@ -12,6 +12,7 @@
 #import "WQCommonSwitchItem.h"
 #import "WQCommonSubtitleItem.h"
 #import "WQCommonCenterItem.h"
+#import "WQCommonCustomItem.h"
 typedef struct WQCommonHeight WQCommonHeight;
 
 @interface WQCommonGroup : NSObject
