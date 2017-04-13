@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSFileManager+Path.h"
+#import "NSFileManager+WQPath.h"
 
 typedef NS_ENUM(NSInteger,CacheDocumentType) {
     CacheToDocDirectory,

@@ -1,17 +1,11 @@
-#
-#  Be sure to run `pod spec lint WQSomeUIKit.podspec' to ensure this is a
-#  valid spec and to remove all comments including this before submitting the spec.
-#
-#  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
+
 
 Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.1.5"
+  s.version      = "1.1.6"
   s.summary      = "Usual collection"
 
   s.description  = <<-DESC 
@@ -58,9 +52,8 @@ Pod::Spec.new do |s|
 
 # "WQSomeUIKit",  表示源文件的路径，注意这个路径是相对podspec文件而言的。
   # s.source_files  = "WQSomeUIKit/**/**/*.{h,m}"
-   s.public_header_files = 'WQSomeUIKit/WQSomeUIKit.h'
-  s.source_files = 'WQSomeUIKit/WQSomeUIKit.h'
-  
+  # s.source_files = "WQSomeUIKit/**/**/*.{h,m}"
+  # s.public_header_files = 'WQSomeUIKit/WQSomeUIKit.h'
   # s.vendored_libraries = "WQSomeUIKit/Resources/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Resources/amrwapper/libopencore-amrwb.a"
   s.resources = ["WQSomeUIKit/Resources/Sb/*.storyboard"] 
   # s.exclude_files = "Classes/Exclude"
@@ -116,11 +109,18 @@ Pod::Spec.new do |s|
 
    s.subspec 'Category' do |ss|
     # ss.source_files = 'WQSomeUIKit/Category/**/*.{h,m}'
+    
+    ss.subspec 'Category_Vendor' do |sss|
+
+      sss.source_files = 'WQSomeUIKit/Category/Category_Vendor/*.{h,m}'
+    end 
     ss.subspec 'Category_Foundation' do |sss|
+      sss.dependency 'WQSomeUIKit/Category/Category_Vendor'
       sss.source_files = 'WQSomeUIKit/Category/Category_Foundation/*.{h,m}'
       sss.public_header_files = 'WQSomeUIKit/Category/Category_Foundation/*.h'
     end 
     ss.subspec 'Category_UIKit' do |sss|
+      sss.dependency 'WQSomeUIKit/Gloable/Header'
       sss.source_files = 'WQSomeUIKit/Category/Category_UIKit/*.{h,m}'
     end  
   end
@@ -138,9 +138,11 @@ Pod::Spec.new do |s|
       sss.public_header_files ='WQSomeUIKit/Tool/BasicHelp/*.h'
     end
     ss.subspec 'FunctionHelp' do |sss|
+      sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/Tool/FunctionHelp/*.{h,m}'
     end
     ss.subspec 'VoiceTool' do |sss|
+      sss.dependency 'WQSomeUIKit/Tool/BasicHelp'
       sss.source_files = 'WQSomeUIKit/Tool/VoiceTool/*.{h,m}'
     end
   end
@@ -161,27 +163,35 @@ Pod::Spec.new do |s|
       sss.public_header_files='WQSomeUIKit/UIHelp/Help/*.h'
     end
     ss.subspec 'AlertUI' do |sss|
+      sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/UIHelp/AlertUI/*.{h,m}'
     end 
     ss.subspec 'BannerLoop' do |sss|
+      sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/UIHelp/BannerLoop/*.{h,m}'
     end
     ss.subspec 'ClendarUI' do |sss|
+      sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/UIHelp/ClendarUI/*.{h,m}'
     end
     ss.subspec 'ExamineUI' do |sss|
+      sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/UIHelp/ExamineUI/*.{h,m}'
     end
     ss.subspec 'FlowTagUI' do |sss|
+      sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/UIHelp/FlowTagUI/*.{h,m}'
     end 
     ss.subspec 'PhotoUI' do |sss|
+      sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/UIHelp/PhotoUI/*.{h,m}'
     end
     ss.subspec 'PopSelectionsUI' do |sss|
+      sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/UIHelp/PopSelectionsUI/*.{h,m}'
     end
     ss.subspec 'ShareUI' do |sss|
+      sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/UIHelp/ShareUI/*.{h,m}'
     end
     ss.subspec 'SlideMenu' do |sss|

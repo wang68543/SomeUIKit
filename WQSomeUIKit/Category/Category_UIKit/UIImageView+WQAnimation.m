@@ -6,15 +6,15 @@
 //  Copyright © 2017年 WangQiang. All rights reserved.
 //
 
-#import "UIImageView+Animation.h"
+#import "UIImageView+WQAnimation.h"
 #import <objc/runtime.h>
 
-@implementation UIImageView (Animation)
+@implementation UIImageView (WQAnimation)
 @dynamic fadeImage;
 @dynamic running;
 //@synthesize running = _running;
 static char *const kLoadingKey = "running";
-static NSString *kRotation = @"rotationAnimation";
+static NSString *const kRotation = @"WQRotationAnimation";
 
 -(void)setFadeImage:(UIImage *)fadeImage{
     CATransition *transtion = [CATransition animation];

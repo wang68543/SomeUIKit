@@ -6,9 +6,9 @@
 //  Copyright © 2017年 WangQiang. All rights reserved.
 //
 
-#import "NSString+Help.h"
+#import "NSString+WQHelp.h"
 #import <CommonCrypto/CommonDigest.h>
-@implementation NSString (Help)
+@implementation NSString (WQHelp)
 -(CGSize)sizeWithMaxSize:(CGSize)maxSize font:(UIFont *)font{
     return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size;
 }

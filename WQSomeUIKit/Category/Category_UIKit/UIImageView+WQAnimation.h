@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageView (Animation)
+@interface UIImageView (WQAnimation)
 /**
  此属性只具备设置不具备读取
  */

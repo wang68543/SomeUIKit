@@ -8,6 +8,8 @@
 
 #import "WQVoiceTool.h"
 #import <AVFoundation/AVFoundation.h>
+#import "WQAppInfo.h"
+
 #import "WQCache.h"
 //#import "amrFileCodec.h"
 
@@ -73,9 +75,16 @@ static id _instace;
     } downFinshed:downFinsh compeletion:compeleletion];
 }
 -(void)playWithPath:(NSString *)path convertVoice:(ConvertDownloadVoiceBlock)convertBlock downFinshed:(DowonFinshBlock)downFinsh compeletion:(PlayFinshBlock)compeleletion{
+    [self playWithPath:path cachePath:[[NSFileManager pathForVoiceDirectory] stringByAppendingPathComponent:path.lastPathComponent] convertVoice:convertBlock downFinshed:downFinsh compeletion:compeleletion];
+}
+-(void)playWithPath:(NSString *)path
+         cachePath:(NSString *)cachePath
+       convertVoice:(ConvertDownloadVoiceBlock)convertBlock
+        downFinshed:(DowonFinshBlock)downFinsh
+        compeletion:(PlayFinshBlock)compeleletion{
     [self stopCurrentPlayer];
     __weak typeof(self) weakSelf = self;
-    [self downloadVoice:path  convertVoice:convertBlock compeletion:^(NSError *error, NSData *voiceData, VoiceCacheType cacheType) {
+    [self downloadVoice:path cachePath:cachePath convertVoice:convertBlock compeletion:^(NSError *error, NSData *voiceData, VoiceCacheType cacheType) {
         !downFinsh?:downFinsh(error,voiceData,cacheType);
         if(error){
             !compeleletion?:compeleletion(error,YES);
@@ -98,7 +107,7 @@ static id _instace;
     }];
 }
 #pragma mark -- 下载语音
--(void)downloadVoice:(NSString *)path convertVoice:(ConvertDownloadVoiceBlock)convertBlock compeletion:(DowonFinshBlock)downFinshed{
+-(void)downloadVoice:(NSString *)path cachePath:(NSString *)cachePath convertVoice:(ConvertDownloadVoiceBlock)convertBlock compeletion:(DowonFinshBlock)downFinshed{
      NSURL *url = [NSURL URLWithString:path];
     if(!url){
         !downFinshed?:downFinshed([self errorWithMsg:@"音频文件路径不存在"],nil,VoiceCacheTypeNone);
@@ -124,7 +133,7 @@ static id _instace;
             if(!data){
                 error = [weakSelf errorWithMsg:@"音频文件下载失败"];
             }else{
-                if(data)[data writeToFile:path atomically:YES];
+                if(data&&cachePath)[data writeToFile:cachePath atomically:YES];
             }
             !downFinshed?:downFinshed(error,data,cacheType);
         });
@@ -189,12 +198,16 @@ static id _instace;
     }
 }
 
+-(NSError *)record{
+   return  [self recordWithName:[WQAppInfo appUUIDWithPathExtension:@"wav"]];
+}
 -(NSError *)recordWithName:(NSString *)name{
     return [self recordWithPath:[[NSFileManager pathForVoiceDirectory] stringByAppendingPathComponent:name]];
 }
 /**直接将录音文件存放到指定的路径下*/
 -(NSError *)recordWithPath:(NSString *)path{
     [self stopCurrentRecorder];
+    [self stopCurrentPlayer];
     NSError *error;
     AVAudioSession *session = [AVAudioSession sharedInstance];
     NSError *setCategoryError = nil;
@@ -256,5 +269,10 @@ static id _instace;
 
 -(NSError *)errorWithMsg:(NSString *)msg{
    return  [NSError errorWithDomain:NSStringFromClass([self class]) code:-3000 userInfo:@{NSLocalizedDescriptionKey:msg}];
+}
+
+/**拷贝文件*/
++(void)copyFile:(NSString *)filePath targetPath:(NSString *)targetPath{
+    [[NSFileManager defaultManager] moveItemAtPath:filePath toPath:targetPath error:nil];
 }
 @end

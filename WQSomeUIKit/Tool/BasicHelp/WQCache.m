@@ -51,6 +51,7 @@
 +(void)cache:(id)object path:(NSString *)path{
     //最后一个路径可能不存在
 //    if (![[NSFileManager defaultManager] fileExistsAtPath:path] || !object) return;
+    if([object conformsToProtocol:@protocol(NSCoding)])
     [NSKeyedArchiver archiveRootObject:object toFile:path];
 }
 +(id)loadWithPath:(NSString *)path{

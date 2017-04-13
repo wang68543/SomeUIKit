@@ -11,12 +11,18 @@
 		DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE056BAA1DCD760F00E16D15 /* DateSelectViewController.m */; };
 		DE056BAD1DCD760F00E16D15 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE056BAB1DCD760F00E16D15 /* DateSelectViewController.xib */; };
 		DE0A4DAB1E6DAF0000281808 /* WQSubTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A4DAA1E6DAF0000281808 /* WQSubTransitionViewController.m */; };
+		DE0F9F3B1E9B5F880061E2A3 /* CoderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0F9F3A1E9B5F880061E2A3 /* CoderObject.m */; };
+		DE0F9F3E1E9B64D90061E2A3 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0F9F3D1E9B64D90061E2A3 /* Student.m */; };
+		DE157EF11E9F2FD300E6979C /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DE157EEA1E9F2FD300E6979C /* NSDate+Utilities.m */; };
+		DE157EF21E9F2FD300E6979C /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE157EEC1E9F2FD300E6979C /* UIBarButtonItem+Badge.m */; };
+		DE157EF31E9F2FD300E6979C /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = DE157EEE1E9F2FD300E6979C /* UIButton+countDown.m */; };
+		DE157EF41E9F2FD300E6979C /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = DE157EF01E9F2FD300E6979C /* UIGestureRecognizer+Block.m */; };
 		DE1FDD2D1E72507C008E6BA2 /* WQAnimationTrasitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1FDD2C1E72507C008E6BA2 /* WQAnimationTrasitionViewController.xib */; };
 		DE1FDD311E72A069008E6BA2 /* WQHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD301E72A069008E6BA2 /* WQHttpTool.m */; };
 		DE1FDD341E72A1AC008E6BA2 /* WQBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD331E72A1AC008E6BA2 /* WQBaseAPI.m */; };
-		DE1FDD371E72AC51008E6BA2 /* UIImageView+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD361E72AC51008E6BA2 /* UIImageView+SDWebImage.m */; };
-		DE1FDD3A1E72B053008E6BA2 /* UIImageView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD391E72B053008E6BA2 /* UIImageView+Animation.m */; };
-		DE289B381E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE289B371E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m */; };
+		DE1FDD371E72AC51008E6BA2 /* UIImageView+WQSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD361E72AC51008E6BA2 /* UIImageView+WQSDWebImage.m */; };
+		DE1FDD3A1E72B053008E6BA2 /* UIImageView+WQAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD391E72B053008E6BA2 /* UIImageView+WQAnimation.m */; };
+		DE289B381E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE289B371E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.m */; };
 		DE289B4E1E8BB99200F8C92E /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DE289B471E8BB99200F8C92E /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DE289B4F1E8BB99200F8C92E /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE289B4C1E8BB99200F8C92E /* libopencore-amrnb.a */; };
 		DE289B501E8BB99200F8C92E /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE289B4D1E8BB99200F8C92E /* libopencore-amrwb.a */; };
@@ -48,9 +54,10 @@
 		DED67AD11E71340B0061CABF /* WQBroserController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ACC1E71340B0061CABF /* WQBroserController.m */; };
 		DED67AD21E71340B0061CABF /* WQBroserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED67ACD1E71340B0061CABF /* WQBroserController.xib */; };
 		DED67AD31E71340B0061CABF /* WQControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67ACF1E71340B0061CABF /* WQControllerTransition.m */; };
-		DED67AD91E714E400061CABF /* NSFileManager+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67AD81E714E400061CABF /* NSFileManager+Path.m */; };
+		DED67AD91E714E400061CABF /* NSFileManager+WQPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DED67AD81E714E400061CABF /* NSFileManager+WQPath.m */; };
 		DEDCAAEF1E8F78CF00E9B61E /* WQCommonCustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDCAAEE1E8F78CF00E9B61E /* WQCommonCustomItem.m */; };
 		DEDCAAF31E8F839500E9B61E /* WQCommonDataResource.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDCAAF21E8F839500E9B61E /* WQCommonDataResource.m */; };
+		DEDD3BE71E9B6DD0000CAB8B /* NSDate+WQHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDD3BE61E9B6DD0000CAB8B /* NSDate+WQHandle.m */; };
 		DEE619FB1E77CD2300C6D806 /* WQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE619FA1E77CD2300C6D806 /* WQTableViewController.m */; };
 		DEEA34241E763A72007149B1 /* WQCommonBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34231E763A72007149B1 /* WQCommonBaseItem.m */; };
 		DEEA34271E763B05007149B1 /* WQCommonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA34261E763B05007149B1 /* WQCommonGroup.m */; };
@@ -63,12 +70,10 @@
 		DEFE2C691DD22716006BB614 /* WQLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFE2C671DD22716006BB614 /* WQLoopViewController.m */; };
 		DEFE2C6A1DD22716006BB614 /* WQLoopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFE2C681DD22716006BB614 /* WQLoopViewController.xib */; };
 		DEFF6D3B1E6971800004CFE2 /* ZHAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CAB1E69717F0004CFE2 /* ZHAnimationView.m */; };
-		DEFF6D3C1E6971800004CFE2 /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CAF1E69717F0004CFE2 /* NSDate+Format.m */; };
-		DEFF6D3F1E6971800004CFE2 /* NSString+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB51E69717F0004CFE2 /* NSString+Date.m */; };
-		DEFF6D411E6971800004CFE2 /* NSString+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB91E69717F0004CFE2 /* NSString+Help.m */; };
-		DEFF6D421E6971800004CFE2 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CBB1E69717F0004CFE2 /* UIGestureRecognizer+Block.m */; };
-		DEFF6D431E6971800004CFE2 /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CBE1E69717F0004CFE2 /* UIButton+countDown.m */; };
-		DEFF6D441E6971800004CFE2 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CC01E69717F0004CFE2 /* UIImage+Extension.m */; };
+		DEFF6D3C1E6971800004CFE2 /* NSDate+WQFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CAF1E69717F0004CFE2 /* NSDate+WQFormat.m */; };
+		DEFF6D3F1E6971800004CFE2 /* NSString+WQDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB51E69717F0004CFE2 /* NSString+WQDate.m */; };
+		DEFF6D411E6971800004CFE2 /* NSString+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CB91E69717F0004CFE2 /* NSString+WQHelp.m */; };
+		DEFF6D441E6971800004CFE2 /* UIImage+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CC01E69717F0004CFE2 /* UIImage+WQHelp.m */; };
 		DEFF6D491E6971800004CFE2 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD31E69717F0004CFE2 /* 00.jpg */; };
 		DEFF6D4A1E6971800004CFE2 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD41E69717F0004CFE2 /* 01.jpg */; };
 		DEFF6D4B1E6971800004CFE2 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD51E69717F0004CFE2 /* 02.jpg */; };
@@ -78,7 +83,7 @@
 		DEFF6D4F1E6971800004CFE2 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CD91E69717F0004CFE2 /* 06.jpg */; };
 		DEFF6D501E6971800004CFE2 /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CDA1E69717F0004CFE2 /* 07.jpg */; };
 		DEFF6D511E6971800004CFE2 /* TabbbarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6CDC1E69717F0004CFE2 /* TabbbarController.storyboard */; };
-		DEFF6D521E6971800004CFE2 /* WQCoderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE01E69717F0004CFE2 /* WQCoderObject.m */; };
+		DEFF6D521E6971800004CFE2 /* WQDynamicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE01E69717F0004CFE2 /* WQDynamicObject.m */; };
 		DEFF6D531E6971800004CFE2 /* WQError.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CE21E69717F0004CFE2 /* WQError.m */; };
 		DEFF6D571E6971800004CFE2 /* RuntimeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CEA1E69717F0004CFE2 /* RuntimeKit.m */; };
 		DEFF6D581E6971800004CFE2 /* WQAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6CEC1E69717F0004CFE2 /* WQAppInfo.m */; };
@@ -138,17 +143,29 @@
 		DE056BAB1DCD760F00E16D15 /* DateSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelectViewController.xib; sourceTree = "<group>"; };
 		DE0A4DA91E6DAF0000281808 /* WQSubTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQSubTransitionViewController.h; sourceTree = "<group>"; };
 		DE0A4DAA1E6DAF0000281808 /* WQSubTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQSubTransitionViewController.m; sourceTree = "<group>"; };
+		DE0F9F391E9B5F880061E2A3 /* CoderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoderObject.h; sourceTree = "<group>"; };
+		DE0F9F3A1E9B5F880061E2A3 /* CoderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoderObject.m; sourceTree = "<group>"; };
+		DE0F9F3C1E9B64D90061E2A3 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		DE0F9F3D1E9B64D90061E2A3 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		DE157EE91E9F2FD300E6979C /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		DE157EEA1E9F2FD300E6979C /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		DE157EEB1E9F2FD300E6979C /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
+		DE157EEC1E9F2FD300E6979C /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
+		DE157EED1E9F2FD300E6979C /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
+		DE157EEE1E9F2FD300E6979C /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
+		DE157EEF1E9F2FD300E6979C /* UIGestureRecognizer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Block.h"; sourceTree = "<group>"; };
+		DE157EF01E9F2FD300E6979C /* UIGestureRecognizer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Block.m"; sourceTree = "<group>"; };
 		DE1FDD2C1E72507C008E6BA2 /* WQAnimationTrasitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WQAnimationTrasitionViewController.xib; sourceTree = "<group>"; };
 		DE1FDD2F1E72A069008E6BA2 /* WQHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHttpTool.h; sourceTree = "<group>"; };
 		DE1FDD301E72A069008E6BA2 /* WQHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQHttpTool.m; sourceTree = "<group>"; };
 		DE1FDD321E72A1AC008E6BA2 /* WQBaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBaseAPI.h; sourceTree = "<group>"; };
 		DE1FDD331E72A1AC008E6BA2 /* WQBaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQBaseAPI.m; sourceTree = "<group>"; };
-		DE1FDD351E72AC51008E6BA2 /* UIImageView+SDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImage.h"; sourceTree = "<group>"; };
-		DE1FDD361E72AC51008E6BA2 /* UIImageView+SDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWebImage.m"; sourceTree = "<group>"; };
-		DE1FDD381E72B053008E6BA2 /* UIImageView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Animation.h"; sourceTree = "<group>"; };
-		DE1FDD391E72B053008E6BA2 /* UIImageView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Animation.m"; sourceTree = "<group>"; };
-		DE289B361E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BarButtonHelp.h"; sourceTree = "<group>"; };
-		DE289B371E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BarButtonHelp.m"; sourceTree = "<group>"; };
+		DE1FDD351E72AC51008E6BA2 /* UIImageView+WQSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WQSDWebImage.h"; sourceTree = "<group>"; };
+		DE1FDD361E72AC51008E6BA2 /* UIImageView+WQSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WQSDWebImage.m"; sourceTree = "<group>"; };
+		DE1FDD381E72B053008E6BA2 /* UIImageView+WQAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WQAnimation.h"; sourceTree = "<group>"; };
+		DE1FDD391E72B053008E6BA2 /* UIImageView+WQAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WQAnimation.m"; sourceTree = "<group>"; };
+		DE289B361E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WQInitHelp.h"; sourceTree = "<group>"; };
+		DE289B371E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WQInitHelp.m"; sourceTree = "<group>"; };
 		DE289B461E8BB99200F8C92E /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
 		DE289B471E8BB99200F8C92E /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
 		DE289B481E8BB99200F8C92E /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
@@ -210,14 +227,16 @@
 		DED67ACD1E71340B0061CABF /* WQBroserController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WQBroserController.xib; sourceTree = "<group>"; };
 		DED67ACE1E71340B0061CABF /* WQControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQControllerTransition.h; sourceTree = "<group>"; };
 		DED67ACF1E71340B0061CABF /* WQControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQControllerTransition.m; sourceTree = "<group>"; };
-		DED67AD71E714E400061CABF /* NSFileManager+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Path.h"; sourceTree = "<group>"; };
-		DED67AD81E714E400061CABF /* NSFileManager+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Path.m"; sourceTree = "<group>"; };
+		DED67AD71E714E400061CABF /* NSFileManager+WQPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+WQPath.h"; sourceTree = "<group>"; };
+		DED67AD81E714E400061CABF /* NSFileManager+WQPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+WQPath.m"; sourceTree = "<group>"; };
 		DEDCAAEC1E8F5A8700E9B61E /* WQSomeUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQSomeUIKit.h; sourceTree = "<group>"; };
 		DEDCAAED1E8F78CF00E9B61E /* WQCommonCustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonCustomItem.h; sourceTree = "<group>"; };
 		DEDCAAEE1E8F78CF00E9B61E /* WQCommonCustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonCustomItem.m; sourceTree = "<group>"; };
 		DEDCAAF11E8F839500E9B61E /* WQCommonDataResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonDataResource.h; sourceTree = "<group>"; };
 		DEDCAAF21E8F839500E9B61E /* WQCommonDataResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonDataResource.m; sourceTree = "<group>"; };
 		DEDCAAF51E8FC17D00E9B61E /* WQCommonCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonCellProtocol.h; sourceTree = "<group>"; };
+		DEDD3BE51E9B6DD0000CAB8B /* NSDate+WQHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQHandle.h"; sourceTree = "<group>"; };
+		DEDD3BE61E9B6DD0000CAB8B /* NSDate+WQHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQHandle.m"; sourceTree = "<group>"; };
 		DEE619F91E77CD2300C6D806 /* WQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTableViewController.h; sourceTree = "<group>"; };
 		DEE619FA1E77CD2300C6D806 /* WQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTableViewController.m; sourceTree = "<group>"; };
 		DEEA34221E763A72007149B1 /* WQCommonBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonBaseItem.h; sourceTree = "<group>"; };
@@ -241,18 +260,14 @@
 		DEFE2C681DD22716006BB614 /* WQLoopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WQLoopViewController.xib; sourceTree = "<group>"; };
 		DEFF6CAA1E69717F0004CFE2 /* ZHAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAnimationView.h; sourceTree = "<group>"; };
 		DEFF6CAB1E69717F0004CFE2 /* ZHAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAnimationView.m; sourceTree = "<group>"; };
-		DEFF6CAE1E69717F0004CFE2 /* NSDate+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Format.h"; sourceTree = "<group>"; };
-		DEFF6CAF1E69717F0004CFE2 /* NSDate+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Format.m"; sourceTree = "<group>"; };
-		DEFF6CB41E69717F0004CFE2 /* NSString+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Date.h"; sourceTree = "<group>"; };
-		DEFF6CB51E69717F0004CFE2 /* NSString+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Date.m"; sourceTree = "<group>"; };
-		DEFF6CB81E69717F0004CFE2 /* NSString+Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Help.h"; sourceTree = "<group>"; };
-		DEFF6CB91E69717F0004CFE2 /* NSString+Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Help.m"; sourceTree = "<group>"; };
-		DEFF6CBA1E69717F0004CFE2 /* UIGestureRecognizer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Block.h"; sourceTree = "<group>"; };
-		DEFF6CBB1E69717F0004CFE2 /* UIGestureRecognizer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Block.m"; sourceTree = "<group>"; };
-		DEFF6CBD1E69717F0004CFE2 /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
-		DEFF6CBE1E69717F0004CFE2 /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
-		DEFF6CBF1E69717F0004CFE2 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
-		DEFF6CC01E69717F0004CFE2 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		DEFF6CAE1E69717F0004CFE2 /* NSDate+WQFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQFormat.h"; sourceTree = "<group>"; };
+		DEFF6CAF1E69717F0004CFE2 /* NSDate+WQFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQFormat.m"; sourceTree = "<group>"; };
+		DEFF6CB41E69717F0004CFE2 /* NSString+WQDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WQDate.h"; sourceTree = "<group>"; };
+		DEFF6CB51E69717F0004CFE2 /* NSString+WQDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQDate.m"; sourceTree = "<group>"; };
+		DEFF6CB81E69717F0004CFE2 /* NSString+WQHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WQHelp.h"; sourceTree = "<group>"; };
+		DEFF6CB91E69717F0004CFE2 /* NSString+WQHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQHelp.m"; sourceTree = "<group>"; };
+		DEFF6CBF1E69717F0004CFE2 /* UIImage+WQHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WQHelp.h"; sourceTree = "<group>"; };
+		DEFF6CC01E69717F0004CFE2 /* UIImage+WQHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WQHelp.m"; sourceTree = "<group>"; };
 		DEFF6CC51E69717F0004CFE2 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		DEFF6CC61E69717F0004CFE2 /* WQConstans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQConstans.h; sourceTree = "<group>"; };
 		DEFF6CD31E69717F0004CFE2 /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
@@ -264,8 +279,8 @@
 		DEFF6CD91E69717F0004CFE2 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
 		DEFF6CDA1E69717F0004CFE2 /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
 		DEFF6CDC1E69717F0004CFE2 /* TabbbarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabbbarController.storyboard; sourceTree = "<group>"; };
-		DEFF6CDF1E69717F0004CFE2 /* WQCoderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCoderObject.h; sourceTree = "<group>"; };
-		DEFF6CE01E69717F0004CFE2 /* WQCoderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCoderObject.m; sourceTree = "<group>"; };
+		DEFF6CDF1E69717F0004CFE2 /* WQDynamicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQDynamicObject.h; sourceTree = "<group>"; };
+		DEFF6CE01E69717F0004CFE2 /* WQDynamicObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQDynamicObject.m; sourceTree = "<group>"; };
 		DEFF6CE11E69717F0004CFE2 /* WQError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQError.h; sourceTree = "<group>"; };
 		DEFF6CE21E69717F0004CFE2 /* WQError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQError.m; sourceTree = "<group>"; };
 		DEFF6CE91E69717F0004CFE2 /* RuntimeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeKit.h; sourceTree = "<group>"; };
@@ -370,6 +385,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DE0F9F381E9B5F5E0061E2A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F9F391E9B5F880061E2A3 /* CoderObject.h */,
+				DE0F9F3A1E9B5F880061E2A3 /* CoderObject.m */,
+				DE0F9F3C1E9B64D90061E2A3 /* Student.h */,
+				DE0F9F3D1E9B64D90061E2A3 /* Student.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE157EE81E9F2FD300E6979C /* Category_Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DE157EE91E9F2FD300E6979C /* NSDate+Utilities.h */,
+				DE157EEA1E9F2FD300E6979C /* NSDate+Utilities.m */,
+				DE157EEB1E9F2FD300E6979C /* UIBarButtonItem+Badge.h */,
+				DE157EEC1E9F2FD300E6979C /* UIBarButtonItem+Badge.m */,
+				DE157EED1E9F2FD300E6979C /* UIButton+countDown.h */,
+				DE157EEE1E9F2FD300E6979C /* UIButton+countDown.m */,
+				DE157EEF1E9F2FD300E6979C /* UIGestureRecognizer+Block.h */,
+				DE157EF01E9F2FD300E6979C /* UIGestureRecognizer+Block.m */,
+			);
+			path = Category_Vendor;
+			sourceTree = "<group>";
+		};
 		DE1FDD2E1E72A055008E6BA2 /* NetWorkTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,8 +418,8 @@
 				DE1FDD301E72A069008E6BA2 /* WQHttpTool.m */,
 				DE1FDD321E72A1AC008E6BA2 /* WQBaseAPI.h */,
 				DE1FDD331E72A1AC008E6BA2 /* WQBaseAPI.m */,
-				DE1FDD351E72AC51008E6BA2 /* UIImageView+SDWebImage.h */,
-				DE1FDD361E72AC51008E6BA2 /* UIImageView+SDWebImage.m */,
+				DE1FDD351E72AC51008E6BA2 /* UIImageView+WQSDWebImage.h */,
+				DE1FDD361E72AC51008E6BA2 /* UIImageView+WQSDWebImage.m */,
 			);
 			path = NetWorkTool;
 			sourceTree = "<group>";
@@ -467,6 +508,7 @@
 		DEC00B261DB8BD1A00A516A1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DE0F9F381E9B5F5E0061E2A3 /* Model */,
 				DEC00B291DB8BD1A00A516A1 /* ViewController */,
 			);
 			path = Classes;
@@ -638,6 +680,7 @@
 		DEFF6CAC1E69717F0004CFE2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DE157EE81E9F2FD300E6979C /* Category_Vendor */,
 				DEFF6CAD1E69717F0004CFE2 /* Category_Foundation */,
 				DEFF6CBC1E69717F0004CFE2 /* Category_UIKit */,
 			);
@@ -647,14 +690,14 @@
 		DEFF6CAD1E69717F0004CFE2 /* Category_Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6CAE1E69717F0004CFE2 /* NSDate+Format.h */,
-				DEFF6CAF1E69717F0004CFE2 /* NSDate+Format.m */,
-				DEFF6CB41E69717F0004CFE2 /* NSString+Date.h */,
-				DEFF6CB51E69717F0004CFE2 /* NSString+Date.m */,
-				DEFF6CB81E69717F0004CFE2 /* NSString+Help.h */,
-				DEFF6CB91E69717F0004CFE2 /* NSString+Help.m */,
-				DEFF6CBA1E69717F0004CFE2 /* UIGestureRecognizer+Block.h */,
-				DEFF6CBB1E69717F0004CFE2 /* UIGestureRecognizer+Block.m */,
+				DEFF6CAE1E69717F0004CFE2 /* NSDate+WQFormat.h */,
+				DEFF6CAF1E69717F0004CFE2 /* NSDate+WQFormat.m */,
+				DEFF6CB41E69717F0004CFE2 /* NSString+WQDate.h */,
+				DEFF6CB51E69717F0004CFE2 /* NSString+WQDate.m */,
+				DEFF6CB81E69717F0004CFE2 /* NSString+WQHelp.h */,
+				DEFF6CB91E69717F0004CFE2 /* NSString+WQHelp.m */,
+				DEDD3BE51E9B6DD0000CAB8B /* NSDate+WQHandle.h */,
+				DEDD3BE61E9B6DD0000CAB8B /* NSDate+WQHandle.m */,
 			);
 			path = Category_Foundation;
 			sourceTree = "<group>";
@@ -662,14 +705,12 @@
 		DEFF6CBC1E69717F0004CFE2 /* Category_UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6CBD1E69717F0004CFE2 /* UIButton+countDown.h */,
-				DEFF6CBE1E69717F0004CFE2 /* UIButton+countDown.m */,
-				DEFF6CBF1E69717F0004CFE2 /* UIImage+Extension.h */,
-				DEFF6CC01E69717F0004CFE2 /* UIImage+Extension.m */,
-				DE1FDD381E72B053008E6BA2 /* UIImageView+Animation.h */,
-				DE1FDD391E72B053008E6BA2 /* UIImageView+Animation.m */,
-				DE289B361E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.h */,
-				DE289B371E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m */,
+				DEFF6CBF1E69717F0004CFE2 /* UIImage+WQHelp.h */,
+				DEFF6CC01E69717F0004CFE2 /* UIImage+WQHelp.m */,
+				DE1FDD381E72B053008E6BA2 /* UIImageView+WQAnimation.h */,
+				DE1FDD391E72B053008E6BA2 /* UIImageView+WQAnimation.m */,
+				DE289B361E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.h */,
+				DE289B371E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.m */,
 			);
 			path = Category_UIKit;
 			sourceTree = "<group>";
@@ -738,8 +779,8 @@
 		DEFF6CDE1E69717F0004CFE2 /* BasicFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF6CDF1E69717F0004CFE2 /* WQCoderObject.h */,
-				DEFF6CE01E69717F0004CFE2 /* WQCoderObject.m */,
+				DEFF6CDF1E69717F0004CFE2 /* WQDynamicObject.h */,
+				DEFF6CE01E69717F0004CFE2 /* WQDynamicObject.m */,
 				DEFF6CE11E69717F0004CFE2 /* WQError.h */,
 				DEFF6CE21E69717F0004CFE2 /* WQError.m */,
 			);
@@ -749,8 +790,8 @@
 		DEFF6CE31E69717F0004CFE2 /* BasicHelp */ = {
 			isa = PBXGroup;
 			children = (
-				DED67AD71E714E400061CABF /* NSFileManager+Path.h */,
-				DED67AD81E714E400061CABF /* NSFileManager+Path.m */,
+				DED67AD71E714E400061CABF /* NSFileManager+WQPath.h */,
+				DED67AD81E714E400061CABF /* NSFileManager+WQPath.m */,
 				DEFF6CE91E69717F0004CFE2 /* RuntimeKit.h */,
 				DEFF6CEA1E69717F0004CFE2 /* RuntimeKit.m */,
 				DEFF6CEB1E69717F0004CFE2 /* WQAppInfo.h */,
@@ -1147,25 +1188,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEEA34391E769ACC007149B1 /* WQCommonCenterItem.m in Sources */,
-				DEFF6D411E6971800004CFE2 /* NSString+Help.m in Sources */,
+				DEFF6D411E6971800004CFE2 /* NSString+WQHelp.m in Sources */,
 				DE1FDD311E72A069008E6BA2 /* WQHttpTool.m in Sources */,
 				DEDCAAEF1E8F78CF00E9B61E /* WQCommonCustomItem.m in Sources */,
+				DEDD3BE71E9B6DD0000CAB8B /* NSDate+WQHandle.m in Sources */,
 				DEFF6D631E6971800004CFE2 /* ExamineCell.m in Sources */,
 				DEFF6D741E6971800004CFE2 /* MainTabBarController.m in Sources */,
 				DEEA34271E763B05007149B1 /* WQCommonGroup.m in Sources */,
 				DEFF6D5E1E6971800004CFE2 /* WQAlertController.m in Sources */,
-				DEFF6D431E6971800004CFE2 /* UIButton+countDown.m in Sources */,
+				DE0F9F3E1E9B64D90061E2A3 /* Student.m in Sources */,
 				DEC00AFB1DB8BBC000A516A1 /* ViewController.m in Sources */,
 				DED67AD31E71340B0061CABF /* WQControllerTransition.m in Sources */,
 				DEFF6D661E6971800004CFE2 /* GuDExamineDataViewController.m in Sources */,
 				DEFF6D611E6971800004CFE2 /* ClendarUnit.m in Sources */,
 				DEEA342D1E763E8D007149B1 /* WQCommonSwitchItem.m in Sources */,
-				DE1FDD371E72AC51008E6BA2 /* UIImageView+SDWebImage.m in Sources */,
+				DE1FDD371E72AC51008E6BA2 /* UIImageView+WQSDWebImage.m in Sources */,
 				DEFF6D761E6971800004CFE2 /* WQStarLevel.m in Sources */,
 				DEFF6D581E6971800004CFE2 /* WQAppInfo.m in Sources */,
 				DED67AD11E71340B0061CABF /* WQBroserController.m in Sources */,
+				DE157EF11E9F2FD300E6979C /* NSDate+Utilities.m in Sources */,
 				DEFF6D6A1E6971800004CFE2 /* WQTagsFlowLayout.m in Sources */,
-				DEFF6D521E6971800004CFE2 /* WQCoderObject.m in Sources */,
+				DEFF6D521E6971800004CFE2 /* WQDynamicObject.m in Sources */,
 				DE49E2B81E6D44DA0040A51A /* WQAnimationTrasitionViewController.m in Sources */,
 				DEFF6D5C1E6971800004CFE2 /* WQTextView.m in Sources */,
 				DE8537791DE0043800654C4D /* WQClanderViewController.m in Sources */,
@@ -1173,9 +1216,10 @@
 				DEFF6D5D1E6971800004CFE2 /* WQEdgeTitleButton.m in Sources */,
 				DE55FF471DBA08EB0014C758 /* VerticalScrollTextViewController.m in Sources */,
 				DEEA34361E766B08007149B1 /* WQCommonBaseTableController.m in Sources */,
+				DE0F9F3B1E9B5F880061E2A3 /* CoderObject.m in Sources */,
 				DEFF6D751E6971800004CFE2 /* MenuViewController.m in Sources */,
 				DEC00B341DB8C0D900A516A1 /* GetPictureViewController.m in Sources */,
-				DEFF6D3C1E6971800004CFE2 /* NSDate+Format.m in Sources */,
+				DEFF6D3C1E6971800004CFE2 /* NSDate+WQFormat.m in Sources */,
 				DEC00B531DB8D1C400A516A1 /* ButtonTitleImageLayoutViewController.m in Sources */,
 				DED67AD01E71340B0061CABF /* APPHELP.m in Sources */,
 				DEDCAAF31E8F839500E9B61E /* WQCommonDataResource.m in Sources */,
@@ -1190,38 +1234,40 @@
 				DEFF6D701E6971800004CFE2 /* WQShareActionItem.m in Sources */,
 				DE0A4DAB1E6DAF0000281808 /* WQSubTransitionViewController.m in Sources */,
 				DE1FDD341E72A1AC008E6BA2 /* WQBaseAPI.m in Sources */,
-				DE1FDD3A1E72B053008E6BA2 /* UIImageView+Animation.m in Sources */,
+				DE1FDD3A1E72B053008E6BA2 /* UIImageView+WQAnimation.m in Sources */,
 				DE289B4E1E8BB99200F8C92E /* amrFileCodec.m in Sources */,
 				DEFF6D3B1E6971800004CFE2 /* ZHAnimationView.m in Sources */,
 				DEC00AF81DB8BBC000A516A1 /* AppDelegate.m in Sources */,
+				DE157EF31E9F2FD300E6979C /* UIButton+countDown.m in Sources */,
+				DE157EF21E9F2FD300E6979C /* UIBarButtonItem+Badge.m in Sources */,
 				DEFE2C691DD22716006BB614 /* WQLoopViewController.m in Sources */,
 				DEFF6D721E6971800004CFE2 /* ContainerViewController.m in Sources */,
 				DE55FF621DBA10310014C758 /* TextViewPlacehodelViewController.m in Sources */,
 				DEFF6D651E6971800004CFE2 /* GuDExaminationItem.m in Sources */,
+				DE157EF41E9F2FD300E6979C /* UIGestureRecognizer+Block.m in Sources */,
 				DEEA342A1E763E31007149B1 /* WQCommonArrowItem.m in Sources */,
-				DEFF6D3F1E6971800004CFE2 /* NSString+Date.m in Sources */,
+				DEFF6D3F1E6971800004CFE2 /* NSString+WQDate.m in Sources */,
 				DEFF6D601E6971800004CFE2 /* ClendarDayUnit.m in Sources */,
 				DEEA34331E766AC6007149B1 /* WQCommonBaseCell.m in Sources */,
 				DEC00B4B1DB8CA7400A516A1 /* DropDownViewController.m in Sources */,
 				DEEA34301E76675F007149B1 /* WQCommonSubtitleItem.m in Sources */,
 				DEFF6D731E6971800004CFE2 /* MainNavController.m in Sources */,
 				DEFF6D6B1E6971800004CFE2 /* WQSelectPhotoViewController.m in Sources */,
-				DEFF6D421E6971800004CFE2 /* UIGestureRecognizer+Block.m in Sources */,
 				DEC00AF51DB8BBC000A516A1 /* main.m in Sources */,
 				DEFF6D681E6971800004CFE2 /* WQTagCollectionViewCell.m in Sources */,
 				DEFF6D5A1E6971800004CFE2 /* WQKeyboardAdjustHelp.m in Sources */,
 				DEFF6D571E6971800004CFE2 /* RuntimeKit.m in Sources */,
-				DEFF6D441E6971800004CFE2 /* UIImage+Extension.m in Sources */,
+				DEFF6D441E6971800004CFE2 /* UIImage+WQHelp.m in Sources */,
 				DED67AC31E71252A0061CABF /* WQVoiceTool.m in Sources */,
 				DEFF6D531E6971800004CFE2 /* WQError.m in Sources */,
 				DEFF6D621E6971800004CFE2 /* WQClendarView.m in Sources */,
 				DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */,
-				DED67AD91E714E400061CABF /* NSFileManager+Path.m in Sources */,
+				DED67AD91E714E400061CABF /* NSFileManager+WQPath.m in Sources */,
 				DEFF6D671E6971800004CFE2 /* GuDExamineViewController.m in Sources */,
 				DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */,
 				DEEA34241E763A72007149B1 /* WQCommonBaseItem.m in Sources */,
 				DEFF6D6C1E6971800004CFE2 /* WQSelectOptionsCell.m in Sources */,
-				DE289B381E8BB3C100F8C92E /* UIBarButtonItem+BarButtonHelp.m in Sources */,
+				DE289B381E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.m in Sources */,
 				DE8537841DE0602400654C4D /* ReplicatorViewController.m in Sources */,
 				DEAFF1F71DDF142200CF8116 /* WQTabBarViewController.m in Sources */,
 			);

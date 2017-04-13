@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageView (SDWebImage)
+@interface UIImageView (WQSDWebImage)
 
 /**
  设置图片

@@ -6,9 +6,9 @@
 //  Copyright © 2017年 WangQiang. All rights reserved.
 //
 
-#import "UIBarButtonItem+BarButtonHelp.h"
+#import "UIBarButtonItem+WQInitHelp.h"
 
-@implementation UIBarButtonItem (BarButtonHelp)
+@implementation UIBarButtonItem (WQInitHelp)
 +(instancetype)backBarButtonItemWithTarget:(id)target action:(SEL)action{
 //    UIImage *image = [[UIImage imageNamed:@"register1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
       //FIXME:这里需要根据自己的需要放返回箭头

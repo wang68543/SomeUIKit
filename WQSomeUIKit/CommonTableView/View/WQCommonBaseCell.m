@@ -8,7 +8,7 @@
 
 #import "WQCommonBaseCell.h"
 
-#import "NSString+Help.h"
+#import "NSString+WQHelp.h"
 
 @interface WQCommonBaseCell()
 @property (strong ,nonatomic) UILabel *subtitleLabel;

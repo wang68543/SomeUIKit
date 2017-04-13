@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 heima. All rights reserved.
 //
 
-#import "UIImage+Extension.h"
+#import "UIImage+WQHelp.h"
 #import "WQConstans.h"
-@implementation UIImage (Extension)
+@implementation UIImage (WQHelp)
 
 - (instancetype)hu_circleImageWithCornerRadius:(CGFloat)radius
 {
@@ -167,6 +167,9 @@
 //    CIImage*iconImage = [filter outputImage];
 //    UIImage*image = [UIImage imageWithCIImage:iconImage];
     return QRCodeImage;
+}
+-(NSData *)compressImage{
+    return [self compressImageToKb:100];
 }
 -(NSData *)compressImageToKb:(NSInteger)kb{
     NSData *dataImage = UIImageJPEGRepresentation(self, 1.0);

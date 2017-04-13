@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WQCoderObject : NSObject
+@interface WQDynamicObject : NSObject<NSCoding>
 
 +(instancetype)classWithDict:(NSDictionary *)dict;
 +(NSArray *)classesWithArray:(NSArray *)array;
@@ -18,7 +18,7 @@
  模型中含有数组模型
  
  @param array         数组
- @param inArrayModels 模型中的模型对应的JSON中的建-模型的类型
+ @param inArrayModels 模型中的模型对应的JSON中的键-模型的类型
  */
 +(NSArray *)classesWithArray:(NSArray *)array classInArray:(NSDictionary *)inArrayModels;
 

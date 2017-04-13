@@ -6,10 +6,10 @@
 //  Copyright © 2017年 WangQiang. All rights reserved.
 //
 
-#import "UIImageView+SDWebImage.h"
+#import "UIImageView+WQSDWebImage.h"
 #import "UIImageView+WebCache.h"
 
-@implementation UIImageView (SDWebImage)
+@implementation UIImageView (WQSDWebImage)
 -(void)downloadHeadImage:(NSString *)url{
     [self downloadImage:url placeholder:@""];
 }

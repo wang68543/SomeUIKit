@@ -9,7 +9,7 @@
 #import "WQBaseAPI.h"
 #import "WQHttpTool.h"
 #import "WQAppInfo.h"
-#import "UIImage+Extension.h"
+#import "UIImage+WQHelp.h"
 
 @implementation WQBaseAPI
 +(void)POST:(NSString *)url params:(NSMutableDictionary *)params response:(WQResponse)res{

@@ -6,9 +6,9 @@
 //  Copyright © 2017年 WangQiang. All rights reserved.
 //
 
-#import "NSFileManager+Path.h"
+#import "NSFileManager+WQPath.h"
 
-@implementation NSFileManager (Path)
+@implementation NSFileManager (WQPath)
 + (NSURL *)URLForDirectory:(NSSearchPathDirectory)directory{
     return [[[self defaultManager] URLsForDirectory:directory inDomains:NSUserDomainMask] lastObject];
 }

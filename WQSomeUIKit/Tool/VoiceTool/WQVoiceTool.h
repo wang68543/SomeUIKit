@@ -51,20 +51,28 @@ typedef BOOL (^RecordFinshBlock)(NSError *error,NSString *recordPath,CGFloat dur
 -(void)playWithPath:(NSString *)path
         downFinshed:(DowonFinshBlock)downFinsh
         compeletion:(PlayFinshBlock)compeleletion;
+-(void)playWithPath:(NSString *)path
+       convertVoice:(ConvertDownloadVoiceBlock)convertBlock
+        downFinshed:(DowonFinshBlock)downFinsh
+        compeletion:(PlayFinshBlock)compeleletion;
 /**
  音频播放
 
  @param path 音频路径
+ @param cachePath 音频缓存路径
  @param convertBlock 下载的音频转换后播放 //FIXME: 这里默认没有转换 (转换需添加框架框架比较大)
  @param downFinsh 音频下载完成
  @param compeleletion 音频播放完成
  */
 -(void)playWithPath:(NSString *)path
+         cachePath:(NSString *)cachePath
        convertVoice:(ConvertDownloadVoiceBlock)convertBlock
         downFinshed:(DowonFinshBlock)downFinsh
         compeletion:(PlayFinshBlock)compeleletion;
 /**外部停止播放(会回调block)*/
 -(void)stopCurrentPlayer;
+/**采用默认的录音名字(由当前设备的唯一标识与当前时间组成的格式wav)*/
+-(NSError *)record;
 /**
  直接将录音文件存放到指定的目录下
 
@@ -81,4 +89,8 @@ typedef BOOL (^RecordFinshBlock)(NSError *error,NSString *recordPath,CGFloat dur
 /**录音格式转换*/
 //FIXME:这里需要导入一个第三方的库文件才能调用
 //-(void)wavData:(NSData *)data toAmr:(void (^)(NSData *))compeletion;
+
+/**拷贝文件*/
++(void)copyFile:(NSString *)filePath targetPath:(NSString *)targetPath;
+
 @end

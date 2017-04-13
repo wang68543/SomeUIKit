@@ -12,4 +12,4 @@
 #import "WQConstans.h"
 #import "WQCache.h"
 #import "WQControllerTransition.h"
-#import "NSFileManager+Path.h"
+#import "NSFileManager+WQPath.h"

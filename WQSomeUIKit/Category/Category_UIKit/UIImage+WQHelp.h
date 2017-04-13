@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (Extension)
+@interface UIImage (WQHelp)
 /**
  *  根据颜色返回一张该颜色的图片
  */
@@ -32,5 +32,8 @@
  @param kb 单位kb
  */
 -(NSData *)compressImageToKb:(NSInteger)kb;
+
+//压缩图片
+-(NSData *)compressImage;
 
 @end

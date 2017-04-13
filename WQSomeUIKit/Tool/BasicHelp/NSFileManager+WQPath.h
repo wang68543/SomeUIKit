@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSFileManager (Path)
+@interface NSFileManager (WQPath)
 
 /**CacheToCachesDirectory*/
 +(NSString *)pathForCacheDirectory;
