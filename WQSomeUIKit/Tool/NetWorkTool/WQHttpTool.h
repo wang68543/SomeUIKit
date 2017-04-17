@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^HttpSuccessBlock)(NSURLResponse *reponse, id json);
-typedef void(^HttpFailureBlock)(NSURLResponse *reponse ,NSError *error);
+typedef void (^HttpFailureBlock)(NSURLResponse *reponse ,NSError *error);
 typedef void (^HttpDownloadProgressBlock)(CGFloat progress);
 typedef void (^HttpUploadProgressBlock)(CGFloat progress);
 
@@ -25,10 +25,40 @@ typedef void (^HttpUploadProgressBlock)(CGFloat progress);
             success:(HttpSuccessBlock)success
             failure:(HttpFailureBlock)failure;
 
+
+
+
+
++(void)postAudio:(NSString *)audioPath
+            path:(NSString *)urlString
+          params:(NSDictionary *)params
+        progress:(HttpUploadProgressBlock)progress
+         success:(HttpSuccessBlock)success
+         failure:(HttpFailureBlock)failure;
+/**语音上传*/
++(void)postAudioData:(NSData *)audioData
+                path:(NSString *)urlString
+              params:(NSDictionary *)params
+            progress:(HttpUploadProgressBlock)progress
+             success:(HttpSuccessBlock)success
+             failure:(HttpFailureBlock)failure;
++(void)postImage:(UIImage *)image
+            path:(NSString *)urlString
+          params:(NSDictionary *)params
+        progress:(HttpUploadProgressBlock)progress
+         success:(HttpSuccessBlock)success
+         failure:(HttpFailureBlock)failure;
+/**图片上传*/
++(void)postImageData:(NSData *)imageData
+                path:(NSString *)urlString
+              params:(NSDictionary *)params
+            progress:(HttpUploadProgressBlock)progress
+             success:(HttpSuccessBlock)success
+             failure:(HttpFailureBlock)failure;
 /**
  上传文件API
 
- @param path 接口路径
+ @param urlString 接口路径
  @param params 接口参数
  @param fileParams 文件参数
  @param data 文件二进制
@@ -36,14 +66,14 @@ typedef void (^HttpUploadProgressBlock)(CGFloat progress);
  @param success 上传成功
  @param failure 上传失败
  */
-+(void)postDataWithPath:(NSString *)path
++(void)postDataWithURL:(NSString *)urlString
                  params:(NSDictionary *)params
              fileParams:(NSDictionary *)fileParams
                fileData:(NSData *)data
                progress:(HttpUploadProgressBlock)progress
                 success:(HttpSuccessBlock)success
                 failure:(HttpFailureBlock)failure;
-+(void)postFileWithPath:(NSString *)path
++(void)postFileWithURL:(NSString *)urlString
                  params:(NSDictionary *)params
              fileParams:(NSDictionary *)fileParams
                filePath:(NSString *)filePath

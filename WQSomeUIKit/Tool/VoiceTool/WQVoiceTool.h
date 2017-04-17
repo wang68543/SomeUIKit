@@ -59,7 +59,7 @@ typedef BOOL (^RecordFinshBlock)(NSError *error,NSString *recordPath,CGFloat dur
  音频播放
 
  @param path 音频路径
- @param cachePath 音频缓存路径
+ @param cachePath 音频缓存路径(Directory存储的目标文件夹)
  @param convertBlock 下载的音频转换后播放 //FIXME: 这里默认没有转换 (转换需添加框架框架比较大)
  @param downFinsh 音频下载完成
  @param compeleletion 音频播放完成
@@ -80,8 +80,15 @@ typedef BOOL (^RecordFinshBlock)(NSError *error,NSString *recordPath,CGFloat dur
  @return 开启录音出错信息
  */
 -(NSError *)recordWithName:(NSString *)name;
-/**直接将录音文件存放到指定的路径下(有时候路径存在但就是无法存储 尝试下重启)*/
--(NSError *)recordWithPath:(NSString *)path;
+
+/**
+ 直接将录音文件存放到指定的路径下(有时候路径存在但就是无法存储 尝试下重启)
+
+ @param path 录音文件存放路径
+ @param settings 设置信息(为空就用默认的代替)
+ @return 开启错误信息
+ */
+-(NSError *)recordWithPath:(NSString *)path settings:(NSDictionary *)settings;
 
 /**停止录音*/
 -(void)stopRecordCompeletion:(RecordFinshBlock)recordFinsh;

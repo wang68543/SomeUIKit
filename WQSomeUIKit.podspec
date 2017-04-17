@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.1.6"
+  s.version      = "1.1.7"
   s.summary      = "Usual collection"
 
   s.description  = <<-DESC 
@@ -126,7 +126,15 @@ Pod::Spec.new do |s|
   end
 
 
-
+   non_arc_files = 'WQSomeUIKit/Tool/VoiceTool/amrwapper/*.{h,m}'
+   s.requires_arc = true
+   s.exclude_files = non_arc_files
+   s.subspec 'WavAmrHelp' do |sna|
+   sna.requires_arc = false
+   sna.source_files = non_arc_files
+   # sna.resources =
+   sna.vendored_libraries = "WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrwb.a"
+   end
 
   s.subspec 'Tool' do |ss|
     # ss.source_files = 'WQSomeUIKit/Tool/**/*.{h,m}'
@@ -141,15 +149,21 @@ Pod::Spec.new do |s|
       sss.dependency 'WQSomeUIKit/UIHelp/Help'
       sss.source_files = 'WQSomeUIKit/Tool/FunctionHelp/*.{h,m}'
     end
-    ss.subspec 'VoiceTool' do |sss|
+    ss.subspec 'NetWorkTool' do |sss|
       sss.dependency 'WQSomeUIKit/Tool/BasicHelp'
+      sss.dependency 'WQSomeUIKit/Category/Category_UIKit'
+      sss.source_files = 'WQSomeUIKit/Tool/NetWorkTool/*.{h,m}'
+    end
+    ss.subspec 'VoiceTool' do |sss|
+      sss.dependency 'WQSomeUIKit/Tool/NetWorkTool'
+      sss.dependency 'WQSomeUIKit/WavAmrHelp'
       sss.source_files = 'WQSomeUIKit/Tool/VoiceTool/*.{h,m}'
     end
+    
   end
 
 
   s.subspec 'UICustom' do |ss|
-    ss.source_files = 'WQSomeUIKit/UICustom/**/*.{h,m}'
     ss.subspec 'ViewCustom' do |sss|
       sss.source_files = 'WQSomeUIKit/UICustom/ViewCustom/*.{h,m}'
     end 
@@ -210,15 +224,7 @@ Pod::Spec.new do |s|
 
 
   
-  non_arc_files = 'WQSomeUIKit/Tool/VoiceTool/amrwapper/*.{h,m}'
-  #  s.requires_arc = true
-   s.exclude_files = non_arc_files
-  #  s.subspec 'WavAmrHelp' do |sna|
-  #  sna.requires_arc = false
-  #  sna.source_files = non_arc_files
-  #  # sna.resources =
-  #  sna.vendored_libraries = "WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrwb.a"
-  #  end
+   
    # $(PROJECT_DIR)/WQSomeUIKit/Resources/amrwapper/opencore-amrwb
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency 'AFNetworking', '~> 3.0'

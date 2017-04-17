@@ -32,7 +32,7 @@ typedef void(^TestBlock)(int age);
 @property char charDefault;
 @property(retain)id idRetain;
 @property (strong ,nonatomic) NSDictionary *dic;
-
+@property (assign ,nonatomic) BOOL boolValue;
 @property(nonatomic, assign) CGRect rect ;
 
 @property(nonatomic, assign) CGPoint point ;

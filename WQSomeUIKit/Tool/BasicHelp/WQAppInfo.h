@@ -25,6 +25,8 @@
 +(NSString *)appDeviceToken;
 /**设备的唯一标识*/
 +(NSString *)appUUIDString;
+/**去除唯一标识中的横线*/
++(NSString *)appUUIDWithoutLine;
 /**设备与时间组合的唯一标识*/
 +(NSString *)appUUID_DateString;
 /**通过后缀名组成一个唯一的名字*/

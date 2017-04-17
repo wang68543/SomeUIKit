@@ -54,13 +54,18 @@ static NSString *kLastVersion = @"lastVersion";
 +(NSString *)appUUIDString{
     return [UIDevice currentDevice].identifierForVendor.UUIDString;
 }
+//MARK: 去除唯一标识中的横线
++(NSString *)appUUIDWithoutLine{
+    NSString *uuidStr = [self appUUIDString];
+    return [uuidStr stringByReplacingOccurrencesOfString:@"-" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, uuidStr.length-1)];
+}
 //MARK: 设备令牌
 +(NSString *)appDeviceToken{
    return  [WQCache userDefaultObjectWithKey:kLastVersion];
 }
 //MARK: 设备与时间组合的唯一标识
 +(NSString *)appUUID_DateString{
-    return [NSString stringWithFormat:@"%@%.0f",[self appUUIDString],[[NSDate date] timeIntervalSince1970]];
+    return [NSString stringWithFormat:@"%@%.0f",[self appUUIDWithoutLine],[[NSDate date] timeIntervalSince1970]];
 }
 //MARK: 通过后缀名组成一个唯一的名字
 +(NSString *)appUUIDWithPathExtension:(NSString *)pathExtension{

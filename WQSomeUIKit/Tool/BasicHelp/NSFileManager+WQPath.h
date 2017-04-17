@@ -19,6 +19,8 @@
 /**自定义缓存文件夹*/
 +(NSString *)pathWithCustomDirectory:(NSString *)customDir;
 
+/**创建路径*/
++(NSError *)createPathIfNotExtist:(NSString *)path;
 /**
  Get URL of Documents directory.
  

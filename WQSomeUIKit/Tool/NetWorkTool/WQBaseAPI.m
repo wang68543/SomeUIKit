@@ -28,7 +28,7 @@
 }
 +(void)uploadImage:(NSString *)url params:(NSMutableDictionary *)params image:(UIImage *)image response:(WQResponse)res{
     NSDictionary *fileParams = @{kName:@"uploadFile",kFileName:[WQAppInfo appUUID_DateString],kMimeType:@"image/png"};
-    [WQHttpTool postDataWithPath:url params:params fileParams:fileParams fileData:[image compressImageToKb:100] progress:NULL success:^(NSURLResponse *reponse, id json) {
+    [WQHttpTool postDataWithURL:url params:params fileParams:fileParams fileData:[image compressImageToKb:100] progress:NULL success:^(NSURLResponse *reponse, id json) {
         !res?:res(nil,json);
     } failure:^(NSURLResponse *reponse, NSError *error) {
         !res?:res(error,nil);

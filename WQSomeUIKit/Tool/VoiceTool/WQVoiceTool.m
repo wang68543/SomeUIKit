@@ -115,9 +115,14 @@ static id _instace;
     }
     __weak typeof(self) weakSelf = self;
     dispatch_block_t block = ^(){
-        NSString *lastPath = url.lastPathComponent;
         //TODO: 先从缓存中取、取不到再去网络取
-        NSData *data = [self voiceDataWithName:lastPath];
+        NSString *basicPath = cachePath;
+        if(!basicPath || basicPath.length <= 0){
+            basicPath = [NSFileManager pathForVoiceDirectory];
+        }
+        NSString *path = [basicPath stringByAppendingPathComponent:url.lastPathComponent];
+        NSData *data = [NSData dataWithContentsOfFile:path];
+    
         VoiceCacheType cacheType;
         if(data){
             cacheType = VoiceCacheTypeDisk;
@@ -140,25 +145,6 @@ static id _instace;
     };
     [self addJobToQueue:block];
 }
-
-/**从缓存中获取语音*/
--(NSData *)voiceDataWithName:(NSString *)name{
-    if(!name){
-        return nil;
-    }else{
-        NSString *path = [[NSFileManager pathForVoiceDirectory] stringByAppendingPathComponent:name];
-        if(!path) return nil;
-        NSData *data = [NSData dataWithContentsOfFile:path];
-        return data;
-    }
-}
-
-#pragma mark -- 停止语音播放
-//-(void)stopPlay{
-//    [self stopCurrentPlayer];//
-//    //暂时不确定代理是否会响应
-//     !self.playfinsh?:self.playfinsh(nil,NO);
-//}
 #pragma mark -- 内部终止当前的语音播放
 -(void)stopCurrentPlayer{
     if(self.isPlaying){
@@ -178,7 +164,7 @@ static id _instace;
 
 #pragma mark -- 
 //获取录音设置
-- (NSDictionary*)GetAudioRecorderSettingDict{
+- (NSDictionary*)defaultAudioRecorderSettingDict{
     NSDictionary *recordSetting = [[NSDictionary alloc] initWithObjectsAndKeys:
                                    [NSNumber numberWithFloat: 8000.0],AVSampleRateKey, //采样率
                                    [NSNumber numberWithInt: kAudioFormatLinearPCM],AVFormatIDKey,
@@ -202,22 +188,22 @@ static id _instace;
    return  [self recordWithName:[WQAppInfo appUUIDWithPathExtension:@"wav"]];
 }
 -(NSError *)recordWithName:(NSString *)name{
-    return [self recordWithPath:[[NSFileManager pathForVoiceDirectory] stringByAppendingPathComponent:name]];
+    return [self recordWithPath:[[NSFileManager pathForVoiceDirectory] stringByAppendingPathComponent:name] settings:nil];
 }
 /**直接将录音文件存放到指定的路径下*/
--(NSError *)recordWithPath:(NSString *)path{
+-(NSError *)recordWithPath:(NSString *)path settings:(NSDictionary *)settings{
     [self stopCurrentRecorder];
     [self stopCurrentPlayer];
     NSError *error;
     AVAudioSession *session = [AVAudioSession sharedInstance];
     NSError *setCategoryError = nil;
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&setCategoryError];
-    
     if(setCategoryError){
-        NSLog(@"%@", [setCategoryError description]);
+        error = setCategoryError;
+        return error;
     }
     
-    self.recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL fileURLWithPath:path] settings:[self GetAudioRecorderSettingDict] error:&error];
+    self.recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL fileURLWithPath:path] settings:settings?settings :[self defaultAudioRecorderSettingDict] error:&error];
     if(![self.recorder prepareToRecord] && error){
         error = [self errorWithMsg:@"开启录音失败"];
     }else{

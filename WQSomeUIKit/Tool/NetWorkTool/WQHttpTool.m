@@ -7,6 +7,8 @@
 //
 
 #import "WQHttpTool.h"
+#import "WQAppInfo.h"
+#import "UIImage+WQHelp.h"
 
 #import "AFNetworking.h"
 
@@ -66,13 +68,65 @@ NSString *const kMimeType = @"kUploadMimeType";
         !failure?:failure(task.response,error);
     }];
 }
-+(void)postFileWithPath:(NSString *)path params:(NSDictionary *)params fileParams:(NSDictionary *)fileParams filePath:(NSString *)filePath progress:(HttpUploadProgressBlock)progress success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure{
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    [self postDataWithPath:path params:params fileParams:fileParams fileData:data progress:progress success:success failure:failure];
+#pragma mark -- 图片上传
++(void)postImage:(UIImage *)image
+            path:(NSString *)urlString
+          params:(NSDictionary *)params
+        progress:(HttpUploadProgressBlock)progress
+         success:(HttpSuccessBlock)success
+         failure:(HttpFailureBlock)failure{
+    [self postImageData:[image compressImageToKb:100] path:urlString params:params progress:progress success:success failure:failure];
 }
-+(void)postDataWithPath:(NSString *)path params:(NSDictionary *)params fileParams:(NSDictionary *)fileParams fileData:(NSData *)data progress:(HttpUploadProgressBlock)progress success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure{
+/**图片上传*/
++(void)postImageData:(NSData *)imageData
+                path:(NSString *)urlString
+              params:(NSDictionary *)params
+            progress:(HttpUploadProgressBlock)progress
+             success:(HttpSuccessBlock)success
+             failure:(HttpFailureBlock)failure{
+    NSDictionary *fileParams = @{kFileName:[WQAppInfo appUUIDWithPathExtension:@"jpg"],kName:@"uploadfile",kMimeType:@"image/jpeg"};
+    [self postDataWithURL:urlString params:params fileParams:fileParams fileData:imageData progress:progress success:success failure:failure];
+}
+#pragma mark -- 语音上传
++(void)postAudio:(NSString *)audioPath
+            path:(NSString *)urlString
+          params:(NSDictionary *)params
+        progress:(HttpUploadProgressBlock)progress
+         success:(HttpSuccessBlock)success
+         failure:(HttpFailureBlock)failure{
+    [self postAudioData:[NSData dataWithContentsOfFile:audioPath] path:urlString params:params progress:progress success:success failure:failure];
+}
+/**语音上传*/
++(void)postAudioData:(NSData *)audioData
+                path:(NSString *)urlString
+              params:(NSDictionary *)params
+            progress:(HttpUploadProgressBlock)progress
+             success:(HttpSuccessBlock)success
+             failure:(HttpFailureBlock)failure{
+    NSDictionary *fileParams = @{kFileName:[WQAppInfo appUUIDWithPathExtension:@"amr"],kName:@"uploadfile",kMimeType:@"audio/mp3"};
+    [self postDataWithURL:urlString params:params fileParams:fileParams fileData:audioData progress:progress success:success failure:failure];
+}
+
+#pragma mark -- -文件上传
++(void)postFileWithURL:(NSString *)urlString
+                params:(NSDictionary *)params
+            fileParams:(NSDictionary *)fileParams
+              filePath:(NSString *)filePath
+              progress:(HttpUploadProgressBlock)progress
+               success:(HttpSuccessBlock)success
+               failure:(HttpFailureBlock)failure{
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    [self postDataWithURL:urlString params:params fileParams:fileParams fileData:data progress:progress success:success failure:failure];
+}
++(void)postDataWithURL:(NSString *)urlString
+                params:(NSDictionary *)params
+            fileParams:(NSDictionary *)fileParams
+              fileData:(NSData *)data
+              progress:(HttpUploadProgressBlock)progress
+               success:(HttpSuccessBlock)success
+               failure:(HttpFailureBlock)failure{
     //获取完整的url路径
-    NSString * urlString = [kBaseUrl stringByAppendingPathComponent:path];
+    NSString * url = [kBaseUrl stringByAppendingPathComponent:urlString];
     NSString *fileName = [fileParams objectForKey:kFileName];
     NSString *name = [fileParams objectForKey:kName];
     NSString *mineType = [fileParams objectForKey:kMimeType];
@@ -80,7 +134,7 @@ NSString *const kMimeType = @"kUploadMimeType";
     NSAssert(fileName, @"上传文件名不能为空");
     NSAssert(name, @"服务器接收字段不能为空");
     NSAssert(mineType, @"文件mineType名不能为空");
-    [[AFHttpClient sharedClient] POST:urlString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [[AFHttpClient sharedClient] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:data name:name fileName:fileName mimeType:mineType];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {

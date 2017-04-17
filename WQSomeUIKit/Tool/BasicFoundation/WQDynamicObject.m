@@ -183,13 +183,9 @@ typedef NS_ENUM(NSInteger ,VarDataType) {
                     [self setValue:@([decoder decodeIntegerForKey:key]) forKey:key];
                     break;
                 case VarDataTypeFloat:
-                    [self setValue:@([decoder decodeFloatForKey:key]) forKey:key];
-                    break;
                 case VarDataTypeDouble:
-                    [self setValue:@([decoder decodeDoubleForKey:key]) forKey:key];
-                    break;
                 case VarDataTypeInt:
-                    [self setValue:@([decoder decodeIntForKey:key]) forKey:key];
+                    [self setValue:@([decoder decodeIntForKey:key]) forKeyPath:key];
                     break;
                 case VarDataTypeStruct:
                     //FIXME:暂时不知道结构体怎么处理

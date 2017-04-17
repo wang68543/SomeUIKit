@@ -119,7 +119,6 @@
     // 获取对象里的属性列表
     objc_property_t * properties = class_copyPropertyList([instance
                                                            class], &outCount);
-    
     for (i = 0; i < outCount; i++) {
         objc_property_t property =properties[i];
         //  属性名转成字符串
