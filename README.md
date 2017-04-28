@@ -18,7 +18,8 @@ self.manger = [WQVoiceRecordManager manager];
 [[WQVoicePlayManager manager] play:@"http://123.56.148.205/upload/audio/865555555555553/2/aud_58aeba23f30b9.txt" playFinsh:^(NSError *error, NSString *urlStr, BOOL finshed) {
     }];
 ```
-#### 3.五星评分<font size=4 color=#7A7C97>(支持任意大小的五角星形状，也支持使用图片)</font> 
+#### 3.五星评分
+><small>支持任意大小的五角星形状，也支持使用图片</small>
 
 ```objective-c
  WQStarLevel *starLevel = [[WQStarLevel alloc] init];
@@ -29,7 +30,8 @@ starLevel.backgroundColor = [UIColor whiteColor];
 starLevel.starHeight = 40;
 ```
 
-#### 4.标题与图片位置任意方向排列的按钮<font size=4 color=#7A7C97> (支持本身的自带布局属性)</font>
+#### 4.标题与图片位置任意方向排列的按钮
+><small>支持本身的自带布局属性</small>
 
 ```objective-c
 WQEdgeTitleButton *edgeTitle = [self commonContentTitle];
