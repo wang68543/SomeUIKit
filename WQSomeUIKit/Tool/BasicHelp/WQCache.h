@@ -25,9 +25,9 @@ typedef NS_ENUM(NSInteger,CacheDocumentType) {
 +(id)objectWithName:(NSString *)name cacheType:(CacheDocumentType)doucumentType;
 
 
-/**存储到指定的路径*/
+/** 存储到指定的路径 */
 +(void)cache:(id)object path:(NSString *)path;
-/**根据指定的路径获取对象*/
+/** 根据指定的路径获取对象 */
 +(id)loadWithPath:(NSString *)path;
 
 

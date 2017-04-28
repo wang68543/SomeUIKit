@@ -28,7 +28,7 @@ typedef void(^WQVoicePlayFinshBlock)(NSError *error ,NSString *urlStr,BOOL finsh
 @property (assign ,nonatomic) WQVoiceCacheType cachePocilty;
 
 @property (assign ,nonatomic,readonly,getter=isPlaying) BOOL playing;
-/**可能有时候下载下来的是amr格式或者一些OC不支持的格式需要进行转换*/
+/** 可能有时候下载下来的是amr格式或者一些OC不支持的格式需要进行转换 */
 - (instancetype)initWithCache:(WQVoiceCache *)cache downloader:(WQVoiceDownloader *)downloader;
 - (void)play:(NSString *)voicePath
    playFinsh:(WQVoicePlayFinshBlock)playFinshedBlock;

@@ -13,6 +13,7 @@
 -(void)photoSelectedViewDidFinshSelected:(NSDictionary *)info;
 @end
 @interface WQSelectPhotoViewController : UIViewController
+@property (assign ,nonatomic) BOOL allowsEditing;
 -(void)showInController:(UIViewController *)controller;
 @property (weak ,nonatomic) id<PhotoSelectedViewControllerDelegate> delegate;
 @end

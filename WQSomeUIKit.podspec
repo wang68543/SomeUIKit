@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.1.7"
+  s.version      = "1.1.8"
   s.summary      = "Usual collection"
 
   s.description  = <<-DESC 
@@ -159,7 +159,9 @@ Pod::Spec.new do |s|
       sss.dependency 'WQSomeUIKit/WavAmrHelp'
       sss.source_files = 'WQSomeUIKit/Tool/VoiceTool/*.{h,m}'
     end
-    
+    ss.subspec 'PayTool' do |sss|
+      sss.source_files = 'WQSomeUIKit/Tool/PayTool/*.{h,m}'
+    end
   end
 
 
@@ -206,6 +208,7 @@ Pod::Spec.new do |s|
     end
     ss.subspec 'ShareUI' do |sss|
       sss.dependency 'WQSomeUIKit/UIHelp/Help'
+      sss.resources = ["WQSomeUIKit/UIHelp/ShareUI/*.xib"] 
       sss.source_files = 'WQSomeUIKit/UIHelp/ShareUI/*.{h,m}'
     end
     ss.subspec 'SlideMenu' do |sss|

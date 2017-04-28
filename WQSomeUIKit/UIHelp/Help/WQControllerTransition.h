@@ -38,16 +38,16 @@ typedef NS_ENUM(NSInteger ,AnimationType) {
 
 // MARK:-------- 使用此类 必须强引用
 @interface WQControllerTransition : NSObject<UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate>
-/**弹出页面是否是将要显示*/
+/** 弹出页面是否是将要显示 */
 @property (assign ,nonatomic,readonly,getter=isPresent) BOOL present;
 
-/**动画时间 默认0.3*/
+/** 动画时间 默认0.3 */
 @property (assign ,nonatomic) CGFloat duration;
 
 //====================转场的场景选择========================
-/**设置两个View之间的转场*/
+/** 设置两个View之间的转场 */
 @property (assign ,nonatomic) ShowSuperViewType showSuperViewType;
-/**设置要Presentation的子View的动画 当设置为Custom就会按照下面的预设的值进行动画 */
+/** 设置要Presentation的子View的动画 当设置为Custom就会按照下面的预设的值进行动画 */
 @property (assign ,nonatomic) ShowOneSubViewType showOneSubViewType;
 //******************************************
 

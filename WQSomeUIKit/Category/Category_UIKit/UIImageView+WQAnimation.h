@@ -19,7 +19,6 @@
  */
 -(void)startRotationImage;
 -(void)stopRotationImage;
-@property (assign ,nonatomic,getter=isRunning) BOOL running;
-
+@property (assign ,nonatomic,readonly,getter=isRunning) BOOL running;
 
 @end

@@ -36,10 +36,10 @@
 }
 - (IBAction)play:(UIButton *)sender {
 //    WQVoiceDownloader *downloader = [[WQVoiceDownloader alloc] init];
-    WQVoicePlayManager *mgr =  [WQVoicePlayManager manager];
-    
-    [mgr.downloader setConvertVoiceStyle:WQConvertBase64AmrToWav];
-    [mgr play:@"http://123.56.148.205/upload/audio/865555555555553/2/aud_58aeba23f30b9.txt" playFinsh:^(NSError *error, NSString *urlStr, BOOL finshed) {
+//    WQVoicePlayManager *mgr =  [WQVoicePlayManager manager];
+    //下载的是amr格式的语音 需要转换为wav格式
+    [[WQVoicePlayManager manager].downloader setConvertVoiceStyle:WQConvertBase64AmrToWav];
+    [[WQVoicePlayManager manager] play:@"http://123.56.148.205/upload/audio/865555555555553/2/aud_58aeba23f30b9.txt" playFinsh:^(NSError *error, NSString *urlStr, BOOL finshed) {
         
     }];
 }

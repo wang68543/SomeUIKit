@@ -144,7 +144,7 @@
     
     UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
     ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
-    ipc.allowsEditing = YES;
+    ipc.allowsEditing = self.allowsEditing;
     ipc.delegate = self;
     ipc.navigationBar.barTintColor = [UIColor groupTableViewBackgroundColor] ;
     [self presentViewController:ipc animated:YES completion:nil];
@@ -158,7 +158,7 @@
         return;
     }
     UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
-    ipc.allowsEditing = YES;
+    ipc.allowsEditing = self.allowsEditing;
     ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     ipc.delegate = self;

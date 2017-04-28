@@ -7,152 +7,17 @@
 //
 
 #import "WQAlertController.h"
+#import "WQCommonAlertTitleView.h"
+#import "WQCommonAlertBottomView.h"
 
 //#import "WQConstans.h"
 #import "APPHELP.h"
 #define APP_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define APP_HEIGHT [[UIScreen mainScreen] bounds].size.height
-
-#pragma mark ============BottomView=================
-@implementation AlertBottomView
-
-+(instancetype)bottomViewWithConfirmTitle:(NSString *)confirmTitle cacelTitle:(NSString *)cancelTitle{
-    return [[self alloc] initWithConfirmTitle:confirmTitle cancelTitle:cancelTitle];
-}
-+(instancetype)bottomView{
-    return [self bottomViewWithConfirmTitle:@"确认" cacelTitle:@"取消"];
-}
--(instancetype)initWithConfirmTitle:(NSString *)confirmTitle cancelTitle:(NSString *)cancelTitle{
-    if(self = [super init]){
-        if(confirmTitle){
-            UIButton *confirm = [[UIButton alloc] init];
-            [confirm setTitle:confirmTitle forState:UIControlStateNormal];
-            confirm.titleLabel.font = [UIFont systemFontOfSize:17.0];
-            [confirm setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-            [confirm setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.8] forState:UIControlStateNormal];
-            [confirm addTarget:self action:@selector(confirm) forControlEvents:UIControlEventTouchUpInside];
-            confirm.backgroundColor = [UIColor clearColor];
-           _confirmBtn = confirm;
-            [self addSubview:confirm];
-        }
-        if(cancelTitle || (!cancelTitle && !confirmTitle)){
-            if(!cancelTitle) cancelTitle = @"取消";
-            UIButton *cancle = [[UIButton alloc] init];
-            [cancle setTitle:cancelTitle forState:UIControlStateNormal];
-            [cancle setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-            [cancle addTarget:self action:@selector(cancle) forControlEvents:UIControlEventTouchUpInside];
-            cancle.titleLabel.font = [UIFont systemFontOfSize:16.0];
-            cancle.backgroundColor = [UIColor clearColor];
-            [cancle setTitleColor:[[UIColor redColor] colorWithAlphaComponent:0.8] forState:UIControlStateNormal];
-            _cancleBtn = cancle;
-            [self addSubview:cancle];
-        }
-        
-        if(cancelTitle && confirmTitle){
-            UIView *middleLine = [[UIView alloc] init];
-            middleLine.backgroundColor = [UIColor groupTableViewBackgroundColor];
-           _midleLine = middleLine;
-            [self addSubview:middleLine];
-        }
-        
-        UIView *topLine = [[UIView alloc] init];
-        topLine.backgroundColor = [UIColor groupTableViewBackgroundColor];
-        _topLine = topLine;
-        [self addSubview:topLine];
-        
-        self.backgroundColor = [UIColor clearColor];
-        
-    }
-    return self;
-}
--(void)setTintColor:(UIColor *)tintColor{
-    [super setTintColor:tintColor];
-    self.midleLine.backgroundColor = tintColor;
-    self.topLine.backgroundColor = tintColor;
-}
--(void)layoutSubviews{
-    [super layoutSubviews];
-    CGFloat lineW = 1.0;
-    CGFloat viewWidth = CGRectGetWidth(self.frame);
-    CGFloat viewHeight = CGRectGetHeight(self.frame);
-    self.topLine.frame = CGRectMake(0, 0, viewWidth, lineW);
-    if(_confirmBtn && _cancleBtn){
-        _midleLine.frame = CGRectMake(viewWidth*0.5, lineW, lineW, viewHeight - lineW);
-        _confirmBtn.frame = CGRectMake(0, lineW, viewWidth*0.5, viewHeight - 1.0);
-        _cancleBtn.frame = CGRectMake(CGRectGetMaxX(self.confirmBtn.frame), CGRectGetMinY(self.confirmBtn.frame),  CGRectGetWidth(self.confirmBtn.frame),  CGRectGetHeight(self.confirmBtn.frame));
-    }else{
-        if(_confirmBtn){
-            _confirmBtn.frame = CGRectMake(0, lineW, viewWidth,viewHeight - lineW);
-        }else{
-            _cancleBtn.frame = CGRectMake(0, lineW, viewWidth, viewHeight - lineW);
-        }
-    }
-}
-
--(void)confirm{
-    if ([self.delegate respondsToSelector:@selector(bottomViewDidConfirm:)]) {
-        [self.delegate bottomViewDidConfirm:self];
-    }
-}
--(void)cancle{
-    if ([self.delegate respondsToSelector:@selector(bottomViewDidCancel:)]) {
-        [self.delegate bottomViewDidCancel:self];
-    }
-}
-@end
-
-#pragma mark =============TitleView================
-@implementation AlertTitleView
-
--(instancetype)init{
-    if(self = [super init]){
-        UIImageView *imageView = [[UIImageView alloc] init];
-        
-        _iconView = imageView;
-        [self addSubview:imageView];
-        UILabel  *label = [[UILabel alloc] init];
-        label.font = [UIFont boldSystemFontOfSize:20.0];
-        label.textColor = [UIColor colorWithRed:157.0/255.0 green:160.0/255.0 blue:166.0/255.0 alpha:1.0];
-        _titleLabel = label;
-        [self addSubview:label];
-        
-        UIView *lineView = [[UIView alloc] init];
-        lineView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-        _lineView = lineView;
-        [self addSubview:lineView];
-    }
-    return self;
-}
-+(instancetype)titleView{
-    return [[self alloc] init];
-}
--(void)setTintColor:(UIColor *)tintColor{
-    [super setTintColor:tintColor];
-    self.titleLabel.textColor = tintColor;
-    self.lineView.backgroundColor = tintColor;
-}
--(void)layoutSubviews{
-    [super layoutSubviews];
-    self.lineView.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 2.0, CGRectGetWidth(self.frame), 2.0);
-    CGFloat leftX = 10.0;
-    
-    if(_iconView.image){
-        CGSize imageSize = _iconView.image.size;
-        CGFloat imageH = MIN(CGRectGetHeight(self.frame) - CGRectGetHeight(self.lineView.frame), imageSize.height);
-        CGFloat imageY = (CGRectGetHeight(self.frame) - CGRectGetHeight(self.lineView.frame) - imageH)*0.5;
-        _iconView.frame = CGRectMake(leftX, imageY, imageSize.width, imageH);
-        leftX = CGRectGetMaxX(_iconView.frame)+10.0;
-    }
-    
-    if(_titleLabel.text){
-        _titleLabel.frame = CGRectMake(leftX, 0.0, CGRectGetWidth(self.frame) - leftX - 20.0, CGRectGetHeight(self.frame) - CGRectGetHeight(self.lineView.frame));
-    }
-}
-@end
-#pragma mark =============AlertController================
-@interface WQAlertController ()<AlertBottomViewDelegate,UIGestureRecognizerDelegate>{
+@interface WQAlertController ()<WQAlertBottomViewDelegate,UIGestureRecognizerDelegate>{
     NSMutableDictionary *_actions;
     UITapGestureRecognizer *_tapBackGR;
+    BOOL _hasObserver;
 }
 @property (strong ,nonatomic) UIView *containerView;
 @property (strong ,nonatomic) WQControllerTransition *bottomTranstion;
@@ -167,6 +32,30 @@
     }
     return _containerView;
 }
+
++(UIView *)centerTextFiledWithTip:(NSString *)tipMessage configurationHandler:(void (^)(UITextField * _Nonnull))handler{
+    UIView *contentView = [[UIView alloc] init];
+    CGFloat contentY = 10.0;
+    CGFloat leftPadding = 15.0;
+    CGFloat contentW = AlertCenterWidth - leftPadding *2;
+    if(tipMessage.length > 0){
+        UILabel *tipLabel = [[UILabel alloc] init];
+        tipLabel.numberOfLines = 0;
+        tipLabel.text = tipMessage;
+        CGFloat tipHeight = [tipMessage boundingRectWithSize:CGSizeMake(contentW, NSIntegerMax) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:tipLabel.font} context:nil].size.height;
+        tipLabel.frame = CGRectMake(leftPadding, contentY, contentW, tipHeight);
+        contentY += tipHeight;
+        [contentView addSubview:tipLabel];
+    }
+    UITextField *textField = [[UITextField alloc] init];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.frame = CGRectMake(leftPadding, contentY+10.0, contentW, 38.0);
+    [contentView addSubview:textField];
+    contentView.frame = CGRectMake(0, 0, AlertCenterWidth, CGRectGetMaxY(textField.frame)+10.0);
+    handler?handler(textField):nil;
+    return contentView;
+}
+
 +(instancetype)alertViewWithTitle:(NSString *)title centerView:(UIView *)centerView{
     return [[self alloc] initWithTitle:title titleIcon:nil centerView:centerView confirmTitle:@"确定" cancelTitle:@"取消"];
 }
@@ -211,40 +100,51 @@
     return [self alertViewWithTitle:title centerView:centerView];
 }
 
++(instancetype)alertViewWithTopView:(UIView<WQAlertTitleViewProtocol> *)topView centerView:(UIView *)centerView bottomView:(UIView<WQAlertBottomViewProtocol> *)bottomView{
+    return [[self alloc] initWithTopView:topView centerView:centerView bottomView:bottomView];
+}
+
 -(instancetype)initWithTitle:(nullable NSString *)title
                    titleIcon:(nullable NSString *)titleIcon
                   centerView:(nonnull UIView *)centerView
                 confirmTitle:(nullable NSString *)confirmitle
                  cancelTitle:(nullable NSString *)cancelTitle{
-    if (self = [super init]){
+    
+    UIView<WQAlertTitleViewProtocol> *topView = [self configTitleViewWithTitle:title icon:titleIcon];
+    UIView<WQAlertBottomViewProtocol>*bottom =  [self configBottomViewWithConfirm:confirmitle cancel:cancelTitle];
+    return [self initWithTopView:topView centerView:centerView bottomView:bottom];
+}
+-(instancetype)initWithTopView:(UIView<WQAlertTitleViewProtocol> *)topView centerView:(UIView *)centerView bottomView:(UIView<WQAlertBottomViewProtocol> *)bottomView{
+    if(self = [super init]){
         _actions = [NSMutableDictionary dictionary];
         _centerViews = [NSMutableArray array];
-        
-        [self configTitleViewWithTitle:title icon:titleIcon];
+        _titleView = topView;
+        _bottomView = bottomView;
+        if(topView){
+          [self.containerView addSubview:topView];
+        }
         [self configCenterView:centerView];
+        if(bottomView){
+           [self.containerView addSubview:bottomView];
+        }else{
+             [self configTapGR];
+        }
         
-        [self configBottomViewWithConfirm:confirmitle cancel:cancelTitle];
         [self layoutContainerSubView];
-        
-        
         [_centerViews addObject:_topCenterView];
-//        self.containerViewRadius = 5.0;
     }
     return self;
 }
+
 #pragma mark -- 配置标题视图
--(void)configTitleViewWithTitle:(NSString *)title icon:(NSString *)titileIcon{
-    if(_titleView)[_titleView removeFromSuperview];
+-(UIView<WQAlertTitleViewProtocol>*)configTitleViewWithTitle:(NSString *)title icon:(NSString *)titileIcon{
+    UIView <WQAlertTitleViewProtocol> *_topView ;
     if(title || titileIcon){
-        _titleView = [AlertTitleView titleView];
-        
-        _titleView.titleLabel.text = title;
-        _titleView.iconView.image = [UIImage imageNamed:titileIcon];
-        
-        [self.containerView addSubview:_titleView];
+        _topView = [WQCommonAlertTitleView titleViewWithTitle:title icon:[UIImage imageNamed:titileIcon]];
     }else{
-        _titleView = nil;
+        _topView = nil;
     }
+    return _topView;
 }
 -(void)setContainerViewRadius:(CGFloat)containerViewRadius{
     if(containerViewRadius < 0) containerViewRadius = 0 ;
@@ -255,26 +155,29 @@
     }
 }
 #pragma mark -- 配置底部视图
--(void)configBottomViewWithConfirm:(NSString *)confirmTitle cancel:(NSString *)cancelTitle{
-    if(_bottomView){
-        [_bottomView removeFromSuperview];
-    }
+-(UIView<WQAlertBottomViewProtocol>*)configBottomViewWithConfirm:(NSString *)confirmTitle cancel:(NSString *)cancelTitle{
+//    if(_bottomView){
+//        [_bottomView removeFromSuperview];
+//    }
+    UIView <WQAlertBottomViewProtocol>*_bottom;
     if(confirmTitle || cancelTitle){
-        _bottomView = [AlertBottomView bottomViewWithConfirmTitle:confirmTitle cacelTitle:cancelTitle];
-        _bottomView.delegate = self;
-        [self.containerView addSubview:self.bottomView];
+        _bottom = [WQCommonAlertBottomView bottomViewWithConfirmTitle:confirmTitle cancelTitle:cancelTitle ];
+        _bottom.delegate = self;
+//        [self.containerView addSubview:self.bottomView];
    
     }else{
-        _bottomView = nil;
-        [self configTapGR];
+        _bottom = nil;
+//        [self configTapGR];
     }
+    return _bottom;
 }
 #pragma mark -- 配置中间视图
 -(void)configCenterView:(UIView *)centerView{
     if(_topCenterView)[_topCenterView removeFromSuperview];
     _topCenterView = centerView;
     UIView *tf = [self findInputText:centerView];
-    if(tf){
+    if(tf && !_hasObserver){
+        _hasObserver = YES;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     }
     [self configTapGR];
@@ -309,8 +212,8 @@
     CGFloat centerViewHeight = 0.0;
     CGFloat centerViewWidth = MIN(CGRectGetWidth(_topCenterView.frame), AlertCenterWidth);
     if(_titleView){
-        _titleView.frame = CGRectMake(0, 0, centerViewWidth, 49.0);
-        centerViewHeight += 49.0;
+        _titleView.frame = CGRectMake(0, 0, centerViewWidth, [_titleView heightForView]);
+        centerViewHeight += CGRectGetHeight(_titleView.frame);
     }
     
     CGRect _topCenterViewFrame = CGRectMake(MAX(0, (centerViewWidth - CGRectGetWidth(_topCenterView.frame))*0.5), centerViewHeight, CGRectGetWidth(_topCenterView.frame), CGRectGetHeight(_topCenterView.frame));
@@ -320,8 +223,8 @@
     centerViewHeight += _topCenterViewFrame.size.height;
     
     if(_bottomView){
-        _bottomView.frame = CGRectMake(0, centerViewHeight, centerViewWidth, 49.0);
-        centerViewHeight += 49.0;
+        _bottomView.frame = CGRectMake(0, centerViewHeight, centerViewWidth, [_bottomView heightForView]);
+        centerViewHeight += CGRectGetHeight(_bottomView.frame);
     }
 
     _containerView.frame = CGRectMake((APP_WIDTH - centerViewWidth)*0.5,( APP_HEIGHT - centerViewHeight)*0.5, centerViewWidth, centerViewHeight);
@@ -355,7 +258,6 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 -(void)keyboardWillChangeFrame:(NSNotification *)note{
-  
     // 取出键盘高度
     CGRect keyboardF = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGFloat duration = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
@@ -367,11 +269,11 @@
         return;
     }
     //将原本在sv_bg得Rect改为self.view.window上的Rect
-    CGRect kuangToViewframe  = [tf.superview convertRect:tf.frame toView:nil];
-    
+//    CGRect kuangToViewframe  = [tf.superview convertRect:tf.frame toView:nil];
+    CGRect kuangToViewframe  = self.containerView.frame;
     //[self.view convertRect:tf.frame fromView:tf];
     //框的最大Y值大于键盘的最小y值 急这两者就交叉了
-    CGFloat offsetY = CGRectGetMaxY(kuangToViewframe) - keyboardF.origin.y;
+    CGFloat offsetY = CGRectGetMaxY(kuangToViewframe) - CGRectGetMinY(keyboardF);
     if (offsetY > 0) {//交叉了,需要往上移
         [UIView animateWithDuration:duration animations:^{
             self.containerView.transform = CGAffineTransformMakeTranslation(0, -offsetY - 10.0);
@@ -411,27 +313,21 @@
     [inViewController presentViewController:self animated:YES completion:NULL];
 }
 #pragma amrk -- AlertBottomViewDelegate
--(void)bottomViewDidCancel:(AlertBottomView *)bottomView{
-//    if([self.delegate respondsToSelector:@selector(commonAlertDidCancel:)]){
-//        [self.delegate commonAlertDidCancel:self];
-//    }else{
-//     [self dismissViewControllerAnimated:YES completion:NULL];
-//    }
+-(void)bottomViewDidClickConfirmAction{
+    [self.containerView endEditing:YES];
+    BottomAction block = [_actions valueForKey:ActionConfirm];
+    //    __weak typeof(self) weakSelf = self;
+    if(block) {
+        block(self);
+    }else{
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+    
+}
+-(void)bottomViewDidClickCancelAction{
+    [self.containerView endEditing:YES];
     BottomAction block = [_actions valueForKey:ActionCancel];
     if(block){
-      block(self);
-    }else{
-       [self dismissViewControllerAnimated:YES completion:NULL]; 
-    }
-}
-
--(void)bottomViewDidConfirm:(AlertBottomView *)bottomView{
-//    if([self.delegate respondsToSelector:@selector(commonAlertDidConfirm:)]){
-//        [self.delegate commonAlertDidConfirm:self];
-//    }
-    BottomAction block = [_actions valueForKey:ActionConfirm];
-//    __weak typeof(self) weakSelf = self;
-    if(block) {
         block(self);
     }else{
         [self dismissViewControllerAnimated:YES completion:NULL];
@@ -485,7 +381,7 @@
 //        if(_bottomView){
 //            [self bottomViewDidCancel:_bottomView];
 //        }else{
-            [self dismissViewControllerAnimated:animate completion:NULL];
+        [self dismissViewControllerAnimated:animate completion:NULL];
 //        }
     }else{
       

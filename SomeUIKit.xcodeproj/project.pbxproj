@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B43B7901A5066FFD774F34F /* libPods-SomeUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 366E2D08C590E008A7E8429E /* libPods-SomeUIKit.a */; };
+		DE01EEF91EAF644E008DA164 /* WQPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE01EEF81EAF644E008DA164 /* WQPayTool.m */; };
+		DE01EEFC1EAF647A008DA164 /* WQPayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DE01EEFB1EAF647A008DA164 /* WQPayItem.m */; };
 		DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE056BAA1DCD760F00E16D15 /* DateSelectViewController.m */; };
 		DE056BAD1DCD760F00E16D15 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE056BAB1DCD760F00E16D15 /* DateSelectViewController.xib */; };
 		DE0A4DAB1E6DAF0000281808 /* WQSubTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A4DAA1E6DAF0000281808 /* WQSubTransitionViewController.m */; };
@@ -27,6 +29,9 @@
 		DE289B4F1E8BB99200F8C92E /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE289B4C1E8BB99200F8C92E /* libopencore-amrnb.a */; };
 		DE289B501E8BB99200F8C92E /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE289B4D1E8BB99200F8C92E /* libopencore-amrwb.a */; };
 		DE49E2B81E6D44DA0040A51A /* WQAnimationTrasitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */; };
+		DE4A3EA31EADCE8E00A69892 /* WQSelectDateController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A3EA21EADCE8E00A69892 /* WQSelectDateController.m */; };
+		DE4A3EA61EAE093A00A69892 /* WQCommonAlertBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A3EA51EAE093A00A69892 /* WQCommonAlertBottomView.m */; };
+		DE4A3EA91EAE095200A69892 /* WQCommonAlertTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A3EA81EAE095200A69892 /* WQCommonAlertTitleView.m */; };
 		DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE55FF3B1DB9A48C0014C758 /* StarViewController.m */; };
 		DE55FF3E1DB9A48C0014C758 /* StarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE55FF3C1DB9A48C0014C758 /* StarViewController.xib */; };
 		DE55FF471DBA08EB0014C758 /* VerticalScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE55FF461DBA08EB0014C758 /* VerticalScrollTextViewController.m */; };
@@ -115,7 +120,7 @@
 		DEFF6D6C1E6971800004CFE2 /* WQSelectOptionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D1E1E69717F0004CFE2 /* WQSelectOptionsCell.m */; };
 		DEFF6D6D1E6971800004CFE2 /* WQSelecOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D201E69717F0004CFE2 /* WQSelecOptionsView.m */; };
 		DEFF6D6E1E6971800004CFE2 /* WQShareActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D231E69717F0004CFE2 /* WQShareActionCell.m */; };
-		DEFF6D6F1E6971800004CFE2 /* ShareActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6D241E69717F0004CFE2 /* ShareActionCell.xib */; };
+		DEFF6D6F1E6971800004CFE2 /* WQShareActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFF6D241E69717F0004CFE2 /* WQShareActionCell.xib */; };
 		DEFF6D701E6971800004CFE2 /* WQShareActionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D261E69717F0004CFE2 /* WQShareActionItem.m */; };
 		DEFF6D711E6971800004CFE2 /* WQShareActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D281E69717F0004CFE2 /* WQShareActionViewController.m */; };
 		DEFF6D721E6971800004CFE2 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6D2B1E6971800004CFE2 /* ContainerViewController.m */; };
@@ -145,6 +150,10 @@
 
 /* Begin PBXFileReference section */
 		366E2D08C590E008A7E8429E /* libPods-SomeUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SomeUIKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE01EEF71EAF644E008DA164 /* WQPayTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQPayTool.h; sourceTree = "<group>"; };
+		DE01EEF81EAF644E008DA164 /* WQPayTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQPayTool.m; sourceTree = "<group>"; };
+		DE01EEFA1EAF647A008DA164 /* WQPayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQPayItem.h; sourceTree = "<group>"; };
+		DE01EEFB1EAF647A008DA164 /* WQPayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQPayItem.m; sourceTree = "<group>"; };
 		DE056BA91DCD760F00E16D15 /* DateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectViewController.h; sourceTree = "<group>"; };
 		DE056BAA1DCD760F00E16D15 /* DateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectViewController.m; sourceTree = "<group>"; };
 		DE056BAB1DCD760F00E16D15 /* DateSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelectViewController.xib; sourceTree = "<group>"; };
@@ -183,6 +192,14 @@
 		DE289B4D1E8BB99200F8C92E /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		DE49E2B61E6D44DA0040A51A /* WQAnimationTrasitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAnimationTrasitionViewController.h; sourceTree = "<group>"; };
 		DE49E2B71E6D44DA0040A51A /* WQAnimationTrasitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAnimationTrasitionViewController.m; sourceTree = "<group>"; };
+		DE4A3EA11EADCE8E00A69892 /* WQSelectDateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQSelectDateController.h; sourceTree = "<group>"; };
+		DE4A3EA21EADCE8E00A69892 /* WQSelectDateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQSelectDateController.m; sourceTree = "<group>"; };
+		DE4A3EA41EAE093A00A69892 /* WQCommonAlertBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonAlertBottomView.h; sourceTree = "<group>"; };
+		DE4A3EA51EAE093A00A69892 /* WQCommonAlertBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonAlertBottomView.m; sourceTree = "<group>"; };
+		DE4A3EA71EAE095200A69892 /* WQCommonAlertTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonAlertTitleView.h; sourceTree = "<group>"; };
+		DE4A3EA81EAE095200A69892 /* WQCommonAlertTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonAlertTitleView.m; sourceTree = "<group>"; };
+		DE4A3EAA1EAE09A200A69892 /* WQAlertBottomViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAlertBottomViewProtocol.h; sourceTree = "<group>"; };
+		DE4A3EAB1EAE09CA00A69892 /* WQAlertTitleViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQAlertTitleViewProtocol.h; sourceTree = "<group>"; };
 		DE55FF3A1DB9A48C0014C758 /* StarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarViewController.h; sourceTree = "<group>"; };
 		DE55FF3B1DB9A48C0014C758 /* StarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarViewController.m; sourceTree = "<group>"; };
 		DE55FF3C1DB9A48C0014C758 /* StarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarViewController.xib; sourceTree = "<group>"; };
@@ -347,7 +364,7 @@
 		DEFF6D201E69717F0004CFE2 /* WQSelecOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQSelecOptionsView.m; sourceTree = "<group>"; };
 		DEFF6D221E69717F0004CFE2 /* WQShareActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQShareActionCell.h; sourceTree = "<group>"; };
 		DEFF6D231E69717F0004CFE2 /* WQShareActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQShareActionCell.m; sourceTree = "<group>"; };
-		DEFF6D241E69717F0004CFE2 /* ShareActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareActionCell.xib; sourceTree = "<group>"; };
+		DEFF6D241E69717F0004CFE2 /* WQShareActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WQShareActionCell.xib; sourceTree = "<group>"; };
 		DEFF6D251E69717F0004CFE2 /* WQShareActionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQShareActionItem.h; sourceTree = "<group>"; };
 		DEFF6D261E69717F0004CFE2 /* WQShareActionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQShareActionItem.m; sourceTree = "<group>"; };
 		DEFF6D271E69717F0004CFE2 /* WQShareActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQShareActionViewController.h; sourceTree = "<group>"; };
@@ -403,6 +420,17 @@
 				DFA5B52A480A3EB1FB2C3F57 /* Pods-SomeUIKit.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE01EEF61EAF6433008DA164 /* PayTool */ = {
+			isa = PBXGroup;
+			children = (
+				DE01EEF71EAF644E008DA164 /* WQPayTool.h */,
+				DE01EEF81EAF644E008DA164 /* WQPayTool.m */,
+				DE01EEFA1EAF647A008DA164 /* WQPayItem.h */,
+				DE01EEFB1EAF647A008DA164 /* WQPayItem.m */,
+			);
+			path = PayTool;
 			sourceTree = "<group>";
 		};
 		DE0F9F381E9B5F5E0061E2A3 /* Model */ = {
@@ -800,6 +828,7 @@
 		DEFF6CDD1E69717F0004CFE2 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				DE01EEF61EAF6433008DA164 /* PayTool */,
 				DE1FDD2E1E72A055008E6BA2 /* NetWorkTool */,
 				DED67AB41E71252A0061CABF /* VoiceTool */,
 				DEFF6CDE1E69717F0004CFE2 /* BasicFoundation */,
@@ -885,8 +914,16 @@
 		DEFF6CFC1E69717F0004CFE2 /* AlertUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE4A3EA11EADCE8E00A69892 /* WQSelectDateController.h */,
+				DE4A3EA21EADCE8E00A69892 /* WQSelectDateController.m */,
 				DEFF6CFD1E69717F0004CFE2 /* WQAlertController.h */,
 				DEFF6CFE1E69717F0004CFE2 /* WQAlertController.m */,
+				DE4A3EA41EAE093A00A69892 /* WQCommonAlertBottomView.h */,
+				DE4A3EA51EAE093A00A69892 /* WQCommonAlertBottomView.m */,
+				DE4A3EA71EAE095200A69892 /* WQCommonAlertTitleView.h */,
+				DE4A3EA81EAE095200A69892 /* WQCommonAlertTitleView.m */,
+				DE4A3EAA1EAE09A200A69892 /* WQAlertBottomViewProtocol.h */,
+				DE4A3EAB1EAE09CA00A69892 /* WQAlertTitleViewProtocol.h */,
 			);
 			path = AlertUI;
 			sourceTree = "<group>";
@@ -966,7 +1003,7 @@
 			children = (
 				DEFF6D221E69717F0004CFE2 /* WQShareActionCell.h */,
 				DEFF6D231E69717F0004CFE2 /* WQShareActionCell.m */,
-				DEFF6D241E69717F0004CFE2 /* ShareActionCell.xib */,
+				DEFF6D241E69717F0004CFE2 /* WQShareActionCell.xib */,
 				DEFF6D251E69717F0004CFE2 /* WQShareActionItem.h */,
 				DEFF6D261E69717F0004CFE2 /* WQShareActionItem.m */,
 				DEFF6D271E69717F0004CFE2 /* WQShareActionViewController.h */,
@@ -1126,7 +1163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEFF6D6F1E6971800004CFE2 /* ShareActionCell.xib in Resources */,
+				DEFF6D6F1E6971800004CFE2 /* WQShareActionCell.xib in Resources */,
 				DE1FDD2D1E72507C008E6BA2 /* WQAnimationTrasitionViewController.xib in Resources */,
 				DE687B051EA35DF200AC6E74 /* WQVoiceViewController.xib in Resources */,
 				DEFF6D4F1E6971800004CFE2 /* 06.jpg in Resources */,
@@ -1230,6 +1267,7 @@
 				DEFF6D741E6971800004CFE2 /* MainTabBarController.m in Sources */,
 				DE5C8A291EA0B39000C81ED4 /* WQVoiceDownloader.m in Sources */,
 				DE687B031EA35DAD00AC6E74 /* WQVoiceViewController.m in Sources */,
+				DE4A3EA91EAE095200A69892 /* WQCommonAlertTitleView.m in Sources */,
 				DEEA34271E763B05007149B1 /* WQCommonGroup.m in Sources */,
 				DEFF6D5E1E6971800004CFE2 /* WQAlertController.m in Sources */,
 				DE0F9F3E1E9B64D90061E2A3 /* Student.m in Sources */,
@@ -1241,6 +1279,7 @@
 				DE1FDD371E72AC51008E6BA2 /* UIImageView+WQSDWebImage.m in Sources */,
 				DEFF6D761E6971800004CFE2 /* WQStarLevel.m in Sources */,
 				DEFF6D581E6971800004CFE2 /* WQAppInfo.m in Sources */,
+				DE01EEF91EAF644E008DA164 /* WQPayTool.m in Sources */,
 				DED67AD11E71340B0061CABF /* WQBroserController.m in Sources */,
 				DE5C8A351EA0C08400C81ED4 /* WQVoicePlayManager.m in Sources */,
 				DE157EF11E9F2FD300E6979C /* NSDate+Utilities.m in Sources */,
@@ -1282,6 +1321,7 @@
 				DEFF6D721E6971800004CFE2 /* ContainerViewController.m in Sources */,
 				DE55FF621DBA10310014C758 /* TextViewPlacehodelViewController.m in Sources */,
 				DEFF6D651E6971800004CFE2 /* GuDExaminationItem.m in Sources */,
+				DE4A3EA31EADCE8E00A69892 /* WQSelectDateController.m in Sources */,
 				DE157EF41E9F2FD300E6979C /* UIGestureRecognizer+Block.m in Sources */,
 				DEEA342A1E763E31007149B1 /* WQCommonArrowItem.m in Sources */,
 				DEFF6D3F1E6971800004CFE2 /* NSString+WQDate.m in Sources */,
@@ -1295,6 +1335,7 @@
 				DEC00AF51DB8BBC000A516A1 /* main.m in Sources */,
 				DEFF6D681E6971800004CFE2 /* WQTagCollectionViewCell.m in Sources */,
 				DEFF6D5A1E6971800004CFE2 /* WQKeyboardAdjustHelp.m in Sources */,
+				DE01EEFC1EAF647A008DA164 /* WQPayItem.m in Sources */,
 				DEFF6D571E6971800004CFE2 /* RuntimeKit.m in Sources */,
 				DEFF6D441E6971800004CFE2 /* UIImage+WQHelp.m in Sources */,
 				DED67AC31E71252A0061CABF /* WQVoiceTool.m in Sources */,
@@ -1302,6 +1343,7 @@
 				DEDD16361EA121D7001D9764 /* WQVoiceDownloadOperation.m in Sources */,
 				DEFF6D621E6971800004CFE2 /* WQClendarView.m in Sources */,
 				DE55FF3D1DB9A48C0014C758 /* StarViewController.m in Sources */,
+				DE4A3EA61EAE093A00A69892 /* WQCommonAlertBottomView.m in Sources */,
 				DED67AD91E714E400061CABF /* NSFileManager+WQPath.m in Sources */,
 				DEFF6D671E6971800004CFE2 /* GuDExamineViewController.m in Sources */,
 				DE056BAC1DCD760F00E16D15 /* DateSelectViewController.m in Sources */,

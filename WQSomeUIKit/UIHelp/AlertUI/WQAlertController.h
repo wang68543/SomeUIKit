@@ -8,40 +8,20 @@
 
 #import <UIKit/UIKit.h>
 @class WQAlertController;
-@class AlertBottomView;
-@class AlertTitleView;
+#import "WQAlertTitleViewProtocol.h"
+#import "WQAlertBottomViewProtocol.h"
+
 #import "WQControllerTransition.h"
 #define AlertCenterWidth ([[UIScreen mainScreen] bounds].size.width - 50)
 UIKIT_EXTERN  NSString * _Nonnull const ActionConfirm;
 UIKIT_EXTERN  NSString * _Nonnull const ActionCancel;
 
 typedef void(^BottomAction)( WQAlertController * _Nonnull alertController);
-#pragma mark -- -alertView
-@class AlertBottomView;
-@protocol AlertBottomViewDelegate<NSObject>
-@optional
--(void)bottomViewDidConfirm:(nonnull AlertBottomView *)bottomView;
--(void)bottomViewDidCancel:(nonnull AlertBottomView *)bottomView;
-@end
-@interface AlertBottomView:UIView
-@property (nullable, weak ,nonatomic,readonly) UIButton *confirmBtn;
-@property (nullable, weak ,nonatomic,readonly) UIButton *cancleBtn;
-@property (nullable, weak ,nonatomic,readonly) UIView *topLine;
-@property (nullable, weak ,nonatomic,readonly) UIView  *midleLine;
-
-@property (nullable,weak ,nonatomic) id<AlertBottomViewDelegate> delegate;
-+(nullable instancetype)bottomViewWithConfirmTitle:(nullable NSString *)confirmTitle cacelTitle:(nullable NSString *)cancelTitle;
-+(nonnull instancetype)bottomView;
-@end
-#pragma mark -- -AlertTitleView
-@interface AlertTitleView : UIView
-@property (nullable, weak, nonatomic,readonly) UILabel *titleLabel;
-@property (nullable, weak, nonatomic,readonly) UIImageView *iconView;
-@property (nullable, weak ,nonatomic,readonly) UIView *lineView;
-+(nonnull instancetype)titleView;
-@end
-
 @interface WQAlertController : UIViewController
+/**初始化一个输入框弹出框的中间视图*/
++(nonnull UIView *)centerTextFiledWithTip:(nullable NSString *)tipMessage
+                     configurationHandler:(void (^ __nullable)(UITextField * _Nonnull textFiled))handler;
+
 +(nonnull instancetype)alertWithContent:(nonnull NSString *)content;
 +(nonnull instancetype)alertWithCenterView:(nonnull UIView *)centerView;
 +(nonnull instancetype)alertWithCenterView:(nonnull UIView *)centerView isNeedBottomView:(BOOL)needBottom;
@@ -67,20 +47,22 @@ typedef void(^BottomAction)( WQAlertController * _Nonnull alertController);
                              confirmTitle:( nullable NSString *)confirmitle
                               cancelTitle:(nullable NSString *)cancelTitle;
 
+/**自定义上下视图*/
++(nonnull instancetype)alertViewWithTopView:(nullable UIView<WQAlertTitleViewProtocol> *)topView
+                                 centerView:(nonnull UIView *)centerView
+                                 bottomView:(nullable UIView <WQAlertBottomViewProtocol>*)bottomView;
 ///**中间视图的四周边距*/
 //@property (assign ,nonatomic) UIEdgeInsets contentEdgeInsets;
 @property (strong ,nonatomic,nullable) UIColor *tintColor;
 /**整个视图的圆角*/
 @property (assign ,nonatomic) CGFloat containerViewRadius;
 
-@property (nullable,strong ,nonatomic,readonly) AlertTitleView *titleView;
-
-@property (strong ,nonatomic,nullable ,readonly) AlertBottomView *bottomView;
+@property (nullable,strong ,nonatomic,readonly) UIView<WQAlertTitleViewProtocol> *titleView;
+@property (strong ,nonatomic,nullable ,readonly) UIView <WQAlertBottomViewProtocol> *bottomView;
 
 @property (strong ,nonatomic,nonnull ,readonly) UIView *topCenterView;
 /**当中间点击切换的时候会有多个View*/
 @property (strong ,nonatomic,nonnull ,readonly) NSMutableArray *centerViews;
-
 
 
 -(void)addActionType:(nonnull NSString *const)type action:(nonnull BottomAction)action;

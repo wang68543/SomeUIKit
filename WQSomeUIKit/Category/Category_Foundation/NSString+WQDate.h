@@ -11,8 +11,7 @@
 @interface NSString (WQDate)
 
 /**下划线表示- 2表示汉字 3表示:  4表示斜杠/ 其余的使用日期本身的本地化 00表示空格*/
-
--(NSDate *)millionSecondsToDate;
-/**yyyy-MM-dd HH:mm:ss*/
--(NSDate *)yyyy_MM_dd00HH3mm3ssToDate;
+-(NSDate *)formatMillionSecondsToDate;
+/** yyyy-MM-dd HH:mm:ss */
+-(NSDate *)formatyyyy_MM_dd00HH3mm3ssToDate;
 @end
