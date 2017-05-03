@@ -13,8 +13,8 @@
 
 #import "WQControllerTransition.h"
 #define AlertCenterWidth ([[UIScreen mainScreen] bounds].size.width - 50)
-UIKIT_EXTERN  NSString * _Nonnull const ActionConfirm;
-UIKIT_EXTERN  NSString * _Nonnull const ActionCancel;
+UIKIT_EXTERN  NSString * _Nonnull const WQActionConfirm;
+UIKIT_EXTERN  NSString * _Nonnull const WQActionCancel;
 
 typedef void(^BottomAction)( WQAlertController * _Nonnull alertController);
 @interface WQAlertController : UIViewController

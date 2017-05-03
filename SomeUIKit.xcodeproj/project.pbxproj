@@ -24,6 +24,7 @@
 		DE1FDD341E72A1AC008E6BA2 /* WQBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD331E72A1AC008E6BA2 /* WQBaseAPI.m */; };
 		DE1FDD371E72AC51008E6BA2 /* UIImageView+WQSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD361E72AC51008E6BA2 /* UIImageView+WQSDWebImage.m */; };
 		DE1FDD3A1E72B053008E6BA2 /* UIImageView+WQAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FDD391E72B053008E6BA2 /* UIImageView+WQAnimation.m */; };
+		DE2662FA1EB8493800983F59 /* WQDateFormater.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2662F91EB8493800983F59 /* WQDateFormater.m */; };
 		DE289B381E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE289B371E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.m */; };
 		DE289B4E1E8BB99200F8C92E /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DE289B471E8BB99200F8C92E /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DE289B4F1E8BB99200F8C92E /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE289B4C1E8BB99200F8C92E /* libopencore-amrnb.a */; };
@@ -45,6 +46,9 @@
 		DE687B031EA35DAD00AC6E74 /* WQVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE687B021EA35DAD00AC6E74 /* WQVoiceViewController.m */; };
 		DE687B051EA35DF200AC6E74 /* WQVoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE687B041EA35DF200AC6E74 /* WQVoiceViewController.xib */; };
 		DE71DF9C1E6672C50061E374 /* WQKeyboardHandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE71DF9B1E6672C50061E374 /* WQKeyboardHandleViewController.m */; };
+		DE7FDF6D1EB64AF7003A68E9 /* WQPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7FDF6C1EB64AF7003A68E9 /* WQPresentationController.m */; };
+		DE7FDF701EB6F3E6003A68E9 /* WQPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7FDF6F1EB6F3E6003A68E9 /* WQPopoverPresentationController.m */; };
+		DE7FDF761EB79BBA003A68E9 /* WQNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7FDF751EB79BBA003A68E9 /* WQNavViewController.m */; };
 		DE8537791DE0043800654C4D /* WQClanderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8537781DE0043800654C4D /* WQClanderViewController.m */; };
 		DE8537841DE0602400654C4D /* ReplicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8537831DE0602400654C4D /* ReplicatorViewController.m */; };
 		DEAFF1F71DDF142200CF8116 /* WQTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAFF1F61DDF142200CF8116 /* WQTabBarViewController.m */; };
@@ -180,6 +184,8 @@
 		DE1FDD361E72AC51008E6BA2 /* UIImageView+WQSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WQSDWebImage.m"; sourceTree = "<group>"; };
 		DE1FDD381E72B053008E6BA2 /* UIImageView+WQAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WQAnimation.h"; sourceTree = "<group>"; };
 		DE1FDD391E72B053008E6BA2 /* UIImageView+WQAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WQAnimation.m"; sourceTree = "<group>"; };
+		DE2662F81EB8493800983F59 /* WQDateFormater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQDateFormater.h; sourceTree = "<group>"; };
+		DE2662F91EB8493800983F59 /* WQDateFormater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQDateFormater.m; sourceTree = "<group>"; };
 		DE289B361E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WQInitHelp.h"; sourceTree = "<group>"; };
 		DE289B371E8BB3C100F8C92E /* UIBarButtonItem+WQInitHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WQInitHelp.m"; sourceTree = "<group>"; };
 		DE289B461E8BB99200F8C92E /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
@@ -223,6 +229,12 @@
 		DE687B041EA35DF200AC6E74 /* WQVoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WQVoiceViewController.xib; sourceTree = "<group>"; };
 		DE71DF9A1E6672C50061E374 /* WQKeyboardHandleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQKeyboardHandleViewController.h; sourceTree = "<group>"; };
 		DE71DF9B1E6672C50061E374 /* WQKeyboardHandleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQKeyboardHandleViewController.m; sourceTree = "<group>"; };
+		DE7FDF6B1EB64AF7003A68E9 /* WQPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQPresentationController.h; sourceTree = "<group>"; };
+		DE7FDF6C1EB64AF7003A68E9 /* WQPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQPresentationController.m; sourceTree = "<group>"; };
+		DE7FDF6E1EB6F3E6003A68E9 /* WQPopoverPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQPopoverPresentationController.h; sourceTree = "<group>"; };
+		DE7FDF6F1EB6F3E6003A68E9 /* WQPopoverPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQPopoverPresentationController.m; sourceTree = "<group>"; };
+		DE7FDF741EB79BBA003A68E9 /* WQNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQNavViewController.h; sourceTree = "<group>"; };
+		DE7FDF751EB79BBA003A68E9 /* WQNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQNavViewController.m; sourceTree = "<group>"; };
 		DE8537771DE0043800654C4D /* WQClanderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQClanderViewController.h; sourceTree = "<group>"; };
 		DE8537781DE0043800654C4D /* WQClanderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQClanderViewController.m; sourceTree = "<group>"; };
 		DE8537821DE0602400654C4D /* ReplicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicatorViewController.h; sourceTree = "<group>"; };
@@ -607,6 +619,8 @@
 				DE687B011EA35DAD00AC6E74 /* WQVoiceViewController.h */,
 				DE687B021EA35DAD00AC6E74 /* WQVoiceViewController.m */,
 				DE687B041EA35DF200AC6E74 /* WQVoiceViewController.xib */,
+				DE7FDF741EB79BBA003A68E9 /* WQNavViewController.h */,
+				DE7FDF751EB79BBA003A68E9 /* WQNavViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -641,6 +655,10 @@
 				DED67ACD1E71340B0061CABF /* WQBroserController.xib */,
 				DED67ACE1E71340B0061CABF /* WQControllerTransition.h */,
 				DED67ACF1E71340B0061CABF /* WQControllerTransition.m */,
+				DE7FDF6B1EB64AF7003A68E9 /* WQPresentationController.h */,
+				DE7FDF6C1EB64AF7003A68E9 /* WQPresentationController.m */,
+				DE7FDF6E1EB6F3E6003A68E9 /* WQPopoverPresentationController.h */,
+				DE7FDF6F1EB6F3E6003A68E9 /* WQPopoverPresentationController.m */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -759,6 +777,8 @@
 				DEFF6CB91E69717F0004CFE2 /* NSString+WQHelp.m */,
 				DEDD3BE51E9B6DD0000CAB8B /* NSDate+WQHandle.h */,
 				DEDD3BE61E9B6DD0000CAB8B /* NSDate+WQHandle.m */,
+				DE2662F81EB8493800983F59 /* WQDateFormater.h */,
+				DE2662F91EB8493800983F59 /* WQDateFormater.m */,
 			);
 			path = Category_Foundation;
 			sourceTree = "<group>";
@@ -1286,6 +1306,7 @@
 				DEFF6D6A1E6971800004CFE2 /* WQTagsFlowLayout.m in Sources */,
 				DEFF6D521E6971800004CFE2 /* WQDynamicObject.m in Sources */,
 				DE49E2B81E6D44DA0040A51A /* WQAnimationTrasitionViewController.m in Sources */,
+				DE2662FA1EB8493800983F59 /* WQDateFormater.m in Sources */,
 				DEFF6D5C1E6971800004CFE2 /* WQTextView.m in Sources */,
 				DE8537791DE0043800654C4D /* WQClanderViewController.m in Sources */,
 				DE5C94D21DE6B8BC00EFA20F /* WQSelectedTagsViewController.m in Sources */,
@@ -1303,6 +1324,9 @@
 				DEE619FB1E77CD2300C6D806 /* WQTableViewController.m in Sources */,
 				DEFF6D781E6971800004CFE2 /* GYChangeTextView.m in Sources */,
 				DE71DF9C1E6672C50061E374 /* WQKeyboardHandleViewController.m in Sources */,
+				DE7FDF701EB6F3E6003A68E9 /* WQPopoverPresentationController.m in Sources */,
+				DE7FDF6D1EB64AF7003A68E9 /* WQPresentationController.m in Sources */,
+				DE7FDF761EB79BBA003A68E9 /* WQNavViewController.m in Sources */,
 				DEFF6D591E6971800004CFE2 /* WQCache.m in Sources */,
 				DEFF6D5F1E6971800004CFE2 /* WQBannerLoopView.m in Sources */,
 				DEFF6D6E1E6971800004CFE2 /* WQShareActionCell.m in Sources */,

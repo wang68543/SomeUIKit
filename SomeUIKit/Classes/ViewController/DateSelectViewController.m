@@ -25,9 +25,12 @@
 }
 - (IBAction)alertAction:(UIButton *)sender {
     if(sender.tag == 1){
-        WQSelectDateController *dateAlert = [WQSelectDateController dateWithTitle:@"选择日期" alertStyle:UIAlertControllerStyleActionSheet dateDidChange:NULL confirmSelected:^(WQSelectDateController * _Nonnull dateController, NSDate * _Nonnull date) {
+        WQSelectDateController *dateAlert = [WQSelectDateController customDateWithTitle:@"选择日期" alertStyle:UIAlertControllerStyleAlert dateDidChange:NULL confirmSelected:^(WQSelectDateController * _Nonnull dateController, NSDate * _Nonnull date) {
             
         } cancelSelected:NULL];
+//        dateAlert.date = [NSDate date];
+        dateAlert.maximumDate = [NSDate date];
+        dateAlert.units = @[@"年",@"月"];
         [dateAlert showInController:self.navigationController];
     }else{
         WQAlertController *alert = [WQAlertController alertViewWithTitle:@"选择日期" centerView:_myDatePicker];
@@ -38,13 +41,13 @@
     
     
         //__weak
-        [alert addActionType:ActionCancel action:^(WQAlertController * _Nonnull alertViewController) {
+        [alert addActionType:WQActionCancel action:^(WQAlertController * _Nonnull alertViewController) {
             sender.backgroundColor = [UIColor redColor];
     //        [alertViewController dismissViewControllerAnimated:YES completion:NULL];
              [alertViewController popCenterViewAnimate:YES];
     
         }];
-        [alert addActionType:ActionConfirm action:^(WQAlertController * _Nonnull alertViewController) {
+        [alert addActionType:WQActionConfirm action:^(WQAlertController * _Nonnull alertViewController) {
             UIView *centerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, AlertCenterWidth, 100)];
             UITextField *textView = [[UITextField alloc] init];
             textView.frame = CGRectMake(10, 30, AlertCenterWidth - 20, 50);

@@ -315,7 +315,7 @@
 #pragma amrk -- AlertBottomViewDelegate
 -(void)bottomViewDidClickConfirmAction{
     [self.containerView endEditing:YES];
-    BottomAction block = [_actions valueForKey:ActionConfirm];
+    BottomAction block = [_actions valueForKey:WQActionConfirm];
     //    __weak typeof(self) weakSelf = self;
     if(block) {
         block(self);
@@ -326,7 +326,7 @@
 }
 -(void)bottomViewDidClickCancelAction{
     [self.containerView endEditing:YES];
-    BottomAction block = [_actions valueForKey:ActionCancel];
+    BottomAction block = [_actions valueForKey:WQActionCancel];
     if(block){
         block(self);
     }else{
@@ -409,8 +409,8 @@
     //如果是__NSStackBlock__这里会自动copy一份到堆上__NSMallocBlock__的当传值给字典的时候
     [_actions setValue:action forKey:type];
 }
- NSString *const ActionConfirm = @"Confirm";
- NSString *const ActionCancel = @"Cancel";
+ NSString *const WQActionConfirm = @"Confirm";
+ NSString *const WQActionCancel = @"Cancel";
 
 @end
 

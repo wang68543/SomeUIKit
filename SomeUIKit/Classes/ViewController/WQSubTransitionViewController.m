@@ -21,6 +21,9 @@
     [btn addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
     btn.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:btn];
+    
+    //对应前面的WQPresentationController
+     [self updatePreferredContentSizeWithTraitCollection:self.traitCollection];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,14 +33,43 @@
 -(void)btnBack:(UIButton *)btn{
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+//| ----------------------------------------------------------------------------
+//对应前面的WQPresentationController
+//当屏幕发生旋转的时候会调用这个方法
+- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+    
+    // When the current trait collection changes (e.g. the device rotates),
+    // update the preferredContentSize.
+    [self updatePreferredContentSizeWithTraitCollection:newCollection];
 }
-*/
+
+
+//| ----------------------------------------------------------------------------
+//! Updates the receiver's preferredContentSize based on the verticalSizeClass
+//! of the provided \a traitCollection.
+//
+- (void)updatePreferredContentSizeWithTraitCollection:(UITraitCollection *)traitCollection
+{
+    // 左右留35
+    // 上下留80
+    
+    CGFloat w = self.view.bounds.size.width - 35.f * 2;
+    CGFloat h = self.view.bounds.size.height - 80.f * 2;
+    
+    self.preferredContentSize = CGSizeMake(w,h);
+}
+
+
+
+
+- (void)dealloc
+{
+    NSLog(@"%@ --> dealloc",[self class]);
+}
 
 @end

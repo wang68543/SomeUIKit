@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import "WQNavViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     ViewController *viewController = [[ViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    WQNavViewController *nav = [[WQNavViewController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     

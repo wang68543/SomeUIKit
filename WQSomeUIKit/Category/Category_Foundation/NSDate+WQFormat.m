@@ -7,9 +7,8 @@
 //
 
 #import "NSDate+WQFormat.h"
-
+#import "WQDateFormater.h"
 @implementation NSDate (WQFormat)
-
 
 /**
  一年中的第几周
@@ -53,14 +52,8 @@
 -(NSString *)TOHH3mm{
     return [self formatDateWithFormat:@"HH:mm"];
 }
-
-
 -(NSString *)formatDateWithFormat:(NSString *)format{
-    return [[self formaterWithFormat:format] stringFromDate:self];
-}
--(NSDateFormatter *)formaterWithFormat:(NSString *)format{
-    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
-    formater.dateFormat = format;
-    return formater;
+    [WQDateFormater manager].dateFormat = format;
+    return [[WQDateFormater manager] stringFromDate:self];
 }
 @end

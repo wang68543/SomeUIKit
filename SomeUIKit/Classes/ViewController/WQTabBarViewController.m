@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tabControllerTransition = [WQControllerTransition transitionWithTabBarController:self];
+//    WQControllerTransition *transition = [WQControllerTransition transitionWithTabBarController:self];
+//    self.delegate = transition;
 }
 -(void)dealloc{
     NSLog(@"tabbarController 销毁");

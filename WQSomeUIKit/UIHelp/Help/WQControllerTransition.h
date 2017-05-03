@@ -21,11 +21,17 @@ typedef NS_ENUM(NSInteger,ShowSuperViewType) {
     ShowSuperViewTypeDefault,
     ShowSuperViewTypePush,
     ShowSuperViewTypePop,
-    ShowSuperViewTypeTabRight,//用于tabBarController
-    ShowSuperViewTypeTabLeft,//同上
     ShowSuperViewTypePresentation,//从下往上
     ShowSuperViewTypeDismissal,//从上往下
-    ShowSuperViewTypeFrameChange,//此类枚举用到了orignalFrame与TargetFrame
+    /** 用于tabBarController转场 */
+    ShowSuperViewTypeTabRight = 100,//用于tabBarController
+    ShowSuperViewTypeTabLeft,//同上
+    
+    ShowSuperViewTypeFrameChange = 200,//此类枚举用到了orignalFrame与TargetFrame
+    /** 暂时只是orignalFrame起作用 (圆形缩放)*/
+    ShowSuperViewTypeScaleCircle,
+    
+    
 };
 typedef NS_ENUM(NSInteger ,AnimationType) {
     AnimationTypeNormal,
@@ -37,7 +43,7 @@ typedef NS_ENUM(NSInteger ,AnimationType) {
 };
 
 // MARK:-------- 使用此类 必须强引用
-@interface WQControllerTransition : NSObject<UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate>
+@interface WQControllerTransition : NSObject<UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate,UITabBarControllerDelegate,UINavigationControllerDelegate>
 /** 弹出页面是否是将要显示 */
 @property (assign ,nonatomic,readonly,getter=isPresent) BOOL present;
 
@@ -47,6 +53,8 @@ typedef NS_ENUM(NSInteger ,AnimationType) {
 //====================转场的场景选择========================
 /** 设置两个View之间的转场 */
 @property (assign ,nonatomic) ShowSuperViewType showSuperViewType;
+/** 根据原来的动画方式沿着来时的路线消失 默认YES*/
+@property (assign ,nonatomic) BOOL reverseDismiss;
 /** 设置要Presentation的子View的动画 当设置为Custom就会按照下面的预设的值进行动画 */
 @property (assign ,nonatomic) ShowOneSubViewType showOneSubViewType;
 //******************************************
@@ -54,13 +62,17 @@ typedef NS_ENUM(NSInteger ,AnimationType) {
 #pragma mark -- init
 //============tabBarController支持左右滑动初始化方式===============
 +(nonnull instancetype)transitionWithTabBarController:(nonnull UITabBarController *)tabBarController;
+
+/** 自定义push动画:如果在push之前 View 没有创建就无法加进去 并且如果xib创建的 没有给view的frame  使用自定义动画 也不会调整为屏幕宽  */
++(nonnull instancetype)transitionWithNavigationController:(nonnull UINavigationController *)navigationController;
+
 //******************************************
 
 //============子View转场初始化方式===============
 +(nonnull instancetype)transitionWithAnimatedView:(nullable UIView *)animatedView;
 //******************************************
 
-
+//+ (nonnull instancetype)transitionWithPresentedViewController:(nonnull UIViewController *)presentedViewController;
 
 //==========ShowOneSubviewTypeCustom 辅助属性==============
 /**

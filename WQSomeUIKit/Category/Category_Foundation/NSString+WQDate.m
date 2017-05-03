@@ -7,6 +7,7 @@
 //
 
 #import "NSString+WQDate.h"
+#import "WQDateFormater.h"
 
 @implementation NSString (WQDate)
 -(NSDate *)formatMillionSecondsToDate{
@@ -17,12 +18,14 @@
 -(NSDate *)formatyyyy_MM_dd00HH3mm3ssToDate{
     return [self dateWithFormatString:@"yyyy-MM-dd HH:mm:ss"];
 }
--(NSDate *)dateWithFormatString:(NSString *)formatString{
-    return  [[self formaterWithFormat:formatString] dateFromString:self];
+//MARK: -- yyyy-MM-dd
+-(NSDate *)formatyyyy_MM_ddToDate{
+    return [self dateWithFormatString:@"yyyy-MM-dd"];
 }
--(NSDateFormatter *)formaterWithFormat:(NSString *)format{
-    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
-    formater.dateFormat = format;
-    return formater;
+-(NSDate *)dateWithFormatString:(NSString *)formatString{
+    //频繁创建 NSDateFormatter 比较好性能
+    //    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+    [WQDateFormater manager].dateFormat = formatString;
+    return  [[WQDateFormater manager] dateFromString:self];
 }
 @end

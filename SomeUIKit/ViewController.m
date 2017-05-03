@@ -10,6 +10,9 @@
 #import "UIImageView+WQAnimation.h"
 #import "CoderObject.h"
 #import "WQCache.h"
+#import "WQNavViewController.h"
+#import "NSDate+WQFormat.h"
+#import "NSString+WQDate.h"
 
 @interface ViewController ()
 
@@ -20,7 +23,12 @@
 static NSString *const identifier = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    NSDate *date = [NSDate date];
+    NSDateFormatter *forMatter = [[NSDateFormatter alloc] init];
     
+    [forMatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *date = @"2017-05-02".formatyyyy_MM_ddToDate;// 12:30:30
+    NSLog(@"==== %@",date.TOyyyy_MM_dd00HH3mm);
     CoderObject *coderObj = [WQCache objectWithName:@"test"];
 //    [WQCache cacheObject:coderObj name:@"test"];
     

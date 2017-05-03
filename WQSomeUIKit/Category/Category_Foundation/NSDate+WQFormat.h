@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (WQFormat)
+//TODO: 每个NSDate日期都带有时区信息
+/** 根据日期NSDate后面的时区自动转换为对应当前时区的时间字符串 */
 -(NSString *)formatDateWithFormat:(NSString *)format;
 /**
  一年中的第几周
