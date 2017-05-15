@@ -96,6 +96,8 @@
 		DED853691EC9A22F004469CE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DED853671EC9A22F004469CE /* libcrypto.a */; };
 		DED8536A1EC9A22F004469CE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DED853681EC9A22F004469CE /* libssl.a */; };
 		DED8536D1EC9A271004469CE /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8536C1EC9A271004469CE /* Order.m */; };
+		DED853701EC9A43C004469CE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8536E1EC9A43C004469CE /* libcrypto.a */; };
+		DED853711EC9A43C004469CE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8536F1EC9A43C004469CE /* libssl.a */; };
 		DEDCAAEF1E8F78CF00E9B61E /* WQCommonCustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDCAAEE1E8F78CF00E9B61E /* WQCommonCustomItem.m */; };
 		DEDCAAF31E8F839500E9B61E /* WQCommonDataResource.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDCAAF21E8F839500E9B61E /* WQCommonDataResource.m */; };
 		DEDD16361EA121D7001D9764 /* WQVoiceDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDD16351EA121D7001D9764 /* WQVoiceDownloadOperation.m */; };
@@ -418,6 +420,8 @@
 		DED853681EC9A22F004469CE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = WQSomeUIKit/Tool/PayTool/PaySDK/alipaySdk/libssl.a; sourceTree = "<group>"; };
 		DED8536B1EC9A271004469CE /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		DED8536C1EC9A271004469CE /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		DED8536E1EC9A43C004469CE /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		DED8536F1EC9A43C004469CE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		DEDCAAEC1E8F5A8700E9B61E /* WQSomeUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQSomeUIKit.h; sourceTree = "<group>"; };
 		DEDCAAED1E8F78CF00E9B61E /* WQCommonCustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonCustomItem.h; sourceTree = "<group>"; };
 		DEDCAAEE1E8F78CF00E9B61E /* WQCommonCustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonCustomItem.m; sourceTree = "<group>"; };
@@ -547,6 +551,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED853711EC9A43C004469CE /* libssl.a in Frameworks */,
 				DED853661EC9A0BD004469CE /* libsqlite3.tbd in Frameworks */,
 				DED853611EC99B34004469CE /* CoreMotion.framework in Frameworks */,
 				DED8535F1EC998E2004469CE /* CFNetwork.framework in Frameworks */,
@@ -558,6 +563,7 @@
 				DED853591EC997EC004469CE /* Foundation.framework in Frameworks */,
 				DED853571EC997E5004469CE /* UIKit.framework in Frameworks */,
 				DED853551EC997DE004469CE /* CoreGraphics.framework in Frameworks */,
+				DED853701EC9A43C004469CE /* libcrypto.a in Frameworks */,
 				DED853531EC997D4004469CE /* SystemConfiguration.framework in Frameworks */,
 				DED853511EC997CE004469CE /* libz.tbd in Frameworks */,
 				DED8534F1EC997C2004469CE /* libc++.tbd in Frameworks */,
@@ -838,6 +844,8 @@
 		DED852E11EC94B8B004469CE /* alipaySdk */ = {
 			isa = PBXGroup;
 			children = (
+				DED8536E1EC9A43C004469CE /* libcrypto.a */,
+				DED8536F1EC9A43C004469CE /* libssl.a */,
 				DED852E21EC94B8B004469CE /* AlipaySDK.bundle */,
 				DED852E31EC94B8B004469CE /* AlipaySDK.framework */,
 			);
