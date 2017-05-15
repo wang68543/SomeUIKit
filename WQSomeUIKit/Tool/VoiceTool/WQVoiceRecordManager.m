@@ -256,6 +256,13 @@
     };
     [self addJobToQueue:block];
 }
+#pragma mark --  /**外界主动打断录音*/
+-(void)interruptRecord{
+    if(self.isRecording){
+        [self.recorder stop];
+        [self.recorder deleteRecording];
+    }
+}
 -(void)dealloc{
     if(self.recorder.isRecording){
         [self.recorder stop];

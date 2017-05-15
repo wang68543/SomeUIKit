@@ -66,8 +66,8 @@ typedef NS_ENUM(NSInteger ,VarDataType) {
     }
     
 }
--(NSArray *)properties{
-    NSMutableArray *properties = [NSMutableArray array];
+-(NSArray <NSString *>*)properties{
+    NSMutableArray<NSString *> *properties = [NSMutableArray array];
     unsigned int count = 0;
     Ivar *ivars = class_copyIvarList([self class], &count);
     for (int i = 0; i<count; i++) {
@@ -335,5 +335,49 @@ NSString *getVarTypeStr(Ivar ivar){
     }
     return typeStr;
 }
+-(BOOL)isEualToItem:(WQDynamicObject *)anItem{
+    if([NSStringFromClass([self class]) isEqualToString:NSStringFromClass([anItem class])]){
+        __block BOOL isEqual = YES;
+        [[self properties] enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            id value = [self valueForKey:obj];
+            id anValue = [anItem valueForKey:obj];
+            NSLog(@"%@====%@",value,anValue);
+            if([value isKindOfClass:[NSObject class]]){
+                if([value isKindOfClass:[NSNumber class]] || [value isKindOfClass:[NSValue class]]){
+                    if([value doubleValue] != [anValue doubleValue]){
+                        isEqual = NO;
+                        *stop = YES;
+                    }
+                }else if([value isKindOfClass:[NSString class]]){
+                    if(![value isEqualToString:anValue]){
+                        isEqual = NO;
+                        *stop = YES;
+                    }
+                }else if([value isKindOfClass:[WQDynamicObject class]]){
+                    if(![value isEualToItem:anValue]){
+                        isEqual = NO;
+                        *stop = YES;
+                    }
+                }else{//非当前对象 默认为相等
+//                    if(![value isEqual:anValue]){
+//                        isEqual = NO;
+//                        *stop = YES;
+//                    }
+                }
+            }else{
+                if(value != anValue){
+                    isEqual = NO;
+                    *stop = YES;
+                }
+            }
+        }];
+        return isEqual;
+    }else{
+        return NO;
+    }
+}
 
+-(void)dealloc{
+    NSLog(@"%@", [NSString stringWithFormat:@"%@ 销毁了",NSStringFromClass([self class])]);
+}
 @end

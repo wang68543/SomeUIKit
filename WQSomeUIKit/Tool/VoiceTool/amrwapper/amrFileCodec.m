@@ -212,7 +212,7 @@ int ReadAMRFrameFirstData(char* fpamr,int pos,int maxLen, unsigned char frameBuf
 // 返回值: 0-出错; 1-正确
 int ReadAMRFrameData(char* fpamr,int pos,int maxLen, unsigned char frameBuffer[], int stdFrameSize, unsigned char stdFrameHeader)
 {
-	int bytes = 0;
+//	int bytes = 0;
     int nPos = 0;
 	unsigned char frameHeader; // 帧头
 	
@@ -398,7 +398,7 @@ int ReadPCMFrameData(short speech[], char* fpwave, int nChannels, int nBitsPerSa
 {
 	int nRead = 0;
 	int x = 0, y=0;
-	unsigned short ush1=0, ush2=0, ush=0;
+//	unsigned short ush1=0, ush2=0, ush=0;
 	
 	// 原始PCM音频帧数据
 	unsigned char  pcmFrame_8b1[PCM_FRAME_SIZE];
@@ -620,10 +620,11 @@ int SkipCaffHead(char* buf){
         return 0;
     }
     buf+=4;
-    
-    u16 mFileVersion = readUInt16(buf);
+//    u16 mFileVersion =
+    readUInt16(buf);
     buf+=2;
-    u16 mFileFlags = readUInt16(buf);
+//      u16 mFileFlags =
+   readUInt16(buf);
     buf+=2;
     
     //desc free data

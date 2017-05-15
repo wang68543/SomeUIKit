@@ -70,7 +70,8 @@ typedef void (^WQUpdateMetersBlock)(float meterPower);
 /**这里停止直接回调之前定义好的回调*/
 //- (void)stop;
 - (void)stopRecord:(WQRecordFinshBlock)recordFinsh;
-
+/** 外界主动打断录音 */
+-(void)interruptRecord;
 /** 用于语音转换之后上传(主要用于内部) */
 - (void)setConvertRecordStyle:(WQRecordConvertStyle)style;
 - (void)setConvertRecordOperation:(WQConvertRecord)convertOperation;

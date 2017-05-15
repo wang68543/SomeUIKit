@@ -12,7 +12,7 @@
 +(instancetype)backBarButtonItemWithTarget:(id)target action:(SEL)action{
 //    UIImage *image = [[UIImage imageNamed:@"register1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
       //FIXME:这里需要根据自己的需要放返回箭头
-    UIButton *btn = [self buttonWithImage:@"register1" target:target action:action];
+    UIButton *btn = [self buttonWithImage:@"back" target:target action:action];
     btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     btn.frame = CGRectMake(0, 0, 80, 44);
     return [[UIBarButtonItem alloc] initWithCustomView:btn];

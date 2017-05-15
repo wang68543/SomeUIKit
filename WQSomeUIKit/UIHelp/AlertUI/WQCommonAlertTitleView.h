@@ -10,8 +10,8 @@
 #import "WQAlertTitleViewProtocol.h"
 
 @interface WQCommonAlertTitleView : UIView<WQAlertTitleViewProtocol>
-@property (copy ,nonatomic) NSString *title;
-@property (strong ,nonatomic) UIImage *titleIcon;
+@property (copy ,nonatomic,nullable) NSString *title;
+@property (strong ,nonatomic,nullable) UIImage *titleIcon;
 @property (nullable,strong ,nonatomic) NSDictionary * titleAttribute;
 
 -(nonnull instancetype)initWithTitle:(nullable NSString *)title icon:(nullable UIImage *)titleIcon;

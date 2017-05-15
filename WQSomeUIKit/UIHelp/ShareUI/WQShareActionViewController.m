@@ -10,7 +10,7 @@
 #import "WQShareActionCell.h"
 #import "WQControllerTransition.h"
 //#import "WQConstans.h"
-#import "APPHELP.h"
+#import "WQAPPHELP.h"
 
 #define ShareItemH 80.0
 @interface WQShareActionViewController()<UICollectionViewDelegate,UICollectionViewDataSource,UIGestureRecognizerDelegate>
@@ -110,7 +110,7 @@ static NSString *const CellID = @"shareCell";
 }
 
 -(void)showInController:(UIViewController *)inVC{
-    if(!inVC) inVC = [APPHELP visibleViewController];
+    if(!inVC) inVC = [WQAPPHELP visibleViewController];
     self.transitioningDelegate = self.botomTransition;
     self.modalPresentationStyle = UIModalPresentationCustom;
     [inVC presentViewController:self animated:YES completion:NULL];

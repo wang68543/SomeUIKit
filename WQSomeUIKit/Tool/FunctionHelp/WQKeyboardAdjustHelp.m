@@ -7,7 +7,7 @@
 //
 
 #import "WQKeyboardAdjustHelp.h"
-#import "APPHELP.h"
+#import "WQAPPHELP.h"
 @interface WQKeyboardAdjustHelp()<UITextViewDelegate,UITextFieldDelegate>
 //@property (assign ,nonatomic) BOOL keyboardChangeing;
 @property (strong ,nonatomic) UITapGestureRecognizer *tapGR;
@@ -158,7 +158,7 @@
 //MARK: --找出所有的输入框 并排序
 -(void)findAllTextFileds{
     if(_textFieldViews) return;
-    NSArray *tfViews = [APPHELP deepInputTextViews:_lastView];
+    NSArray *tfViews = [WQAPPHELP deepInputTextViews:_lastView];
     if(tfViews.count > 0){
         _textFieldViews =  [tfViews sortedArrayUsingComparator:^NSComparisonResult(UIView *  _Nonnull view1, UIView *  _Nonnull view2) {
             CGRect frame1 = [view1 convertRect:view1.bounds toView:_lastView];

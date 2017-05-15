@@ -11,7 +11,7 @@
 #import "WQCommonAlertBottomView.h"
 
 //#import "WQConstans.h"
-#import "APPHELP.h"
+#import "WQAPPHELP.h"
 #define APP_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define APP_HEIGHT [[UIScreen mainScreen] bounds].size.height
 @interface WQAlertController ()<WQAlertBottomViewDelegate,UIGestureRecognizerDelegate>{
@@ -296,7 +296,7 @@
 }
 -(void)showInViewController:(UIViewController *)inViewController subViewFrameChangeType:(ShowOneSubViewType)showSubViewType subViewShowAnimationType:(AnimationType)animationTye{
     if(!inViewController){
-        inViewController = [APPHELP visibleViewController];
+        inViewController = [WQAPPHELP visibleViewController];
     }
     _bottomTranstion = [WQControllerTransition transitionWithAnimatedView:self.containerView];
     _bottomTranstion.showOneSubViewType = showSubViewType;

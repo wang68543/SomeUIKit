@@ -63,4 +63,10 @@
     
     return iAge;
 }
+//MARK: -- 将日期转为毫秒时间戳
+- (long long int)millisecond{
+    NSTimeInterval timeInterval = [self timeIntervalSince1970];
+    long long int milliTime = timeInterval *1000;
+    return milliTime;
+}
 @end

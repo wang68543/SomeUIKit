@@ -29,10 +29,16 @@
     _borderColor = [UIColor blackColor];
     _borderWidth = 1.0;
     _starHeight = 15.0;
+    _leftPadding = 10.0;
     _starNormalColor = [UIColor lightGrayColor];
     self.backgroundColor = [UIColor whiteColor];
 }
-
+-(void)setHideUnHighlited:(BOOL)hideUnHighlited{
+    _hideUnHighlited = hideUnHighlited;
+    if(hideUnHighlited){
+        self.enabled = NO;
+    }
+}
 
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
@@ -43,7 +49,6 @@
 //    }else{
         topPading = (rect.size.height - self.starHeight)*0.5;
 //    }
-    CGFloat left = 10.0;
     CGFloat sectionH = 5.0;
     CGFloat starW = self.starHeight;
     BOOL isNeedRects = NO;
@@ -55,23 +60,42 @@
     //fmodf(float, float) 表示第一个浮点数除以第二个浮点数的余数
     float decimalValue = fmodf(self.starValue, 1.0);
     int integer = (int)floor(self.starValue);
+    BOOL highlighted = NO;
     for (int i = 0; i < 5 ; i ++) {
-        CGRect rect = CGRectMake(left + (starW + sectionH)*i , topPading, starW, self.starHeight);
+        CGRect rect = CGRectMake(_leftPadding + (starW + sectionH)*i , topPading, starW, self.starHeight);
         //从左到右
         if(isNeedRects){
             [starRects addObject:[NSValue valueWithCGRect:rect]];
         }
-        
-        if(!_half){
-            [self drawSatr:rect isFill:i+1 <= self.starValue];
+        if(i+1 <= self.starValue){
+            highlighted = YES;
         }else{
-            if(decimalValue >= 0.5 && i == integer){
-                [self draStarHalfFill:rect];
+            highlighted = NO;
+        }
+        if(self.hideUnHighlited && !highlighted) continue;
+        if(_drawType == DrawTypeStar){
+            if(!_half){
+                [self drawSatr:rect isFill:highlighted];
             }else{
-                [self drawSatr:rect isFill:i+1 <= self.starValue];
+                if(decimalValue >= 0.5 && i == integer){
+                    [self draStarHalfFill:rect];
+                }else{
+                    [self drawSatr:rect isFill:highlighted];
+                }
             }
+        }else if(_drawType == DrawTypeImage){
+            [self drawImage:rect isHighlight:highlighted];
         }
         
+    }
+}
+
+#pragma mark -- 画图片
+-(void)drawImage:(CGRect)rect isHighlight:(BOOL)highlight{
+    if(highlight){
+        [self.highlightImage drawInRect:rect];
+    }else{
+        [self.normalImage drawInRect:rect];
     }
 }
 #pragma mark -- 画半颗星填充的

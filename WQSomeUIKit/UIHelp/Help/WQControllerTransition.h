@@ -66,6 +66,12 @@ typedef NS_ENUM(NSInteger ,AnimationType) {
 /** 自定义push动画:如果在push之前 View 没有创建就无法加进去 并且如果xib创建的 没有给view的frame  使用自定义动画 也不会调整为屏幕宽  */
 +(nonnull instancetype)transitionWithNavigationController:(nonnull UINavigationController *)navigationController;
 
+///**
+// 单独的页面需要滑出右半部分(即当前页面显示完整的,下个页面只显示占屏幕一部分只存的位置)
+//
+// @param percent 下个页面显示的位置占屏幕的比例
+// */
+//+(nonnull instancetype)transitionWithNavigationController:(nonnull UINavigationController *)navigationController pushPercent:(CGFloat)percent;
 //******************************************
 
 //============子View转场初始化方式===============

@@ -19,8 +19,8 @@
  */
 + (UIImage *)resizedImage:(NSString *)name;
 + (UIImage *)resizedImage:(NSString *)name size:(CGSize)size;
-- (instancetype)hu_circleImageWithCornerRadius:(CGFloat)radius;
-+ (instancetype)hu_circleImageNamed:(NSString *)name cornerRadius:(CGFloat)radius;
+- (UIImage *)hu_circleImageWithCornerRadius:(CGFloat)radius;
++ (UIImage *)hu_circleImageNamed:(NSString *)name cornerRadius:(CGFloat)radius;
 
 + (UIImage *)imageInBounds:(CGRect)bounds colors:(NSArray <UIColor *> *)colors;
 + (UIImage *)imageInBounds:(CGRect)bounds colors:(NSArray <UIColor *> *)colors subHeights:(NSArray <NSNumber *> *)heights;

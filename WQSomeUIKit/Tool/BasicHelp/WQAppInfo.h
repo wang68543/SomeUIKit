@@ -21,6 +21,8 @@
 +(NSString *)appBuild_Version;
 /** App名字 */
 +(NSString *)appName;
+/** App配置文件里面的名字 */
++(NSString *)appDisplayName;
 /** 设备令牌 */
 +(NSString *)appDeviceToken;
 /** 设备的唯一标识 */

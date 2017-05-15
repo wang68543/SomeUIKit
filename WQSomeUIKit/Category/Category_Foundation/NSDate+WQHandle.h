@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (WQHandle)
+
+
 /** 获取当前时区的时间 */
 +(NSDate *)currentTimeZoneDate;
 /** 修正日期为当前时区的日期 */
@@ -22,4 +24,6 @@
 -(NSString *)handleToChatTime;
 /** 根据出生日期算年龄 */
 - (NSInteger)ageWithBirthday;
+/** 将日期转为毫秒时间戳 */
+- (long long int)millisecond;
 @end

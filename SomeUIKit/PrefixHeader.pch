@@ -10,4 +10,6 @@
 #define PrefixHeader_pch
 //#import "WQSomeUIKit.h"
 //#import "WQConstans.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #endif /* PrefixHeader_pch */

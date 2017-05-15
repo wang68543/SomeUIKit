@@ -9,13 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "WQPayItem.h"
 
+static NSString *const kWeiXinAppId = @"wx550a40a0a6922cee";
+//
 typedef NS_ENUM(NSInteger , PayResultState){
     kPayDefault,
-    kPaySuccess,
+    kPaySuccess, //支付工具支付成功了 
     kPayFailed,
     kPayCanceled,
+    kPayAppActiveWait,//app重新激活了 但是支付没有回调过来
 };
-
+@protocol WQPayToolDelegate <NSObject>
+-(void)payToolCompeletion:(WQPayItem *)item payState:(PayResultState)payState message:(NSString *)message;
+@end
 typedef void(^WQPayCompeletion)(PayResultState state , WQPayItem *payItem,NSString *errMsg);
 @interface WQPayTool : NSObject
 +(instancetype)payManager;
@@ -30,5 +35,6 @@ typedef void(^WQPayCompeletion)(PayResultState state , WQPayItem *payItem,NSStri
   */
 //-(BOOL)handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 -(BOOL)handleOpenURL:(NSURL *)url;
+-(void)sendPay:(WQPayItem *)payItem delegate:(id<WQPayToolDelegate>)delegate;
 -(void)sendPay:(WQPayItem *)payItem compeletion:(WQPayCompeletion)payComepeltion;
 @end

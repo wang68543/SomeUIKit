@@ -609,7 +609,9 @@ typedef void(^AnmationCompeletion)(BOOL finished);
         if(self.navgationController){
             //在navigationCntroller push、pop转场中呈现显示View都要添加到容器视图中
            [contanierView addSubview:toView];
-            
+            if(self.isPresent){
+               toView.frame = contanierView.bounds; 
+            }
         }else if(self.isPresent){
             
             //在  modal的dismissal 转场中，不要添加 toView，否则黑屏
@@ -631,15 +633,6 @@ typedef void(^AnmationCompeletion)(BOOL finished);
 //        }else{
             [self normalAnmiation:animation completion:animationCompletion];
 //        }
-//            [UIView animateWithDuration:self.duration animations:^{
-//                fromView.transform = fromViewTransform;
-//                toView.transform = CGAffineTransformIdentity;
-//                
-//            } completion:^(BOOL finished) {
-//               toView.transform = CGAffineTransformIdentity;
-//               fromView.transform = CGAffineTransformIdentity;
-//                [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-//            }];
     
         //也可以用这个实现动画
 //        [UIView transitionFromView:<#(nonnull UIView *)#> toView:<#(nonnull UIView *)#> duration:<#(NSTimeInterval)#> options:<#(UIViewAnimationOptions)#> completion:<#^(BOOL finished)completion#>]
@@ -650,7 +643,6 @@ typedef void(^AnmationCompeletion)(BOOL finished);
         }else{
             view = [transitionContext viewForKey:UITransitionContextFromViewKey];
         }
-        
         switch (self.showSuperViewType) {
             case ShowSuperViewTypeFrameChange:
                 if(CGRectIsNull(self.targetFrame))self.targetFrame = view.frame;
@@ -718,6 +710,7 @@ typedef void(^AnmationCompeletion)(BOOL finished);
     }
 
 }
+
 // MARK: -- CAAnimationDelegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
      [_transitionContext completeTransition:![_transitionContext transitionWasCancelled]];

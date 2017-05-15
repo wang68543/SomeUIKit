@@ -10,7 +10,7 @@
 #import "WQCommonAlertTitleView.h"
 #import "WQCommonAlertBottomView.h"
 #import "WQControllerTransition.h"
-#import "APPHELP.h"
+#import "WQAPPHELP.h"
 static CGFloat const DatePickerHeight = 190;
 
 static CGFloat const ToolBarHeight = 44.0;
@@ -351,7 +351,7 @@ static NSInteger const kUnits = NSCalendarUnitYear|NSCalendarUnitMonth;
 }
 -(void)showInController:(nullable UIViewController *)viewController{
     if(!viewController){
-        viewController = [APPHELP currentNavgationController];
+        viewController = [WQAPPHELP currentNavgationController];
     }
     _bottomTranstion = [WQControllerTransition transitionWithAnimatedView:self.containerView];
     if(_alertControllerStyle == UIAlertControllerStyleAlert){

@@ -7,7 +7,7 @@
 //
 
 #import "MainNavController.h"
-#import "ContainerViewController.h"
+#import "WQContainerViewController.h"
 
 @interface MainNavController ()
 
@@ -48,7 +48,7 @@
     UIViewController *childViewController = self;
     while (1) {
         UIViewController *parentViewController = childViewController.parentViewController;
-        if([parentViewController isKindOfClass:[ContainerViewController class]]){
+        if([parentViewController isKindOfClass:[WQContainerViewController class]]){
             [parentViewController performSelector:@selector(openCloseMenum)];
             break;
         }else{

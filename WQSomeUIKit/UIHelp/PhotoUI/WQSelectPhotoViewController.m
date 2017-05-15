@@ -9,7 +9,7 @@
 #import "WQSelectPhotoViewController.h"
 #import "WQControllerTransition.h"
 //#import "WQConstans.h"
-#import "APPHELP.h"
+#import "WQAPPHELP.h"
 #define APP_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define APP_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define DivLineBG UIColorMake(225, 226, 230, 1.0)
@@ -51,7 +51,7 @@
 }
 
 -(void)showInController:(UIViewController *)controller{
-    if(!controller)controller = [APPHELP visibleViewController];
+    if(!controller)controller = [WQAPPHELP visibleViewController];
     self.controller = controller;
     self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
 //    self.view.backgroundColor = [UIColor clearColor];

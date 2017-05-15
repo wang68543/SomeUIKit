@@ -8,7 +8,7 @@
 
 #import "WQCommonDataResource.h"
 #import "WQCommonBaseCell.h"
-#import "APPHELP.h"
+#import "WQAPPHELP.h"
 #import "WQCommonCellProtocol.h"
 
 @interface WQCommonDataResource ()
@@ -111,8 +111,8 @@ static NSString *const identifier = @"commonCell";
             WQCommonArrowItem *item = (WQCommonArrowItem *)baseItem;
             if(item.destClass){
                 UIViewController *destVc = [[item.destClass alloc] init];
-                [APPHELP setPropertyValue:destVc values:item.destPropertyParams];
-                [[APPHELP currentNavgationController] pushViewController:destVc animated:YES];
+                [WQAPPHELP setPropertyValue:destVc values:item.destPropertyParams];
+                [[WQAPPHELP currentNavgationController] pushViewController:destVc animated:YES];
             }
             if(item.operation){
                 item.operation();

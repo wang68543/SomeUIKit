@@ -28,7 +28,7 @@
     }
     return _scrollView;
 }
-const static NSString *offset = @"offset";
+ static NSString * const offset = @"offset";
 -(instancetype)initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]){
         _pageW = frame.size.width;

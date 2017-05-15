@@ -29,4 +29,11 @@
  */
 -(instancetype)copyItem;
 
+/**
+ 对比两个对象的各个属性是否相等
+
+ @param anItem 对比的对象
+ */
+-(BOOL)isEualToItem:(WQDynamicObject *)anItem;
+
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "WQCommonBaseTableController.h"
-#import "APPHELP.h"
+#import "WQAPPHELP.h"
 
 @interface WQCommonBaseTableController ()
 @property (strong ,nonatomic) UITableView *tableView;

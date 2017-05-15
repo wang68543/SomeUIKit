@@ -10,7 +10,7 @@
 #import "WQConstans.h"
 @implementation UIImage (WQHelp)
 
-- (instancetype)hu_circleImageWithCornerRadius:(CGFloat)radius
+- (UIImage *)hu_circleImageWithCornerRadius:(CGFloat)radius
 {
     // 利用self生成一张圆形图片
     
@@ -36,7 +36,7 @@
 }
 
 /** 圆形图片裁剪 */
-+ (instancetype)hu_circleImageNamed:(NSString *)name cornerRadius:(CGFloat)radius
++ (UIImage *)hu_circleImageNamed:(NSString *)name cornerRadius:(CGFloat)radius
 {
     return [[UIImage imageNamed:name] hu_circleImageWithCornerRadius:radius];
 }

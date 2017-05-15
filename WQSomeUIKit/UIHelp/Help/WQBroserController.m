@@ -8,7 +8,7 @@
 
 #import "WQBroserController.h"
 #import <WebKit/WebKit.h>
-#import "APPHELP.h"
+#import "WQAPPHELP.h"
 @interface WQBroserController ()<UIWebViewDelegate,WKNavigationDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 //@property (strong, nonatomic) WKWebView *webView;
@@ -68,7 +68,7 @@
     NSLog(@"request:%@",request.URL.absoluteString);
     //    NSLog(@"=====schem:%@ ==== resource:%@",request.URL.scheme,request.URL.resourceSpecifier);
     if([request.URL.scheme compare:@"tel" options:NSCaseInsensitiveSearch] == NSOrderedSame){
-        [APPHELP callNumber:request.URL.resourceSpecifier];
+        [WQAPPHELP callNumber:request.URL.resourceSpecifier];
         return NO;
     }
     return YES;

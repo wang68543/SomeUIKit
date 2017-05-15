@@ -7,7 +7,7 @@
 //
 
 #import "WQClendarView.h"
-#import "ClendarUnit.h"
+#import "WQClendarUnit.h"
 #define CenterItem 72
 @interface WQClendarView()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (strong ,nonatomic) UICollectionView *collectionView;
@@ -46,7 +46,7 @@ static NSString  *const  Clender = @"Clender";
 }
 -(instancetype)initWithFrame:(CGRect)frame{
     if(self == [super initWithFrame:frame]){
-        [self.collectionView registerClass:[ClendarUnit class] forCellWithReuseIdentifier:Clender];
+        [self.collectionView registerClass:[WQClendarUnit class] forCellWithReuseIdentifier:Clender];
         [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:CenterItem inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionLeft];
         [self addSubview:self.collectionView];
     }
@@ -80,7 +80,7 @@ static NSString  *const  Clender = @"Clender";
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    ClendarUnit *cell = [collectionView dequeueReusableCellWithReuseIdentifier:Clender forIndexPath:indexPath];
+    WQClendarUnit *cell = [collectionView dequeueReusableCellWithReuseIdentifier:Clender forIndexPath:indexPath];
     NSDate *monthDate = [self getDateByAddingMonth:indexPath.item];
 //    NSArray *models = [self findRemindsInMonth:monthDate];
     

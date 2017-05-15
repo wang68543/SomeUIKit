@@ -51,11 +51,11 @@ Pod::Spec.new do |s|
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 # "WQSomeUIKit",  表示源文件的路径，注意这个路径是相对podspec文件而言的。
-  # s.source_files  = "WQSomeUIKit/**/**/*.{h,m}"
+  s.source_files  = "WQSomeUIKit/WQSomeUIKit.h"
   # s.source_files = "WQSomeUIKit/**/**/*.{h,m}"
   # s.public_header_files = 'WQSomeUIKit/WQSomeUIKit.h'
   # s.vendored_libraries = "WQSomeUIKit/Resources/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Resources/amrwapper/libopencore-amrwb.a"
-  s.resources = ["WQSomeUIKit/Resources/Sb/*.storyboard"] 
+  s.resources = ["WQSomeUIKit/Resources/Sb/*.storyboard","WQSomeUIKit/Resources/Assets/**.xcassets/**/*.png"] 
   # s.exclude_files = "Classes/Exclude"
    #import "WQConstans.h"
 #   s.prefix_header_contents =<<-EOS
@@ -136,6 +136,15 @@ Pod::Spec.new do |s|
    sna.vendored_libraries = "WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrwb.a"
    end
 
+   s.subspec 'PaySDK' do |ss|
+   ss.frameworks = "AlipaySDK", "SystemConfiguration","CoreTelephony","QuartzCore","CoreText","CoreGraphics","CFNetwork","CoreMotion"
+   ss.libraries = "c++", "z","sqlite3"
+   ss.source_files ="WQSomeUIKit/Tool/PayTool/PaySDK/**/*.{h,m}"
+   ss.vendored_libraries = "WQSomeUIKit/Tool/PayTool/PaySDK/WeiXinSdk/libWeChatSDK.a" ,"WQSomeUIKit/Tool/PayTool/PaySDK/alipaySdk/**.a",
+   ss.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SRCROOT)/WQSomeUIKit/Tool/PayTool/PaySDK"}
+   end
+
+
   s.subspec 'Tool' do |ss|
     # ss.source_files = 'WQSomeUIKit/Tool/**/*.{h,m}'
     ss.subspec 'BasicFoundation' do |sss|
@@ -160,6 +169,7 @@ Pod::Spec.new do |s|
       sss.source_files = 'WQSomeUIKit/Tool/VoiceTool/*.{h,m}'
     end
     ss.subspec 'PayTool' do |sss|
+      sss.dependency  'WQSomeUIKit/PaySDK'	
       sss.source_files = 'WQSomeUIKit/Tool/PayTool/*.{h,m}'
     end
   end
@@ -175,6 +185,7 @@ Pod::Spec.new do |s|
   s.subspec 'UIHelp' do |ss|
     # ss.source_files = 'WQSomeUIKit/UIHelp/**/*.{h,m}'
     ss.subspec 'Help' do |sss|
+      sss.resources = ['WQSomeUIKit/UIHelp/Help/*.xib']
       sss.source_files = 'WQSomeUIKit/UIHelp/Help/*.{h,m}'
       sss.public_header_files='WQSomeUIKit/UIHelp/Help/*.h'
     end

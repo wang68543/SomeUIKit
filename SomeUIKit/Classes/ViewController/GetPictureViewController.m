@@ -9,6 +9,7 @@
 #import "GetPictureViewController.h"
 #import "WQSelectPhotoViewController.h"
 #import "WQShareActionViewController.h"
+#import "WQStepNumberView.h"
 
 @interface GetPictureViewController ()<PhotoSelectedViewControllerDelegate,ShareActionDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -19,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    WQStepNumberView *stepNumber = [[WQStepNumberView alloc] init];
+    stepNumber.frame = CGRectMake(60, 80, 100, 60);
+    [self.view addSubview:stepNumber];
     // Do any additional setup after loading the view from its nib.
 }
 

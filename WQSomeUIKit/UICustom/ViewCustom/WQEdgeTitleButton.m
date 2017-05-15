@@ -20,6 +20,7 @@
 //        _edge = UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0);
 //         _textPadding = 3.0;//文字与图片之间的间距
         self.titleLabel.numberOfLines = 0;
+        self.titleEdgeInsets = UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0);
     }
     return self;
 }
@@ -379,22 +380,29 @@
     }
     return maxHeight;
 }
-- (void)setTitle:(NSString *)title forState:(UIControlState)state{
-    [super setTitle:title forState:state];
-    
-    // 1.计算文字的尺寸
-    self.titleSize = [title boundingRectWithSize:CGSizeMake([self titleMaxWidth],[self titleMaxHeight]) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil].size;
+-(CGSize)titleSize{
+    if(self.currentAttributedTitle){
+        _titleSize = [self.currentAttributedTitle boundingRectWithSize:CGSizeMake( [self titleMaxWidth],[self titleMaxHeight]) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+    }else if(self.currentTitle){
+         _titleSize = [self.currentTitle boundingRectWithSize:CGSizeMake([self titleMaxWidth],[self titleMaxHeight]) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil].size;
+    }else{
+        _titleSize = CGSizeZero;
+    }
+    return _titleSize;
 }
--(void)setAttributedTitle:(NSAttributedString *)title forState:(UIControlState)state{
-    [super setAttributedTitle:title forState:state];
-    // 1.计算文字的尺寸
-    self.titleSize = [title boundingRectWithSize:CGSizeMake( [self titleMaxWidth],[self titleMaxHeight]) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+-(CGSize)imageSize{
+    return self.currentImage.size;
 }
--(void)setImage:(UIImage *)image forState:(UIControlState)state{
-    [super setImage:image forState:state];
-    //没有主观限制图片的尺寸的时候 默认按照图片的实际尺寸
-    if(CGSizeEqualToSize(self.imageSize, CGSizeZero))
-    self.imageSize = image.size;
-}
+//-(void)setAttributedTitle:(NSAttributedString *)title forState:(UIControlState)state{
+//    [super setAttributedTitle:title forState:state];
+//    // 1.计算文字的尺寸
+//    self.titleSize = [title boundingRectWithSize:CGSizeMake( [self titleMaxWidth],[self titleMaxHeight]) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+//}
+//-(void)setImage:(UIImage *)image forState:(UIControlState)state{
+//    [super setImage:image forState:state];
+//    //没有主观限制图片的尺寸的时候 默认按照图片的实际尺寸
+//    if(CGSizeEqualToSize(self.imageSize, CGSizeZero))
+//    self.imageSize = image.size;
+//}
 
 @end
