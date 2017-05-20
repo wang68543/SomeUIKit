@@ -26,14 +26,23 @@
 -(NSDate *)formatyyyy_MM_dd00HH3mm3ssToDate{
     return [self dateWithFormatString:@"yyyy-MM-dd HH:mm:ss"];
 }
+//MARK: -- yyyy-MM-dd HH:mm
+-(NSDate *)formatyyyy_MM_dd00HH3mmToDate{
+    return [self dateWithFormatString:@"yyyy-MM-dd HH:mm"];
+}
 //MARK: -- yyyy-MM-dd
 -(NSDate *)formatyyyy_MM_ddToDate{
     return [self dateWithFormatString:@"yyyy-MM-dd"];
 }
+
+//MARK: --  HH:mm
+-(NSDate *)formatHH3mmToDate{
+    return [self dateWithFormatString:@"HH:mm"];
+}
 -(NSDate *)dateWithFormatString:(NSString *)formatString{
     //频繁创建 NSDateFormatter 比较好性能
     //    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
-    if(formatString.length > self.length) return nil;
+    if(formatString.length > self.length) return [NSDate date];
     [WQDateFormater manager].dateFormat = formatString;
     return  [[WQDateFormater manager] dateFromString:self];
 }

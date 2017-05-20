@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "WQSomeUIKit"
-  s.version      = "1.1.8"
+  s.version      = "1.1.9"
   s.summary      = "Usual collection"
 
   s.description  = <<-DESC 
@@ -47,7 +47,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/wang68543/WQSomeUIKit.git", :tag => "#{s.version}" }
   s.requires_arc = true
-
+  s.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>'
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 # "WQSomeUIKit",  表示源文件的路径，注意这个路径是相对podspec文件而言的。
@@ -136,12 +136,15 @@ Pod::Spec.new do |s|
    sna.vendored_libraries = "WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrnb.a","WQSomeUIKit/Tool/VoiceTool/amrwapper/libopencore-amrwb.a"
    end
 
-   s.subspec 'PaySDK' do |ss|
-   ss.frameworks = "AlipaySDK", "SystemConfiguration","CoreTelephony","QuartzCore","CoreText","CoreGraphics","CFNetwork","CoreMotion"
-   ss.libraries = "c++", "z","sqlite3"
-   ss.source_files ="WQSomeUIKit/Tool/PayTool/PaySDK/**/*.{h,m}"
-   ss.vendored_libraries = "WQSomeUIKit/Tool/PayTool/PaySDK/WeiXinSdk/libWeChatSDK.a" ,"WQSomeUIKit/Tool/PayTool/PaySDK/alipaySdk/**.a",
-   ss.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SRCROOT)/WQSomeUIKit/Tool/PayTool/PaySDK"}
+   s.subspec 'WQPaySDK' do |ss|
+   ss.source_files ="WQSomeUIKit/PaySDK/**/*.{h,m}"
+   ss.vendored_frameworks = 'WQSomeUIKit/PaySDK/alipaySdk/AlipaySDK.framework'
+   ss.frameworks = 'SystemConfiguration','CoreTelephony','QuartzCore','CoreText','CoreGraphics','CFNetwork','CoreMotion'
+   ss.libraries = "c++", "z","sqlite3",
+   ss.vendored_libraries = 'WQSomeUIKit/PaySDK/WeiXinSdk/libWeChatSDK.a' ,'WQSomeUIKit/PaySDK/alipaySdk/libcrypto.a','WQSomeUIKit/PaySDK/alipaySdk/libssl.a'
+   ss.resource = 'WQSomeUIKit/PaySDK/alipaySdk/AlipaySDK.bundle'
+   ss.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/WQSomeUIKit/PaySDK" }
+
    end
 
 
@@ -169,7 +172,7 @@ Pod::Spec.new do |s|
       sss.source_files = 'WQSomeUIKit/Tool/VoiceTool/*.{h,m}'
     end
     ss.subspec 'PayTool' do |sss|
-      sss.dependency  'WQSomeUIKit/PaySDK'	
+      sss.dependency  'WQSomeUIKit/WQPaySDK'	
       sss.source_files = 'WQSomeUIKit/Tool/PayTool/*.{h,m}'
     end
   end

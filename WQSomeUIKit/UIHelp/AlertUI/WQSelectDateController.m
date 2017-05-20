@@ -21,7 +21,7 @@ static CGFloat const TitleViewHeight = 49.0;
 
 static NSInteger const kUnits = NSCalendarUnitYear|NSCalendarUnitMonth;
 
-#define CenterAlertWidth ([UIScreen mainScreen].bounds.size.width - 50)
+#define CenterAlertWidth ([UIScreen mainScreen].bounds.size.width - 40)
 
 @interface WQSelectDateController ()<WQAlertBottomViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 @property (copy ,nonatomic) ChangeDate dateChange;

@@ -11,6 +11,7 @@
 #import "WQSubTransitionViewController.h"
 #import "WQAlertController.h"
 #import "WQPresentationController.h"
+#import "WQActionSheetController.h"
 
 @interface WQAnimationTrasitionViewController ()<UIPopoverPresentationControllerDelegate>
 @property (strong ,nonatomic) WQControllerTransition *frameChangeTransition;
@@ -61,6 +62,12 @@
     nav.modalPresentationStyle = UIModalPresentationCustom;
     [self.navigationController presentViewController:nav animated:YES completion:NULL];
     
+}
+- (IBAction)actionSheet:(UIButton *)sender {
+    WQActionSheetController *actionSheet = [[WQActionSheetController alloc] init];
+    actionSheet.optionas = @[@"12134",@"35566"];
+    actionSheet.bottomTitles = @"取消";
+    [actionSheet presentedInViewController:self];
 }
 
 //  ————————————— UIViewController.m 在此处弹出

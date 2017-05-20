@@ -20,6 +20,8 @@
 #import "UIGestureRecognizer+Block.h"
 #import "NSString+WQDate.h"
 #import "NSDate+WQHandle.h"
+#import "NSString+WQBridgeFormat.h"
+
 #import "UIImage+WQHelp.h"
 #import "UIImageView+WQAnimation.h"
 #import "UIBarButtonItem+WQInitHelp.h"

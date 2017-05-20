@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.transition = [WQControllerTransition transitionWithNavigationController:self];
+//    self.transition = [WQControllerTransition transitionWithNavigationController:self];
 }
 
 - (void)didReceiveMemoryWarning {

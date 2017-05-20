@@ -610,6 +610,7 @@ typedef void(^AnmationCompeletion)(BOOL finished);
             //在navigationCntroller push、pop转场中呈现显示View都要添加到容器视图中
            [contanierView addSubview:toView];
             if(self.isPresent){
+                //如果push转场的时候 将要呈现的控制器是xib创建的 他的尺寸就是xib的尺寸而不会根据屏幕大小进行调整
                toView.frame = contanierView.bounds; 
             }
         }else if(self.isPresent){

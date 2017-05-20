@@ -24,6 +24,8 @@
     CGPoint _preContentOffset;//记录scollView初始的offset
     CGAffineTransform _preTransform;
     
+    UIView *_gestureView;
+    
 }
 +(instancetype)keyboardAdjustHelpWithView:(UIView *)view excludeTag:(NSInteger)excludeTag{
     return [self keyboardAdjustWithMoveView:view gestureRecognizerView:view excludeTag:excludeTag];
@@ -42,19 +44,18 @@
             _preContentOffset = CGPointZero;
         }
         _preTransform = moveView.transform;
-        
-        
         _excludeTag = excludeTag;
-        
         _animationCurve = UIViewAnimationCurveEaseInOut;
         _animationDuration = 0.25;
         _keyboardDistanceFromTextField = 10.0;
         
-        [self rigisterNotification];
-        
-        //放在这里是为了让键盘的returnKey初始化
-        [self findAllTextFileds];
-        [self setDelegates];
+        if(moveView){
+           [self rigisterNotification];
+            //放在这里是为了让键盘的returnKey初始化
+            [self findAllTextFileds];
+            [self setDelegates];
+        }
+        _gestureView = gestureView;
         if(gestureView){
             _tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackground:)];
            [gestureView addGestureRecognizer:_tapGR];
@@ -65,7 +66,12 @@
 
 -(void)tapBackground:(UITapGestureRecognizer *)tapGR{
 //    self.keyboardChangeing = NO;
-    [_lastView endEditing:YES];
+    if(_gestureView){
+        [_gestureView endEditing:YES];
+    }else{
+      [_lastView endEditing:YES];  
+    }
+    
 }
 //MARK: -- 给所有的输入框设置代理
 -(void)setDelegates{

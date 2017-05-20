@@ -16,7 +16,7 @@
 @interface WQStepNumberView : UIView
 @property (strong ,nonatomic,readonly) UIButton *addButton;
 @property (strong ,nonatomic,readonly) UIButton *subtractButton;
-
+@property (strong ,nonatomic,readonly) UITextField *countNumTextField;
 @property (weak ,nonatomic) id<WQStepNumberDelegate> delegate;
 /** 步进的值是否支持小数 */
 @property (assign ,nonatomic) BOOL isStepFloat;

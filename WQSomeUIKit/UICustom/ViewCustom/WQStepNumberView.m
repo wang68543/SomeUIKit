@@ -8,7 +8,7 @@
 
 #import "WQStepNumberView.h"
 @interface WQStepNumberView()
-@property (strong ,nonatomic) UITextField *countNumTextField;
+
 @property (strong ,nonatomic) UIView *tfTopLine;
 @property (strong ,nonatomic) UIView *tfBottomLine;
 

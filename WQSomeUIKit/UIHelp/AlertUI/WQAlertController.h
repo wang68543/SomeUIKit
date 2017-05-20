@@ -15,7 +15,6 @@
 #define AlertCenterWidth ([[UIScreen mainScreen] bounds].size.width - 50)
 UIKIT_EXTERN  NSString * _Nonnull const WQActionConfirm;
 UIKIT_EXTERN  NSString * _Nonnull const WQActionCancel;
-
 typedef void(^BottomAction)( WQAlertController * _Nonnull alertController);
 @interface WQAlertController : UIViewController
 /**初始化一个输入框弹出框的中间视图*/
